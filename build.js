@@ -11,7 +11,7 @@ class TargetCodeBuilder {
     this.srcDir = options.srcDir || 'src';
     this.distDir = options.distDir || 'dist';
     this.watch = options.watch || false;
-    this.minify = options.minify !== false;
+    this.minify = false; // Disabled for debugging
     
     this.htmlMinifyOptions = {
       collapseWhitespace: true,
@@ -57,6 +57,7 @@ class TargetCodeBuilder {
 
       // Find all activity directories
       const activityPaths = await this.findActivityPaths();
+      console.log('🔍 Activity paths found:', activityPaths);
       
       if (activityPaths.length === 0) {
         console.log('⚠️  No activities found in src directory');
@@ -154,28 +155,32 @@ class TargetCodeBuilder {
   createBundle(html, css, js, metadata) {
     const timestamp = new Date().toISOString();
     
-    return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adobe Target - ${metadata.brand} ${metadata.region} ${metadata.activity} ${metadata.experience}</title>
-  
-  <!-- Target Code Bundle -->
-  <!-- Generated: ${timestamp} -->
-  <!-- Brand: ${metadata.brand} -->
-  <!-- Region: ${metadata.region} -->
-  <!-- Activity: ${metadata.activity} -->
-  <!-- Experience: ${metadata.experience} -->
-  
-  ${css ? `<style>\n${css}\n</style>` : ''}
-</head>
-<body>
-  ${html || '<!-- No HTML content -->'}
-  
-  ${js ? `<script>\n${js}\n</script>` : ''}
-</body>
-</html>`;
+    let bundle = '';
+    
+    // Add metadata comments
+    bundle += `<!-- Target Code Bundle -->\n`;
+    bundle += `<!-- Generated: ${timestamp} -->\n`;
+    bundle += `<!-- Brand: ${metadata.brand} -->\n`;
+    bundle += `<!-- Region: ${metadata.region} -->\n`;
+    bundle += `<!-- Activity: ${metadata.activity} -->\n`;
+    bundle += `<!-- Experience: ${metadata.experience} -->\n\n`;
+    
+    // Add CSS if present
+    if (css) {
+      bundle += `<style>\n${css}\n</style>\n\n`;
+    }
+    
+    // Add HTML content if present
+    if (html) {
+      bundle += `${html}\n\n`;
+    }
+    
+    // Add JavaScript if present
+    if (js) {
+      bundle += `<script>\n${js}\n</script>\n`;
+    }
+    
+    return bundle;
   }
 
   startWatcher() {

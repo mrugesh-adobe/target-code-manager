@@ -132,12 +132,20 @@ The build script supports several command-line options:
 # Watch mode for development
 node build.js --watch
 
-# Disable minification
-node build.js --no-minify
-
-# Both options together
-node build.js --watch --no-minify
+# Note: Minification is disabled by default for debugging purposes
+# The output includes uncompressed CSS, HTML, and JavaScript for easy debugging
 ```
+
+## Output Format
+
+The generated bundle files contain only the essential Adobe Target code without full HTML document structure:
+
+- Metadata comments with build information
+- `<style>` tag with CSS
+- HTML markup content
+- `<script>` tag with JavaScript
+
+This format is optimized for Adobe Target deployment and debugging.
 
 ## Team Collaboration
 
