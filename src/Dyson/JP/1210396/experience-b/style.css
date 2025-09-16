@@ -1,0 +1,363 @@
+/* .basket-body__summary--container + div, .basket-body__summary--container.col-lg-8{clear:both} */
+.button--transactional {
+  -webkit-appearance: initial !important;
+  display: block;
+}
+
+.js-basket-item-compatible-heading {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  -webkit-transform: translateZ(1px);
+  transform: translateZ(1px);
+  background-color: #00000080;
+}
+
+.overlay-is-open .overlay {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-animation-duration: 0.25s, 0.5s;
+  animation-duration: 0.25s, 0.5s;
+  -webkit-animation-timing-function: ease-in-out, ease-in-out;
+  animation-timing-function: ease-in-out, ease-in-out;
+  -webkit-animation-delay: 0, 0;
+  animation-delay: 0, 0;
+  -webkit-animation-iteration-count: 1, 1;
+  animation-iteration-count: 1, 1;
+  -webkit-animation-direction: normal, normal;
+  animation-direction: normal, normal;
+  -webkit-animation-fill-mode: both, both;
+  animation-fill-mode: both, both;
+  -webkit-animation-play-state: running, running;
+  animation-play-state: running, running;
+  -webkit-animation-name: digi-fade-in-modal, digi-slide-up-modal;
+  animation-name: digi-fade-in-modal, digi-slide-up-modal;
+}
+
+.overlay__content--video {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.trade-up-item__close {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.s7videoviewer .s7videoplayer .s7iconeffect[state] {
+  background-image: url(https://www.dyson.co.uk/etc/dam/viewers/s7viewers/html5/images/v2/IconEffect_video_sprite.png);
+  background-position: -0px -320px;
+}
+
+.basket-recommendations_T546 h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.basket-recommendations_T546 h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.basket-recommendations_T546 .plp-cards__name {
+  margin-top: 1rem !important;
+}
+
+.basket-recommendations_T546 p {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.basket-recommendations_T546 .plp-cards__price {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.basket-recommendations_T546 .responsive-image,
+.basket-recommendations_T546 .plp-cards__text-container,
+.basket-recommendations_T546 .plp-cards__bottom-container {
+  background-color: #fff;
+}
+
+.basket-recommendations_T546 .plp-cards__bottom-container {
+  padding-top: 0;
+}
+
+.basket-recommendations_T546 .plp-cards__price-container,
+.basket-recommendations_T546 .plp-cards__text-container {
+  padding: 0 16px;
+}
+
+.basket-recommendations_T546 .plp-cards__image-container img {
+  max-height: 200px;
+  width: auto !important;
+  max-width: 100%;
+}
+
+.basket-recommendations_T546
+  .plp-cards__button-container
+  .plp-cards__add-to-basket {
+  width: 100%;
+}
+
+.basket-recommendations_T546 .plp-cards__button-container {
+  margin-top: 0;
+}
+
+.basket-recommendations_T546
+  .plp-cards__button-container
+  .plp-cards__learn-more-button {
+  display: none;
+}
+
+.basket-recommendations_T546 .plp-cards__text-container {
+  padding-bottom: 1rem;
+}
+
+/* .recs_wrapper.plp-cards__items li {
+          text-align: center;
+      } */
+
+.button--transactional {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  color: #333333;
+  padding-left: 1.25rem;
+  text-decoration: none;
+}
+
+.button--transactional:hover {
+  text-decoration: none;
+}
+
+/* .button--transactional::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0a0b09;
+    border: 1px solid #919191;
+    background-color: #fff;
+    vertical-align: middle;
+  }*/
+
+.basket-recommendations_T546 .button--transactional.active {
+  color: #0a0b09;
+}
+
+.basket-recommendations_T546 .button--transactional.active::before {
+  /* content: "✓"; */
+  background-image: url(https://www.dyson.co.uk/etc.clientlibs/dyson/clientlibs/clientlib-head/resources/images/sprite/sprite.png);
+  background-position: 0 -1904px;
+  height: 2rem;
+  width: 2rem;
+  /* font-weight: bold;
+          line-height: 1.75rem;
+          text-align: center;
+          font-size: 1.5rem; */
+  border: 2px solid #0a0b09;
+}
+
+.at_recs_card_T546.plp-cards__item.js-plp-cards-item.active
+  .plp-cards__image-container {
+  border: 2px solid #0a0b09;
+  border-bottom: none;
+}
+
+.at_recs_card_T546.plp-cards__item.js-plp-cards-item.active
+  .plp-cards__text-container {
+  border-left: 2px solid #0a0b09;
+  border-right: 2px solid #0a0b09;
+}
+
+.at_recs_card_T546.plp-cards__item.js-plp-cards-item.active
+  .plp-cards__bottom-container {
+  border: 2px solid #0a0b09;
+  border-top: none;
+}
+
+@media screen and (max-width: 767px) {
+  .basket-recommendations_T546 .plp-cards__button-container {
+    margin-top: 1rem;
+  }
+
+  .basket-recommendations_T546 {
+    max-width: 100%;
+  }
+
+  .basket-recommendations_T546 .text__heading.h2 {
+    padding-left: 1.25rem;
+  }
+
+  .basket-recommendations_T546 .plp-cards__description {
+    min-height: 80px;
+  }
+
+  .button--transactional {
+    padding-left: 1rem;
+  }
+
+  .basket-recommendations_T546 .recs-container_T546 {
+    margin-left: 1.25rem;
+  }
+
+  .basket-recommendations_T546 .plp-cards__text-container {
+    padding-bottom: 0;
+  }
+}
+
+.basket-body__summary--container {
+  justify-content: flex-start !important;
+}
+
+@media screen and (max-width: 767px) {
+  .tooltip {
+    display: inline-block;
+    border-bottom: none;
+    cursor: auto;
+    max-width: 220px;
+    min-width: 216px;
+    background-color: #ffffff;
+    color: black;
+    position: absolute;
+    z-index: 3141599;
+    top: 0px;
+    right: -30px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 0 2px 10px);
+    height: auto;
+  }
+
+  .tooltip:after {
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    margin-top: 4px;
+    border-style: solid;
+    top: calc(100% - 4px);
+    right: 29% !important;
+    transform: rotate(180deg);
+    border-color: transparent transparent #fff transparent !important;
+  }
+
+  .hide-tooltip {
+    display: none !important;
+  }
+
+  .toolTip-icon-size {
+    width: 20px;
+    height: 20px;
+  }
+
+  .toolTip-icon {
+    border: 3px solid #000;
+    border-radius: 50%;
+    flex: 1;
+    margin: 0 auto;
+    margin-right: 0;
+    min-width: 21px;
+    padding: 0;
+    width: 21px;
+    margin-left: 2px;
+    max-width: 21px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff !important;
+    outline: none !important;
+  }
+
+  .tooltipclosebutton {
+    float: right;
+    background: white;
+    border: 1px solid white;
+    align-self: flex-start;
+  }
+
+  .activeToolTip {
+    z-index: 6 !important;
+  }
+
+  .close-tooltip {
+    display: inline-block;
+    height: 10px !important;
+    width: 10px !important;
+  }
+
+  .tooltip-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  .tooltip-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .tooltip-container .plp-cards__description {
+    padding: 16px 0 16px 16px;
+  }
+
+  .tooltip-container .tooltipclosebutton {
+    padding: 8px 8px 0 8px;
+  }
+
+  .basket-recommendations_T546 .plp-cards__name {
+    flex: 1;
+  }
+
+  .tooltip-block .toolTip-icon {
+    flex: 1;
+  }
+
+  .top-spacing {
+    margin-top: 32px;
+  }
+
+  .trade-up-item__close {
+    top: 4rem;
+  }
+}
+
+.button[disabled] {
+  pointer-events: none;
+  cursor: default;
+}
+
+/*added for new badges*/
+
+.custom-badge.GB-Purple {
+  color: #ffffff;
+  background-color: #522a86;
+}
