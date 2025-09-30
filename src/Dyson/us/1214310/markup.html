@@ -1,0 +1,618 @@
+<style>
+    .row.slider-row {
+        position: relative;
+    }
+
+    .promotional-hero__product--messages .list strong {
+        color: red;
+    }
+
+    /* sticky state toggled by JS */
+    .row.slider-row.is-sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--sticky-offset, 0px);
+        z-index: 1000;
+        background: #fff;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .in-page-nav-container__heading.js-faq-keypress {
+        scroll-margin-top: 200px;
+    }
+
+    .in-page-nav {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .promotional-hero .js-responsive-image.fluidimage.loaded {
+        width: 165px;
+        height: 248px;
+    }
+
+    .in-page-nav__headingblock {
+        display: none;
+    }
+
+    .in-page-nav__txt {
+        visibility: visible !important;
+        font-size: 14px !important;
+        color: #8F8F8F !important;
+    }
+
+    h2.in-page-nav-container__heading.js-faq-keypress {
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .in-page-nav__link.active .in-page-nav__txt {
+        text-decoration: none !important;
+        color: black !important;
+    }
+
+    .col-xs-12.in-page-nav-container__col,
+    .in-page-nav-container__wrapper {
+        padding: 0 !important;
+    }
+
+    .row.promotional-hero__row {
+        width: 100% !important;
+    }
+
+    li.in-page-nav__list.currentVisibleItem .in-page-nav__txt {
+
+        opacity: 1;
+        color: black;
+    }
+
+    li.in-page-nav__list.currentVisibleItem {
+
+        opacity: 1;
+        color: black;
+    }
+
+    li.in-page-nav__list.currentVisibleItem button:focus,
+    li.in-page-nav__list .js-in-page-nav-link.active:focus,
+    li.in-page-nav__list.currentVisibleItem button:focus-visible {
+        outline: none !important;
+    }
+
+    .in-page-nav-slider__prev {
+        border-right: none !important;
+    }
+
+    .in-page-nav-slider__next {
+        border-left: none !important;
+    }
+
+
+    .in-page-nav__items .in-page-nav__list:nth-child(1):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(2):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(3):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(4):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(5):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(6):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(7):hover img,
+    .in-page-nav__items .in-page-nav__list:nth-child(8):hover img {
+        opacity: 1 !important;
+        cursor: pointer;
+    }
+
+    .in-page-nav__items .in-page-nav__list:nth-child(1):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(2):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(3):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(4):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(5):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(6):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(7):hover .in-page-nav__txt,
+    .in-page-nav__items .in-page-nav__list:nth-child(8):hover .in-page-nav__txt {
+        color: black !important;
+    }
+
+    .in-page-nav__link {
+        cursor: pointer;
+        padding-left: 0.75rem !important;
+    }
+
+    .promotional-hero__price .promotional-hero__prices {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .js-promotional-hero-install-message {
+        order: 2;
+    }
+
+    @media screen and (max-width: 500px) {
+        .in-page-nav__link.js-in-page-nav-link img {
+            display: none;
+        }
+
+        .in-page-nav__block {
+            scrollbar-width: none;
+            padding-bottom: 0 !important;
+        }
+
+        .in-page-nav__list:has(>.in-page-nav__link.js-in-page-nav-link.active) .in-page-nav__txt {
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            font-size: 14px;
+            min-width: auto !important
+        }
+
+        .promotional-hero .js-responsive-image.fluidimage.loaded {
+            width: 149px;
+            height: 224px;
+        }
+
+        h2.in-page-nav-container__heading.js-faq-keypress {
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        .in-page-nav__items {
+            white-space: nowrap;
+        }
+
+        .js-promotional-hero-item.js-swatch-item-hook {
+            padding: 0 !important;
+        }
+
+        .in-page-nav__link,
+        .in-page-nav__txt {
+            min-width: unset !important;
+        }
+
+        .in-page-nav-slider__next,
+        .in-page-nav-slider__prev {
+            top: 3px !important;
+        }
+
+        .in-page-nav__wrapper {
+            padding-top: 1rem !important;
+            padding-bottom: 0.25rem !important;
+        }
+
+        .promotional-hero-item__instalment-multi-container {
+            display: flex;
+        }
+
+        .instalment-multi-container__description {
+            margin-top: 12px
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .in-page-nav__wrapper {
+            padding-top: 0 !important;
+        }
+
+        .in-page-nav__link.js-in-page-nav-link img {
+            width: 38px;
+            height: 38px;
+        }
+
+        .in-page-nav__link.js-in-page-nav-link {
+            background: none !important;
+            min-width: auto !important;
+        }
+
+        .js-promotional-hero-item {
+            width: 50% !important;
+        }
+
+        .in-page-nav__items {
+            justify-content: center !important;
+        }
+
+        .in-page-nav__block {
+            padding-top: 1.625rem;
+        }
+
+        .promotional-hero__product--messages.js-promotional-hero-promo-message {
+            width: calc(100% + 75%);
+        }
+
+        .js-promotional-hero-item.js-swatch-item-hook {
+            width: 50% !important;
+        }
+
+        .js-promotional-hero-button.js-swatch-item-cta-hook {
+            width: calc(100% + 65%);
+        }
+
+        .in-page-nav__items .in-page-nav__list:nth-child(2) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(3) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(4) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(5) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(6) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(7) img,
+        .in-page-nav__items .in-page-nav__list:nth-child(8) img {
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        #Lighting .in-page-nav-container__heading.js-faq-keypress,
+        [id="Cordless vacuums "] .in-page-nav-container__heading.js-faq-keypress,
+        [id="Hair care "] .in-page-nav-container__heading.js-faq-keypress,
+        [id="Air treatment"] .in-page-nav-container__heading.js-faq-keypress,
+        [id="Upright vacuums"] .in-page-nav-container__heading.js-faq-keypress,
+        [id="Headphones"] .in-page-nav-container__heading.js-faq-keypress,
+        [id="Featured deals "] .in-page-nav-container__heading.js-faq-keypress {
+            scroll-margin-top: calc(var(--header-height, 0px) + 300px);
+        }
+
+        .in-page-nav__block.in-page-nav__items-wrapper {
+            padding-top: 1.2rem !important;
+            padding-bottom: 1.2rem !important;
+        }
+
+    }
+/*
+    [data-analytics-action-title='dyson deals'] .rich-content__text-section {
+        background: black;
+    }
+
+    [data-analytics-action-title='dyson deals'] .rich-content__text-section .slide-block--one {
+        text-align: left;
+    }
+
+    [data-analytics-action-title='dyson deals'] .rich-content__text-section .slide-block--one .rich-content__rich-text.h5,
+    [data-analytics-action-title='dyson deals'] .rich-content__text-section .slide-block--one .typography-body {
+        color: white;
+    }
+  */
+</style>
+<script>
+    (function(w, d) {
+        var logInfo = function(str) {
+            console.info(str)
+        }
+        var Flickerlessly = w.Flickerlessly || {};
+        ! function(t) {
+            "use strict";
+            var e = function(t, e, n, o) {
+                    var a = "atNodeInserted" + t,
+                        i = [],
+                        s = ["", "-moz-", "-webkit-", "-ms-", "-o-"];
+                    s.forEach(function(t, e) {
+                        i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}")
+                    }), i.push(e + "{"), s.forEach(function(t, e) {
+                        i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";")
+                    }), i.push("}");
+                    var r = d.getElementsByTagName("head")[0];
+                    if (r) {
+                        var c = d.createElement("style");
+                        c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(d.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild)
+                    }
+                    var l = function(t) {
+                        if (t.animationName === a && "object" == typeof t.target) {
+                            var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success");
+                            w.console && logInfo("('" + e + "') ready! Execute: " + i, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : w.console
+                        }
+                    };
+                    ["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function(t, e) {
+                        d.addEventListener(t, l, !1)
+                    })
+                },
+                n = Math.floor(1e3 * Math.random() + 1);
+            t.onReady = function() {
+                for (var t = 0; t < arguments.length; t++) {
+                    var o = arguments[t],
+                        a = o.selector,
+                        i = o.success || null,
+                        s = o.persist || !1;
+                    e(n++, a, i, s)
+                }
+            }
+        }(Flickerlessly);
+
+        Flickerlessly.onReady({
+            selector: '.search-list.js-search-results-list',
+            success: function(el) {
+                console.log(window.location.href)
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(1)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_All_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Featured deals "] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(1) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(1)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+                    if (window.s) {
+                        s.eVar56 = "All Deals | EXP-B";
+                        s.tl();
+                    }
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(2)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Best_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Featured deals "] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView();
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(2) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(2)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+                    if (window.s) {
+                        s.eVar56 = "Featured deals | EXP-B";
+                        s.tl();
+                    }
+
+                });
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(3)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Floorcare_Selected.png');
+                el.addEventListener('click', function() {
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(3) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(3)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+                    setTimeout(function() {
+                        document.querySelector('[id ="Cordless vacuums "] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, 500);
+                    if (window.s) {
+                        s.eVar56 = "Cordless vacuums | EXP-B";
+                        s.tl();
+                    }
+
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(4)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Haircare_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Hair care "] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(4) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(4)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+                    if (window.s) {
+                        s.eVar56 = "Hair care | EXP-B";
+                        s.tl();
+                    }
+
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(5)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_EC_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Air treatment"] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(5) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(5)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    })
+                    if (window.s) {
+                        s.eVar56 = "Air treatment | EXP-B";
+                        s.tl();
+                    }
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(6)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Corded_Selected.png')
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Upright vacuums"] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(6) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(6)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+                    if (window.s) {
+                        s.eVar56 = "Upright vacuums | EXP-B";
+                        s.tl();
+                    }
+
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(7)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Headphone_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Headphones"] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(7) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(7)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+
+                    if (window.s) {
+                        s.eVar56 = "Headphones | EXP-B";
+                        s.tl();
+                    }
+                })
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav__items .in-page-nav__list:nth-child(8)',
+            success: function(el) {
+                el.querySelector('img').setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/deals-nav/Icon_Lighting_Selected.png');
+                el.addEventListener('click', function() {
+                    setTimeout(function() {
+                        document.querySelector('[id ="Lighting"] .in-page-nav-container__heading.js-faq-keypress').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 500);
+
+                    document.querySelector('.in-page-nav__items .in-page-nav__list:nth-child(8) img').style.opacity = 1;
+                    document.querySelectorAll('.in-page-nav__items .in-page-nav__list:not(.in-page-nav__items .in-page-nav__list:nth-child(8)) img').forEach(function(el) {
+                        el.style.opacity = "0.4";
+                    });
+
+                    if (window.s) {
+                        s.eVar56 = "Lighting | EXP-B";
+                        s.tl();
+                    }
+                })
+            },
+            persist: true
+        }, {
+            selector: '.row.slider-row',
+            success: function(el) {
+                const nav = document.querySelector('.row.slider-row');
+                if (!nav) return;
+
+                const header = document.querySelector('.site-header, header[role="banner"]');
+
+                let UP_OFFSET = document.querySelector('.aem-Grid .header.js-header').offsetHeight; // px gap from top when scrolling UP
+
+                /*  if(!document.querySelector('.language-banner.theme--dark .language-banner__content')){
+                	UP_OFFSET = document.querySelector('.aem-Grid .header.js-header').offsetHeight - document.querySelector('.language-banner.theme--dark').offsetHeight;
+                  }*/
+
+                /* if(window.innerWidth < 500) {
+					  UP_OFFSET = 112;
+				  }*/
+
+                const getHeaderOffset = () => header ? header.getBoundingClientRect().height : 0;
+
+                // spacer prevents layout jump when nav becomes fixed
+                const spacer = document.createElement('div');
+                spacer.style.display = 'none';
+                spacer.style.height = nav.offsetHeight + 'px';
+                nav.parentNode.insertBefore(spacer, nav);
+
+                // sentinel marks the original position (doesn't move)
+                const sentinel = document.createElement('div');
+                nav.parentNode.insertBefore(sentinel, nav);
+
+                let lastY = window.scrollY;
+                let headerOffset = getHeaderOffset();
+                let triggerTop = sentinel.getBoundingClientRect().top + window.scrollY;
+
+                function stick(topPx) {
+                    if (!nav.classList.contains('is-sticky')) {
+                        nav.classList.add('is-sticky');
+                        spacer.style.display = 'block';
+                    }
+                    nav.style.top = topPx + 'px';
+                }
+
+                function unstick() {
+                    if (nav.classList.contains('is-sticky')) {
+                        nav.classList.remove('is-sticky');
+                        spacer.style.display = 'none';
+                        nav.style.top = '';
+                    }
+                }
+
+                function onScroll() {
+                    if (!document.querySelector('.language-banner.theme--dark .language-banner__content')) {
+                        UP_OFFSET = document.querySelector('.aem-Grid .header.js-header').offsetHeight - document.querySelector('.language-banner.theme--dark').offsetHeight;
+                    }
+                    const y = window.scrollY;
+                    const goingDown = y > lastY;
+
+                    if (y > triggerTop) {
+                        const top = headerOffset + (goingDown ? 0 : UP_OFFSET);
+                        stick(top);
+                    } else {
+                        // back to original spot -> remove sticky
+                        unstick();
+                    }
+
+                    lastY = y;
+                }
+
+                function recalc() {
+                    spacer.style.height = nav.offsetHeight + 'px';
+                    headerOffset = getHeaderOffset();
+                    triggerTop = sentinel.getBoundingClientRect().top + window.scrollY;
+                    onScroll();
+                }
+
+                window.addEventListener('scroll', onScroll, {
+                    passive: true
+                });
+                window.addEventListener('resize', recalc);
+                window.addEventListener('load', recalc);
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav-slider__next.js-paddle-next',
+            success: function(el) {
+                /*document.querySelector('.in-page-nav-slider__next.js-paddle-next').addEventListener('click', function(){
+				setTimeout(function(){
+					   document.querySelector('.in-page-nav__list.currentVisibleItem button').click()
+				},500)
+			})*/
+            },
+            persist: true
+        }, {
+            selector: '.in-page-nav-slider__prev.js-paddle-prev',
+            success: function(el) {
+                /*document.querySelector('.in-page-nav-slider__prev.js-paddle-prev').addEventListener('click', function(){
+				setTimeout(function(){
+					   document.querySelector('.in-page-nav__list.currentVisibleItem button').click()
+				},500)
+			})*/
+            },
+            persist: true
+        }, {
+            selector: '.search-faceat-results-container',
+            success: function(el) {},
+            persist: true
+        });
+    })(window, document);
+</script>

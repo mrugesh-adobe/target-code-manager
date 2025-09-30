@@ -808,17 +808,17 @@
                             }
                   }    
               }
-  
+
               if(_satellite.getVar('Cfg: Site Language') == "ar"){
                 el.querySelector(".at_recs_price.trade-up-item__regional").style.paddingRight = "15px";
                 el.querySelector(".custom-badge-placement-mobile").style.right = "10px";
                 el.querySelector(".custom-badge-placement-mobile").style.left = "50%";
               }
-  
+
               if(el.querySelector(".custom-badge-placement-mobile").innerText == ""){
                   el.querySelector(".custom-badge-placement-mobile").style.background = "none"
               }
-  
+
               el.querySelector(".button--large").innerHTML = window.see_more;
               setTimeout(function () {
                   matchHeight();
@@ -831,6 +831,3 @@
   
   
   })(window, document);
-  
-
-  
