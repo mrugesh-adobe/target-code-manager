@@ -1,10 +1,21 @@
 <style>
-    .row.slider-row {
-        position: relative;
+    .promotional-hero__card-row .promotional-hero__description-container {
+        height: auto;
+        display: none;
     }
 
-    .promotional-hero__product--messages .list strong {
-        color: red;
+    .promotional-hero__card-row .js-promotional-hero-content {
+        height: auto !important;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .promotional-hero__content {
+            flex: 0 1 auto !important;
+        }
+    }
+
+    .row.slider-row {
+        position: relative;
     }
 
     /* sticky state toggled by JS */
@@ -206,9 +217,9 @@
             min-width: auto !important;
         }
 
-        .js-promotional-hero-item {
+        /* .js-promotional-hero-item {
             width: 50% !important;
-        }
+        } */
 
         .in-page-nav__items {
             justify-content: center !important;
@@ -218,17 +229,13 @@
             padding-top: 1.625rem;
         }
 
-        .promotional-hero__product--messages.js-promotional-hero-promo-message {
-            width: calc(100% + 75%);
-        }
-
-        .js-promotional-hero-item.js-swatch-item-hook {
+        /* .js-promotional-hero-item.js-swatch-item-hook {
             width: 50% !important;
-        }
+        } */
 
-        .js-promotional-hero-button.js-swatch-item-cta-hook {
+        /* .js-promotional-hero-button.js-swatch-item-cta-hook {
             width: calc(100% + 65%);
-        }
+        } */
 
         .in-page-nav__items .in-page-nav__list:nth-child(2) img,
         .in-page-nav__items .in-page-nav__list:nth-child(3) img,
