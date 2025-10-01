@@ -1,4 +1,5 @@
 <style>
+    /* START: To hide bullet points */
     .promotional-hero__card-row .promotional-hero__description-container {
         height: auto;
         display: none;
@@ -13,6 +14,8 @@
             flex: 0 1 auto !important;
         }
     }
+
+    /* END: To hide bullet points */
 
     .row.slider-row {
         position: relative;
@@ -229,11 +232,15 @@
             padding-top: 1.625rem;
         }
 
-        /* .js-promotional-hero-item.js-swatch-item-hook {
-            width: 50% !important;
-        } */
+        /* .promotional-hero__product--messages.js-promotional-hero-promo-message {
+            width: calc(100% + 75%);
+        } 
 
-        /* .js-promotional-hero-button.js-swatch-item-cta-hook {
+        .js-promotional-hero-item.js-swatch-item-hook {
+            width: 50% !important;
+        }
+
+        .js-promotional-hero-button.js-swatch-item-cta-hook {
             width: calc(100% + 65%);
         } */
 
@@ -264,7 +271,8 @@
         }
 
     }
-/*
+
+    /*
     [data-analytics-action-title='dyson deals'] .rich-content__text-section {
         background: black;
     }
