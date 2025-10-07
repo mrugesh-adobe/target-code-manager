@@ -1,0 +1,501 @@
+<div __recsClickTrackIdPlaceholder__><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style type="text/css" id='recs_style_1'>
+
+#attentive_overlay{
+  z-index:2147483588!important;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card .rich-content__button-container {
+    width:auto!important;
+  }
+  .card .at-thumbnail {
+    width: 94px!important;
+  }
+}
+
+.card-header {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  font-family: DysonFutura, sans-serif;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #000;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 2147483589;
+}
+.card img {
+  width: 99px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.card-content {
+  flex-grow: 0;
+  color: white;
+}
+
+/*
+.card .rich-content__button-container .button{
+  display: inline-block;
+}
+*/
+
+@media only screen and (max-width: 767px) {
+    .card .rich-content__button {
+        width: auto!important; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .card-header {
+    font-size: 1rem;
+  }
+  .card-content .card-title {
+    font-size: 0.875rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.card-title {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  font-family: DysonFutura, sans-serif;
+  min-height:48px;
+}
+
+.card-btn {
+  background: #ddd9d9;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 15px 25px;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.card-btn:hover {
+  background: #b5b3b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  width:40px;
+  height:40px;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.close-btn.at-754 img {
+  width: 14px;
+  filter: brightness(5);
+  display: block;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    max-width: 480px;
+  }
+  .recs-container-at-754 {
+    float: left;
+  }
+
+  /* @keyframes slideInLeft {
+				from {
+					opacity: 0;
+					transform: translateX(-100%);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			} */
+}
+
+.container-par-parbase.recs-container-at-754 {
+  visibility: hidden;
+}
+
+	 
+	
+</style>
+  <div class="container-par-parbase recs-container-at-754">
+     #if($entities.size() > 0)
+         <div class="container-fluid-at-754 container-fluid--upto-lg pt-lg-0 pt-xl-0 pb-lg-0 pb-xl-0 pt-md-0 pb-md-0 pt-xs-0 pt-sm-0 pb-xs-0 pb-sm-0">
+	 #set($count = 1)
+	 #set($base_url="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/SKU.png")
+	 #foreach($e in $entities)
+	 #set($lname = $e.localName)
+	 #set($stockStatus = $e.stockStatus)
+	 #set($id = $e.id)
+		#if($count < 2)
+			#set($count = $count + 1)
+	#if($stockStatus != "H")
+	 <div class="card">
+	 <a class="at-card-img-at-754" href="$e.pageURL" >
+	 <span class="image_container-at-754">
+                                            #set($img_url=$base_url.replace("SKU", $id.replace("GB", "").replace("FR", "").replace("US", "").replace("CA", "").replace("DE", "").replace("CH", "").replace("ES", "").replace("IT", "").replace("BE", "").replace("PT", "").replace("DK", "").replace("NO", "").replace("SE", "").replace("FI", "").replace("NL", "").replace("IE", "").replace("AT", "").replace("JP", "")))
+                                             <img alt="" src="$img_url" class="at-thumbnail"/>
+                                         </span>
+										 </a>
+    <div class="card-content">
+	 <div class="card-header at-754">Continue where you left off</div>
+        <div class="card-title">$lname</div>
+        <div class="rich-content__button-container" style="margin-top: 0.5rem;margin-bottom: 0rem;"><a href="$e.pageURL" class="button rich-content__button theme-xs--dark theme-sm--dark theme-md--dark theme-lg--dark theme-xl--dark light at-754" data-di-id="di-id-88526465-52e5c6f7
+<span class="rich-content__button-text at-754">Continue here</span></a></div>
+
+    </div>
+    <a class="close-btn at-754" aria-label="close" href="#" ><img alt="" src="https://cimage.adobe.com/dyson/images/Close-Icon.png" class="at-thumbnail-cross"/></a>
+	</div>
+	#end
+	#end
+#end
+             
+         </div>
+     #end
+     </div>
+	 
+	 <script type="text/javascript">
+    /*!
+     * flickerlessly.js v0.2.1
+     * @author Vadym Ustymenko
+     * @copyright 1996-2019. Adobe Systems Incorporated. All rights reserved.
+     * @usage: Flickerlessly.onReady({selector:'.a, .b', success:function(el, log){}},
+     *                              {selector:'.c', success:myCallbackFn, persist:true });
+     */
+	
+	// update text for continue shopping
+	
+		var continueShoppingText = 'Continue where you left off',
+		continueShoppingButtonText = 'Continue here',
+		continueShoppingButtonClick = 'continue-shoppingcta',
+		ctaTracking = "continue-shopping-popup",
+		continueShoppingClose = 'Continue-shopping-close-button',
+		continueShoppingImage = 'Continue-shopping-image';
+		
+
+  if (location.host.indexOf('.de') > -1) {
+		continueShoppingText = 'Weitermachen, wo du aufgehört hast';
+		continueShoppingButtonText = 'Zum Produkt';
+		ctaTracking = "continue-shopping-popup";
+		continueShoppingButtonClick = 'continue-shoppingcta',
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.ie') > -1) {
+	  continueShoppingText = 'Continue where you left off';
+		continueShoppingButtonText = 'Continue here';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.at') > -1) {
+		continueShoppingText = 'Weitermachen, wo du aufgehört hast';
+		continueShoppingButtonText = 'Zum Produkt';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.es') > -1) {
+    continueShoppingText = 'Continúa desde donde lo dejaste';
+		continueShoppingButtonText = 'Continúa desde aqui';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.nl') > -1) {
+    continueShoppingText = 'Ga verder waar je was gebleven';
+		continueShoppingButtonText = 'Ga hier verder';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.fr') > -1) {
+    continueShoppingText = 'Reprenez là où vous en étiez:';
+		continueShoppingButtonText = 'Continuer votre shopping';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.it') > -1) {
+   continueShoppingText = 'Riprendi da qui';
+		continueShoppingButtonText = 'Continua qui';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.pathname.indexOf('/nl_be/') > -1) {
+   continueShoppingText = 'Ga verder waar je was gebleven';
+		continueShoppingButtonText = 'Ga hier verder';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.pathname.indexOf('/fr_be/') > -1) {
+    continueShoppingText = 'Reprenez là où vous en étiez:';
+		continueShoppingButtonText = 'Continuer votre shopping';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.pt') > -1) {
+    continueShoppingText = 'Retome desde onde ficou';
+		continueShoppingButtonText = 'Continue aqui';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.se') > -1) {
+   continueShoppingText = 'Fortsätt där du slutade';
+		continueShoppingButtonText = 'Fortsätt här';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.dk') > -1) {
+   continueShoppingText = 'Fortsæt hvor du slap';
+		continueShoppingButtonText = 'Fortsæt her';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.fi') > -1) {
+    continueShoppingText = 'Jatka siitä, mihin jäit';
+		continueShoppingButtonText = 'Jatka tästä';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.no') > -1) {
+   continueShoppingText = 'Fortsett der du slapp';
+		continueShoppingButtonText = 'Fortsett her';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  }
+  else if (location.host.indexOf('.ch') > -1) {
+    _dtag = 'ch';
+    if (document.documentElement.lang == 'de-CH') {
+ continueShoppingText = 'Weitermachen, wo du aufgehört hast';
+		continueShoppingButtonText = 'Zum Produkt';
+		ctaTracking = "continue-shopping-popup";
+		continueShoppingButtonClick = 'continue-shoppingcta',
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+    } else if (document.documentElement.lang == 'it-CH') {
+     continueShoppingText = 'Riprendi da dove avevi lasciato';
+		continueShoppingButtonText = 'Continua qui';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+    } else if (document.documentElement.lang == 'fr-CH') {
+     continueShoppingText = 'Reprenez là où vous en étiez:';
+		continueShoppingButtonText = 'Continuer votre shopping';
+		ctaTracking = 'continue-shopping-popup';
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+    }
+  } else if (location.host.indexOf('.uk') > -1) {
+   continueShoppingText = 'Continue where you left off';
+		continueShoppingButtonText = 'Continue here';
+		ctaTracking = "continue-shopping-popup";
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+  } else if (location.host.indexOf('.ca') > -1) {
+    _dtag = 'ca';
+  } else if (location.host.indexOf('.jp') > -1) {
+     continueShoppingText = '';
+		continueShoppingButtonText = '';
+		ctaTracking = '';
+		continueShoppingButtonClick = '';
+		continueShoppingClose = '';
+		continueShoppingImage = '';
+  } else if (location.host.indexOf('.be') > -1) {
+    continueShoppingText = '';
+		continueShoppingButtonText = '';
+		ctaTracking = '';
+		continueShoppingButtonClick = '';
+		continueShoppingClose = '';
+		continueShoppingImage = '';
+  }
+
+  if (location.host.indexOf('.ca') > -1) {
+    if (location.pathname.indexOf('/en') > -1) {
+     continueShoppingText = 'Continue where you left off';
+		continueShoppingButtonText = 'Continue here';
+		ctaTracking = "continue-shopping-popup";
+		continueShoppingButtonClick = 'continue-shoppingcta';
+		continueShoppingClose = 'Continue-shopping-close-button-test';
+		continueShoppingImage = 'Continue-shopping-image';
+    } else if (location.pathname.indexOf('/fr') > -1) {
+       continueShoppingText = '';
+		continueShoppingButtonText = '';
+		ctaTracking = '';
+		continueShoppingButtonClick = '';
+		continueShoppingClose = '';
+    }
+  }
+	
+
+	
+	if(sessionStorage.getItem("atBanner") && sessionStorage.getItem("atBanner")=="true"){
+			document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+		}
+    (function (w, d) {
+        var logInfo = function (str) {
+        }
+        var Flickerlessly = w.Flickerlessly || {}; !function (t) { "use strict"; var e = function (t, e, n, o) { var a = "atNodeInserted" + t, i = [], s = ["", "-moz-", "-webkit-", "-ms-", "-o-"]; s.forEach(function (t, e) { i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}") }), i.push(e + "{"), s.forEach(function (t, e) { i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";") }), i.push("}"); var r = d.getElementsByTagName("head")[0]; if (r) { var c = d.createElement("style"); c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(d.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild) } var l = function (t) { if (t.animationName === a && "object" == typeof t.target) { var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success"); w.console && logInfo("('" + e + "') ready! Execute: " + i, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : w.console && console.error("Cannot Callback", i, n) } };["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function (t, e) { d.addEventListener(t, l, !1) }) }, n = Math.floor(1e3 * Math.random() + 1); t.onReady = function () { for (var t = 0; t < arguments.length; t++) { var o = arguments[t], a = o.selector, i = o.success || null, s = o.persist || !1; e(n++, a, i, s) } } }(Flickerlessly);
+
+/* change: reviews added as a selector */
+
+        Flickerlessly.onReady(
+           
+			{
+                selector: ".close-btn.at-754",
+                success: function (el) {
+                    el.addEventListener('click', function(e){
+						e.preventDefault();
+						if (window.s) {
+									s.eVar56 = continueShoppingClose;
+									s.tl();
+								}
+						sessionStorage.setItem("atBanner", "true");
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none';
+					})
+                },
+                persist: true
+            },
+			{
+                selector: ".button.rich-content__button.at-754",
+                success: function (el) {
+                    el.addEventListener('click', function(e){
+						let prdName = document.querySelector('.container-fluid-at-754 .card-title').innerHTML;
+						if (window.s) {
+									s.eVar56 = continueShoppingButtonClick + '~' + prdName;
+									s.tl();
+								}
+						sessionStorage.setItem("atBanner", "true");
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+					})
+                },
+                persist: true
+            },
+			{
+                selector: ".at-card-img-at-754",
+                success: function (el) {
+                    el.addEventListener('click', function(e){
+						let prdName = document.querySelector('.container-fluid-at-754 .card-title').innerHTML;
+						if (window.s) {
+									s.eVar56 = continueShoppingImage + '~' + prdName;
+									s.tl();
+								};
+						sessionStorage.setItem("atBanner", "true");
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+					})
+                },
+                persist: true
+            },
+            
+			{
+				selector: 'div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-blue',
+                success: function (el) {
+					if(document.querySelector('div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-blue .stickypromo-banner__container')!=null) {
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'none'
+						 el.addEventListener('click', function(e){
+							document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'block'
+							document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'visible'
+						})
+					}
+                },
+                persist: true
+            },
+			{
+				selector: 'div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-black',
+                success: function (el) {
+					if(document.querySelector('div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-black .stickypromo-banner__container') !=null){
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+						document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'none'
+						 el.addEventListener('click', function(e){
+							document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'block'
+							document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'visible'
+						})
+					}
+                },
+                persist: true
+            },
+			{
+                selector: ".recs-container-at-754",
+                success: function (el) {
+					setTimeout(function(){
+						if(document.querySelector('div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-blue .stickypromo-banner__container') ==null && document.querySelector('div.js-stickyPromoBanner.stickypromo-banner.stickypromo-banner__theme-black .stickypromo-banner__container')==null){
+							if((sessionStorage.getItem("atBanner") && sessionStorage.getItem("atBanner")=="true") || dataLayer.pageInfo.pageType.includes('product')){
+							//document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
+							//document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'none'
+							} else {
+								if (window.s) {
+									s.eVar56 = ctaTracking;
+									s.tl();
+								}
+								document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'block'
+								document.querySelector('.container-par-parbase.recs-container-at-754').style.visibility = 'visible'
+								sessionStorage.setItem("atBanner", "true");
+							}
+						}
+						document.querySelector('.card-header.at-754').innerHTML = continueShoppingText;
+					document.querySelector('.button.rich-content__button.at-754').innerHTML = continueShoppingButtonText;
+					
+					},2000)
+					
+					
+                },
+                persist: false
+            },
+			);
+       
+
+    })(window, document);
+</script></div>
