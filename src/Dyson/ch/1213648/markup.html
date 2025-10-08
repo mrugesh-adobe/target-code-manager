@@ -165,11 +165,24 @@
 	 #set($lname = $e.localName)
 	 #set($stockStatus = $e.stockStatus)
 	 #set($id = $e.id)
+	 
+	 ## Locale-aware URL logic
+	 #set($lang="${mbox.page_lang}")
+	 #if($lang != '')
+	 #set($newURL = 'pageURL_'+$lang)
+	 #set($pageURL = $e.get($newURL))
+	 #else
+	 #set($pageURL = $e.pageURL)
+	 #end
+	 
+	 #if(!$pageURL || $pageURL == "")
+	 #set($pageURL=$e.pageURL)
+	 #end
 		#if($count < 2)
 			#set($count = $count + 1)
 	#if($stockStatus != "H")
 	 <div class="card">
-	 <a class="at-card-img-at-754" href="$e.pageURL" >
+	 <a class="at-card-img-at-754" href="$pageURL" >
 	 <span class="image_container-at-754">
                                             #set($img_url=$base_url.replace("SKU", $id.replace("GB", "").replace("FR", "").replace("US", "").replace("CA", "").replace("DE", "").replace("CH", "").replace("ES", "").replace("IT", "").replace("BE", "").replace("PT", "").replace("DK", "").replace("NO", "").replace("SE", "").replace("FI", "").replace("NL", "").replace("IE", "").replace("AT", "").replace("JP", "")))
                                              <img alt="" src="$img_url" class="at-thumbnail"/>
@@ -178,7 +191,7 @@
     <div class="card-content">
 	 <div class="card-header at-754">Continue where you left off</div>
         <div class="card-title">$lname</div>
-        <div class="rich-content__button-container" style="margin-top: 0.5rem;margin-bottom: 0rem;"><a href="$e.pageURL" class="button rich-content__button theme-xs--dark theme-sm--dark theme-md--dark theme-lg--dark theme-xl--dark light at-754" data-di-id="di-id-88526465-52e5c6f7
+        <div class="rich-content__button-container" style="margin-top: 0.5rem;margin-bottom: 0rem;"><a href="$pageURL" class="button rich-content__button theme-xs--dark theme-sm--dark theme-md--dark theme-lg--dark theme-xl--dark light at-754" data-di-id="di-id-88526465-52e5c6f7
 <span class="rich-content__button-text at-754">Continue here</span></a></div>
 
     </div>
