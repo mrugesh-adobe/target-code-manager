@@ -234,7 +234,7 @@
 
     @media screen and (max-width: 767px) {
         .at_recs_card-at-641 {
-           /* display: flex; */
+           // display: flex;
         }
 
         .recs-container-at-641 {
@@ -291,7 +291,7 @@
 
     @media screen and (max-width: 767px) {
         .at_recs_card-at-641 {
-            /* display: flex; */
+            //display: flex;
         }
 
         .recs-container-at-641 {
@@ -656,7 +656,7 @@
 			}
 			
 			.at-641-mobile.row {
-				margin-left: 25px;
+				padding-left: 25px;
 				width: 100% !important;
 				margin-right: 0;
 			}
@@ -757,7 +757,7 @@
 	 }
 	 
 	 .at_recs_card-at-641 .text_section {
-		/* padding: 0 15px 15px 15px; */
+		//padding: 0 15px 15px 15px;
 	 }
 	 
 	 .review_text {
@@ -771,7 +771,7 @@
 		 display: none !important;
 	 }
 	 .recs_wrapper-at-641 .slick-list.draggable .slick-slide.slick-current:nth-child(1) {
-		/* margin-left: 0 !important; */
+		// margin-left: 0 !important;
 	 }
 	 
 	 .recs_wrapper-at-641 .slick-track:after, .slick-track:before {
@@ -897,7 +897,7 @@
                              #set($id = $e.id)
                                 #set($sapDivision = $e.sapDivision)
    
-                                #set($lang="${mbox.page_lang}")
+                                #set($lang="${mbox.site_lang}")
 								#if($lang != '')
 								 #set($newURL = 'pageURL_'+$lang)
 								 #set($pageURL = $e.get($newURL))
@@ -939,9 +939,6 @@
                                 #if($badge.indexOf("none")>-1)
                                     #set($badge="")
                                 #end
-								#if($lang == 'en' && $e.localName !="" )
-								#set($lname = $e.localName)
-								#end
                              #if($count < 11 && $id != '' && $lname.indexOf('Airblade') < 0)
                                  #set($count = $count + 1)
                                  <li class="at-table-column-at-641 col-xs-12 col-md-3 col-lg-3 swiper-slide" data-analytics-action-title="$lname">
@@ -1186,22 +1183,27 @@
         reviewLang = 'Bewertungen';
         oosLocal = ' ';
     } else if (location.host.indexOf('.ie') > -1) {
+        _dtag = 'ie';
+        header_641 = 'Recently viewed',
+        see_more_641 = 'Add to basket',
+        reviewLang = 'reviews',
+        oosLocal = ' - alternative machines available to order now';
     } else if (location.host.indexOf('.at') > -1) {
         _dtag = 'at';
-        header_641 = 'Für dich empfohlene Produkte';
-        see_more_641 = 'Mehr erfahren';
+        header_641 = 'Kürzlich angesehen';
+        see_more_641 = 'In den Warenkorb';
         reviewLang = 'bewertungen';
         oosLocal = ' ';
     } else if (location.host.indexOf('.es') > -1) {
         _dtag = 'es';
-        header_641 = 'Recomendado para ti';
-        see_more_641 = 'Descubre más';
+        header_641 = 'Visto recientemente';
+        see_more_641 = 'Añadir a la cesta';
         reviewLang = 'opiniones';
         oosLocal = ' - productos alternativos disponibles para comprar ahora';
     } else if (location.host.indexOf('.nl') > -1) {
         _dtag = 'nl';
-        header_641 = 'Aanbevolen voor jou';
-        see_more_641 = 'Meer informatie';
+        header_641 = 'Recent bekeken';
+        see_more_641 = 'In winkelmand';
         reviewLang = 'beoordelingen';
         oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
     } else if (location.host.indexOf('.fr') > -1) {
@@ -1219,50 +1221,50 @@
     } else if (location.pathname.indexOf('/nl_be/') > -1) {
         _dtag = 'be';
         _lang = 'nl';
-        header_641 = 'Aanbevolen voor jou';
-        see_more_641 = 'Meer informatie';
+        header_641 = 'Recent bekeken';
+        see_more_641 = 'In winkelmand';
         reviewLang = 'beoordelingen';
         oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
     } else if (location.pathname.indexOf('/fr_be/') > -1) {
         _dtag = 'be';
         _lang = 'fr';
-        see_more_641 = 'En savoir plus';
-        header_641 = 'Recommandé pour vous';
+        see_more_641 = 'Ajouter au panier';
+        header_641 = 'Récemment consulté';
         reviewLang = 'avis';
         oosLocal = ' - machines alternatives disponibles à la commande maintenant';
     }
     else if (location.host.indexOf('.pt') > -1) {
         _dtag = 'pt';
-        see_more_641 = 'Saber mais';
-        header_641 = 'Recomendado para si';
+        see_more_641 = 'Adicionar ao carrinho';
+        header_641 = 'Visto recentemente';
         reviewLang = 'comentários';
         oosLocal = ' - outros produtos disponíveis para comprar agora';
     }
     else if (location.host.indexOf('.se') > -1) {
         _dtag = 'se';
-        see_more_641 = 'Se mer';
-        header_641 = 'Rekommenderat för dig';
+        see_more_641 = 'Lägg till i kundvagnen';
+        header_641 = 'Senast visade';
         reviewLang = 'kundomdömen';
         oosLocal = ' - alternativa maskiner tillgängliga att beställa nu';
     }
     else if (location.host.indexOf('.dk') > -1) {
         _dtag = 'dk';
-        see_more_641 = 'Se mere';
-        header_641 = 'Anbefalet til dig';
+        see_more_641 = 'Læg i indkøbskurven';
+        header_641 = 'Sidst sete';
         reviewLang = 'anmeldelser';
         oosLocal = ' - alternative maskiner kan bestilles nu';
     }
     else if (location.host.indexOf('.fi') > -1) {
         _dtag = 'fi';
-        see_more_641 = 'Katso lisää';
-        header_641 = 'Suositeltu sinulle';
+        see_more_641 = 'Lisää ostoskoriin';
+        header_641 = 'Viimeksi katsotut';
         reviewLang = 'arvostelua';
         oosLocal = ' - vaihtoehtoisia koneita nyt tilattavissa';
     }
     else if (location.host.indexOf('.no') > -1) {
         _dtag = 'no';
-        see_more_641 = 'Se mer';
-        header_641 = 'Anbefalt for deg';
+        see_more_641 = 'Legg til i handlekurven';
+        header_641 = 'Sist viste';
         reviewLang = 'anmeldelser';
         oosLocal = ' - alternative maskiner tilgjengelig for bestilling nå';
      }  
@@ -1614,7 +1616,7 @@ if(window._dtag == '') {
 } else if(window._dtag == 'be'){
 	cartBaseUrl = "https://api.dyson.be/apiman-gateway/dyson/cart/1.0/be/";
 	bundleUrl = "https://www.dyson.be/bundle-selector.";
-	basketURL = 'https://www.dyson.be/nl_be/basket';
+	basketURL = 'https://www.dyson.be/basket';
 	productUrl = "https://api.dyson.be/apiman-gateway/dyson/product/1.0/be/";
 	addingCartText = 'Bezig met toevoegen ...'
 } else if(window._dtag == 'pt'){
@@ -1649,20 +1651,10 @@ if(window._dtag == '') {
 	addingCartText = 'Legger til...';
 } else if(window._dtag == 'ch'){
 	cartBaseUrl = "https://api.dyson.ch/apiman-gateway/dyson/cart/1.0/ch/";
-	if(location.pathname.indexOf('/fr') > -1) {
-		bundleUrl = "https://www.dyson.ch/fr_ch/selecteur-de-forfait.";
-		basketURL = 'https://www.dyson.ch/fr_ch/basket';
-	}
-	if(location.pathname.indexOf('/de') > -1){
-		bundleUrl = "https://www.dyson.ch/de_ch/bundle-selector.";
-		basketURL = 'https://www.dyson.ch/de_ch/basket';
-	}
-	if(location.pathname.indexOf('/it') > -1){
-		bundleUrl = "https://www.dyson.ch/it_ch/selettore-pacchetto.";
-		basketURL = 'https://www.dyson.ch/it/basket';
-	}
+	bundleUrl = "https://www.dyson.ch/bundle-selector.";
+	basketURL = 'https://www.dyson.ch/basket';
 	productUrl = "https://api.dyson.ch/apiman-gateway/dyson/product/1.0/ch/";
-	addingCartText = 'Wird hinzugefügt...'
+	addingCartText = 'Wird hinzugefügt...';
 } else if(window._dtag == 'ca'){
 	cartBaseUrl = "https://api.dysoncanada.ca/apiman-gateway/dyson/cart/1.0/ca/";
 	if(location.pathname.indexOf('/en') > -1) {
