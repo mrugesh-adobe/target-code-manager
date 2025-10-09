@@ -234,7 +234,7 @@
 
     @media screen and (max-width: 767px) {
         .at_recs_card-at-641 {
-           // display: flex;
+           /* display: flex; */
         }
 
         .recs-container-at-641 {
@@ -291,7 +291,7 @@
 
     @media screen and (max-width: 767px) {
         .at_recs_card-at-641 {
-            //display: flex;
+            /* display: flex; */
         }
 
         .recs-container-at-641 {
@@ -757,7 +757,7 @@
 	 }
 	 
 	 .at_recs_card-at-641 .text_section {
-		//padding: 0 15px 15px 15px;
+		/* padding: 0 15px 15px 15px; */
 	 }
 	 
 	 .review_text {
@@ -771,7 +771,7 @@
 		 display: none !important;
 	 }
 	 .recs_wrapper-at-641 .slick-list.draggable .slick-slide.slick-current:nth-child(1) {
-		// margin-left: 0 !important;
+		/* margin-left: 0 !important; */
 	 }
 	 
 	 .recs_wrapper-at-641 .slick-track:after, .slick-track:before {
@@ -897,7 +897,7 @@
                              #set($id = $e.id)
                                 #set($sapDivision = $e.sapDivision)
    
-                                #set($lang="${mbox.site_lang}")
+                                #set($lang="${mbox.page_lang}")
 								#if($lang != '')
 								 #set($newURL = 'pageURL_'+$lang)
 								 #set($pageURL = $e.get($newURL))
@@ -939,6 +939,9 @@
                                 #if($badge.indexOf("none")>-1)
                                     #set($badge="")
                                 #end
+								#if($lang == 'en' && $e.localName !="" )
+								#set($lname = $e.localName)
+								#end
                              #if($count < 11 && $id != '' && $lname.indexOf('Airblade') < 0)
                                  #set($count = $count + 1)
                                  <li class="at-table-column-at-641 col-xs-12 col-md-3 col-lg-3 swiper-slide" data-analytics-action-title="$lname">
