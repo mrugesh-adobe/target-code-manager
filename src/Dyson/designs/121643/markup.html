@@ -233,9 +233,6 @@
     }
 
     @media screen and (max-width: 767px) {
-        .at_recs_card-at-641 {
-           /* display: flex; */
-        }
 
         .recs-container-at-641 {
             border-top: 1px solid #332f2c;
@@ -257,7 +254,6 @@
 
     .custom-badge {
         color: white;
-        /*background: black;*/
         top: -13px;
         left: 16px;
         z-index: 3 !important;
@@ -290,10 +286,6 @@
     }
 
     @media screen and (max-width: 767px) {
-        .at_recs_card-at-641 {
-            /* display: flex; */
-        }
-
         .recs-container-at-641 {
             border-bottom: 1px solid #332f2c;
 			position: relative;
@@ -479,8 +471,6 @@
 			  opacity: 0;
 			  transition: opacity 0.3s ease-in-out;
 			}
-			
-
     }
 	
 	@media screen and (min-width: 1440px) {
@@ -756,10 +746,6 @@
 		 }
 	 }
 	 
-	 .at_recs_card-at-641 .text_section {
-		/* padding: 0 15px 15px 15px; */
-	 }
-	 
 	 .review_text {
 		 font-size: 0.875rem;
 	 }
@@ -770,10 +756,7 @@
 	 .recs_wrapper-at-641 #chevron-bold-sr {
 		 display: none !important;
 	 }
-	 .recs_wrapper-at-641 .slick-list.draggable .slick-slide.slick-current:nth-child(1) {
-		/* margin-left: 0 !important; */
-	 }
-	 
+	
 	 .recs_wrapper-at-641 .slick-track:after, .slick-track:before {
 		 display: none;
 	 }
@@ -878,8 +861,6 @@
 		.at-table-column-at-641:last-child {
 			margin-right: 0 !important;
 		}
-	
-	 
 	
 </style>
 <script type="text/template" id="at_template_recs">
@@ -1216,20 +1197,27 @@
         see_more_641 = 'Scopri di più';
         reviewLang = 'recensioni';
         oosLocal = " - macchine alternative disponibili per l'ordine ora";
-    } else if (location.pathname.indexOf('/nl_be/') > -1) {
+    } else if (location.host.indexOf('.be') > -1) {
         _dtag = 'be';
-        _lang = 'nl';
-        header_641 = 'Aanbevolen voor jou';
-        see_more_641 = 'Meer informatie';
-        reviewLang = 'beoordelingen';
-        oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
-    } else if (location.pathname.indexOf('/fr_be/') > -1) {
-        _dtag = 'be';
-        _lang = 'fr';
-        see_more_641 = 'En savoir plus';
-        header_641 = 'Recommandé pour vous';
-        reviewLang = 'avis';
-        oosLocal = ' - machines alternatives disponibles à la commande maintenant';
+        if (document.documentElement.lang=='nl-BE') {
+            _lang = 'nl';
+            header_641 = 'Aanbevolen voor jou';
+            see_more_641 = 'Meer informatie';
+            reviewLang = 'beoordelingen';
+            oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
+        } else if (document.documentElement.lang=='fr-BE') {
+            _lang = 'fr';
+            see_more_641 = 'En savoir plus';
+            header_641 = 'Recommandé pour vous';
+            reviewLang = 'avis';
+            oosLocal = ' - machines alternatives disponibles à la commande maintenant';
+        } else {
+            // Default fallback for .be domain
+            header_641 = 'Recently viewed';
+            see_more_641 = 'Add to basket';
+            reviewLang = 'reviews';
+            oosLocal = ' - alternative machines available to order now';
+        }
     }
     else if (location.host.indexOf('.pt') > -1) {
         _dtag = 'pt';
@@ -1614,7 +1602,16 @@ if(window._dtag == '') {
 } else if(window._dtag == 'be'){
 	cartBaseUrl = "https://api.dyson.be/apiman-gateway/dyson/cart/1.0/be/";
 	bundleUrl = "https://www.dyson.be/bundle-selector.";
-	basketURL = 'https://www.dyson.be/nl_be/basket';
+	if(location.pathname.indexOf('/fr') > -1) {
+		bundleUrl = "https://www.dyson.be/fr_be/bundle-selector.";
+		basketURL = 'https://www.dyson.be/fr_be/basket';
+		addingCartText = 'Ajout en cours...';
+	}
+	if(location.pathname.indexOf('/nl') > -1){
+		bundleUrl = "https://www.dyson.be/nl_be/bundle-selector.";
+		basketURL = 'https://www.dyson.be/nl_be/basket';
+		addingCartText = 'Bezig met toevoegen ...';
+	}
 	productUrl = "https://api.dyson.be/apiman-gateway/dyson/product/1.0/be/";
 	addingCartText = 'Bezig met toevoegen ...'
 } else if(window._dtag == 'pt'){

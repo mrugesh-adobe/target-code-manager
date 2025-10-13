@@ -344,6 +344,23 @@
 		continueShoppingImage = 'Continue-shopping-image';
   } else if (location.host.indexOf('.ca') > -1) {
     _dtag = 'ca';
+    // Handle Belgian locales based on URL path
+    if (document.documentElement.lang == 'fr-CA') {
+      continueShoppingText = 'Reprenez là où vous en étiez:';
+      continueShoppingButtonText = 'Continuer votre shopping';
+      ctaTracking = 'continue-shopping-popup';
+      continueShoppingButtonClick = 'continue-shoppingcta';
+      continueShoppingClose = 'Continue-shopping-close-button-test';
+      continueShoppingImage = 'Continue-shopping-image';
+    } else {
+      // Default fallback for .ca domain
+      continueShoppingText = 'Continue where you left off';
+      continueShoppingButtonText = 'Continue here';
+      ctaTracking = 'continue-shopping-popup';
+      continueShoppingButtonClick = 'continue-shoppingcta';
+      continueShoppingClose = 'Continue-shopping-close-button';
+      continueShoppingImage = 'Continue-shopping-image';
+    }
   } else if (location.host.indexOf('.jp') > -1) {
      continueShoppingText = '';
 		continueShoppingButtonText = '';
