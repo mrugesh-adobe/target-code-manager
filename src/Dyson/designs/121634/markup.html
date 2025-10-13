@@ -394,25 +394,6 @@
       continueShoppingImage = 'Continue-shopping-image';
     }
   }
-
-  if (location.host.indexOf('.ca') > -1) {
-    if (location.pathname.indexOf('/en') > -1) {
-     continueShoppingText = 'Continue where you left off';
-		continueShoppingButtonText = 'Continue here';
-		ctaTracking = "continue-shopping-popup";
-		continueShoppingButtonClick = 'continue-shoppingcta';
-		continueShoppingClose = 'Continue-shopping-close-button-test';
-		continueShoppingImage = 'Continue-shopping-image';
-    } else if (location.pathname.indexOf('/fr') > -1) {
-       continueShoppingText = '';
-		continueShoppingButtonText = '';
-		ctaTracking = '';
-		continueShoppingButtonClick = '';
-		continueShoppingClose = '';
-    }
-  }
-	
-
 	
 	if(sessionStorage.getItem("atBanner") && sessionStorage.getItem("atBanner")=="true"){
 			document.querySelector('.container-par-parbase.recs-container-at-754').style.display = 'none'
