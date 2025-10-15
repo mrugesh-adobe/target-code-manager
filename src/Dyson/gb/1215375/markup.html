@@ -1,0 +1,1722 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+  integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css" id='recs_style'>
+  .at_recs_price .trade-up-item__reduced-price {
+    text-decoration: line-through;
+    font-size: .875rem;
+    display: inline-flex !important;
+    padding-left: 0px;
+    padding-right: 8px;
+  }
+
+  .at_recs_price .trade-up-item__reduced-price .curr_before,
+  .at_recs_price .trade-up-item__savings .curr_before {
+    padding-left: 4px;
+  }
+
+  .at_recs_price .trade-up-item__savings {
+    color: #06c;
+    font-size: .875rem;
+    display: inline-flex;
+  }
+
+  .at_recs_price.trade-up-item__regional {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .at_recs_price .trade-up-item__price {
+    padding-left: 0px !important;
+  }
+
+  a.at_recs_card:hover {
+    border: 1px solid #333;
+  }
+
+  .custom-badge.none {
+    visibility: hidden;
+  }
+
+  .custom-badge.no_promo_label,
+  .custom-badge.at_offer_promo_inverted,
+  .custom-badge.US_Promo_white {
+    color: #0066cc;
+    background-color: #ffffff;
+    box-shadow: inset 0px 0px 0px 1px #0066cc;
+    border-radius: 2px;
+  }
+
+  .custom-badge.NO_exclusive {
+    color: #000;
+    background-color: #ffcc00;
+  }
+
+  .custom-badge.fr_Gifting_PC {
+    color: #7d4e4b;
+    background-color: #f6e3dc;
+    box-shadow: inset 0px 0px 0px 1px #7d4e4b;
+    border-radius: 2px;
+  }
+
+  .custom-badge.US_only_at,
+  .custom-badge.global_offer_promo {
+    background-color: #0066cc;
+  }
+
+  .custom-badge.us_exclusive {
+    background-color: #333;
+  }
+
+  .custom-badge.us_urgency {
+    background-color: #d9384e;
+  }
+
+  .custom-badge.us_technology {
+    background-color: #000;
+  }
+
+
+  .at-table {
+    display: flex;
+    width: 100%;
+    border-spacing: 5px;
+  }
+
+  .at-table-row {
+    width: 100%;
+    clear: both;
+  }
+
+  .at-table-column {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding: 16px;
+  }
+
+  .recs-container .trade-up-header__content {
+    color: #333;
+    font-size: 1.5rem;
+  }
+
+  .recs-container {
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    background: #ffffff;
+  }
+
+  .recs_wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .image_container {
+    position: relative;
+  }
+
+  .text_section>h3 {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    padding-top: 0;
+  }
+
+  .full_width {
+    width: 100% !important;
+  }
+
+  /* .at_recs_price .trade-up-item__regional>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  } */
+
+  .add-to-basket__form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .at_recs_card {
+    border: 1px solid #999999;
+    background-color: #ffffff;
+    text-decoration: none !important;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+
+  .at_recs_card .trade-up-item__badge {
+    z-index: 1;
+  }
+
+  .mobile_badge,
+  .mobile_only_line {
+    display: none;
+  }
+
+  .at_recs_card .reviews_section {
+    padding: 8px 10px 0px 15px;
+  }
+
+  .review_stars {
+    width: 96px;
+    min-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.dyson.co.uk/content/dam/dyson/adobetarget/recommendations/review-stars-small-new.png);
+    margin-right: 8px;
+  }
+
+  .review_stars.five {
+    background-position-y: 0;
+  }
+
+  .review_stars.four-five {
+    background-position-y: 10%;
+  }
+
+  .review_stars.four {
+    background-position-y: 20%;
+  }
+
+  .review_stars.three-five {
+    background-position-y: 30%;
+  }
+
+  .review_stars.three {
+    background-position-y: 40%;
+  }
+
+  .review_stars.two {
+    background-position-y: 60%;
+  }
+
+  .review_stars.two-five {
+    background-position-y: 50%;
+  }
+
+  .review_stars.one-five {
+    background-position-y: 70%;
+  }
+
+  .review_stars.one {
+    background-position-y: 80%;
+  }
+
+  .review_stars.zero {
+    background-position-y: 100%;
+  }
+
+  .review_stars.invisible,
+  .review_stars.invisible+.review_text {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .review_text {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 767px) {
+    .at_recs_card {
+      display: flex;
+    }
+
+    .recs-container {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+
+  .at_recs_price {
+    /* flex-direction: column;
+    justify-content: center; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  /* .at_recs_card .at_recs_price .atBluePrice {
+    padding-left: 15px;
+  } */
+
+  .at_recs_price .atBluePrice {
+    border-top: 1px solid #dadada;
+    width: 100%;
+    padding-left: 15px !important;
+  } 
+
+  .custom-badge {
+    color: white;
+    background: black;
+    top: -13px;
+    left: 16px;
+    z-index: 3 !important;
+    position: absolute;
+    padding: 2px 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .custom-badge.be_promotions,
+  .custom-badge.nl_promotions,
+  .custom-badge.de_promotions {
+    color: #0066cc !important;
+    background-color: #ffffff !important;
+    box-shadow: inset 0px 0px 0px 1px #0066cc;
+  }
+
+  .custom-badge.be_direct_exclusive {
+    color: #fff !important;
+    background-color: #0066CC !important;
+  }
+
+  .custom-badge.be_latest_technology {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
+
+  .at_recs_card>.text_section>h3 {
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 767px) {
+    .at_recs_card {
+      display: flex;
+    }
+
+    .recs-container {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+
+  @media(max-width: 480px) {
+    .at_recs_card>.image_container>.at-thumbnail {
+      max-height: 220px;
+      width: auto;
+    }
+
+    .at_recs_card>.text_section>h3,
+    .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+    .trade-up-item__price {
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .at-table-column {
+      padding-top: 0;
+      padding-bottom: 0;
+      max-width: 60%;
+      margin-bottom: 20px;
+    }
+
+    .at_recs_card {
+      border: none;
+    }
+
+    .at_recs_card .text_section {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+
+    .mobile_only_line {
+      display: inline-block;
+      width: 114%;
+      position: absolute;
+      top: 0;
+      margin-left: -12%;
+    }
+
+    .custom-badge {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 0.5rem;
+      position: absolute;
+      top: -11px;
+      left: 0;
+      margin-bottom: 8px;
+      order: -1;
+      padding: 3px;
+    }
+
+    .carousel button:focus {
+      outline: none !important;
+    }
+
+    .at_recs_card>.badge {
+      display: none;
+    }
+
+    .mobile_badge {
+      display: inline-block;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 8px;
+    }
+
+    .at_recs_card .reviews_section {
+      padding: 8px 10px 0px 15px;
+    }
+
+    .review_stars {
+      width: 92px;
+      min-height: 16px;
+    }
+  }
+
+  div.trade-up-item__price--blue {
+    color: #06c;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .at_recs_card>.image_container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .at_recs_card>.image_container>.at-thumbnail {
+      width: auto;
+      height: 220px;
+      margin-top: 1px;
+    }
+
+    .at_recs_card>.text_section>h3,
+    .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+    .trade-up-item__price {
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .at-table-column {
+      padding: 16px 11px;
+    }
+
+    .custom-badge {
+      left: 11px;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .recs-container .trade-up-header__content {
+      font-size: 2rem;
+    }
+    
+    .at_recs_card>.image_container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .at_recs_card>.image_container>.at-thumbnail {
+      margin-top: 1px;
+      max-height: 240px;
+      width: auto;
+    }
+
+    .at_recs_card .text_section>h3,
+    .at_recs_card .text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+    .trade-up-item__price {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .carousel {
+      margin: 0 auto !important;
+    }
+
+  }
+
+  .see-more-section {
+    padding: 0px !important;
+  }
+
+  .promoText-section {
+    color: #06c;
+  }
+
+  .gb_technology,
+  .us_technology,
+  .ca_technology,
+  .fr_technology,
+  .nl_technology,
+  .ie_technology,
+  .it_technology,
+  .es_technology,
+  .at_technology,
+  .de_technology,
+  .jp_exclusive {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .gb_exclusive,
+  .us_exclusive,
+  .ca_exclusive,
+  .fr_exclusive,
+  .nl_exclusive,
+  .ie_exclusive,
+  .it_exclusive,
+  .es_exclusive,
+  .at_exclusive,
+  .de_exclusive {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .gb_urgency,
+  .us_urgency,
+  .ca_urgency,
+  .fr_urgency,
+  .nl_urgency,
+  .ie_urgency,
+  .it_urgency,
+  .es_urgency,
+  .at_urgency,
+  .de_urgency {
+    background-color: #d9384e;
+    color: #fff;
+  }
+
+  .gb_educational,
+  .us_educational,
+  .ca_educational,
+  .fr_educational,
+  .nl_educational,
+  .ie_educational,
+  .it_educational,
+  .es_educational,
+  .at_educational,
+  .de_educational {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .gb_offer_promo,
+  .us_offer_promo,
+  .ca_offer_promo,
+  .fr_offer_promo,
+  .jp_offer_promo,
+  .nl_offer_promo,
+  .ie_offer_promo,
+  .it_offer_promo,
+  .es_offer_promo,
+  .at_offer_promo,
+  .de_offer_promo {
+    background-color: #0066cc;
+    color: #fff;
+  }
+
+  .gb_popular,
+  .us_popular,
+  .ca_popular,
+  .fr_popular,
+  .nl_popular,
+  .ie_popular,
+  .it_popular,
+  .es_popular,
+  .at_popular,
+  .de_popular {
+    background-color: #ffcc00;
+    color: #000;
+  }
+
+  .recs_wrapper.carousel {
+    width: 100%;
+    margin: 0px;
+    visibility: visible;
+    display: inline-flex;
+  }
+
+  .recs_wrapper .slick-slide {
+    margin: 10px;
+  }
+
+  .recs_wrapper .slick-slide img {
+    width: 100%;
+    border: 2px solid #fff;
+  }
+
+  .recs_wrapper .wrapper .slick-dots li button:before {
+    font-size: 20px;
+    color: white;
+  }
+
+  @media screen and (max-width: 500px) {
+    .recs_wrapper.carousel.slick-initialized.slick-slider {
+      position: relative;
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .recs_wrapper.carousel a.at_recs_card {
+      display: block !important;
+      border: 1px solid #dadada;
+      background-color: #ffffff;
+      text-decoration: none !important;
+      display: inline-block;
+      width: 100%;
+      padding: 0;
+      position: relative;
+    }
+
+    .at_recs_card>.image_container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .recs_wrapper .slick-slide .at-table-column {
+      padding: 0;
+    }
+
+    .at_recs_price.trade-up-item__regional {
+      width: 100% !important;
+    }
+
+    div.trade-up-item__price--blue {
+      padding-bottom: 10px;
+    }
+
+    a.at_recs_card:hover,
+    a.at_recs_card:focus,
+    a.at_recs_card:active {
+      border: 1px solid #333;
+      color: #333;
+      outline: none;
+    }
+
+    .recs-container .row {
+      width: 100% !important;
+      margin-left: 25px !important;
+    }
+  }
+
+  .recs_wrapper .slick-list {
+    padding: 0 40% 0 0 !important;
+  }
+
+  .recs_wrapper .slick-prev,
+  .recs-container .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 47%;
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin-top: -10px \9;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    border-radius: 17px;
+    background: #a7a4a4;
+  }
+
+  .recs_wrapper .slick-next {
+    left: 80%;
+  }
+
+  .recs_wrapper .slick-prev {
+    z-index: 99;
+    right: 90%;
+  }
+
+
+  .recs_wrapper .slick-next:before {
+    content: '→';
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    left: -2px;
+    font-size: 0;
+  }
+
+  .recs_wrapper .slick-prev:before {
+    content: '←';
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    right: -3px;
+    font-size: 0;
+  }
+
+  .recs_wrapper .slick-prev:before,
+  .recs-container .slick-next:before {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .recs_wrapper .slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .recs_wrapper .slick-track {
+    display: flex !important;
+  }
+
+  .recs_wrapper .slick-slide {
+    height: inherit !important;
+  }
+
+  .trade-up-item__price {
+    /* border-top: 1px solid #dadada; */
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 24px;
+  }
+
+  .trade-up-item__text.trade-up-item__name {
+    line-height: 1.3;
+    padding-right: 10px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .recs-container .trade-up-header__content {
+      font-size: 1.875rem;
+    }
+    
+    .recs_wrapper.carousel {
+      margin: 0 auto !important;
+    }
+
+    .recs_wrapper.carousel li:nth-child(4) {
+      display: none;
+    }
+
+    .at-table-column.col-xs-12.col-md-3 {
+      width: 33.33%
+    }
+  }
+
+  .at_recs_card .text_section {
+    /* padding: 0 15px 15px 15px; */
+  }
+
+  .review_text {
+    font-size: 0.875rem;
+  }
+
+  .trade-up-item__price--blue,
+  .trade-up-item__reduced-price,
+  .trade-up-item__text {
+    padding-left: 15px;
+  }
+
+  .recs_wrapper #chevron-bold-sr {
+    display: none !important;
+  }
+
+  .recs_wrapper .slick-list.draggable .slick-slide.slick-current:nth-child(1) {
+    /* margin-left: 0 !important; */
+  }
+
+  .recs_wrapper .slick-track:after,
+  .slick-track:before {
+    display: none;
+  }
+
+  .at_recs_card .js-product-hero-promo-message {
+    margin-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #06c;
+    margin-bottom: .5rem;
+  }
+
+  .at_recs_card .js-product-hero-promo-message li strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 400 !important;
+  }
+
+  .at_recs_card .js-product-hero-promo-message li {
+    list-style-type: none;
+  }
+
+  .at_recs_card .js-product-hero-promo-message .list {
+    padding-left: 0;
+  }
+</style>
+
+<div class="container-par parbase recs-container" data-analytics-component="product-recommendations">
+  #if($entities.size() > 0)
+  <div
+    class="container-fluid container-fluid--upto-lg pt-lg-0 pt-xl-0 pb-lg-0 pb-xl-0 pt-md-0 pb-md-0 pt-xs-0 pt-sm-0 pb-xs-0 pb-sm-0">
+    <div class="row">
+      <div class="at-table">
+        <div class="at-table-row">
+          <h2 class="trade-up-header__content js-trade-up-header-content col-xs-12 hidden-xs-up"></h2>
+          <ul class="recs_wrapper carousel">
+            #set($count = 1)
+            #set($base_url="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/SKU.png")
+            #foreach($e in $entities)
+            #set($id = $e.id)
+            #set($sapDivision = $e.sapDivision)
+
+            #set($lang="${mbox.page_lang}")
+            #if($lang != '')
+            #set($newURL = 'pageURL_'+$lang)
+            #set($pageURL = $e.get($newURL))
+            #else
+            #set($pageURL = $e.pageURL)
+            #end
+            #if($lang != '')
+            #set($newBadge = 'badgeText_'+$lang)
+            #set($badge = $e.get($newBadge))
+            #else
+            #set($badge = $e.badgeText)
+            #end
+            #set($badgeClass=$e.badgeTheme)
+            #set($newlname = 'name' + $lang)
+            #set($lname = $e.get($newlname))
+            #set($domain = $e.domain)
+            #if($lang != '')
+            #set($newprodPromoMessage = 'prodPromoMessage_'+$lang)
+            #set($prdtMessage = $e.get($newprodPromoMessage))
+            #else
+            #set($prdtMessage = $e.prodPromoMessage)
+            #end
+            #if(!$pageURL || $pageURL == "")
+            #set($pageURL=$e.pageURL)
+            #end
+            #if($lname == "")
+            #set($lname = $e.localName)
+            #end
+            #if($e.domain == "at")
+            #set($rCount=$e.reviewCount)
+            #end
+            #if($e.domain == "at")
+            #set($rStar=$e.reviewStar)
+            #end
+            #if(!$badge || $badge == "")
+            #set($badge=$e.badgeText)
+            #end
+            #if($badge.indexOf("none")>-1)
+            #set($badge="")
+            #end
+            #if($lang == 'en' && $e.localName !="" )
+            #set($lname = $e.localName)
+            #end
+            #if($count < 5 && $id !='' && $lname.indexOf('Airblade') < 0) #set($count=$count + 1) <li
+              class="at-table-column col-xs-12 col-md-3 col-lg-3" data-analytics-action-title="$lname">
+              <span role="group" aria-label="Product">
+                <a class="at_recs_card" data-analytics-action-name="see more" href="$pageURL"
+                  sku="$e.id.replace('US', '').replace('JP', '')" region="$e.domain">
+
+                  <span class="mobile_only_line"></span>
+
+                  <div class="image_container">
+                    #set($img_url=$base_url.replace("SKU", $id.replace("GB", "").replace("FR", "").replace("US",
+                    "").replace("CA", "").replace("DE", "").replace("CH", "").replace("ES", "").replace("IT",
+                    "").replace("BE", "").replace("PT", "").replace("DK", "").replace("NO", "").replace("SE",
+                    "").replace("FI", "").replace("NL", "").replace("IE", "").replace("AT", "").replace("JP", "")))
+                    <img alt="" src="$img_url" class="at-thumbnail" />
+                  </div>
+                  <div class="text_section">
+                    <h3 class="trade-up-item__text trade-up-item__name">$lname</h3>
+                    #if($badge != '')
+                    <span class="badge trade-up-item__badge custom-badge $badgeClass">$badge</span>
+                    #end
+
+                    #if($e.domain == "at")
+                    <div class="trade-up-item__text reviews_section">
+                      <span class="review_stars">$e.reviewStar</span>
+                      <div class="sr-only ratings__stars--reader"></div>
+                      <span class="review_text">$e.reviewCount</span>
+                    </div>
+                    #else
+                    <div class="trade-up-item__text reviews_section">
+                      <span class="review_stars"></span>
+                      <div class="sr-only ratings__stars--reader"></div>
+                      <span class="review_text"></span>
+                    </div>
+                    #end
+
+                    #set($newfullPrice='wasPrice_' + $lang)
+                    #set($fullPrice=$e.get($newfullPrice))
+                    #set($newsalePrice='currPrice_' + $lang)
+                    #set($salePrice=$e.get($newsalePrice))
+                    #set($newdiff='savePrice_'+$lang)
+                    #set($diff=$e.get($newdiff))
+                    #set($discount=$e.discountText)
+                    <div class="at_recs_price trade-up-item__regional">
+                      #if($salePrice=="")
+                      <div class="trade-up-item__price">
+                        <span class="curr_before"></span><span class="price">$fullPrice</span>
+                      </div>
+                      #else
+                      <div class="atBluePrice">
+                        <div class="trade-up-item__price--blue trade-up-item__price"><span
+                            class="price">$salePrice</span>
+                        </div>
+                        #if($discount == "A")
+                        <div class="trade-up-item__reduced-price"><span class="curr_before">$fullPrice</span>
+                        </div>
+                        <div class="trade-up-item__savings js-item-savings"><span class="curr_before">$diff</span>
+                        </div>
+                        #end
+                      </div>
+                      #end
+                    </div>
+                    <div
+                      class="product-hero__promotion--messages product-hero__promotion-no-padding js-product-hero-promo-message ">
+                      <ul class="list">
+                        <li class="element js-promotional-details-message" data-promotion-type="OTHER">
+                          <strong>$prdtMessage</strong>
+                        </li>
+                      </ul>
+                    </div>
+                    <button
+                      class="trade-up-item__regional see-more-section button button--transactional js-add-to-basket-button promotional-hero__button add-to-basket__form-button">
+                      <span>Add to basket</span>
+                    </button>
+                  </div>
+                </a>
+              </span>
+              </li>
+              #end
+              #end
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  #end
+</div>
+
+<script type="text/javascript">
+  /*!
+   * flickerlessly.js v0.2.1
+   * @author Vadym Ustymenko
+   * @copyright 1996-2019. Adobe Systems Incorporated. All rights reserved.
+   * @usage: Flickerlessly.onReady({selector:'.a, .b', success:function(el, log){}},
+   *                              {selector:'.c', success:myCallbackFn, persist:true });
+   */
+
+  var addPriceHeight = function () {
+    if (!document.querySelector('.at_recs_price.trade-up-item__regional[reduced]')) {
+      return;
+    }
+    if (!document.getElementById('reduced_price_style')) {
+      document.body.insertAdjacentHTML('afterbegin', '<style id="reduced_price_style"></style>');
+    }
+  },
+    matchHeight = function () {
+      /*name height*/
+      var names = document.querySelectorAll('.at_recs_card .trade-up-item__text.trade-up-item__name'), reviews = document.querySelectorAll('.at_recs_card .text_section .trade-up-item__text.reviews_section'), priceSection = document.querySelectorAll('.at_recs_price.trade-up-item__regional'), promoSection = document.querySelectorAll('.at_recs_card .js-product-hero-promo-message'), max = 0;
+      if (jQuery(window).width() < 100) {
+        for (var i = names.length - 1; i >= 0; i--) {
+          names[i].style.minHeight = max;
+        }
+        for (var i = reviews.length - 1; i >= 0; i--) {
+          reviews[i].style.minHeight = max;
+        }
+      } else {
+        for (var i = names.length - 1; i >= 0; i--) {
+          max = names[i].offsetHeight > max ? names[i].offsetHeight : max;
+        }
+        for (var i = names.length - 1; i >= 0; i--) {
+          names[i].style.minHeight = max + 'px';
+        }
+        max = 0;
+        for (var i = reviews.length - 1; i >= 0; i--) {
+          max = reviews[i].offsetHeight > max ? reviews[i].offsetHeight : max;
+        }
+        for (var i = reviews.length - 1; i >= 0; i--) {
+          reviews[i].style.minHeight = max + 'px';
+        }
+        max = 0;
+        for (var i = priceSection.length - 1; i >= 0; i--) {
+          max = priceSection[i].offsetHeight > max ? priceSection[i].offsetHeight : max;
+        }
+        for (var i = priceSection.length - 1; i >= 0; i--) {
+          priceSection[i].style.minHeight = max + 'px';
+        }
+        max = 0;
+        for (var i = promoSection.length - 1; i >= 0; i--) {
+          max = promoSection[i].offsetHeight > max ? promoSection[i].offsetHeight : max;
+        }
+        for (var i = promoSection.length - 1; i >= 0; i--) {
+          promoSection[i].style.minHeight = max + 'px';
+        }
+      }
+    },
+    loadCarousel = function () {
+      if ((typeof (jQuery) != 'undefined' &&
+        typeof jQuery.fn.slick !== "undefined") && !document.querySelector('.recs_wrapper .slick-next.slick-arrow')) {
+        var jq = jQuery.noConflict();
+        if (window.innerWidth < 500) {
+          setTimeout(function () {
+            jq('.recs_wrapper.carousel').slick({
+              slidesToShow: 1,
+              dots: false,
+              centerMode: false,
+              infinite: false,
+              slidesToScroll: 1
+            });
+            document.querySelectorAll('.at-table-column').forEach(function (i) {
+              i.style.maxWidth = '100%';
+            });
+            clearInterval(loadCarousel);
+            document.querySelector('.recs_wrapper.carousel').style.visibility = 'visible';
+          }, 500);
+          setTimeout(function () {
+            matchHeight();
+            addPriceHeight();
+          }, 500);
+        }
+      }
+
+      if (window.innerWidth > 500) {
+        document.querySelector('.recs_wrapper.carousel').style.visibility = 'visible';
+        setTimeout(function () {
+          matchHeight();
+          addPriceHeight();
+        }, 500);
+      }
+    }
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      matchHeight();
+      addPriceHeight();
+    }, 2500);
+    setTimeout(function () {
+      matchHeight();
+      addPriceHeight();
+    }, 2500);
+    setTimeout(function () {
+      matchHeight();
+      addPriceHeight();
+    }, 2500);
+  })
+  window.addEventListener('resize', function () {
+    setTimeout(function () {
+      matchHeight();
+      addPriceHeight();
+    }, 2500);
+  });
+
+
+  window._dtag = '', window._lang = '',
+    header = 'Recommended for you',
+    see_more = 'Add to basket',
+    reviewLang = 'reviews',
+    oosLocal = ' - alternative machines available to order now';
+
+  if (location.host.indexOf('.de') > -1) {
+    _dtag = 'de';
+    header = 'Für dich empfohlen';
+    see_more = 'In den Warenkorb';
+    reviewLang = 'Bewertungen';
+    oosLocal = ' ';
+  } else if (location.host.indexOf('.ie') > -1) {
+  } else if (location.host.indexOf('.at') > -1) {
+    _dtag = 'at';
+    header = 'Für dich empfohlene Produkte';
+    see_more = 'Mehr erfahren';
+    reviewLang = 'bewertungen';
+    oosLocal = ' ';
+  } else if (location.host.indexOf('.es') > -1) {
+    _dtag = 'es';
+    header = 'Recomendado para ti';
+    see_more = 'Descubre más';
+    reviewLang = 'opiniones';
+    oosLocal = ' - productos alternativos disponibles para comprar ahora';
+  } else if (location.host.indexOf('.nl') > -1) {
+    _dtag = 'nl';
+    header = 'Aanbevolen voor jou';
+    see_more = 'Meer informatie';
+    reviewLang = 'beoordelingen';
+    oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
+  } else if (location.host.indexOf('.fr') > -1) {
+    _dtag = 'fr';
+    see_more = 'En savoir plus';
+    header = 'Meilleures ventes';
+    reviewLang = 'avis';
+    oosLocal = ' - produits similaires disponibles';
+  } else if (location.host.indexOf('.it') > -1) {
+    _dtag = 'it';
+    header = 'Prodotti più venduti';
+    see_more = 'Scopri di più';
+    reviewLang = 'recensioni';
+    oosLocal = " - macchine alternative disponibili per l'ordine ora";
+  } else if (location.pathname.indexOf('/nl_be/') > -1) {
+    _dtag = 'be';
+    _lang = 'nl';
+    header = 'Aanbevolen voor jou';
+    see_more = 'Meer informatie';
+    reviewLang = 'beoordelingen';
+    oosLocal = ' - alternatieve machines beschikbaar om nu te bestellen';
+  } else if (location.pathname.indexOf('/fr_be/') > -1) {
+    _dtag = 'be';
+    _lang = 'fr';
+    see_more = 'En savoir plus';
+    header = 'Recommandé pour vous';
+    reviewLang = 'avis';
+    oosLocal = ' - machines alternatives disponibles à la commande maintenant';
+  }
+  else if (location.host.indexOf('.pt') > -1) {
+    _dtag = 'pt';
+    see_more = 'Saber mais';
+    header = 'Recomendado para si';
+    reviewLang = 'comentários';
+    oosLocal = ' - outros produtos disponíveis para comprar agora';
+  }
+  else if (location.host.indexOf('.se') > -1) {
+    _dtag = 'se';
+    see_more = 'Se mer';
+    header = 'Rekommenderat för dig';
+    reviewLang = 'kundomdömen';
+    oosLocal = ' - alternativa maskiner tillgängliga att beställa nu';
+  }
+  else if (location.host.indexOf('.dk') > -1) {
+    _dtag = 'dk';
+    see_more = 'Se mere';
+    header = 'Anbefalet til dig';
+    reviewLang = 'anmeldelser';
+    oosLocal = ' - alternative maskiner kan bestilles nu';
+  }
+  else if (location.host.indexOf('.fi') > -1) {
+    _dtag = 'fi';
+    see_more = 'Katso lisää';
+    header = 'Suositeltu sinulle';
+    reviewLang = 'arvostelua';
+    oosLocal = ' - vaihtoehtoisia koneita nyt tilattavissa';
+  }
+  else if (location.host.indexOf('.no') > -1) {
+    _dtag = 'no';
+    see_more = 'Se mer';
+    header = 'Anbefalt for deg';
+    reviewLang = 'anmeldelser';
+    oosLocal = ' - alternative maskiner tilgjengelig for bestilling nå';
+  }
+  else if (location.host.indexOf('.ch') > -1) {
+    _dtag = 'ch';
+    if (document.documentElement.lang == 'de-CH') {
+      header = 'Für dich empfohlene Produkte';
+      see_more = 'Mehr erfahren';
+      reviewLang = 'bewertungen';
+      oosLocal = ' ';
+    } else if (document.documentElement.lang == 'it-CH') {
+      header = 'Consigliato per te';
+      see_more = 'Scopri di più';
+      reviewLang = 'recensioni';
+      oosLocal = " - macchine alternative disponibili per l'ordine ora";
+    } else if (document.documentElement.lang == 'fr-CH') {
+      header = 'Recommandé pour vous';
+      see_more = 'En savoir plus';
+      reviewLang = 'avis';
+      oosLocal = ' - machines alternatives disponibles à la commande maintenant';
+    }
+  } else if (location.host.indexOf('.uk') > -1) {
+    _dtag = 'gb';
+    header = 'Top picks';
+  } else if (location.host.indexOf('.ca') > -1) {
+    _dtag = 'ca';
+  } else if (location.host.indexOf('.jp') > -1) {
+    _dtag = 'jp';
+    see_more = 'カートに入れる';
+    header = 'ブラックフライデー対象製品';
+    wasText = "通常価格&nbsp;";
+    saveText = "割引額&nbsp;";
+  } else if (location.host.indexOf('.be') > -1) {
+    _dtag = 'be';
+  }
+
+  if (location.host.indexOf('.ca') > -1) {
+    if (location.pathname.indexOf('/en') > -1) {
+      header = 'Labour Day Deals',
+        see_more = 'Shop now',
+        reviewLang = 'reviews',
+        oosLocal = ' - alternative machines available to order now';
+    } else if (location.pathname.indexOf('/fr') > -1) {
+      header = 'Recommandé pour vous';
+      see_more = 'Voir plus';
+      reviewLang = 'avis';
+      oosLocal = ' - machines alternatives disponibles à la commande maintenant';
+    }
+  }
+
+  function executeMain() {
+
+    (function (w, d) {
+      var logInfo = function (str) {
+        console.info(str)
+      }
+      var Flickerlessly = w.Flickerlessly || {}; !function (t) { "use strict"; var e = function (t, e, n, o) { var a = "atNodeInserted" + t, i = [], s = ["", "-moz-", "-webkit-", "-ms-", "-o-"]; s.forEach(function (t, e) { i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}") }), i.push(e + "{"), s.forEach(function (t, e) { i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";") }), i.push("}"); var r = d.getElementsByTagName("head")[0]; if (r) { var c = d.createElement("style"); c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(d.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild) } var l = function (t) { if (t.animationName === a && "object" == typeof t.target) { var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success"); w.console && logInfo("('" + e + "') ready! Execute: " + i, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : w.console } };["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function (t, e) { d.addEventListener(t, l, !1) }) }, n = Math.floor(1e3 * Math.random() + 1); t.onReady = function () { for (var t = 0; t < arguments.length; t++) { var o = arguments[t], a = o.selector, i = o.success || null, s = o.persist || !1; e(n++, a, i, s) } } }(Flickerlessly);
+
+      /* change: reviews added as a selector */
+
+      Flickerlessly.onReady(
+        {
+          selector: '#skip-navigation-target .product-specification.parbase:not(.at_target), div.product-review:not(.at_target)',
+          success: function (el) {
+            el.className += ' at_target';
+            /* change 5 : added if condition for notifyme button */
+            if (document.querySelector(".sticky-nav__button .button--notifyMe") == null) {
+              if (document.querySelector('.recs-container')) {
+                var r = document.querySelector('.recs-container');
+                r.parentNode.removeChild(r);
+              }
+              var recsContent = document.getElementById('at_template_recs').innerHTML;
+              if (document.querySelector('#skip-navigation-target .product-specification.parbase')
+                .classList.contains('product-specification')) {
+                document.querySelector('#skip-navigation-target .product-specification.parbase')
+                  .insertAdjacentHTML('beforebegin', recsContent);
+              } else {
+                document.querySelector('div.product-review').insertAdjacentHTML('afterend', recsContent);
+              }
+            }
+          },
+          persist: true
+        },
+
+        {
+          selector: '.product-hero.parbase:not(.at_target)',
+          success: function (el) {
+
+            el.className += ' at_target';
+            if (document.querySelector(".sticky-nav__button .button--notifyMe") != null) {
+              if (document.querySelector('.recs-container')) {
+                var r = document.querySelector('.recs-container');
+                r.parentNode.removeChild(r);
+              }
+              var recsContent = document.getElementById('at_template_recs').innerHTML;
+              document.querySelectorAll(".product-hero")[0].insertAdjacentHTML('afterend', recsContent);
+            }
+          },
+          persist: true
+        }, /* change 6 ends */
+        {
+          selector: ".at_recs_card .at_recs_price > .atBluePrice",
+          success: function (el) {
+            setTimeout(function () {
+              matchHeight();
+              addPriceHeight();
+            }, 500);
+          },
+          persist: false
+        },
+        {
+          selector: ".at_recs_card ",
+          success: function (el) {
+            var domain = el.getAttribute('region'), sku = el.getAttribute('sku'), base_url = '';
+            if (domain === 'ca') {
+              base_url = 'https://api.dyson.co.uk/apiman-gateway/dyson/product/1.0/ca/';
+            } else if (domain === 'us') {
+              base_url = 'https://api.dyson.com/apiman-gateway/dyson/product/1.0/us/';
+            } else if (domain === 'uk') {
+              base_url = 'https://api.dyson.com/apiman-gateway/dyson/product/1.0/gb/';
+            } else if (domain === 'at') {
+              base_url = 'https://api.dyson.co.uk/apiman-gateway/dyson/product/1.0/de/';
+            }
+            else if (domain === window._dtag) {
+              base_url = 'https://api.dyson.co.uk/apiman-gateway/dyson/product/1.0/' + window._dtag + '/';
+            }
+            fetchRating(base_url, sku.replace(window._dtag.toUpperCase(), ""), domain);
+
+            el.querySelector('.see-more-section span').innerHTML = see_more;
+
+            if (document.querySelector('.recs-container h2.trade-up-header__content.hidden-xs-up')) {
+              var oosMessage = "";
+              if (document.querySelector(".sticky-nav__button .button--notifyMe") != null) {
+                oosMessage = oosLocal;
+              }
+              document.querySelector('.recs-container h2.trade-up-header__content.hidden-xs-up').innerHTML = header + oosMessage;;
+              document.querySelector('.recs-container h2.trade-up-header__content').className = 'trade-up-header__content js-trade-up-header-content col-xs-12';
+            }
+          },
+          persist: false
+        }, {
+        selector: '.recs_wrapper .at_recs_card .button--transactional',
+        persist: false,
+        success: function (el) {
+
+          if (el) {
+            el.removeEventListener('click', addToCart);
+            el.addEventListener('click', addToCart);
+            console.log('element present and event listeners attached')
+          }
+        }
+      },
+        {
+          selector: '.recs_wrapper.carousel',
+          success: function (el) {
+            if (window.innerWidth < 500) {
+              setInterval(loadCarousel, 1000);
+            }
+          },
+          persist: true
+        });
+      var fetchRating = function (base_url, sku, domain) {
+        sku = sku.replace("US", "").replace("GB", "").replace("CA", "").replace('BE', '').replace('CH', '');
+        var xhttp = new XMLHttpRequest();
+        var id = sku + window._dtag.toUpperCase();
+        if (domain == 'jp') {
+          id = sku;
+        }
+        if (domain == 'at') {
+          let ratings = document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_stars').innerHTML;
+          document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_stars').innerHTML = '';
+          let stars = "";
+          if (Number(ratings) >= 5) {
+            stars = 'five'
+          } else if (Number(ratings) >= 4.5) {
+            stars = 'four-five'
+          } else if (Number(ratings) >= 4) {
+            stars = 'four';
+          } else if (Number(ratings) >= 3.5) {
+            stars = 'three-five';
+          } else if (Number(ratings) >= 3) {
+            stars = 'three';
+          } else if (Number(ratings) >= 2.5) {
+            stars = 'two-five';
+          } else if (Number(ratings) >= 2) {
+            stars = 'two';
+          } else if (Number(ratings) >= 1.5) {
+            stars = 'one-five';
+          } else if (Number(ratings) >= 1) {
+            stars = 'one';
+          } else if (Number(ratings) < 1) {
+            stars = 'zero';
+          }
+          let prodName = document.querySelector('.at_recs_card[sku="' + id + '"] .text_section h3').textContent;
+          document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_stars').className += (' ' + stars);
+          document.querySelector('.at_recs_card[sku="' + id + '"] img.at-thumbnail').setAttribute('alt', prodName);
+          return;
+        }
+        xhttp.onreadystatechange = function () {
+
+          if (this.readyState == 4 && this.status == 200) {
+            try {
+              var res = JSON.parse(this.responseText),
+                ratings = res['bazaarVoiceAverageRating'],
+                reviews = res["bazaarVoiceNumberOfReviews"],
+                hideWasNowPricing = res["hideWasNowPricing"];
+              if (id && document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section')) {
+                var stars = "";
+                if (hideWasNowPricing) {
+                  document.querySelector('.at_recs_card[sku="' + id + '"]').setAttribute('hidewasnowpricing', true);
+                }
+
+                if (isNaN(Number(ratings))) {
+                  stars = 'zero';
+                }
+                if (Number(ratings) >= 5) {
+                  stars = 'five'
+                } else if (Number(ratings) >= 4.5) {
+                  stars = 'four-five'
+                } else if (Number(ratings) >= 4) {
+                  stars = 'four';
+                } else if (Number(ratings) >= 3.5) {
+                  stars = 'three-five';
+                } else if (Number(ratings) >= 3) {
+                  stars = 'three';
+                } else if (Number(ratings) >= 2.5) {
+                  stars = 'two-five';
+                } else if (Number(ratings) >= 2) {
+                  stars = 'two';
+                } else if (Number(ratings) >= 1.5) {
+                  stars = 'one-five';
+                } else if (Number(ratings) >= 1) {
+                  stars = 'one';
+                } else if (Number(ratings) < 1) {
+                  stars = 'zero';
+                }
+
+                var prodName = document.querySelector('.at_recs_card[sku="' + id + '"] .text_section h3').textContent;
+                document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_stars').className += (' ' + stars);
+                if (reviews != undefined) {
+                  document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_stars').setAttribute('ratings', ratings);
+
+                  document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .review_text').innerHTML = reviews; // + ' ' + reviewLang;
+                  document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section').removeAttribute('style');
+
+                  document.querySelector('.at_recs_card[sku="' + id + '"] .reviews_section .sr-only.ratings__stars--reader').textContent = ratings + ' stars out of 5 from ' + reviews + ' Reviews';
+                  document.querySelector('.at_recs_card[sku="' + id + '"] img.at-thumbnail').setAttribute('alt', prodName);
+                }
+              } else {
+              }
+            } catch (err) {
+            }
+          }
+        };
+        xhttp.open("GET", base_url + sku, true);
+        xhttp.send();
+      }
+
+    })(window, document);
+  }
+  function checkAndExecute(callback, retryCount, retryDelay) {
+    retryCount = retryCount || 20;
+    retryDelay = retryDelay || 200;
+
+    function isSlickAndJQueryLoaded() {
+      return typeof jQuery !== 'undefined' && typeof jQuery.fn.slick !== 'undefined';
+    }
+
+    function tryExecute() {
+      if (isSlickAndJQueryLoaded()) {
+        callback();
+      } else if (retryCount > 0) {
+        retryCount--;
+        setTimeout(tryExecute, retryDelay);
+      } else {
+      }
+    }
+
+    if (window.innerWidth < 500) {
+      tryExecute();
+    } else {
+      callback();
+    }
+  }
+
+  checkAndExecute(function () {
+    executeMain();
+  }, 20, 200);
+
+  // ADD to cart updated  Logic
+
+  // Base URL for all cart-related requests
+  var cartBaseUrl = "";
+  var bundleUrl = "";
+  var basketURL = "";
+  var productDetailsUrl = "";
+  var addingCartText = "";
+  if (window._dtag == '') {
+    cartBaseUrl = "https://api.dyson.com/apiman-gateway/dyson/cart/1.0/us/";
+    productUrl = "https://api.dyson.com/apiman-gateway/dyson/product/1.0/us/"
+    bundleUrl = "https://www.dyson.com/bundle-selector.";
+    basketURL = 'https://www.dyson.com/basket';
+    addingCartText = 'Adding...'
+  } else if (window._dtag == 'fr') {
+    cartBaseUrl = "https://api.dyson.fr/apiman-gateway/dyson/cart/1.0/fr/";
+    bundleUrl = "https://www.dyson.fr/bundle-selector.";
+    basketURL = 'https://www.dyson.fr/basket';
+    productUrl = "https://api.dyson.fr/apiman-gateway/dyson/product/1.0/fr/";
+    addingCartText = 'Ajout en cours...'
+  } else if (window._dtag == 'de') {
+    cartBaseUrl = "https://api.dyson.de/apiman-gateway/dyson/cart/1.0/de/";
+    bundleUrl = "https://www.dyson.de/bundle-selector.";
+    basketURL = 'https://www.dyson.de/basket';
+    productUrl = "https://api.dyson.de/apiman-gateway/dyson/product/1.0/de/";
+    addingCartText = 'Wird hinzugefügt...'
+  } else if (window._dtag == 'it') {
+    cartBaseUrl = "https://api.dyson.it/apiman-gateway/dyson/cart/1.0/it/";
+    bundleUrl = "https://www.dyson.it/bundle-selector.";
+    basketURL = 'https://www.dyson.it/basket';
+    productUrl = "https://api.dyson.it/apiman-gateway/dyson/product/1.0/it/";
+    addingCartText = 'Aggiunta in corso...'
+  } else if (window._dtag == 'ie') {
+    cartBaseUrl = "https://api.dyson.ie/apiman-gateway/dyson/cart/1.0/ie/";
+    bundleUrl = "https://www.dyson.ie/bundle-selector.";
+    basketURL = 'https://www.dyson.ie/basket';
+    productUrl = "https://api.dyson.ie/apiman-gateway/dyson/product/1.0/ie/";
+    addingCartText = 'Adding...'
+  } else if (window._dtag == 'at') {
+    cartBaseUrl = "https://api.dyson.at/apiman-gateway/dyson/cart/1.0/at/";
+    bundleUrl = "https://www.dyson.at/bundle-selector.";
+    basketURL = 'https://www.dyson.at/basket';
+    productUrl = "https://api.dyson.at/apiman-gateway/dyson/product/1.0/at/";
+    addingCartText = 'Wird hinzugefügt...'
+  } else if (window._dtag == 'es') {
+    cartBaseUrl = "https://api.dyson.es/apiman-gateway/dyson/cart/1.0/es/";
+    bundleUrl = "https://www.dyson.es/bundle-selector.";
+    basketURL = 'https://www.dyson.es/basket';
+    productUrl = "https://api.dyson.es/apiman-gateway/dyson/product/1.0/es/";
+    addingCartText = 'Añadiendo…'
+  } else if (window._dtag == 'nl') {
+    cartBaseUrl = "https://api.dyson.nl/apiman-gateway/dyson/cart/1.0/nl/";
+    bundleUrl = "https://www.dyson.nl/bundle-selector.";
+    basketURL = 'https://www.dyson.nl/basket';
+    productUrl = "https://api.dyson.nl/apiman-gateway/dyson/product/1.0/nl/";
+    addingCartText = 'Bezig met toevoegen ...'
+  } else if (window._dtag == 'be') {
+    cartBaseUrl = "https://api.dyson.be/apiman-gateway/dyson/cart/1.0/be/";
+    bundleUrl = "https://www.dyson.be/bundle-selector.";
+    basketURL = 'https://www.dyson.be/basket';
+    productUrl = "https://api.dyson.be/apiman-gateway/dyson/product/1.0/be/";
+    addingCartText = 'Bezig met toevoegen ...'
+  } else if (window._dtag == 'pt') {
+    cartBaseUrl = "https://api.dyson.pt/apiman-gateway/dyson/cart/1.0/pt/";
+    bundleUrl = "https://www.dyson.pt/seletor-de-pacotes.";
+    basketURL = 'https://www.dyson.pt/basket';
+    productUrl = "https://api.dyson.pt/apiman-gateway/dyson/product/1.0/pt/";
+    addingCartText = 'A adicionar...';
+  } else if (window._dtag == 'se') {
+    cartBaseUrl = "https://api.dyson.se/apiman-gateway/dyson/cart/1.0/se/";
+    bundleUrl = "https://www.dyson.se/bundle-selector.";
+    basketURL = 'https://www.dyson.se/basket';
+    productUrl = "https://api.dyson.se/apiman-gateway/dyson/product/1.0/se/";
+    addingCartText = 'Lägger till ...'
+  } else if (window._dtag == 'dk') {
+    cartBaseUrl = "https://api.dyson.dk/apiman-gateway/dyson/cart/1.0/dk/";
+    bundleUrl = "https://www.dyson.dk/bundtvaelger.";
+    basketURL = 'https://www.dyson.dk/basket';
+    productUrl = "https://api.dyson.dk/apiman-gateway/dyson/product/1.0/dk/";
+    addingCartText = 'Tilføjer...';
+  } else if (window._dtag == 'fi') {
+    cartBaseUrl = "https://api.dyson.fi/apiman-gateway/dyson/cart/1.0/fi/";
+    bundleUrl = "https://www.fi.dyson.com/bundle-selector.";
+    basketURL = 'https://www.fi.dyson.com/basket';
+    productUrl = "https://api.dyson.fi/apiman-gateway/dyson/product/1.0/fi/";
+    addingCartText = 'Lisätään...'
+  } else if (window._dtag == 'no') {
+    cartBaseUrl = "https://api.dyson.no/apiman-gateway/dyson/cart/1.0/no/";
+    bundleUrl = "https://www.dyson.no/bundle-selector.";
+    basketURL = 'https://www.dyson.no/basket';
+    productUrl = "https://api.dyson.no/apiman-gateway/dyson/product/1.0/no/";
+    addingCartText = 'Legger til...';
+  } else if (window._dtag == 'ch') {
+    cartBaseUrl = "https://api.dyson.ch/apiman-gateway/dyson/cart/1.0/ch/";
+    bundleUrl = "https://www.dyson.ch/bundle-selector.";
+    basketURL = 'https://www.dyson.ch/basket';
+    productUrl = "https://api.dyson.ch/apiman-gateway/dyson/product/1.0/ch/";
+    addingCartText = 'Wird hinzugefügt...';
+  } else if (window._dtag == 'ca') {
+    cartBaseUrl = "https://api.dysoncanada.ca/apiman-gateway/dyson/cart/1.0/ca/";
+    if (location.pathname.indexOf('/en') > -1) {
+      bundleUrl = "https://www.dysoncanada.ca/en/bundle-selector.";
+      basketURL = 'https://www.dysoncanada.ca/en/basket';
+    }
+    if (location.pathname.indexOf('/fr') > -1) {
+      bundleUrl = "https://www.dysoncanada.ca/fr/bundle-selector.";
+      basketURL = 'https://www.dysoncanada.ca/fr/cart';
+    }
+    productUrl = "https://api.dysoncanada.ca/apiman-gateway/dyson/product/1.0/ca/";
+    addingCartText = 'Adding...'
+  } else if (window._dtag == 'jp') {
+    cartBaseUrl = "https://api.dyson.co.jp/apiman-gateway/dyson/cart/1.0/jp/";
+    bundleUrl = "https://www.dyson.co.jp/bundle-selector.";
+    basketURL = 'https://www.dyson.co.jp/basket';
+    productUrl = "https://api.dyson.co.jp/apiman-gateway/dyson/product/1.0/jp/";
+    addingCartText = '追加しています';
+  } else if (location.host.indexOf('.uk') > -1) {
+    cartBaseUrl = "https://api.dyson.co.uk/apiman-gateway/dyson/cart/1.0/gb/";
+    bundleUrl = "https://www.dyson.co.uk/bundle-selector.";
+    basketURL = 'https://www.dyson.co.uk/basket';
+    productUrl = "https://api.dyson.co.uk/apiman-gateway/dyson/product/1.0/gb/";
+    addingCartText = 'Adding...'
+  }
+
+  function addToCart(e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    var btn = e.target;
+    var sku = jQuery(btn).parents(".at_recs_card").attr("sku");
+
+    btn.setAttribute("disabled", true);
+
+    checkProductDetails(sku, btn);
+  }
+
+  function checkProductDetails(sku, btn) {
+    sku = sku.replace('GB', '').replace('FR', '').replace('IT', '').replace('NL', '').replace('DE', '').replace('ES', '').replace('CA', '').replace('AT', '').replace('NO', '').replace('SE', '').replace('DK', '').replace('FI', '').replace('PT', '').replace('BE', '').replace('IE', '').replace('CH', '').replace('AT', '');
+    var productDetailsUrl = productUrl + sku;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.withCredentials = true;
+
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var res = JSON.parse(this.responseText);
+
+        // Check if the product has a bundle
+        if (res.parentBundleConfig) {
+          redirectToBundlePage(res.parentBundleConfig.id, sku);
+        } else {
+          proceedWithAddToCart(sku, btn);
+        }
+      } else if (this.readyState === 4 && this.status !== 200) {
+        handleError(btn);
+      }
+    };
+
+    xhttp.open("GET", productDetailsUrl, true);
+    xhttp.setRequestHeader("Accept", "application/json");
+    xhttp.send();
+  }
+
+  function redirectToBundlePage(bundleId, sku) {
+    bundleUrl = bundleUrl + bundleId + "." + sku;
+    window.location.href = bundleUrl;  // Redirects user to the interstitial page for selecting a bundle
+  }
+
+  function proceedWithAddToCart(sku, btn) {
+    var checkFOrGuid = JSON.parse(getCookieVal('cartguid'));
+    if (checkLoggedIn()) {
+      var userId = dataLayer.customer.credentialID;
+      addToCartAuthenticated(userId, sku, btn);
+    } else if (checkFOrGuid) {
+      AddProductToExistingCart(sku, btn);
+    } else {
+      createNewCartAndAddProduct(sku, btn);  // Create new cart and add product in one request
+    }
+  }
+
+  function addToCartAuthenticated(userId, sku, btn) {
+    var url = cartBaseUrl + "users/" + userId + "/carts/current";
+
+    sendAddToCartRequest(url, sku, btn);
+  }
+
+  function createNewCartAndAddProduct(sku, btn) {
+    var url = cartBaseUrl + "users/anonymous/carts/createCart?lang=en";  // This API creates a cart and adds a product at once
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.withCredentials = true;
+
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var res = JSON.parse(this.responseText);
+
+        if (res && res.guid) {
+          document.cookie = "cartguid=" + encodeURIComponent(res.guid) + ";path=/";  // Store the cart GUID in cookies
+          handleSuccessResponse(btn);  // No need to add the product separately, the cart already includes it
+        }
+      } else if (this.readyState === 4 && this.status !== 200) {
+        handleError(btn);
+      }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Accept", "application/json");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("x-csrf-token", getCookieVal("CSRF_TOKEN") || "");
+
+    var cartPayload = JSON.stringify({
+      product: {
+        code: sku
+      },
+      quantity: 1  // Include the product and quantity in the cart creation request
+    });
+    xhttp.send(cartPayload);
+  }
+
+  function AddProductToExistingCart(sku, btn) {
+    var cartGUID = JSON.parse(getCookieVal('cartguid'));
+    var url = cartBaseUrl + "users/anonymous/carts/" + cartGUID + "/entries";  // This API creates a cart and adds a product at once
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.withCredentials = true;
+
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var res = JSON.parse(this.responseText);
+
+        if (res && res.guid) {
+          document.cookie = "cartguid=" + encodeURIComponent(res.guid) + ";path=/";  // Store the cart GUID in cookies
+          handleSuccessResponse(btn);  // No need to add the product separately, the cart already includes it
+        }
+      } else if (this.readyState === 4 && this.status !== 200) {
+        handleError(btn);
+      }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Accept", "application/json");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("x-csrf-token", getCookieVal("CSRF_TOKEN") || "");
+
+    var cartPayload = JSON.stringify({
+      product: {
+        code: sku
+      },
+      quantity: 1  // Include the product and quantity in the cart creation request
+    });
+    xhttp.send(cartPayload);
+  }
+
+  function sendAddToCartRequest(url, sku, btn) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.withCredentials = true;
+
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        handleSuccessResponse(btn);
+      } else if (this.readyState === 4 && this.status !== 200) {
+        handleError(btn);
+      }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Accept", "application/json");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("x-csrf-token", getCookieVal("CSRF_TOKEN") || "");
+
+    var productPayload = JSON.stringify({
+      product: {
+        code: sku
+      },
+      quantity: 1
+    });
+    xhttp.send(productPayload);
+  }
+  function handleSuccessResponse(btn) {
+    btn.innerHTML = addingCartText;  // Update the button text
+    setTimeout(function () {
+      btn.innerHTML = '';  // Reload the page to show updated cart
+    }, 300);
+    setTimeout(function () {
+      btn.parentElement.classList.add('completed');
+      window.open(basketURL, '_self');  // Reload the page to show updated cart
+    }, 800);
+  }
+  function handleError(btn) {
+    btn.innerHTML = "Add to cart";
+    btn.removeAttribute("disabled");
+  }
+  function checkLoggedIn() {
+    var loggedIn = dataLayer.customer.credentialID !== "anonymous";
+    return loggedIn;
+  }
+  function getCookieVal(cname) {
+    var cookie = (document.cookie || "").split(";");
+    for (var i = cookie.length - 1; i >= 0; i--) {
+      if (cookie[i].trim().indexOf(cname + "=") > -1) {
+        return decodeURIComponent(cookie[i].trim().replace(cname + "=", ""));
+      }
+    }
+    return null;
+  }
+
+</script>

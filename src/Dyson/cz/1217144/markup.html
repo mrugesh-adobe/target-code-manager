@@ -305,9 +305,23 @@
               success: function (el) {
                   if(!document.querySelector(".at_template_recs")){
                   var recsContent = document.getElementById('at_template_recs').innerHTML;
-                  el.querySelector('[data-gtm-component="menu"]')
-                  .insertAdjacentHTML("beforebegin", recsContent);
-                  document.querySelector(".trade-up-header__content").innerHTML = window.header;
+                  // For CZ we need to insert after second child of .dyson-cms
+                  var insertionPoint = el.querySelector('.dyson-cms > div:nth-child(2)');
+                  
+                  if(insertionPoint) {
+                      insertionPoint.insertAdjacentHTML("afterend", recsContent);
+                      var headerElement = document.querySelector(".trade-up-header__content");
+                      if(headerElement) {
+                          headerElement.innerHTML = window.header;
+                      }
+                  } else {
+                      // Fallback: append to maincontent directly
+                      el.insertAdjacentHTML("afterbegin", recsContent);
+                      var headerElement = document.querySelector(".trade-up-header__content");
+                      if(headerElement) {
+                          headerElement.innerHTML = window.header;
+                      }
+                  }
                 }
               },
               persist: true
