@@ -305,23 +305,47 @@
               success: function (el) {
                   if(!document.querySelector(".at_template_recs")){
                   var recsContent = document.getElementById('at_template_recs').innerHTML;
-                  // For CZ we need to insert after second child of .dyson-cms
-                  var insertionPoint = el.querySelector('.dyson-cms > div:nth-child(2)');
+                  var inserted = false;
                   
-                  if(insertionPoint) {
-                      insertionPoint.insertAdjacentHTML("afterend", recsContent);
-                      var headerElement = document.querySelector(".trade-up-header__content");
-                      if(headerElement) {
-                          headerElement.innerHTML = window.header;
+                  // Function to insert content and update header
+                  var insertContent = function(targetElement, position) {
+                      if(!inserted && targetElement) {
+                          targetElement.insertAdjacentHTML(position, recsContent);
+                          inserted = true;
+                          var headerElement = document.querySelector(".trade-up-header__content");
+                          if(headerElement) {
+                              headerElement.innerHTML = window.header;
+                          }
+                          return true;
                       }
-                  } else {
-                      // Fallback: append to maincontent directly
-                      el.insertAdjacentHTML("afterbegin", recsContent);
-                      var headerElement = document.querySelector(".trade-up-header__content");
-                      if(headerElement) {
-                          headerElement.innerHTML = window.header;
-                      }
+                      return false;
+                  };
+                  
+                  // Try primary target first
+                  var targetElement = document.querySelector('[data-row-target="target-plp-products-grid-layout"]');
+                  if(insertContent(targetElement, "beforebegin")) {
+                      return; // Success, exit early
                   }
+                  
+                  // Lightweight polling for AJAX content (max 3 seconds)
+                  var attempts = 0;
+                  var maxAttempts = 15; // 15 attempts * 200ms = 3 seconds max
+                  var pollInterval = setInterval(function() {
+                      attempts++;
+                      var targetElement = document.querySelector('[data-row-target="target-plp-products-grid-layout"]');
+                      
+                      if(targetElement && insertContent(targetElement, "beforebegin")) {
+                          clearInterval(pollInterval);
+                      } else if(attempts >= maxAttempts) {
+                          clearInterval(pollInterval);
+                          // Fallback to secondary selector
+                          var fallbackElement = el.querySelector('.dyson-cms > div:nth-child(2)');
+                          if(!insertContent(fallbackElement, "afterend")) {
+                              // Final fallback
+                              insertContent(el, "afterbegin");
+                          }
+                      }
+                  }, 200);
                 }
               },
               persist: true
@@ -657,9 +681,6 @@
   .custom-badge.be_latest_technology {
   color: #fff !important;
   background-color: #000 !important;
-  }
-  
-  .at_recs_card>.text_section>h3 {
   }
   
   @media screen and (max-width: 767px) {
