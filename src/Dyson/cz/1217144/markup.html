@@ -321,31 +321,64 @@
                       return false;
                   };
                   
-                  // Try primary target first
-                  var targetElement = document.querySelector('[data-row-target="target-plp-products-grid-layout"]');
+                  // Function to find target element with fallback logic
+                  var findTargetElement = function() {
+                      // Try primary target first
+                      var targetElement = document.querySelector('[data-row-target="target-plp-products-grid-layout"]');
+                      if(targetElement) {
+                          return targetElement;
+                      }
+                      
+                      // Fallback to element with ID ending in "plpherocopy"
+                      var elements = document.querySelectorAll('[id]');
+                      for(var i = 0; i < elements.length; i++) {
+                          if(elements[i].id.endsWith('plpherocopy')) {
+                              return elements[i];
+                          }
+                      }
+                      
+                      return null;
+                  };
+                  
+                  // Try to find and insert content immediately
+                  var targetElement = findTargetElement();
                   if(insertContent(targetElement, "beforebegin")) {
                       return; // Success, exit early
                   }
                   
-                  // Lightweight polling for AJAX content (max 3 seconds)
+                  // Extended polling for AJAX content (max 12 seconds with adaptive intervals)
                   var attempts = 0;
-                  var maxAttempts = 15; // 15 attempts * 200ms = 3 seconds max
-                  var pollInterval = setInterval(function() {
+                  var maxAttempts = 60; // Total attempts for 12 seconds
+                  var currentInterval = 200; // Start with 200ms
+                  
+                  var pollForTarget = function() {
                       attempts++;
-                      var targetElement = document.querySelector('[data-row-target="target-plp-products-grid-layout"]');
+                      var targetElement = findTargetElement();
                       
                       if(targetElement && insertContent(targetElement, "beforebegin")) {
-                          clearInterval(pollInterval);
-                      } else if(attempts >= maxAttempts) {
-                          clearInterval(pollInterval);
-                          // Fallback to secondary selector
+                          return; // Success, stop polling
+                      }
+                      
+                      if(attempts >= maxAttempts) {
+                          // Fallback to secondary selector after 12 seconds
                           var fallbackElement = el.querySelector('.dyson-cms > div:nth-child(2)');
                           if(!insertContent(fallbackElement, "afterend")) {
                               // Final fallback
                               insertContent(el, "afterbegin");
                           }
+                          return;
                       }
-                  }, 200);
+                      
+                      // Adaptive interval: increase interval after 3 seconds to reduce CPU usage
+                      if(attempts === 15) { // After 3 seconds (15 * 200ms)
+                          currentInterval = 500; // Switch to 500ms intervals
+                      }
+                      
+                      setTimeout(pollForTarget, currentInterval);
+                  };
+                  
+                  // Start polling
+                  setTimeout(pollForTarget, 200);
                 }
               },
               persist: true

@@ -1,0 +1,51 @@
+<script>
+    window.showForProducts = ['499044-01', '492600-01', '448753-01'];
+    window.BASE_URL = "https://api.dyson.se/apiman-gateway/dyson/product/1.0/jp/";
+    window.CART_BASE_URL_T546 = "https://api.dyson.se/apiman-gateway/dyson/cart/1.0/jp/";
+    window.staticIds = {
+      
+
+
+
+/*NEED UPDATING BELOW*/
+
+/*499044-01 Dyson PencilVac Fluffycones (SV50 FC)*/  '499044-01': ['973969-01'],
+/*492600-01 Dyson PencilVac Fluffy (SV50 FF)*/  '492600-01': ['973969-01'],
+/*448753-01 Dyson V12s Detect Slim Submarine (SV46 SU)*/  '448753-01': ['973703-01', '972157-01'],
+/*476642-01 Dyson V12s Origin Submarine (SV49 SU)*/  '476642-01': ['973703-01', '972157-01'],
+/*447831-01 Dyson V12 Detect Slim Absolute (SV46 ABL EX)*/  '447831-01': ['972205-01', '972157-01'],
+/*447821-01 Dyson V12 Detect Slim Absolute (SV46 ABL)*/  '447821-01': ['972205-01', '972157-01'],
+/*496012-01 Dyson V12 Detect Slim Fluffy (SV46 FF EX)*/  '496012-01': ['972205-01', '972157-01'],
+/*492668-01 Dyson V12 Detect Slim Fluffy (SV46 FF)*/  '492668-01': ['972205-01', '972157-01'],
+/*447956-01 Dyson Digital Slim Origin (SV18 FF OR2)*/  '447956-01': ['972205-01', '972157-01'],
+/*447818-01 Dyson Digital Slim Fluffy (SV18 FF H)*/  '447818-01': ['972205-01', '972157-01'],
+/*447813-01 Dyson Micro Plus (SV33 FF PL)*/  '447813-01': ['973395-01'],
+/*400410-01 Dyson Cyclone V10 Fluffy (SV12 FF LF)*/  '400410-01': ['972123-01'],
+/*436158-01 Dyson V8 Slim Fluffy Black (SV10K EXT BK)*/  '436158-01': ['972157-01'],
+/*599055-01 Dyson Airstrait?ストレイトナー ジャスパープラム (HT01 JPPL)*/  '599055-01': ['972486-01'],
+/*599525-01 Dyson Airstrait?ストレイトナー さくらチェリー (HT01 KP)*/  '599525-01': ['972486-01'],
+/*560860-01 Dyson Airstrait?ストレイトナー ストロベリー／ブロンズピンク (HT01 SBP)*/  '560860-01': ['972486-01'],
+/*401330-01 Dyson Airstrait?ストレイトナー ダークブルー／コッパー (HT01 DBBC)*/  '401330-01': ['972486-01'],
+/*560468-01 Dyson Airstrait?ストレイトナー セラミックピンク (HT01 VLP)*/  '560468-01': ['972486-01'],
+/*122660-01 Dyson Supersonic Nural? Shineヘアドライヤー ダークブルー／コッパー (HD16 DBBC)*/  '122660-01': ['968999-01'],
+/*514288-01 Dyson Supersonic Nural? Shineヘアドライヤー セラミックパティーナ／トパーズ (HD16 CPATO)*/  '514288-01': ['968999-01'],
+/*560473-01 Dyson Supersonic Nural? Shineヘアドライヤー セラミックピンク (HD16 VLP)*/  '560473-01': ['968999-01'],
+/*522097-01 Dyson Supersonic r?ヘアドライヤー ビンカブルー／トパーズ (HD17 VBTO)*/  '522097-01': ['968999-01'],
+/*560463-01 Dyson Supersonic r?ヘアドライヤー セラミックピンク (HD17 VLP)*/  '560463-01': ['968999-01'],
+/*476722-01 Dyson Supersonic r?ヘアドライヤー セラミックパティーナ／トパーズ (HD17 CPATO)*/  '476722-01': ['968999-01'],
+/*111938-01 Dyson Supersonic?ヘアドライヤー ニッケル／コッパー (HD08 BNBC)*/  '111938-01': ['968999-01'],
+/*544539-01 Dyson Purifier Hot+Cool HP2 De-NOx 空気清浄ファンヒーターホワイト /ゴールド (HP12 WG)*/  '544539-01': ['974527-01'],
+/*586364-01 Dyson Purifier Hot+Cool? Gen1 空気清浄ファンヒーター ブラック／ニッケル (HP10 BN)*/  '586364-01': ['965432-01'],
+/*454864-01 Dyson Purifier Hot+Cool? Gen1 空気清浄ファンヒーター ホワイト／ホワイト (HP10 WW)*/  '454864-01': ['965432-01'],
+/*385416-01* Dyson Purifier Hot+Cool?空気清浄ファンヒーター シルバー／ブルー (HP07 SB)*/  '385416-01': ['965432-01'],
+/*545001-01 Dyson Purifier Humidify+Cool PH2 De-NOx 加湿空気清浄機 ホワイト/ゴールド (PH05 WG)*/  '545001-01': ['974527-01'],
+/*497045-01 Dyson Purifier Humidify+Cool? 加湿空気清浄機 ホワイト／シルバー (PH03 WS N)*/  '497045-01': ['965432-01'],
+/*410641-01 Dyson Purifier Big+Quiet Formaldehyde 空気清浄機 ニッケル / ブルー (BP03 NB)*/  '410641-01': ['972132-01'],
+/*387266-01 Dyson Purifier Big+Quiet 空気清浄機 ホワイト / シルバー (BP02 WS)*/  '387266-01': ['972132-01'],
+/*546435-01 Dyson Purifier Cool PC2 De-NOx 空気清浄ファン ホワイト/ゴールド (TP12 WG)*/  '546435-01': ['974527-01'],
+/*545865-01 Dyson Purifier Cool? Gen1 空気清浄ファン ホワイト/ホワイト (TP10 WW)*/  '545865-01': ['965432-01'],
+/*470332-01 Dyson Purifier Cool Formaldehyde? 空気清浄ファン ニッケル／ゴールド (TP09 NG)*/  '470332-01': ['974527-01'],
+/*369272-01 Dyson Purifier Cool?空気清浄ファン ホワイト／シルバー (TP07 WS)*/  '369272-01': ['965432-01'],
+
+    }
+    </script>

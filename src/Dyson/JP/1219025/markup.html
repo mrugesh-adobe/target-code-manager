@@ -1,0 +1,1833 @@
+<!--T546_DE_AdobeQA--->
+<style type="text/css" id="recs_style">
+    /* .basket-body__summary--container + div, .basket-body__summary--container.col-lg-8{clear:both} */
+    .button--transactional {
+        -webkit-appearance: initial !important;
+        display: block;
+    }
+
+    .js-basket-item-compatible-heading {
+        display: none;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100000;
+        display: none;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        -webkit-transform: translateZ(1px);
+        transform: translateZ(1px);
+        background-color: #00000080;
+    }
+
+    .overlay-is-open .overlay {
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-animation-duration: 0.25s, 0.5s;
+        animation-duration: 0.25s, 0.5s;
+        -webkit-animation-timing-function: ease-in-out, ease-in-out;
+        animation-timing-function: ease-in-out, ease-in-out;
+        -webkit-animation-delay: 0, 0;
+        animation-delay: 0, 0;
+        -webkit-animation-iteration-count: 1, 1;
+        animation-iteration-count: 1, 1;
+        -webkit-animation-direction: normal, normal;
+        animation-direction: normal, normal;
+        -webkit-animation-fill-mode: both, both;
+        animation-fill-mode: both, both;
+        -webkit-animation-play-state: running, running;
+        animation-play-state: running, running;
+        -webkit-animation-name: digi-fade-in-modal, digi-slide-up-modal;
+        animation-name: digi-fade-in-modal, digi-slide-up-modal;
+    }
+
+    .overlay__content--video {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .trade-up-item__close {
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+        z-index: 1;
+        padding: 1rem;
+    }
+
+    .s7videoviewer .s7videoplayer .s7iconeffect[state] {
+        background-image: url(https://www.dyson.co.uk/etc/dam/viewers/s7viewers/html5/images/v2/IconEffect_video_sprite.png);
+        background-position: -0px -320px;
+    }
+
+    .basket-recommendations_T546 h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .basket-recommendations_T546 h3 {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .basket-recommendations_T546 .plp-cards__name {
+        margin-top: 1rem !important;
+    }
+
+    .basket-recommendations_T546 p {
+        font-weight: 400;
+        font-size: 0.875rem;
+    }
+
+    .basket-recommendations_T546 .plp-cards__price {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .basket-recommendations_T546 .responsive-image,
+    .basket-recommendations_T546 .plp-cards__text-container,
+    .basket-recommendations_T546 .plp-cards__bottom-container {
+        background-color: #fff;
+    }
+
+    .basket-recommendations_T546 .plp-cards__bottom-container {
+        padding-top: 0;
+    }
+
+    .basket-recommendations_T546 .plp-cards__price-container,
+    .basket-recommendations_T546 .plp-cards__text-container {
+        padding: 0 16px;
+    }
+
+    .basket-recommendations_T546 .plp-cards__image-container img {
+        max-height: 200px;
+        width: auto !important;
+        max-width: 100%;
+    }
+
+    .basket-recommendations_T546 .plp-cards__button-container .plp-cards__add-to-basket {
+        width: 100%;
+    }
+
+
+    .basket-recommendations_T546 .plp-cards__button-container {
+        margin-top: 0;
+    }
+
+    .basket-recommendations_T546 .plp-cards__button-container .plp-cards__learn-more-button {
+        display: none;
+    }
+
+    .basket-recommendations_T546 .plp-cards__text-container {
+        padding-bottom: 1rem;
+    }
+
+    /* .recs_wrapper.plp-cards__items li {
+          text-align: center;
+      } */
+
+    .button--transactional {
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        color: #333333;
+        padding-left: 1.25rem;
+        text-decoration: none;
+    }
+
+    .button--transactional:hover {
+        text-decoration: none;
+    }
+
+
+    /* .button--transactional::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0a0b09;
+    border: 1px solid #919191;
+    background-color: #fff;
+    vertical-align: middle;
+  }*/
+
+    .basket-recommendations_T546 .button--transactional.active {
+        color: #0a0b09;
+    }
+
+    .basket-recommendations_T546 .button--transactional.active::before {
+        /* content: "✓"; */
+        background-image: url(https://www.dyson.co.uk/etc.clientlibs/dyson/clientlibs/clientlib-head/resources/images/sprite/sprite.png);
+        background-position: 0 -1904px;
+        height: 2rem;
+        width: 2rem;
+        /* font-weight: bold;
+          line-height: 1.75rem;
+          text-align: center;
+          font-size: 1.5rem; */
+        border: 2px solid #0a0b09;
+    }
+
+    .at_recs_card_T546.plp-cards__item.js-plp-cards-item.active .plp-cards__image-container {
+        border: 2px solid #0a0b09;
+        border-bottom: none;
+    }
+
+    .at_recs_card_T546.plp-cards__item.js-plp-cards-item.active .plp-cards__text-container {
+        border-left: 2px solid #0a0b09;
+        border-right: 2px solid #0a0b09;
+    }
+
+    .at_recs_card_T546.plp-cards__item.js-plp-cards-item.active .plp-cards__bottom-container {
+        border: 2px solid #0a0b09;
+        border-top: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        .basket-recommendations_T546 .plp-cards__button-container {
+            margin-top: 1rem;
+        }
+
+        .basket-recommendations_T546 {
+            max-width: 100%;
+        }
+
+        .basket-recommendations_T546 .text__heading.h2 {
+            padding-left: 1.25rem;
+        }
+
+        .basket-recommendations_T546 .plp-cards__description {
+            min-height: 80px;
+        }
+
+        .button--transactional {
+            padding-left: 1rem;
+        }
+
+        .basket-recommendations_T546 .recs-container_T546 {
+            margin-left: 1.25rem;
+        }
+
+        .basket-recommendations_T546 .plp-cards__text-container {
+            padding-bottom: 0;
+        }
+    }
+
+    .basket-body__summary--container {
+        justify-content: flex-start !important;
+    }
+
+
+    @media screen and (max-width: 767px) {
+        .tooltip {
+            display: inline-block;
+            border-bottom: none;
+            cursor: auto;
+            max-width: 220px;
+            min-width: 216px;
+            background-color: #ffffff;
+            color: black;
+            position: absolute;
+            z-index: 3141599;
+            top: 0px;
+            right: -30px;
+            filter: drop-shadow(rgba(0, 0, 0, 0.3) 0 2px 10px);
+            height: auto;
+        }
+
+        .tooltip:after {
+            content: "";
+            position: absolute;
+            border-width: 8px;
+            margin-top: 4px;
+            border-style: solid;
+            top: calc(100% - 4px);
+            right: 29% !important;
+            transform: rotate(180deg);
+            border-color: transparent transparent #fff transparent !important;
+        }
+
+        .hide-tooltip {
+            display: none !important;
+        }
+
+        .toolTip-icon-size {
+            width: 20px;
+            height: 20px;
+        }
+
+        .toolTip-icon {
+            border: 3px solid #000;
+            border-radius: 50%;
+            flex: 1;
+            margin: 0 auto;
+            margin-right: 0;
+            min-width: 21px;
+            padding: 0;
+            width: 21px;
+            margin-left: 2px;
+            max-width: 21px;
+            height: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff !important;
+            outline: none !important;
+        }
+
+
+        .tooltipclosebutton {
+            float: right;
+            background: white;
+            border: 1px solid white;
+            align-self: flex-start;
+        }
+
+
+
+        .activeToolTip {
+            z-index: 6 !important;
+        }
+
+        .close-tooltip {
+            display: inline-block;
+            height: 10px !important;
+            width: 10px !important;
+        }
+
+        .tooltip-block {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: baseline;
+        }
+
+        .tooltip-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .tooltip-container .plp-cards__description {
+            padding: 16px 0 16px 16px;
+        }
+
+        .tooltip-container .tooltipclosebutton {
+            padding: 8px 8px 0 8px;
+        }
+
+        .basket-recommendations_T546 .plp-cards__name {
+            flex: 1;
+        }
+
+        .tooltip-block .toolTip-icon {
+            flex: 1;
+        }
+
+        .top-spacing {
+            margin-top: 32px;
+        }
+
+        .trade-up-item__close {
+            top: 4rem;
+        }
+
+    }
+
+
+
+    .button[disabled] {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    /*added for new badges*/
+
+    .custom-badge.GB-Purple {
+        color: #FFFFFF;
+        background-color: #522A86;
+    }
+</style>
+
+<script>
+    !(function(e, t) {
+        var n = "snapper",
+            a = n + "_nav_item-selected";
+        t.fn[n] = function(r) {
+            var s,
+                o,
+                l = arguments;
+
+            function p(e) {
+                var r = t(e[0].target).closest("." + n),
+                    s = r.find("." + n + "_nav");
+                for (i in e) {
+                    var o = e[i],
+                        l = r.find("a[href='#" + o.target.id + "']");
+                    o.isIntersecting && o.intersectionRatio >= 0.75 ?
+                        (o.target.classList.add(n + "_item-active"),
+                            t(o.target).trigger(n + ".active"),
+                            s.length &&
+                            (l[0].classList.add(a),
+                                s[0].scrollTo ?
+                                s[0].scrollTo({
+                                    left: l[0].offsetLeft,
+                                    behavior: "smooth"
+                                }) :
+                                (s[0].scrollLeft = l[0].offsetLeft))) :
+                        (o.target.classList.remove(n + "_item-active"),
+                            t(o.target).trigger(n + ".inactive"),
+                            l.length && l[0].classList.remove(a));
+                }
+            }
+
+            function d(e) {
+                return t(e).find("." + n + "_item-active");
+            }
+
+            function f(e) {
+                if (t(e).closest("[data-snapper-loop], [data-loop]").length) {
+                    var a = e.scrollWidth,
+                        r = e.scrollLeft,
+                        s = t(e).find("." + n + "_items"),
+                        o = s.children(),
+                        l = e.offsetWidth;
+                    if (r < l) {
+                        var p = o.last(),
+                            d = p.width();
+                        s.prepend(p), (e.scrollLeft = r + d);
+                    } else if (a - r - l <= 0) {
+                        var p = o.first(),
+                            d = p.width();
+                        s.append(p), (e.scrollLeft = r - d);
+                    }
+                }
+            }
+
+            function c(e) {
+                if (!e.closest("[data-snapper-loop], [data-loop]").length) {
+                    var t = e.find(".snapper_pane"),
+                        n = e.find(".snapper_nextprev_next"),
+                        a = e.find(".snapper_nextprev_prev"),
+                        r = t[0].scrollLeft,
+                        s = t[0].scrollWidth,
+                        o = t.width(),
+                        l = o === s;
+                    r >= s - o - 3 || l ?
+                        n.addClass("snapper_nextprev-disabled").attr("tabindex", -1) :
+                        n.removeClass("snapper_nextprev-disabled").attr("tabindex", 0),
+                        r > 3 && !l ?
+                        a.removeClass("snapper_nextprev-disabled").attr("tabindex", 0) :
+                        a.addClass("snapper_nextprev-disabled").attr("tabindex", -1),
+                        l ?
+                        e.addClass("snapper-hide-nav") :
+                        e.removeClass("snapper-hide-nav");
+                }
+            }
+
+            function v(e, a, r) {
+                e.scrollTo ?
+                    e.scrollTo({
+                        left: a,
+                        behavior: "smooth"
+                    }) :
+                    (e.scrollLeft = a);
+                var s = d(e);
+                t(e).trigger(n + ".after-goto", {
+                    activeSlides: s[0]
+                }), r && r();
+            }
+            return (
+                (s = this.each(function() {
+                    if (void 0 === o) {
+                        var a,
+                            s,
+                            h,
+                            u,
+                            $,
+                            g = this,
+                            x = t(g),
+                            m = x.is("[data-" + n + "-nextprev]"),
+                            b = t("." + n + "_pane", g);
+                        b.attr("tabindex", "0");
+                        var L = b.find("." + n + "_items");
+                        !(function e(n) {
+                            n.children().each(function() {
+                                void 0 === t(this).attr("id") &&
+                                    t(this).attr("id", new Date().getTime());
+                            });
+                        })(L);
+                        var C = L.children();
+                        C.addClass(n + "_item");
+                        var y = C.length;
+                        if ("string" == typeof r) {
+                            var k,
+                                _,
+                                w = Array.prototype.slice.call(l, 1);
+                            switch (r) {
+                                case "goto":
+                                    _ = w[0] % y;
+                                    var T = L.children().eq(_)[0].offsetLeft;
+                                    v(b[0], T, function() {
+                                        "function" == typeof w[1] && w[1]();
+                                    });
+                                    break;
+                                case "getIndex":
+                                    o = d(b).index();
+                            }
+                            return;
+                        }
+                        if (!x.attr("data-" + n + "-enhanced")) {
+                            if (
+                                ((a = b[0]),
+                                    (s = new IntersectionObserver(p, {
+                                        root: a,
+                                        threshold: 0.75
+                                    })),
+                                    t(a)
+                                    .find("." + n + "_item")
+                                    .each(function() {
+                                        s.observe(this);
+                                    }),
+                                    s.takeRecords(),
+                                    m)
+                            ) {
+                                var D = t(
+                                        '<ul class="snapper_nextprev"><li class="snapper_nextprev_item"><a href="#prev" class="snapper_nextprev_prev">Prev</a></li><li class="snapper_nextprev_item"><a href="#next" class="snapper_nextprev_next">Next</a></li></ul>'
+                                    ),
+                                    I = t(".snapper_nextprev_contain", g);
+                                I.length || (I = t(g)), D.appendTo(I);
+                            }
+                            t("a", this).bind("click", function(e) {
+                                    clearTimeout(k);
+                                    var n = t(this).attr("href");
+                                    return t(this).is(".snapper_nextprev_next") ?
+                                        (e.preventDefault(), W(!0)) :
+                                        t(this).is(".snapper_nextprev_prev") ?
+                                        (e.preventDefault(), W(!1)) :
+                                        void(
+                                            0 === n.indexOf("#") &&
+                                            n.length > 1 &&
+                                            (e.preventDefault(), P(n))
+                                        );
+                                }),
+                                t(this).bind("keydown", function(e) {
+                                    (37 === e.keyCode || 38 === e.keyCode) &&
+                                    (clearTimeout(k),
+                                        e.preventDefault(),
+                                        e.stopImmediatePropagation(),
+                                        W(!1)),
+                                    (39 === e.keyCode || 40 === e.keyCode) &&
+                                    (clearTimeout(k),
+                                        e.preventDefault(),
+                                        e.stopImmediatePropagation(),
+                                        W(!0));
+                                }),
+                                t(e).bind("resize", function e() {
+                                    clearTimeout(h),
+                                        u || (u = d(b).first()),
+                                        (h = setTimeout(function() {
+                                            P(u.attr("id")), (u = null), c(x);
+                                        }, 300));
+                                }),
+                                b.bind("pointerdown click mouseenter focus", function() {
+                                    clearTimeout(k);
+                                }),
+                                b.bind("scroll", function() {
+                                    window.clearTimeout($),
+                                        ($ = setTimeout(function() {
+                                            f(b[0]), c(x);
+                                        }, 66));
+                                }),
+                                f(b[0]),
+                                c(x),
+                                (function e(t) {
+                                    t &&
+                                        (k = setTimeout(function() {
+                                            var t = R();
+                                            t && (W(!0), e(t));
+                                        }, t));
+                                })(R()),
+                                x.attr("data-" + n + "-enhanced", !0);
+                        }
+                    }
+
+                    function P(e, n) {
+                        var a = t(e, g);
+                        a.length &&
+                            v(b[0], a[0].offsetLeft, function() {
+                                n && n();
+                            });
+                    }
+
+                    function W(e) {
+                        var t, a;
+                        e
+                            ?
+                            ((t = d(b).first().next()),
+                                t.length &&
+                                P("#" + t.attr("id"), function() {
+                                    b.trigger(n + ".after-next");
+                                })) :
+                            ((a = d(b).first().prev()),
+                                a.length &&
+                                P("#" + a.attr("id"), function() {
+                                    b.trigger(n + ".after-prev");
+                                }));
+                    }
+
+                    function R() {
+                        var e =
+                            d(b).last().attr("data-snapper-autoplay") ||
+                            x.attr("data-snapper-autoplay");
+                        return e && (e = parseInt(e, 10) || 5e3), e;
+                    }
+                })),
+                void 0 !== o ? o : s
+            );
+        };
+    })(this, jQuery);
+</script>
+
+<style>
+    .snapper * {
+        box-sizing: border-box;
+    }
+
+    .snapper,
+    .snapper_nextprev_contain {
+        position: relative;
+    }
+
+    .snapper:focus {
+        outline: none;
+    }
+
+    .snapper_pane::-webkit-scrollbar {
+        display: none;
+    }
+
+    .snapper_pane {
+        overflow: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: mandatory;
+        scroll-snap-type: x mandatory;
+        scroll-snap-points-x: repeat(100%);
+        position: relative;
+        z-index: 0;
+    }
+
+    .snapper-sliding .snapper_pane {
+        scroll-snap-type: none;
+    }
+
+    .snapper_items {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .snapper_items>*,
+    .snapper_item {
+        position: relative;
+        white-space: normal;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        padding-right: 1px;
+        padding-left: 1px;
+        flex: 1 0 auto;
+        width: 100%;
+    }
+
+    .snapper_items img {
+        width: 100%;
+        display: block;
+    }
+
+    .snapper_nextprev-disabled,
+    .snapper-hide-nav .snapper_nextprev,
+    .snapper-hide-nav .snapper_nav {
+        opacity: 0.3;
+        cursor: default;
+    }
+
+    .snapper_nav,
+    .snapper_nav_inner {
+        position: relative;
+        margin: 1em 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .snapper_nav a {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        white-space: normal;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        height: 50px;
+        width: auto;
+        margin: 0 5px 0 0;
+    }
+
+    .snapper_nav a.snapper_nav_item-selected {
+        outline: 1px solid #000;
+    }
+
+    .snapper_nav img {
+        display: block;
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .plp-cards__items .snapper_item {
+        width: 70%;
+        max-width: 216px;
+        /*cursor: pointer;*/
+        padding-right: 18px;
+    }
+
+    .button--transactional.completed_T791:after {
+        content: "";
+        display: block;
+        width: .5rem;
+        height: 1rem;
+        top: 90%;
+        left: 50%;
+        border: solid #000;
+        border-width: 0 .125rem .125rem 0;
+        transform: translate3d(-50%, -50%, 0) rotate(45deg) scale(1);
+        animation: checkmark-pop .2s linear;
+        position: absolute;
+        border-radius: 0;
+    }
+
+
+    /*  .plp-cards__items li.snapper_item:nth-child(2){margin: 0 16px;} */
+
+    @media (min-width: 768px) and (max-width: 819px) {
+        .plp-cards__items .snapper_item {
+            max-width: 230px;
+            width: 33%;
+        }
+    }
+
+    @media (min-width: 820px) and (max-width: 1024px) {
+        .plp-cards__items .snapper_item {
+            max-width: 250px;
+            width: 33%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .plp-cards__items .snapper_item {
+            max-width: 290px;
+            width: 33%;
+        }
+
+        .button--transactional.completed_T791:after {
+            content: "";
+            display: block;
+            width: .5rem;
+            height: 1rem;
+            top: 94%;
+            left: 50%;
+            border: solid #000;
+            border-width: 0 .125rem .125rem 0;
+            transform: translate3d(-50%, -50%, 0) rotate(45deg) scale(1);
+            animation: checkmark-pop .2s linear;
+            position: absolute;
+            border-radius: 0;
+        }
+    }
+
+    .plp-cards__items .snapper_pane {
+        scroll-snap-points-x: repeat(100px);
+    }
+
+
+    .basket-recommendations_T546 .button--transactional {
+        height: 100%;
+        padding: 0;
+        max-height: 100%;
+        min-height: 40px !important;
+    }
+
+    .at_recs_card .trade-up-item__badge {
+        z-index: 1;
+    }
+
+
+    .recs-container_T546 .custom-badge.Chitosan {
+        color: #000000;
+        background-color: #f7b0aa;
+        border-radius: 2px;
+    }
+
+    .custom-badge.fr_technology {
+        background-color: black !important;
+        color: white;
+        /* Optional: ensures text is readable on black background */
+    }
+
+
+    .custom-badge.gb_offer_promo {
+        background-color: black;
+    }
+
+    .recs-container_T546 .custom-badge {
+        color: white;
+        background: none;
+        top: 0px !important;
+        left: 0px;
+        margin-left: 8px;
+        z-index: 3 !important;
+        position: absolute;
+        padding: 2px 8px;
+        font-size: 0.875rem;
+        font-weight: normal;
+    }
+
+    .at_recs_card_T546.plp-cards__item.js-plp-cards-item {
+        top: 15px;
+    }
+
+    .js-basket-nav-button {
+        line-height: 3 !important;
+    }
+</style>
+
+<script type="text/javascript">
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.webkitMatchesSelector;
+    }
+    if (!Element.prototype.closest) {
+        Element.prototype.closest = function(s) {
+            var el = this;
+            do {
+                if (el.matches(s)) return el;
+                el = el.parentElement || el.parentNode;
+            } while (el !== null && el.nodeType === 1);
+            return null;
+        };
+    }
+
+    var matchHeight = function() {
+        /*name height*/
+        //var names = document.querySelectorAll('.at_recs_card_T546 .plp-cards__name'), desc = document.querySelectorAll('.at_recs_card_T546 .plp-cards__description');
+        var max = 0;
+        var names = document.querySelectorAll(".plp-cards__text-container");
+        for (var i = names.length - 1; i >= 0; i--) {
+            max = names[i].offsetHeight > max ? names[i].offsetHeight : max;
+        }
+        for (var i = names.length - 1; i >= 0; i--) {
+            names[i].style.minHeight = max + "px";
+        }
+    };
+</script>
+
+
+
+<script type="text/template" id="at_recs_item_template_mobile">
+    <li class=" plp-cards__item--list snapper_item" data-analytics-action-title="LNAME" data-product-id="SKU" style="">
+    <span class="badge trade-up-item__badge custom-badge BADGECLASS">BADGETEXT</span>
+
+          <div role="group" aria-label="Product" class="at_recs_card_T546 plp-cards__item js-plp-cards-item" sku="SKU" region="us">
+
+
+              <div class="plp-cards__image-container">
+                  <div class="responsive-image js-responsive-image-container">
+                      <img alt="ALTR" src="IMG_URL" class="responsive-image__image js-responsive-image fluidimage"/>
+
+                  </div>
+              </div>
+              <div class="plp-cards__text-container">
+                  <div class="tooltip-block">
+                      <h3 class="plp-cards__name">NAME</h3>
+                                          <a href="#" data-analytics-nav-type="link" data-analytics-action-name="link~tooltip open button" tabIndex="0" role="button" aria-label="open-tooltip" type="button" class="toolTip-icon">
+                                              i
+                                          </a>    
+                  
+                  </div>
+              </div>
+              <div class="plp-cards__bottom-container">
+                  <div class="plp-cards__price-container">
+                      <div class="plp-cards__prices plp-cards__prices--single js-plp-cards-prices">
+                          <p class="plp-cards__price plp-cards__price--format">
+                              <span class="price">SALE_PRICE</span>CURR
+                          </p>
+                      </div>
+                  </div>
+
+
+                  <div class="plp-cards__button-container js-plp-cards-container">
+                      <div class="plp-cards__add-to-basket ">
+                          <div class="add-to-basket js-add-to-basket">
+                            <button class="button button--transactional" 
+                            data-basket-processing-button-text="追加しています..." 
+                            sku="SKU"
+                            data-analytics-action-name="cta~add to basket" 
+                            href="#">カートに入れる</button>
+                          </div>
+                      </div>
+                      <a href="PAGE_URL" data-analytics-action-name="button~learn more" class="plp-cards__learn-more-button button button--linking plp-cards__button">Learn more</a>
+                  </div>
+              </div>
+          </div>
+          <div role="dialog" aria-labelledby="TooltipBox" aria-describedby="TooltipDescreption" class="tooltip tooltip-container hide-tooltip">
+                           <a tabindex="0" href="#" data-analytics-nav-type="link" data-analytics-action-name="link~tooltip close button" role="button" class="tooltipclosebutton" aria-label="close" value ="close" type="button" data-dismiss="modal"><svg class="icon icon--close close-tooltip" viewBox="0 0 42 42" data-di-res-id="fcaa7fe8-d1c54ab9" data-di-rand="1602694598812">
+                              <path d="M42 2.8L39.2 0 21 18.2 2.8 0 0 2.8 18.2 21 0 39.2 2.8 42 21 23.8 39.2 42l2.8-2.8L23.8 21 42 2.8z"></path></svg>
+                           </a> 
+              <p class="plp-cards__description"></p>
+          </div>
+  </li>
+</script>
+
+<script type="text/template" id="at_recs_item_template_desktop">
+    <li class=" plp-cards__item--list snapper_item" data-analytics-action-title="LNAME" data-product-id="SKU" style="">
+    <span class="badge trade-up-item__badge custom-badge BADGECLASS">BADGETEXT</span>
+
+          <div role="group" aria-label="Product" class="at_recs_card_T546 plp-cards__item js-plp-cards-item" sku="SKU" region="us">
+              
+              
+              <div class="plp-cards__image-container">
+                  <div class="responsive-image js-responsive-image-container">
+                      <img alt="ALTR" src="IMG_URL" class="responsive-image__image js-responsive-image fluidimage"/>
+                     
+                  </div>
+              </div>
+              <div class="plp-cards__text-container">
+                  <h3 class="plp-cards__name">NAME</h3>
+                  <p class="plp-cards__description"></p>
+              </div>
+              <div class="plp-cards__bottom-container">
+                  <div class="plp-cards__price-container">
+                      <div class="plp-cards__prices plp-cards__prices--single js-plp-cards-prices">
+                          <p class="plp-cards__price plp-cards__price--format">
+                              <span class="price">SALE_PRICE</span>CURR
+                          </p>
+                      </div>
+                  </div>
+                  <div class="plp-cards__button-container js-plp-cards-container">
+                      <div class="plp-cards__add-to-basket ">
+                          <div class="add-to-basket js-add-to-basket">
+                            <button class="button button--transactional" 
+                            data-basket-processing-button-text="追加しています..." 
+                            sku="SKU"
+                            data-analytics-action-name="cta~add to basket" 
+                            href="#">カートに入れる</button>
+                          </div>
+                      </div>
+                      <a href="PAGE_URL" data-analytics-action-name="button~learn more" class="plp-cards__learn-more-button button button--linking plp-cards__button">Learn more</a>
+                  </div>
+              </div>
+          </div>
+  </li>
+</script>
+
+
+<script type="text/template" id="at_template_recs_T546">
+    <div class="basket-recommendations_T546">
+      <div class="text parbase">
+          <div class="text container-fluid container-fluid--upto-lg theme--light rich-text-editor js-text">
+              <div class="js-text-animation">
+                  <div>
+                      <div>
+                      <h2 class="text__heading h2 hidden-xs-up">推奨アクセサリー</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container-par parbase recs-container_T546" data-analytics-component="product-recommendations">
+          <div>
+              <div class="plp-cards parbase">
+                  <div class="container-fluid container-fluid--upto-lg plp-cards js-plp-cards snapper">
+                      <div class="snapper_pane">
+                          <h2 class="trade-up-header__content js-trade-up-header-content col-xs-12 hidden-xs-up"></h2>
+                          <ul class="recs_wrapper plp-cards__items snapper_items">
+
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</script>
+
+<script type="text/javascript">
+    var staticVideo = {
+        "972205-01": "https://video-eu.assetsadobe.com/dyson/_renditions_/e6c/e6cc18f6-d13b-4090-a8ec-ae7c7a07f3f4/avs/972205-01-0x720-3000k.mp4"
+    };
+
+    var overlay = `<div class="overlay overlay--video atVideo">
+  <div class="overlay__content overlay__content--video">
+    <a
+      role="button"
+      href="#"
+      aria-label="Close video"
+      class="trade-up-item__close js-video-close js-video-close-button"
+    >
+      <svg class="icon icon--close" viewBox="0 0 42 42">
+        <path
+          d="M42 2.8L39.2 0 21 18.2 2.8 0 0 2.8 18.2 21 0 39.2 2.8 42 21 23.8 39.2 42l2.8-2.8L23.8 21 42 2.8z"
+        ></path>
+      </svg>
+    </a>
+    <div class="trade-up-item__video js-video-container video-hybris">
+      <video width="100%" controls autoplay playsinline>
+        <source src="" type="video/mp4" />
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </div>
+</div>`;
+
+    document.querySelector("body").insertAdjacentHTML("afterbegin", overlay);
+
+    (function(w, d) {
+            var logInfo = function(str) {
+                //console.info(str)
+            };
+            var Flickerlessly = w.Flickerlessly || {};
+            !(function(t) {
+                "use strict";
+                var e = function(t, e, n, o) {
+                        var a = "atNodeInserted" + t,
+                            i = [],
+                            s = ["", "-moz-", "-webkit-", "-ms-", "-o-"];
+                        s.forEach(function(t, e) {
+                                i.push(
+                                    "@" +
+                                    t +
+                                    "keyframes " +
+                                    a +
+                                    " {from {opacity:0.99} to {opacity:1}}"
+                                );
+                            }),
+                            i.push(e + "{"),
+                            s.forEach(function(t, e) {
+                                i.push(
+                                    t +
+                                    "animation-duration:0.001s;" +
+                                    t +
+                                    "animation-name:" +
+                                    a +
+                                    ";"
+                                );
+                            }),
+                            i.push("}");
+                        var r = d.getElementsByTagName("head")[0];
+                        if (r) {
+                            var c = d.createElement("style");
+                            c.setAttribute("type", "text/css"),
+                                c.styleSheet ?
+                                (c.styleSheet.cssText = i.join("\n")) :
+                                c.appendChild(d.createTextNode(i.join("\n"))),
+                                r.insertBefore(c, r.firstChild);
+                        }
+                        var l = function(t) {
+                            if (t.animationName === a && "object" == typeof t.target) {
+                                var i =
+                                    o === !0 ||
+                                    (o === !1 &&
+                                        null === t.target.getAttribute("data-flk-success"));
+                                w.console &&
+                                    logInfo("('" + e + "') ready! Execute: " + i, t.target),
+                                    "function" == typeof n && i ?
+                                    (n(t.target), t.target.setAttribute("data-flk-success", a)) :
+                                    w.console && console.error("Cannot Callback", i, n);
+                            }
+                        };
+                        [
+                            "animationstart",
+                            "MSAnimationStart",
+                            "webkitAnimationStart",
+                        ].forEach(function(t, e) {
+                            d.addEventListener(t, l, !1);
+                        });
+                    },
+                    n = Math.floor(1e3 * Math.random() + 1);
+                t.onReady = function() {
+                    for (var t = 0; t < arguments.length; t++) {
+                        var o = arguments[t],
+                            a = o.selector,
+                            i = o.success || null,
+                            s = o.persist || !1;
+                        e(n++, a, i, s);
+                    }
+                };
+            })(Flickerlessly);
+
+            (window.screen.width <= 767) && Flickerlessly.onReady({
+                    selector: ".basket-body__summary--section",
+                    success: function(el) {
+                        if (document.querySelector(".basket-recommendations_T546")) {
+                            var r = document.querySelector(".basket-recommendations_T546");
+                            r.remove(r);
+                        }
+
+                        //   if (document.querySelector('.recs-container_T546')) {
+                        //                 var r = document.querySelector('.recs-container_T546');
+                        //                 r.parentNode.removeChild(r);
+                        //             }
+                        window.scrollTo({
+                            left: 0,
+                            top: 0
+                        });
+                        checkDatalayer();
+                        setTimeout(() => {
+                            matchHeight();
+                            setTimeout(() => {
+                                var images = document.querySelectorAll(".plp-cards__image-container img");
+                                var imageHeights = [];
+                                for (var i = images.length - 1; i >= 0; i--) {
+                                    imageHeights.push(images[i].offsetHeight);
+                                }
+                                var highest = Math.max(...imageHeights);
+                                var lowest = Math.min(...imageHeights);
+                                var delta = highest - lowest;
+                                for (var i = images.length - 1; i >= 0; i--) {
+                                    if (images[i].offsetHeight < highest) {
+                                        console.log("here");
+                                        console.log(Number(images[i].parentElement.parentElement
+                                            .nextElementSibling.style.minHeight.replace("px", "")));
+                                        console.log(delta)
+                                        images[i].parentElement.parentElement.nextElementSibling.style.minHeight =
+                                            Number(images[i].parentElement.parentElement
+                                                .nextElementSibling.style.minHeight.replace("px", "")) + delta + "px";
+                                    }
+                                }
+                            }, 0);
+                        }, 1500);
+
+                    },
+                    persist: true,
+                }, {
+                    selector: ".trade-up-item__play",
+                    success: function(el) {
+                        var sku = el.dataset.sku;
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            $(".atVideo video").attr("src", staticVideo[sku]);
+                            //$('.atVideo video')[0].play();
+                            $(".atVideo").addClass("overlay-is-open");
+                        });
+                    },
+                    persist: true,
+                }, {
+                    selector: ".js-video-close-button",
+                    success: function(el) {
+                        el.addEventListener("click", function() {
+                            $(".atVideo video").attr("src", "");
+                            $(".atVideo").removeClass("overlay-is-open");
+                        });
+                    },
+                    persist: true,
+                },
+
+                {
+                    selector: ".at_recs_card_T546 ",
+                    success: function(el) {
+                        var h2 = document.querySelector(
+                            ".basket-recommendations_T546 h2.text__heading.h2.hidden-xs-up"
+                        );
+                        if (h2) {
+                            //console.log("Header Container is present");
+                            //h2.innerHTML = 'Products related to items in your basket';
+                            h2.className = "text__heading h2";
+                        }
+                    },
+                    persist: true,
+                }, {
+                    selector: ".at_recs_card_T546 .button--transactional:not(.at_target_T546)",
+                    success: function(el) {
+                        el.className += " at_target_T546";
+                        el.addEventListener("click", addToCart);
+                    },
+                    persist: true,
+                },
+                /*{
+                  selector: ".basket-empty .basket-empty__container",
+                  success: function (el) {
+                    var recs = document.querySelector(".basket-recommendations_T546");
+                    if (recs) {
+                      var parent = recs.parentNode;
+                      parent.removeChild(recs);
+                    }
+                  },
+                  persist: true,
+                },*/
+                {
+                    selector: ".toolTip-icon",
+                    success: function(el) {
+
+                        if (el.closest('.plp-cards__item--list').querySelector('.tooltip .plp-cards__description').innerHTML === "") {
+                            el.style.display = 'none';
+                        }
+
+                        el.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            el.tabIndex = 0;
+                            document.querySelectorAll('.tooltip').forEach((item) => {
+                                item.classList.add('hide-tooltip');
+                            })
+                            const productContainer = event.target.closest('.plp-cards__item--list');
+                            event.target.closest('.plp-cards__item--list').querySelector('.tooltip').classList.remove("hide-tooltip")
+                            //   const tooltipheight = event.target.closest('.plp-cards__item--list').querySelector('.tooltip').offsetHeight;
+                            //   const listElementHeight = event.target.closest('.plp-cards__item--list').offsetHeight;
+                            //   document.querySelector(' .snapper_pane').style.height = listElementHeight + tooltipheight/3 + 'px';
+                            //   document.querySelector('.toolTip-icon .tooltip').classList.remove("hide-tooltip")
+                        })
+                    },
+                    persist: true,
+                }, {
+                    selector: ".tooltipclosebutton",
+                    success: function(el) {
+                        el.addEventListener('click', function(event) {
+                            event.preventDefault();
+
+                            el.tabIndex = 0;
+
+                            event.target.closest('.tooltip').classList.add("hide-tooltip");
+                            document.querySelector(' .snapper_pane').style.removeProperty("height");
+
+                            //    document.querySelector('.toolTip-icon .tooltip').classList.add("hide-tooltip")
+                        })
+                    },
+                    persist: true,
+                }, {
+                    selector: "#skip-navigation-target > div.basket-body.parbase.js-basket-body > section > div > div.col-xs-12.col-lg-4.float-lg-right.basket-body__summary--container.sticky-initial > div > div.basket-aside__container.js-basket-aside-container.tablet.col-md-6.col-lg-12 > div:nth-child(2)",
+                    success: function(el) {
+                        var orderSummary = el;
+                        orderSummary.classList.add("order-summary-total");
+                        var appendToLoc = document.querySelector('#skip-navigation-target > div.basket-body.parbase.js-basket-body > section > div > div.col-xs-12.col-lg-4.float-lg-right.basket-body__summary--container.sticky-initial > div > div.tablet.col-md-6.col-lg-12.basket-aside__payment-container > div:nth-child(3)')
+                        appendToLoc.append(orderSummary);
+                        var summaryies = document.querySelectorAll('.order-summary-total');
+                        for (var i = 0; i < summaryies.length; i++) {
+                            if (i < summaryies.length - 1) {
+                                summaryies[i].remove();
+                            }
+                        }
+                        document.querySelector(' .basket-aside-title').classList.add("top-spacing");
+                    },
+                    persist: false,
+                },
+                //   {
+                //     selector: ".analytics-link-track",
+                //     success: function (el) {
+                //      el.addEventListener("click",function (event) {
+                //         event.preventDefault();
+                //      })
+                // },
+                //     persist: true,
+                //   },
+            );
+
+            (window.screen.width > 767) && Flickerlessly.onReady({
+                    selector: ".basket-body__summary--section",
+                    success: function(el) {
+                        if (document.querySelector('.recs-container_T546')) {
+                            var r = document.querySelector('.recs-container_T546');
+                            r.parentNode.removeChild(r);
+                        }
+                        window.scrollTo({
+                            left: 0,
+                            top: 0
+                        });
+                        checkDatalayer();
+                    },
+                    persist: true
+                }, {
+                    selector: ".trade-up-item__play",
+                    success: function(el) {
+                        var sku = el.dataset.sku;
+                        el.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            $('.atVideo video').attr('src', staticVideo[sku]);
+                            //$('.atVideo video')[0].play();	
+                            $('.atVideo').addClass('overlay-is-open');
+                        })
+                    },
+                    persist: true
+                }, {
+                    selector: ".js-video-close-button",
+                    success: function(el) {
+                        el.addEventListener('click', function() {
+                            $('.atVideo video').attr('src', '')
+                            $('.atVideo').removeClass('overlay-is-open');
+                        })
+                    },
+                    persist: true
+                },
+
+
+                {
+                    selector: ".at_recs_card_T546 ",
+                    success: function(el) {
+                        var h2 = document.querySelector('.basket-recommendations_T546 h2.text__heading.h2.hidden-xs-up');
+                        if (h2) {
+                            //console.log("Header Container is present");
+                            //h2.innerHTML = 'Products related to items in your basket';
+                            h2.className = 'text__heading h2';
+                        }
+                    },
+                    persist: true
+                }, {
+                    selector: ".at_recs_card_T546 .button--transactional:not(.at_target_T546)",
+                    success: function(el) {
+                        el.className += ' at_target_T546';
+                        el.addEventListener('click', addToCart)
+                    },
+                    persist: true
+                },
+                /* {
+                selector: ".basket-empty .basket-empty__container",
+                success: function (el) {
+          debugger;
+                    var recs = document.querySelector('.basket-recommendations_T546');
+                    if (recs) {
+                        var parent = recs.parentNode;
+                        parent.removeChild(recs);
+                    }
+                },
+                persist: true
+            }*/
+            );
+
+            //var responseObject = [];
+            var fetchData = function(base_url, sku) {
+                if (
+                    document.querySelectorAll(
+                        ".basket-recommendations_T546 ul.plp-cards__items > li"
+                    ).length >= 3
+                ) {
+                    return;
+                }
+                var xhttp = new XMLHttpRequest(),
+                    id = sku;
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        try {
+                            var res = JSON.parse(this.responseText),
+                                obj = {};
+                            console.log(res, "response object here ::;");
+                            obj.ratings = res["bazaarVoiceAverageRating"];
+                            obj.reviews = res["bazaarVoiceNumberOfReviews"];
+                            obj.hideWasNowPricing = res["hideWasNowPricing"];
+                            obj.stockBand = res["stockBand"];
+                            // if (res["stockBand"] !== "A") {
+                            //     return;
+                            // }
+
+                            obj.name = res.webName ? res.webName : null;
+
+                            if (!obj.name) {
+                                obj.name =
+                                    res.localWebNames && res.localWebNames.en ?
+                                    res.localWebNames.en :
+                                    null;
+                            }
+                            if (!obj.name) {
+                                obj.name =
+                                    res.globalWebNames && res.globalWebNames.en ?
+                                    res.globalWebNames.en :
+                                    null;
+                            }
+
+                            obj.fullPrice =
+                                res.price && res.price.value ? res.price.value : null;
+                            if (obj.fullPrice != null) {
+                                obj.fullPrice = obj.fullPrice.toFixed(2)?.replace(".", ".");
+                            }
+
+                            if (res.reducedPrice && res.reducedPrice.value) {
+                                obj.salePrice = res.reducedPrice.value.toFixed(2)?.replace(".", ".");
+                            }
+
+                            if (res.savings && res.savings.value) {
+                                obj.savings = res.savings.value?.toString().replace(".", ".");
+
+                            }
+
+                            if (res.badgeText) {
+                                obj.badgeText = res.badgeText;
+                            }
+
+
+                            if (res.badgeThemeCode) {
+                                obj.badgeClass = res.badgeThemeCode;
+                            }
+
+                            /*if(!obj.salePrice){
+                                              obj.salePrice = obj.fullPrice;
+                                          }*/
+                            obj.url = res.url;
+                            obj.sku = id;
+
+                            obj.description = res["description"] || "";
+
+                            var stars = "";
+
+                            if (obj.ratings && !isNaN(Number(obj.ratings))) {
+                                //console.log('No ratings -> ', obj.ratings);
+                                var ratings = Number(obj.ratings);
+                                if (ratings >= 5) {
+                                    stars = "five";
+                                } else if (ratings >= 4.5) {
+                                    stars = "four-five";
+                                } else if (ratings >= 4) {
+                                    stars = "four";
+                                } else if (ratings >= 3.5) {
+                                    stars = "three-five";
+                                } else if (ratings < 3.5) {
+                                    stars = "three";
+                                }
+
+                                obj.stars = stars;
+                            }
+                            console.log(id, obj, ":::::::object response");
+                            collectResponses(obj);
+
+                        } catch (err) {
+                            console.log(err);
+                        }
+                    }
+                };
+
+                //"https://api.dyson.com/apiman-gateway/dyson/product/1.0/us/"
+                //https://api.dyson.co.uk/apiman-gateway/dyson/product/1.0/gb/226364-01
+
+                xhttp.open("GET", base_url + sku, true);
+                xhttp.send();
+            };
+
+
+            function collectResponses(product) {
+                responseObject.push(product);
+                if ((res.length == responseObject.length)) {
+                    for (i = 0; i < res.length; i++) {
+                        var objValue = responseObject.filter(element => (element.sku == res[i] &&
+                            (element.stockBand == "A")));
+                        objValue = Object.assign({}, ...objValue);
+                        createProduct(objValue);
+                    }
+                }
+
+
+            }
+
+            function createProduct(product) {
+                if (
+                    product &&
+                    product.sku &&
+                    (document.querySelectorAll(
+                        ".basket-recommendations_T546 ul.plp-cards__items > li"
+                    ).length < 3)) {
+                    var parent = document.querySelector(
+                        ".basket-recommendations_T546 ul.plp-cards__items"
+                    );
+                    var name = product.name,
+                        sku = product.sku,
+                        fullPrice = product.fullPrice, //.toFixed(2),
+                        salePrice = product.salePrice, //.toFixed(2),
+                        savings = product.savings,
+                        ratings = product.ratings,
+                        reviews = product.reviews,
+                        stars = product.stars,
+                        hideWasNowPricing = product.hideWasNowPricing,
+                        badgeText = product.badgeText || "",
+                        badgeClass = product.badgeClass || "",
+                        url = product.url;
+                    available = product.stockBand == "A";
+                    description = product.description;
+
+                    var template = window.screen.width <= 767 ? document.getElementById(
+                        "at_recs_item_template_mobile"
+                    ).innerHTML : document.getElementById(
+                        "at_recs_item_template_desktop"
+                    ).innerHTML
+
+                    template = template
+                        .replace(/PAGE_URL/g, url)
+                        .replace(/CURR/g, " ¥")
+                        .replace(/LNAME/g, name.toLowerCase())
+                        .replace(/NAME/g, name)
+                        .replace(/SKU/g, sku)
+                        .replace(/BADGECLASS/g, badgeClass)
+                        .replace(/BADGETEXT/g, badgeText)
+                        .replace(
+                            /IMG_URL/g,
+                            "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/basket-recommendations/" +
+                            sku +
+                            ".jpg"
+                        );
+                    template = template.replace(/ALTR/g, name);
+
+                    if (savings && salePrice && salePrice !== fullPrice) {
+                        template = template
+                            .replace(/HIDE_SALE/g, "hidden-xs-up")
+                            .replace(/HIDE_DISCOUNTED/g, "")
+                            .replace(/FULL_PRICE/g, fullPrice)
+                            .replace(/SALE_PRICE/g, salePrice)
+                            .replace(/SAVINGS/g, savings);
+                    } else {
+                        template = template
+                            .replace(/HIDE_DISCOUNTED/g, "hidden-xs-up")
+                            .replace(/HIDE_SALE/g, "")
+                            .replace(/SALE_PRICE/g, fullPrice);
+                    }
+                    template = template
+                        .replace(/BADGE/g, badgeText)
+                        .replace(/BADGE_CLASS/g, badgeClass);
+
+                    //parent.setAttribute('data-analytics-action-title', name);
+                    if (
+                        document.querySelectorAll(
+                            ".basket-recommendations_T546 ul.plp-cards__items > li"
+                        ).length < 4
+                    ) {
+                        parent.insertAdjacentHTML("beforeend", template);
+
+                        if (staticVideo[sku] != undefined) {
+                            document
+                                .querySelector(
+                                    '.at_recs_card_T546[sku="' +
+                                    sku +
+                                    '"] .plp-cards__image-container img'
+                                )
+                                .insertAdjacentHTML(
+                                    "afterend",
+                                    '<a href="#" data-analytics-action-name="link~play-video" class="trade-up-item__play trade-up-item__play--small js-product-video-trigger active" data-sku=' +
+                                    sku +
+                                    ' role="button" aria-label="Play "> <span class="trade-up-item__icon-wrapper"> <svg class="icon icon-play--small" viewBox="0 0 32 48"> <path d="M0 0v48l32-24zm4 8l21.3 16L4 40z"></path></svg> </span> </a>'
+                                );
+                        }
+
+                        if (description && window.screen.width <= 767) {
+                            console.log(description);
+                            document.querySelector('.at_recs_card_T546[sku="' + sku + '"] + div.tooltip .plp-cards__description').innerHTML = description;
+                        }
+
+                        if (description && window.screen.width > 767) {
+                            console.log(description);
+                            document.querySelector('.at_recs_card_T546[sku="' + sku + '"] .plp-cards__description').innerHTML = description;
+                        }
+                    }
+                    $(document).trigger("enhance");
+                    window.dispatchEvent(new Event("resize"));
+                }
+            }
+
+            function checkLoggedIn() {
+                return dataLayer.customer.credentialID !== "anonymous";
+            }
+
+            function checkcart() {
+                var cookie = (document.cookie || "").split(";");
+                for (var i = cookie.length - 1; i >= 0; i--) {
+                    if (cookie[i].trim().indexOf("cartguid=") > -1) {
+                        return decodeURIComponent(cookie[i].trim().replace("cartguid=", ""));
+                    }
+                }
+                return null;
+            }
+
+            function getCookieVal(cname) {
+                var cookie = (document.cookie || "").split(";");
+                for (var i = cookie.length - 1; i >= 0; i--) {
+                    if (cookie[i].trim().indexOf(cname + "=") > -1) {
+                        return decodeURIComponent(cookie[i].trim().replace(cname + "=", ""));
+                    }
+                }
+                return null;
+            }
+
+            function getcsrf() {
+                var cookie = (document.cookie || "").split(";");
+                for (var i = cookie.length - 1; i >= 0; i--) {
+                    if (cookie[i].trim().indexOf("CSRF_TOKEN=") > -1) {
+                        return decodeURIComponent(
+                            cookie[i].trim().replace("CSRF_TOKEN=", "")
+                        );
+                    }
+                }
+                return null;
+            }
+
+            function addToCart(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var btn = e.target;
+                jQuery(btn)
+                    .parents(".at_recs_card_T546.plp-cards__item.js-plp-cards-item")
+                    .addClass("active");
+
+                var sku = this.getAttribute("sku");
+                var xhttp = new XMLHttpRequest();
+                xhttp.withCredentials = true;
+                var url = "";
+                if (btn && btn.getAttribute("data-basket-processing-button-text")) {
+                    btn.className =
+                        "button--transactional button--fluid active at_target_T546";
+                    btn.innerHTML = btn.getAttribute("data-basket-processing-button-text");
+                    btn.setAttribute("disabled", true);
+                }
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status === 200) {
+                        //Refresh window
+
+                        var res = JSON.parse(this.responseText);
+                        //console.log('ADDTOBASKET', typeof res, this.responseText);
+                        if (typeof res === "object") {
+                            if (res.statusCode === "success") {
+                                if (btn) {
+                                    btn.innerHTML = "&nbsp";
+                                    btn.className =
+                                        "button--transactional button--fluid completed_T791 active at_target_T546";
+                                }
+                                setTimeout(function() {
+                                    window.location.reload();
+                                }, 500);
+                            }
+                        }
+                    } else if (this.readyState === 4 && this.status !== 200) {
+                        if (btn && btn.getAttribute("data-basket-processing-button-text")) {
+                            btn.className = "button--transactional at_target_T546";
+                            btn.innerHTML = "Add to cart";
+                            btn.removeAttribute("disabled");
+                        }
+                    }
+                };
+                var product = JSON.stringify({
+                    product: {
+                        code: sku
+                    },
+                    quantity: 1
+                });
+                if (checkLoggedIn()) {
+                    url =
+                        window.CART_BASE_URL_T546 +
+                        "users/" +
+                        dataLayer.customer.credentialID +
+                        "/carts/current";
+                } else {
+                    //Not logged In
+                    var cartId = getCookieVal("cartguid");
+                    if (cartId) {
+                        url =
+                            window.CART_BASE_URL_T546 +
+                            "users/anonymous/carts/" +
+                            cartId.replace(/\"/g, "") +
+                            "/entries";
+                    } else {
+                        //create new cart
+                        url =
+                            window.CART_BASE_URL_T546 + "users/anonymous/carts/createCart?lang=en";
+                    }
+                }
+                xhttp.open("POST", url + ("?code=" + sku + "&lang=en"), true);
+                xhttp.setRequestHeader("Accept", "application/json");
+                xhttp.setRequestHeader("Content-type", "application/json");
+                //xhttp.setRequestHeader("Cookie", ("CSRF_TOKEN=" + getcsrf() + ";path=www.dyson.com"));
+                xhttp.setRequestHeader("x-csrf-token", getCookieVal("CSRF_TOKEN") || "");
+
+                xhttp.send(product);
+            }
+
+            var timeOut = 10000;
+
+            var getCartAccessories = function() {
+                var res = [];
+                if (
+                    dataLayer &&
+                    dataLayer.products &&
+                    Array.isArray(dataLayer.products)
+                ) {
+                    var products = dataLayer.products;
+                    for (var i = products.length - 1; i >= 0; i--) {
+                        if (
+                            products[i].localProductSKU &&
+                            (products[i].sapDivision === "SPARE_PARTS" ||
+                                products[i].sapDivision === "ACCESSORIES")
+                        ) {
+                            res.push(products[i].localProductSKU);
+                        }
+                    }
+                }
+                return res;
+            };
+
+            function randomiseArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+
+            function checkDatalayer() {
+                if (dataLayer && dataLayer.products && dataLayer.products.length > 0) {
+                    var products = dataLayer.products || [];
+                    var statKeys = Object.keys(window.staticIds);
+
+                    for (var i = products.length - 1; i >= 0; i--) {
+                        if (
+                            products[i].sapDivision &&
+                            products[i].sapDivision === "FINISHED_GOODS"
+                        ) {
+                            sku = products[i].localProductSKU;
+                            if (
+                                !window.showForProducts ||
+                                window.showForProducts.length === 0 ||
+                                window.showForProducts.indexOf(sku) > -1 ||
+                                statKeys.indexOf(sku.toString()) > -1
+                            ) {
+                                document
+                                    .querySelector(
+                                        ".basket-items__container.js-basket-items-container"
+                                    )
+                                    .insertAdjacentHTML(
+                                        "afterend",
+                                        document.getElementById("at_template_recs_T546").innerHTML
+                                    );
+                                if (window.staticIds[sku]) {
+                                    fetchStaticIds(sku);
+                                    //debugger;
+                                } else {
+                                    fetchAccessories(sku);
+                                }
+
+                                break;
+                            }
+                        }
+                    }
+                } else {
+                    if (timeOut > 0) {
+                        timeOut -= 50;
+                        setTimeout(checkDatalayer, 50);
+                    }
+                }
+            }
+
+            var res = [];
+            var responseObject = [];
+
+            function fetchStaticIds(sku) {
+                res = [];
+                responseObject = [];
+                var tools = window.staticIds[sku];
+                var basketPageProduct = dataLayer.products.map(x => x.globalProductSKU);
+                tools = tools.filter(item => basketPageProduct.indexOf(item) == -1)
+                var addedAccessories = getCartAccessories();
+                for (var i = 0; i < tools.length; i++) {
+                    if (addedAccessories.indexOf(tools[i]) === -1) {
+                        res.push(tools[i]);
+                    }
+                }
+                    /* Commented to have the same order of items*/
+                    //randomiseArray(res);
+                    for (var i = 0; i < res.length; i++) {
+                        fetchData(BASE_URL, res[i]);
+
+                    }
+                }
+
+                function fetchAccessories(sku) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // Typical action to be performed when the document is ready:
+                            //document.getElementById("demo").innerHTML = xhttp.responseText;
+                            var res = JSON.parse(this.responseText) || {};
+                            var tools = res.productReferences || [];
+                            var set = new Set();
+                            var includedTools = getIncluded();
+
+                            for (var i = tools.length - 1; i >= 0; i--) {
+                                if (tools[i].referenceType === "CONSISTS_OF") {
+                                    //console.log('CONSISTS_OF', tools[i].target.webName);
+                                } else if (tools[i].referenceType === "SPAREPART") {
+                                    //console.log('SPAREPART', tools[i].target.webName);
+                                } else if (tools[i].referenceType === "ACCESSORIES") {
+                                    //console.log('ACCESSORIES', tools[i].target.webName);
+                                }
+                                if (
+                                    tools[i].target.sapDivision === "SPARE_PARTS" ||
+                                    tools[i].target.sapDivision === "ACCESSORIES"
+                                ) {
+                                    //set.add(tools[i].target.code);
+                                    if (includedTools.indexOf(tools[i].target.webName || "") === -1) {
+                                        //console.log('productReferences', tools[i].target.code, tools[i].target.sapDivision);
+                                        set.add(tools[i].target.code);
+                                    }
+                                }
+                            }
+
+                            //console.log(tools, includedTools, Array.from(set));
+                            tools = Array.from(set);
+                            for (var i = 0; i < tools.length; i++) {
+                                fetchData(BASE_URL, tools[i]);
+                            }
+                            //triggerCustomMbox(sku, Array.from(set));
+                        }
+                    };
+                    xhttp.open("GET", BASE_URL + sku, true);
+                    xhttp.send();
+                }
+
+                function getIncluded() {
+                    var els = document.querySelectorAll(
+                            ".basket-item-accordion__section-bundle.basket-item-accordion__section-bundle--included .basket-item-accordion__content-flex .basket-item-accordion__content--tools .basket-item-accordion__bundle-text .basket-item-accordion__bundle-tool-name"
+                        ),
+                        res = [];
+                    for (var i = els.length - 1; i >= 0; i--) {
+                        res.push(els[i].innerHTML);
+                    }
+                    if (
+                        dataLayer &&
+                        dataLayer.products &&
+                        Array.isArray(dataLayer.products)
+                    ) {
+                        var products = dataLayer.products;
+                        for (var i = products.length - 1; i >= 0; i--) {
+                            if (
+                                products[i].localWebNames &&
+                                products[i].localWebNames.en &&
+                                (products[i].sapDivision === "SPARE_PARTS" ||
+                                    products[i].sapDivision === "ACCESSORIES")
+                            ) {
+                                res.push(products[i].localWebNames.en);
+                            }
+                        }
+                    }
+                    return res;
+                }
+            })(window, document);
+</script>
