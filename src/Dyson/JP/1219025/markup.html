@@ -878,7 +878,7 @@
                   <div class="plp-cards__price-container">
                       <div class="plp-cards__prices plp-cards__prices--single js-plp-cards-prices">
                           <p class="plp-cards__price plp-cards__price--format">
-                              <span class="price">SALE_PRICE</span>CURR
+                              <span class="price">SALE_PRICE</span>
                           </p>
                       </div>
                   </div>
@@ -928,7 +928,7 @@
                   <div class="plp-cards__price-container">
                       <div class="plp-cards__prices plp-cards__prices--single js-plp-cards-prices">
                           <p class="plp-cards__price plp-cards__price--format">
-                              <span class="price">SALE_PRICE</span>CURR
+                              <span class="price">SALE_PRICE</span>
                           </p>
                       </div>
                   </div>
@@ -1475,7 +1475,6 @@
 
                     template = template
                         .replace(/PAGE_URL/g, url)
-                        .replace(/CURR/g, " ¥")
                         .replace(/LNAME/g, name.toLowerCase())
                         .replace(/NAME/g, name)
                         .replace(/SKU/g, sku)
@@ -1489,18 +1488,35 @@
                         );
                     template = template.replace(/ALTR/g, name);
 
+                    // Use built-in Intl.NumberFormat for Japanese Yen formatting, e.g. ¥84,920
+                    var yenFormatter = new Intl.NumberFormat('ja-JP', {
+                        style: 'currency',
+                        currency: 'JPY',
+                        maximumFractionDigits: 0
+                    });
+
+                    function safeNumber(v) {
+                        if (v === null || v === undefined || v === "") return NaN;
+                        return Number(String(v).replace(/[^0-9.-]+/g, ""));
+                    }
+
+                    // Normalize formatter output to use ASCII yen sign (U+00A5) instead of fullwidth (U+FFE5)
+                    var formattedFull = !isNaN(safeNumber(fullPrice)) ? yenFormatter.format(safeNumber(fullPrice)).replace(/\uFFE5/g, '¥') : "";
+                    var formattedSale = !isNaN(safeNumber(salePrice)) ? yenFormatter.format(safeNumber(salePrice)).replace(/\uFFE5/g, '¥') : formattedFull;
+                    var formattedSavings = !isNaN(safeNumber(savings)) ? yenFormatter.format(safeNumber(savings)).replace(/\uFFE5/g, '¥') : (savings || "");
+
                     if (savings && salePrice && salePrice !== fullPrice) {
                         template = template
                             .replace(/HIDE_SALE/g, "hidden-xs-up")
                             .replace(/HIDE_DISCOUNTED/g, "")
-                            .replace(/FULL_PRICE/g, fullPrice)
-                            .replace(/SALE_PRICE/g, salePrice)
-                            .replace(/SAVINGS/g, savings);
+                            .replace(/FULL_PRICE/g, formattedFull)
+                            .replace(/SALE_PRICE/g, formattedSale)
+                            .replace(/SAVINGS/g, formattedSavings);
                     } else {
                         template = template
                             .replace(/HIDE_DISCOUNTED/g, "hidden-xs-up")
                             .replace(/HIDE_SALE/g, "")
-                            .replace(/SALE_PRICE/g, fullPrice);
+                            .replace(/SALE_PRICE/g, formattedFull);
                     }
                     template = template
                         .replace(/BADGE/g, badgeText)
