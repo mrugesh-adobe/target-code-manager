@@ -56,10 +56,10 @@
         var groupSize;
         if (window.innerWidth < 500) {
             groupSize = 2;
-            startIndex = 3;
+            startIndex = 0; // Start from first card to include all rows
         } else {
             groupSize = 3;
-            startIndex = 5;
+            startIndex = 0; // Start from first card to include all rows
         }
 
         const matchGroupedHeights = (selector) => {
