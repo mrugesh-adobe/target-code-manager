@@ -1,0 +1,416 @@
+<script>
+    Flickerlessly = window.Flickerlessly || {}, ! function(t) {
+        "use strict";
+        var e = function(t, e, a, n) {
+            var i = "atNodeInserted" + t,
+                s = "@keyframes " + i + " {from {opacity:0.99} to {opacity:1} }\n";
+            s += e + "{animation-duration:0.001s;animation-name:" + i + ";visibility:hidden}";
+            var o = document.getElementsByTagName("head")[0];
+            if (o) {
+                var r = document.createElement("style");
+                r.setAttribute("type", "text/css"), r.styleSheet ? r.styleSheet.cssText = s : r.appendChild(document.createTextNode(s)), o.insertBefore(r, o.firstChild)
+            }
+            var c = function(t) {
+                if (t.animationName === i && "object" == typeof t.target) {
+                    var s = n === !0 || n === !1 && null === t.target.getAttribute("data-flk-success") ? !0 : !1;
+                    console && console.info && console.info("Node " + e + " ready! Execute: " + s, t.target), "function" == typeof a && s && (a(t.target), t.target.setAttribute("data-flk-success", i)), t.target.style.visibility = "visible"
+                }
+            };
+            ["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function(t, e) {
+                document.addEventListener(t, c, !1)
+            })
+        };
+        t.onReady = function() {
+            for (var t = 0; t < arguments.length; t++) {
+                var a = arguments[t],
+                    n = a.selector,
+                    i = a.success || null,
+                    s = a.persist || !1,
+                    o = Math.floor(100 * Math.random() + 1);
+                e(o, n, i, s)
+            }
+        }
+    }(Flickerlessly);
+
+    var cardInserted = false;
+
+    var heroImage = "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/plp/peak-25/Peak25_PLP-promo-card__WR01_SV47_blk.jpg"; // change this url for image
+    var isDarkMode = true; // keep it true for dark mode
+
+    matchHeight = function() {
+        debugger;
+        var startIndex;
+        var groupSize;
+        if (window.innerWidth < 500) {
+            groupSize = 2;
+            startIndex = 3;
+        } else {
+            groupSize = 3;
+            startIndex = 5;
+        }
+
+        const matchGroupedHeights = (selector) => {
+            const elements = document.querySelectorAll(selector);
+            if (!elements.length) return;
+
+            // Reset heights first
+            elements.forEach(el => el.style.minHeight = '');
+
+            // Wait for layout to stabilize
+            requestAnimationFrame(() => {
+                for (let i = startIndex; i < elements.length; i += groupSize) {
+                    const group = Array.from(elements).slice(i, i + groupSize);
+                    let maxHeight = 0;
+                    // const allEmpty = group.every(el => el.children.length <= 0);
+                    const allEmpty = group.every(el => el.innerHTML.trim() == '');
+                    //const allEmpty = group.every(el => 
+                    //	el.innerText?.trim()?.includes('Options') || el.innerHTML?.trim()?.length === 0
+                    //);
+                    //const allEmpty = group.every(el => el.innerText?.trim()?.includes('Options'));
+
+                    group.forEach(el => {
+                        //if (!el.offsetParent) return; // Skip hidden elements
+                        // hide element here
+                        if (allEmpty) {
+                            el.classList.add('hideElement-799');
+                        }
+                        el.style.minHeight = ''; // Reset again just in case
+                        const height = el.offsetHeight;
+                        maxHeight = Math.max(maxHeight, height);
+                        if (el.classList.contains('plp-card-main-claim') && (el.innerHTML.includes('&nbsp;') || el.textContent.includes('\u00A0'))) {
+                            el.remove();
+                        }
+                    });
+
+                    group.forEach(el => {
+                        //if (!el.offsetParent) return;
+                        el.style.minHeight = maxHeight + 'px';
+                    });
+                }
+            });
+        };
+
+        if (jQuery(window).width() < 100) return;
+
+        // Match all necessary sections
+        if (location.href.indexOf('hair-care') > 0 || location.href.indexOf('air-treatment') > 0) {
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-item-name');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-ratings');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-price-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-image-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-promotion-message');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-swatch-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-attachment-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-main-claim');
+        } else {
+            matchGroupedHeights('.plp-card-item .plp-card-item-name');
+            matchGroupedHeights('.plp-card-item .plp-card-ratings');
+            matchGroupedHeights('.plp-card-item .plp-card-price-container');
+            matchGroupedHeights('.plp-card-item .plp-card-image-container');
+            matchGroupedHeights('.plp-card-item .plp-card-promotion-message');
+            //matchGroupedHeights('.plp-card-container .plp-card-color-swatch-container');
+            matchGroupedHeights('.plp-card-container .plp-card-color-attachment-container');
+            matchGroupedHeights('.plp-card-container .plp-card-main-claim');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-new-label');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-swatch-container');
+        }
+    };
+
+    function debounce(func, delay) {
+        let timeout;
+        return function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(func, delay);
+        };
+    }
+    if (window.innerWidth > 500) {
+        window.addEventListener('scroll', debounce(matchHeight, 200));
+    }
+    /* matchHeight = function () {
+        const startIndex = 5; // Start from card #6 (0-based index)
+        const groupSize = 3;
+
+        const matchGroupedHeights = (selector) => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => el.style.minHeight = ''); // Reset previous heights
+
+            for (let i = startIndex; i < elements.length; i += groupSize) {
+                const group = Array.prototype.slice.call(elements, i, i + groupSize);
+                let maxHeight = 0;
+                group.forEach(el => {
+                    el.style.minHeight = ''; // Reset for accurate measure
+                    maxHeight = Math.max(maxHeight, el.offsetHeight);
+                });
+                group.forEach(el => el.style.minHeight = maxHeight + 'px');
+            }
+        };
+
+        if (jQuery(window).width() < 100) return;
+
+        // Apply equalization to key sections of each card
+        matchGroupedHeights('.plp-card-item .plp-card-item-name');
+        matchGroupedHeights('.plp-card-item .plp-card-ratings');
+        matchGroupedHeights('.plp-card-item .plp-card-price-container');
+        matchGroupedHeights('.plp-card-item .plp-card-image-container');
+        matchGroupedHeights('.plp-card-item .plp-card-promotion-message');
+        matchGroupedHeights('.plp-card-container .plp-card-color-swatch-container');
+        matchGroupedHeights('.plp-card-container .plp-card-color-attachment-container');
+        matchGroupedHeights('.plp-card-container .plp-card-main-claim');
+    };*/
+
+
+    Flickerlessly.onReady({
+        selector: '.product-listing__list-section',
+        persist: false,
+        success: function(el) {
+            /*debugger;*/
+            var promoCard = document.querySelector('.product-listing__list-section > :nth-child(3)');
+            if (promoCard != null && cardInserted == false) {
+
+                cardInserted == true;
+
+                var newPromoCard = document.createElement('li');
+                newPromoCard.classList.add("plp-card-container", "new-promo-card");
+                newPromoCard.setAttribute('tabindex', '0');
+                newPromoCard.innerHTML = '<div class="promo-container" role=group aria-label=item><article class="card-799"><div class="image-wrap-799"><img alt="Device" src=' + heroImage + ' /></div><div class="text-799"><span class="eyebrow-799">Black Friday</span><h2 class="title-799">Gifted engineering</h2><p class="copy-799" data-variant="short">Save on selected Dyson technology this Black Friday.</p><a class="cta-799"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#fff"/><path d="M13 9l6 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="cta-text-799">Explore all</span></a></div></article></div>';
+
+                //if (document.querySelectorAll('.plp-card-item').length > 3 || document.querySelectorAll('.js-plp-color-swatches-group-hook') > 3) {
+                if (document.querySelector(".product-listing__list-section > :nth-child(3)")) {
+                    document.querySelector(".product-listing__list-section > :nth-child(3)").insertAdjacentElement('afterend', newPromoCard);
+                    // insertAfter(newPromoCard, promoCard);
+                }
+                if (!document.querySelector('.promo-container').classList.contains('dark-mode') && !isDarkMode) {
+                    document.querySelector('.promo-container svg circle')?.setAttribute('fill', '#000');
+                    document.querySelector('.promo-container svg path')?.setAttribute('stroke', '#fff');
+                    document.querySelector('.promo-container svg line')?.setAttribute('stroke', '#fff');
+
+                } else {
+                    document.querySelector('.promo-container').classList.add('dark-mode');
+                }
+
+
+            };
+            setTimeout(function() {
+                //matchHeight();
+            }, 6000);
+        },
+        persist: true
+    }, {
+        selector: '.promo-container',
+        persist: false,
+        success: function(el) {
+            el.addEventListener('click', function() {
+                window.location.href = 'https://www.dyson.co.uk/black-friday#floorcare';
+            })
+
+        },
+        persist: true
+    }, {
+        selector: '.list-button.active',
+        persist: false,
+        success: function(el) {
+            if (window.innerWidth < 500) {
+                el.addEventListener('click', function() {
+                    document.querySelector('.promo-container').style.position = 'relative';
+                    document.querySelector('.promo-container').style.height = '467px';
+                    //matchHeight();
+                });
+                setTimeout(function() {
+                    document.querySelector('.promo-container').style.position = 'relative';
+                    document.querySelector('.promo-container').style.height = '467px';
+                    //matchHeight();
+                }, 2000);
+            }
+        }
+    }, {
+        selector: '.grid-button.active',
+        persist: false,
+        success: function(el) {
+            if (window.innerWidth < 500) {
+                el.addEventListener('click', function() {
+                    document.querySelector('.promo-container').style.position = 'absolute';
+                    document.querySelector('.promo-container').style.height = '100%';
+                    //matchHeight();
+                });
+                document.querySelector('.promo-container').style.position = 'absolute';
+                document.querySelector('.promo-container').style.height = '100%';
+                //matchHeight();
+            }
+        },
+        persist: true
+    });
+</script>
+<style>
+    .hideElement-799 {
+        display: none;
+    }
+
+    .new-promo-card {
+        position: relative;
+        padding: 0;
+    }
+
+    .new-promo-card:hover {
+        cursor: pointer;
+        outline: 2px solid #919191;
+        outline-offset: -1px;
+    }
+
+    .new-promo-card .plp-card-item-name {
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    .new-promo-card .promo-container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+
+    .new-promo-card .promo-container a:hover {
+        transform: scale(1.04);
+        transition: all 0.1s ease-in;
+    }
+
+    .plp-card-item-name-at799 {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 15%;
+        text-align: center;
+        width: 80%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .plp-card-item-name-at799 {
+            width: 82% !important;
+            text-align: center;
+            bottom: 12% !important;
+        }
+    }
+
+    .product-listing__toggle-mobile,
+    .product-listing__toggle-button-group button {
+        visibility: hidden !important;
+    }
+
+    // new card
+    /* Make the card fill whatever height its row provides */
+    .promo-container,
+    .promo-container .card-799 {
+        height: 100%;
+    }
+
+    /* Stack image + text, with image flexing to fill leftover space */
+    .promo-container .card-799 {
+        display: grid;
+        grid-template-rows: minmax(var(--img-min, 120px), 1fr) auto;
+        height: 100%;
+    }
+
+    /* Image area grows to fill remaining space */
+    .promo-container .image-wrap-799 {
+        position: relative;
+        flex: 1 1 auto;
+        /* <-- key: takes leftover height */
+        min-height: 120px;
+        /* safety for very short copy */
+        background: #000;
+    }
+
+    .promo-container .image-wrap-799 img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* crops the square asset nicely */
+    }
+
+    /* Text uses only the height it needs */
+    .promo-container .text-799 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 20px;
+        background: #fff;
+    }
+
+    .promo-container.dark-mode .text-799 {
+        background: #000;
+    }
+
+    .promo-container .eyebrow-799 {
+        display: inline-block;
+        font-size: 12px;
+        padding: 4px 10px;
+        background: #000;
+        color: #fff;
+        margin-bottom: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .promo-container.dark-mode .eyebrow-799 {
+        background: #fff;
+        color: #000;
+    }
+
+    .promo-container .title-799 {
+        font-weight: 400;
+        line-height: 32px;
+        font-size: 24px;
+        color: #000;
+    }
+
+    .promo-container.dark-mode .title-799 {
+        color: #fff;
+    }
+
+    .promo-container .copy-799 {
+        margin: 0 0 12px;
+        line-height: 24px;
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .promo-container.dark-mode .copy-799 {
+        color: #FFFFFF;
+    }
+
+    .promo-container .cta-799 {
+        display: flex;
+        align-items: center;
+    }
+
+    .promo-container .cta-text-799 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        color: #000;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .promo-container.dark-mode .cta-text-799 {
+        color: #fff;
+    }
+
+    .promo-container .cta-799 svg {
+        width: 28px;
+        height: 28px;
+    }
+</style>
