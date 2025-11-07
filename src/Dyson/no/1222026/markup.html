@@ -37,162 +37,83 @@
     var heroImage = "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/plp/peak-25/Peak25_PLP-promo-card__WR01_SV47_blk.jpg"; // change this url for image
     var isDarkMode = true; // keep it true for dark mode
 
-    var isMatchingHeight = false;
-    var lastMatchTime = 0;
-    var heightCache = new Map();
-
     matchHeight = function() {
-        // Prevent multiple simultaneous executions
-        if (isMatchingHeight) return;
-        
-        // Throttle execution to prevent flickering - increased for stability
-        const now = Date.now();
-        if (now - lastMatchTime < 1000) return;
-        
-        isMatchingHeight = true;
-        lastMatchTime = now;
-
+        debugger;
         var startIndex;
         var groupSize;
         if (window.innerWidth < 500) {
             groupSize = 2;
-            startIndex = 0; // Start from first card to include all rows
+            startIndex = 3;
         } else {
             groupSize = 3;
-            startIndex = 0; // Start from first card to include all rows
+            startIndex = 5;
         }
 
         const matchGroupedHeights = (selector) => {
             const elements = document.querySelectorAll(selector);
             if (!elements.length) return;
 
-            // Filter out hidden elements and elements in hidden cards
-            const visibleElements = Array.from(elements).filter(el => {
-                const card = el.closest('.plp-card-item');
-                return card && !card.classList.contains('hidden-xs-up') && 
-                       el.offsetParent !== null && // Element is visible
-                       !card.closest('.new-promo-card'); // Exclude promo card
-            });
-
-            if (!visibleElements.length) return;
-
-            // Create cache key for this selector and elements
-            const cacheKey = selector + '_' + visibleElements.length;
-            
-            // Check if we need to recalculate
-            let needsRecalc = false;
-            if (!heightCache.has(cacheKey)) {
-                needsRecalc = true;
-            } else {
-                // Check if any element's natural height has changed significantly
-                const cachedHeights = heightCache.get(cacheKey);
-                for (let i = 0; i < Math.min(visibleElements.length, cachedHeights.length); i++) {
-                    const el = visibleElements[i];
-                    el.style.minHeight = ''; // Temporarily reset to measure natural height
-                    const naturalHeight = el.offsetHeight;
-                    if (Math.abs(naturalHeight - cachedHeights[i]) > 5) {
-                        needsRecalc = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!needsRecalc) return;
-
             // Reset heights first
-            visibleElements.forEach(el => {
-                el.style.minHeight = '';
-                el.style.height = '';
-            });
+            elements.forEach(el => el.style.minHeight = '');
 
-            // Wait for layout to stabilize before measuring
+            // Wait for layout to stabilize
             requestAnimationFrame(() => {
-                const naturalHeights = [];
-                
-                for (let i = startIndex; i < visibleElements.length; i += groupSize) {
-                    const group = visibleElements.slice(i, i + groupSize);
+                for (let i = startIndex; i < elements.length; i += groupSize) {
+                    const group = Array.from(elements).slice(i, i + groupSize);
                     let maxHeight = 0;
-                    
-                    // Check if all elements in group are empty (but exclude image containers)
-                    const allEmpty = group.every(el => {
-                        // Never consider image containers as empty
-                        if (el.classList.contains('plp-card-image-container')) {
-                            return false;
-                        }
-                        const text = el.textContent || el.innerText || '';
-                        const hasContent = text.trim() !== '' && text.trim() !== 'Options';
-                        const hasImages = el.querySelector('img') !== null;
-                        const hasVisibleChildren = el.children.length > 0;
-                        return !hasContent && !hasImages && !hasVisibleChildren;
-                    });
+                    // const allEmpty = group.every(el => el.children.length <= 0);
+                    const allEmpty = group.every(el => el.innerHTML.trim() == '');
+                    //const allEmpty = group.every(el => 
+                    //	el.innerText?.trim()?.includes('Options') || el.innerHTML?.trim()?.length === 0
+                    //);
+                    //const allEmpty = group.every(el => el.innerText?.trim()?.includes('Options'));
 
-                    // First pass: measure heights
                     group.forEach(el => {
-                        // Never hide image containers
-                        if (allEmpty && !el.classList.contains('plp-card-image-container')) {
+                        //if (!el.offsetParent) return; // Skip hidden elements
+                        // hide element here
+                        if (allEmpty) {
                             el.classList.add('hideElement-799');
-                            return;
                         }
-                        
-                        // Clean up problematic content
-                        if (el.classList.contains('plp-card-main-claim') && 
-                            (el.innerHTML.includes('&nbsp;') || el.textContent.includes('\u00A0'))) {
-                            el.innerHTML = el.innerHTML.replace(/&nbsp;/g, ' ').replace(/\u00A0/g, ' ');
-                        }
-                        
+                        el.style.minHeight = ''; // Reset again just in case
                         const height = el.offsetHeight;
-                        naturalHeights.push(height);
                         maxHeight = Math.max(maxHeight, height);
+                        if (el.classList.contains('plp-card-main-claim') && (el.innerHTML.includes('&nbsp;') || el.textContent.includes('\u00A0'))) {
+                            el.remove();
+                        }
                     });
 
-                    // Second pass: apply heights only if they're different
-                    if (maxHeight > 0 && !allEmpty) {
-                        group.forEach(el => {
-                            if (!el.classList.contains('hideElement-799')) {
-                                const currentMinHeight = parseInt(el.style.minHeight) || 0;
-                                if (Math.abs(currentMinHeight - maxHeight) > 2) {
-                                    el.style.minHeight = maxHeight + 'px';
-                                }
-                            }
-                        });
-                    }
+                    group.forEach(el => {
+                        //if (!el.offsetParent) return;
+                        el.style.minHeight = maxHeight + 'px';
+                    });
                 }
-                
-                // Cache the natural heights
-                heightCache.set(cacheKey, naturalHeights);
             });
         };
 
-        if (window.innerWidth < 100) {
-            isMatchingHeight = false;
-            return;
+        if (jQuery(window).width() < 100) return;
+
+        // Match all necessary sections
+        if (location.href.indexOf('hair-care') > 0 || location.href.indexOf('air-treatment') > 0) {
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-item-name');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-ratings');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-price-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-image-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-promotion-message');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-swatch-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-attachment-container');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-main-claim');
+        } else {
+            matchGroupedHeights('.plp-card-item .plp-card-item-name');
+            matchGroupedHeights('.plp-card-item .plp-card-ratings');
+            matchGroupedHeights('.plp-card-item .plp-card-price-container');
+            matchGroupedHeights('.plp-card-item .plp-card-image-container');
+            matchGroupedHeights('.plp-card-item .plp-card-promotion-message');
+            //matchGroupedHeights('.plp-card-container .plp-card-color-swatch-container');
+            matchGroupedHeights('.plp-card-container .plp-card-color-attachment-container');
+            matchGroupedHeights('.plp-card-container .plp-card-main-claim');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-new-label');
+            matchGroupedHeights('.plp-card-item:not(.hidden-xs-up) .plp-card-container .plp-card-color-swatch-container');
         }
-
-        // Match all necessary sections with improved selectors
-        const selectors = [
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card)',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-item-redirection',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-container',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-item-name',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-ratings',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-price-container',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-image-container',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-promotion-message',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-color-attachment-container',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-main-claim',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-new-label',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-color-swatch-container',
-            '.plp-card-item:not(.hidden-xs-up):not(.new-promo-card) .plp-card-addToBasket'
-        ];
-
-        selectors.forEach(selector => {
-            matchGroupedHeights(selector);
-        });
-        
-        // Reset the flag after processing
-        setTimeout(() => {
-            isMatchingHeight = false;
-        }, 100);
     };
 
     function debounce(func, delay) {
@@ -202,48 +123,9 @@
             timeout = setTimeout(func, delay);
         };
     }
-    // Initialize height matching with reduced frequency to prevent flickering
     if (window.innerWidth > 500) {
-        window.addEventListener('scroll', debounce(matchHeight, 1000)); // Increased delay
+        window.addEventListener('scroll', debounce(matchHeight, 200));
     }
-    
-    // Run matchHeight on window resize with longer delay
-    window.addEventListener('resize', debounce(matchHeight, 800));
-    
-    // Run matchHeight when DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(matchHeight, 1000);
-    });
-    
-    // Run matchHeight when all images are loaded
-    window.addEventListener('load', function() {
-        setTimeout(matchHeight, 500);
-    });
-    
-    // Add specific observer for problematic cards that lose height
-    const observeHeightChanges = () => {
-        const problematicCards = document.querySelectorAll('.js-plp-color-swatches-group-hook .plp-card-item');
-        
-        problematicCards.forEach(card => {
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-                        // Re-run height matching if style changes detected
-                        setTimeout(matchHeight, 100);
-                    }
-                });
-            });
-            
-            // Observe style changes on card elements
-            const elementsToObserve = card.querySelectorAll('.plp-card-item-name, .plp-card-main-claim, .plp-card-new-label, .plp-card-color-swatch-container');
-            elementsToObserve.forEach(el => {
-                observer.observe(el, { attributes: true, attributeFilter: ['style'] });
-            });
-        });
-    };
-    
-    // Initialize observer after DOM is ready
-    setTimeout(observeHeightChanges, 2000);
     /* matchHeight = function () {
         const startIndex = 5; // Start from card #6 (0-based index)
         const groupSize = 3;
@@ -290,7 +172,7 @@
                 var newPromoCard = document.createElement('li');
                 newPromoCard.classList.add("plp-card-container", "new-promo-card");
                 newPromoCard.setAttribute('tabindex', '0');
-                newPromoCard.innerHTML = '<div class="promo-container" role=group aria-label=item><article class="card-799"><div class="image-wrap-799"><img alt="Device" src=' + heroImage + ' /></div><div class="text-799"><span class="eyebrow-799">Black Friday</span><h2 class="title-799">Gifted engineering</h2><p class="copy-799" data-variant="short">Save on selected Dyson technology this Black Friday.</p><a class="cta-799"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#fff"/><path d="M13 9l6 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="cta-text-799">Explore all</span></a></div></article></div>';
+                newPromoCard.innerHTML = '<div class="promo-container" role=group aria-label=item><article class="card-799"><div class="image-wrap-799"><img alt="Device" src=' + heroImage + ' /></div><div class="text-799"><span class="eyebrow-799">Black Friday</span><h2 class="title-799">Enestående ingeniørkunst</h2><p class="copy-799" data-variant="short">Tilbud på utvalgte Dyson-teknologi denne Black Friday</p><a class="cta-799"><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#fff"/><path d="M13 9l6 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="cta-text-799">Vis alle</span></a></div></article></div>';
 
                 //if (document.querySelectorAll('.plp-card-item').length > 3 || document.querySelectorAll('.js-plp-color-swatches-group-hook') > 3) {
                 if (document.querySelector(".product-listing__list-section > :nth-child(3)")) {
@@ -309,13 +191,8 @@
 
             };
             setTimeout(function() {
-                matchHeight();
-            }, 1000);
-            
-            // Also run matchHeight after images load
-            setTimeout(function() {
-                matchHeight();
-            }, 3000);
+                //matchHeight();
+            }, 6000);
         },
         persist: true
     }, {
@@ -323,7 +200,7 @@
         persist: false,
         success: function(el) {
             el.addEventListener('click', function() {
-                window.location.href = 'https://www.dyson.co.uk/black-friday#floorcare';
+                window.location.href = 'https://www.dyson.no/black-friday/stovsugere';
             })
 
         },
@@ -336,12 +213,12 @@
                 el.addEventListener('click', function() {
                     document.querySelector('.promo-container').style.position = 'relative';
                     document.querySelector('.promo-container').style.height = '467px';
-                    setTimeout(matchHeight, 100);
+                    //matchHeight();
                 });
                 setTimeout(function() {
                     document.querySelector('.promo-container').style.position = 'relative';
                     document.querySelector('.promo-container').style.height = '467px';
-                    setTimeout(matchHeight, 100);
+                    //matchHeight();
                 }, 2000);
             }
         }
@@ -353,11 +230,11 @@
                 el.addEventListener('click', function() {
                     document.querySelector('.promo-container').style.position = 'absolute';
                     document.querySelector('.promo-container').style.height = '100%';
-                    setTimeout(matchHeight, 100);
+                    //matchHeight();
                 });
                 document.querySelector('.promo-container').style.position = 'absolute';
                 document.querySelector('.promo-container').style.height = '100%';
-                setTimeout(matchHeight, 100);
+                //matchHeight();
             }
         },
         persist: true
@@ -425,7 +302,7 @@
         visibility: hidden !important;
     }
 
-    /* new card */
+    // new card
     /* Make the card fill whatever height its row provides */
     .promo-container,
     .promo-container .card-799 {
@@ -493,6 +370,7 @@
         line-height: 32px;
         font-size: 24px;
         color: #000;
+        text-align: -webkit-center;
     }
 
     .promo-container.dark-mode .title-799 {
@@ -535,28 +413,5 @@
     .promo-container .cta-799 svg {
         width: 28px;
         height: 28px;
-    }
-
-    /* Fix card alignment by ensuring anchor elements stretch to full height */
-    .plp-card-item:not(.new-promo-card) .plp-card-item-redirection {
-        display: block;
-        height: 100%;
-        text-decoration: none;
-    }
-
-    .plp-card-item:not(.new-promo-card) .plp-card-container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    .plp-card-item:not(.new-promo-card) .plp-card-text-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .plp-card-item:not(.new-promo-card) .plp-card-addToBasket {
-        margin-top: auto;
     }
 </style>
