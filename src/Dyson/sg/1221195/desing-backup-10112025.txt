@@ -378,12 +378,12 @@
                         $(document).ready(function() {
                             $('.recs_wrapper.carousel').slick({
                                 slidesToShow: 1,
-                                dots: false,
+                                dots:false,
                                 centerMode: false,
                                 infinite: false,
                                 slidesToScroll: 1,
                                 variableWidth: true
-                            });
+                            })
                         });
                     });
                   }else{
@@ -708,11 +708,7 @@
   }
   
   .at-table-column {
-  width: 240px;
-  }
-  
-  .recs_wrapper.carousel .slick-slide {
-  width: 240px !important;
+  width: 100%;
   }
   
   .at_recs_card>.text_section>h3,
@@ -1022,12 +1018,6 @@
   }
 
   @media screen and (max-width: 500px) {
-  .recs_wrapper.carousel.slick-initialized.slick-slider {
-  position: relative;
-  display: flex;
-  box-sizing: border-box;
-  } 
-  
   .recs_wrapper.carousel a.at_recs_card {
     display: block !important;
     border: 1px solid #dadada;
@@ -1135,16 +1125,7 @@
   }
   .recs_wrapper .slick-slide
   {
-  height: inherit;
-  width: 240px !important;
-  }
-  
-  .recs_wrapper.carousel .slick-slide {
-  width: 240px !important;
-  }
-  
-  .recs_wrapper .slick-slide[style*="width"] {
-  width: 240px !important;
+  height: inherit !important;
   }
   
   .trade-up-item__price {

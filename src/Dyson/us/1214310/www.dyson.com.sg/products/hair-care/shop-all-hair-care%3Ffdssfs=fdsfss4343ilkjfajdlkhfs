@@ -1,0 +1,1216 @@
+
+      padding: 5px;
+  
+      padding: 6px;
+  
+      padding: 7px;
+  
+      padding: 8px;
+  
+      padding: 9px;
+  
+      padding: 10px;
+  
+      padding: 11px;
+   <!doctype html><html lang="en-SG"><head ><script type="text/javascript" src="https://www.dyson.com.sg/public/2ccf45fcc808ec6eeb206819a9250ee02fd5c5b1a6bb" async ></script><script>window.mfTranslationConfig=[];</script>
+        <script> var LOCALE = 'en\u002DUS'; var BASE_URL = 'https\u003A\u002F\u002Fwww.dyson.com.sg\u002F'; var require = { 'baseUrl': 'https\u003A\u002F\u002Fwww.dyson.com.sg\u002Fstatic\u002Fversion1762362486\u002Ffrontend\u002FDyson\u002Fcommerce\u002Fen_US' };</script> <link rel="preconnect" href="https://www.googletagmanager.com" /><link rel="preconnect" href="https://assets.adobedtm.com" /><script type="text/javascript">
+    window.dyson_sorted_pro_disabled=true; window.dyson_sfpickup_disabled=true; window.dyson_datetime_disabled=true; window.checkoutcom_checkout_disabled=true; window.dyson_singlepagecheckout_disabled=true; window.tamara_checkout_disabled=true; window.kcp_checkout_disabled=true; window.districtlookup_checkout_disabled=true; window.magento_reward_checkout_disabled=true; window.gift_options_checkout_disabled=true; window.tax_weee_checkout_disabled=true; window.p2c2ppayment_checkout_disabled=true; window.onepay_checkout_disabled=true; window.paypaliframe_checkout_disabled=true; window.ipay88_checkout_disabled=true; window.pincode_validator_checkout_disabled=true; </script> <meta charset="utf-8"/>
+<meta name="title" content="Shop all hair care | Dyson"/>
+<meta name="description" content="Discover Dyson hair care technology. Powerful, precise styling with no extreme heat. 2 year warranty. Buy Now."/>
+<meta name="keywords" content="Shop all hair care | Dyson"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1120190344",accountID:"3743385",trustKey:"4223720",xpid:"VwEDUlVbDRABVVFbBAQHVVQI",licenseKey:"NRJS-88c8b469fe89689a6ed",applicationID:"1109350309",browserID:"1120190344"};;/*! For license information please see nr-loader-spa-1.283.2.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>g,xN:()=>p});var n=r(3333);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},l={},f="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function g(e,t){if(!e)throw new Error(f);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.283.2",i="PROD",o="CDN",a="^2.0.0-alpha.17"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=g(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9414:(e,t,r)=>{"use strict";r.d(t,{J:()=>c});var n=r(7836),i=r(2646),o=r(944),a=r(3434);const s=new Map;function c(e,t,r,c){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,o.R)(29);const u=function(e){return(e||n.ee).get("logger")}(e),d=(0,a.YM)(u),l=new i.y(n.P);l.level=c.level,l.customAttributes=c.customAttributes;const f=t[r]?.[a.Jt]||t[r];return s.set(f,l),d.inPlace(t,[r],"wrap-logger-",(()=>s.get(f))),u}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>o,ET:()=>a,TZ:()=>s,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log",s=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(8154),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},8154:(e,t,r)=>{"use strict";r.d(t,{z_:()=>o,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>a});r(6154),r(9566),r(384);const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>c,Qu:()=>u,TZ:()=>s,ih:()=>d,pP:()=>a,tC:()=>i});var n=r(860);const i=["click","keydown","submit","popstate"],o="api",a="initialPageLoad",s=n.K7.softNav,c={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},u={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},d={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>x,BR:()=>b,Kp:()=>R,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>p,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>A,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>g,rw:()=>u,tH:()=>T,uP:()=>s,wW:()=>E,xq:()=>a});var n=r(384);const i=r(860).K7.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",p="jsonpNode",g="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",R="-end",x="-body",E="cb"+R,A="jsTime",T="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},8969:(e,t,r)=>{"use strict";r.d(t,{j:()=>O});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(8154),h=r(384),p=r(6344);const g=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),w=r(3785),R=r(9414);function x(){const e=(0,h.pV)();g.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const E={};var A=r(9417),T=r(5603),N=r(5284);const S=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function O(e,t={},g,O){let{init:I,info:P,loader_config:j,runtime:C={},exposed:k=!0}=t;C.loaderType=g;const L=(0,h.pV)();P||(I=L.init,P=L.info,j=L.loader_config),(0,A.xN)(e.agentIdentifier,I||{}),(0,T.a)(e.agentIdentifier,j||{}),P.jsAttributes??={},d.bv&&(P.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,P);const H=(0,A.D0)(e.agentIdentifier),M=[P.beacon,P.errorBeacon];_||(H.proxy.assets&&(S(H.proxy.assets),M.push(H.proxy.assets)),H.proxy.beacon&&M.push(H.proxy.beacon),x(),(0,h.US)("activatedFeatures",N.B),e.runSoftNavOverSpa&&=!0===H.soft_navigations.enabled&&H.feature_flags.includes("soft_nav")),C.denyList=[...H.ajax.deny_list||[],...H.ajax.block_internal?M:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const g={};var x=s.ee.get(e),A=x.get("tracer");E[e]=b.g.OFF,x.on(p.G4.REPLAY_RUNNING,(t=>{E[e]=t}));var T="api-",N=T+"ixn-";function S(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),I(T,n,!0,o||null===r?"session":void 0)(t,r)}function _(){}g.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,x),(0,w.R)(x,e,t,r)},g.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,x),(0,R.J)(x,e,t,{customAttributes:r,level:i})},m.forEach((e=>{g[e]=I(T,e,!0,"api")})),g.addPageAction=I(T,"addPageAction",!0,n.K7.genericEvents),g.recordCustomEvent=I(T,"recordCustomEvent",!0,n.K7.genericEvents),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,I(T,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return S(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},g.setUserId=function(e){if("string"==typeof e||null===e)return S("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return S("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},g.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,x),x.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},g[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.RECORD,[],void 0,n.K7.sessionReplay,x)},g[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.PAUSE,[],void 0,n.K7.sessionReplay,x)},g.interaction=function(e){return(new _).get("object"==typeof e?e:{})};const O=_.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,x),h||(0,a.p)(N+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,x),function(){if(A.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.t)()],r)}}}};function I(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,x),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,x),r?void 0:this}}function P(){r.e(478).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),x.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{O[e]=I(N,e,void 0,h?n.K7.softNav:n.K7.spa)})),g.setCurrentRouteName=h?I(N,"routeName",void 0,n.K7.softNav):I(T,"routeName",!0,n.K7.spa),g.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,x),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!E[e]],void 0,n.K7.jserrors,x)},d.RI?(0,u.GG)((()=>P()),!0):P(),g}(e.agentIdentifier,O,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.283.2.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.283.2.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-2oN05BjxuObKuOX8E0vq/zS51M+2HokmNPBRUrIC1fw3hpJqoI18/nckSFiqV11KxT7ag3C+FunKrR8n0PD9Ig==",249:"sha512-Zs5nIHr/khH6G8IhAEdnngg+P7y/IfmjU0PQmXABpCEtSTeKV22OYdaa9lENrW9uxI0lZ6O5e5dCnEMsTS0onA==",212:"sha512-LPKde7A1ZxIHzoSqWKxn5uWVhM9u76Vtmp9DMBf+Ry3mnn2jpsfyfigMYD5Yka2RG3NeIBqOwNYuPrWL39qn6w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.283.2.PROD"]=self["webpackChunk:NRBA-1.283.2.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(8969);var l=i(1687),f=i(4234),h=i(5289),p=i(6154),g=i(5270),m=i(7767),v=i(6389);class b extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,l.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,l.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,m.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,l.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,l.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};p.RI?(0,h.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,g.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var R=i(384);var x=i(9908),E=i(2843),A=i(3878),T=i(782),N=i(1863);class S extends b{static featureName=T.T;constructor(e,t=!0){super(e,T.T,t),p.RI&&((0,E.u)((()=>(0,x.p)("docHidden",[(0,N.t)()],void 0,T.T,this.ee)),!0),(0,A.sp)("pagehide",(()=>(0,x.p)("winPagehide",[(0,N.t)()],void 0,T.T,this.ee))),this.importAggregator(e))}}var _=i(8154);class O extends b{static featureName=_.TZ;constructor(e,t=!0){super(e,_.TZ,t),this.importAggregator(e)}}var I=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return H(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection";if(!e?.reason)return;if(H(e.reason))try{return e.reason.message=t+": "+e.reason.message,C(e.reason)}catch(t){return C(e.reason)}const r=C(e.reason);return r.message=t+": "+r?.message,r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return H(e.error)?e.error:C(e)}function H(e){return e instanceof Error&&!!e.stack}class M extends b{static featureName=I.T;#r=!1;constructor(e,r=!0){super(e,I.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,x.p)("ierr",[C(e),(0,N.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),p.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,x.p)("err",[k(e),(0,N.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),p.gm.addEventListener("error",(e=>{this.abortHandler&&(0,x.p)("err",[L(e),(0,N.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var D=i(8990);let K=1;const U="nr@id";function V(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===p.gm?0:(0,D.I)(e,U,(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var F=i(8139),B=i(7836),W=i(3434);const z={},q=["open","send"];function Z(t){var r=t||B.ee;const n=function(e){return(e||B.ee).get("xhr")}(r);if(void 0===p.gm.XMLHttpRequest)return n;if(z[n.debugId]++)return n;z[n.debugId]=1,(0,F.u)(r);var i=(0,W.YM)(n),o=p.gm.XMLHttpRequest,a=p.gm.MutationObserver,s=p.gm.Promise,c=p.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=p.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,A.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,q,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(g?g.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var g=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Y="fetch-",J=Y+"body-",X=["arrayBuffer","blob","json","text","formData"],Q=p.gm.Request,ee=p.gm.Response,te="prototype";const re={};function ne(e){const t=function(e){return(e||B.ee).get("fetch")}(e);if(!(Q&&ee&&p.gm.fetch))return t;if(re[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[B.P]&&o[B.P].dt&&(e=o[B.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return re[t.debugId]=1,X.forEach((e=>{r(Q[te],e,J),r(ee[te],e,J)})),r(p.gm,"fetch",Y),t.on(Y+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Y+"done",[null,r],n)}else t.emit(Y+"done",[e],n)})),t}var ie=i(7485),oe=i(5603);class ae{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,oe.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof p.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ie.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var se=i(9300),ce=i(7295),ue=["load","error","abort","timeout"],de=ue.length,le=(0,R.dV)().o.REQ,fe=(0,R.dV)().o.XHR;class he extends b{static featureName=se.T;constructor(e,t=!0){super(e,se.T,t),this.dt=new ae(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,x.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};p.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};pe(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}ne(this.ee),Z(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=R,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){E(t,e)}),(0,A.jT)(!1)),p.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,A.jT)(!1))}function o(e){this.params={method:e[0]},pe(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,N.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<de;s++)r.addEventListener(ue[s],this.listener,(0,A.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+V(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+V(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,N.t)()}function h(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function g(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof fe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,N.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,N.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&p.RI&&(t=""+p.gm.location.href):e[0]&&e[0].url?t=e[0].url:p.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ie.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,N.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof le?r=i.url:p.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),pe(this,r);var o=(""+(i&&i instanceof le&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function w(e,t){if(this.endTime=(0,N.t)(),this.params||(this.params={}),(0,ce.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,N.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function R(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<de;t++)e.removeEventListener(ue[t],this.listener,!1);t.aborted||(0,ce.iW)(t)||(n.duration=(0,N.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):E(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function E(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,x.p)(_.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",h),t.on("removeEventListener-end",g),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function pe(e,t){var r=(0,ie.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ge={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||B.ee).get("history")}(e);return!p.RI||ge[t.debugId]++||(ge[t.debugId]=1,(0,W.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:we,d3:Re,Kp:xe,TZ:Ee,Lc:Ae,uP:Te,Rz:Ne}=be;class Se extends b{static featureName=Ee;constructor(e,t=!0){super(e,Ee,t);if(!(0,m.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,F.u)(r),this.eventsEE.on(Te,(function(e,t){this.bstStart=(0,N.t)()})),this.eventsEE.on(Ae,(function(e,t){(0,x.p)("bst",[e[0],t,this.bstStart,(0,N.t)()],void 0,a.K7.sessionTrace,r)})),r.on(Ne+Re,(function(e){this.time=(0,N.t)(),this.startPath=location.pathname+location.hash})),r.on(Ne+xe,(function(e){(0,x.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,x.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:we,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var _e=i(2614);class Oe extends b{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(_e.H3,"_").concat(_e.uh)))}catch(e){}(0,g.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,x.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===_e.g.FULL||e.sessionReplayMode===_e.g.ERROR)||(0,g.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==_e.g.FULL&&this.featAggregate.initializeRecording(_e.g.FULL,!0):(this.#i=_e.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==_e.g.FULL&&(this.recorder.parent.mode=_e.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ie=i(3962);class Pe extends b{static featureName=Ie.TZ;constructor(e,t=!0){if(super(e,Ie.TZ,t),!p.RI||!(0,R.dV)().o.MO)return;const r=ve(this.ee);Ie.tC.forEach((e=>{(0,A.sp)(e,(e=>{a(e)}),!0)}));const n=()=>(0,x.p)("newURL",[(0,N.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n);try{this.removeOnAbort=new AbortController}catch(e){}(0,A.sp)("popstate",(e=>(0,x.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let i=!1;const o=new((0,R.dV)().o.MO)(((e,t)=>{i||(i=!0,requestAnimationFrame((()=>{(0,x.p)("newDom",[(0,N.t)()],void 0,this.featureName,this.ee),i=!1})))})),a=(0,v.s)((e=>{(0,x.p)("newUIEvent",[e],void 0,this.featureName,this.ee),o.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),o.disconnect(),this.abortHandler=void 0},this.importAggregator(e,{domObserver:o})}}var je=i(7378);const Ce={},ke=["appendChild","insertBefore","replaceChild"];function Le(e){const t=function(e){return(e||B.ee).get("jsonp")}(e);if(!p.RI||Ce[t.debugId])return t;Ce[t.debugId]=!0;var r=(0,W.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,ke,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,A.jT)(!1)),e.addEventListener("error",f,(0,A.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const He={};function Me(e){const t=function(e){return(e||B.ee).get("promise")}(e);if(He[t.debugId])return t;He[t.debugId]=!0;var r=t.context,n=(0,W.YM)(t),i=p.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}p.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[W.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const De={},Ke="setTimeout",Ue="setInterval",Ve="clearTimeout",Ge="-start",Fe=[Ke,"setImmediate",Ue,Ve,"clearImmediate"];function Be(e){const t=function(e){return(e||B.ee).get("timer")}(e);if(De[t.debugId]++)return t;De[t.debugId]=1;var r=(0,W.YM)(t);return r.inPlace(p.gm,Fe.slice(0,2),Ke+"-"),r.inPlace(p.gm,Fe.slice(2,3),Ue+"-"),r.inPlace(p.gm,Fe.slice(3),Ve+"-"),t.on(Ue+Ge,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ke+Ge,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const We={};function ze(e){const t=function(e){return(e||B.ee).get("mutation")}(e);if(!p.RI||We[t.debugId])return t;We[t.debugId]=!0;var r=(0,W.YM)(t),n=p.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:qe,d3:Ze,Kp:Ye,$p:Je,wW:Xe,e5:$e,tH:Qe,uP:et,rw:tt,Lc:rt}=je;class nt extends b{static featureName=qe;constructor(e,t=!0){if(super(e,qe,t),!p.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let r,n=0;const i=this.ee.get("tracer"),o=Le(this.ee),a=Me(this.ee),s=Be(this.ee),c=Z(this.ee),u=this.ee.get("events"),d=ne(this.ee),l=ve(this.ee),f=ze(this.ee);function h(e,t){l.emit("newURL",[""+window.location,t])}function g(){n++,r=window.location.hash,this[et]=(0,N.t)()}function m(){n--,window.location.hash!==r&&h(0,!0);var e=(0,N.t)();this[$e]=~~this[$e]+e-this[et],this[rt]=e}function v(e,t){e.on(t,(function(){this[t]=(0,N.t)()}))}this.ee.on(et,g),a.on(tt,g),o.on(tt,g),this.ee.on(rt,m),a.on(Xe,m),o.on(Xe,m),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e.agentIdentifier]||(0,x.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([et,rt,"xhr-resolved"],this.featureName),u.buffer([et],this.featureName),s.buffer(["setTimeout"+Ye,"clearTimeout"+Ze,et],this.featureName),c.buffer([et,"new-xhr","send-xhr"+Ze],this.featureName),d.buffer([Qe+Ze,Qe+"-done",Qe+Je+Ze,Qe+Je+Ye],this.featureName),l.buffer(["newURL"],this.featureName),f.buffer([et],this.featureName),a.buffer(["propagate",tt,Xe,"executor-err","resolve"+Ze],this.featureName),i.buffer([et,"no-"+et],this.featureName),o.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),v(d,Qe+Ze),v(d,Qe+"-done"),v(o,"new-jsonp"),v(o,"jsonp-end"),v(o,"cb-start"),l.on("pushState-end",h),l.on("replaceState-end",h),window.addEventListener("hashchange",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){h(0,n>1)}),(0,A.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var it=i(3333);class ot extends b{static featureName=it.TZ;constructor(e,t=!0){super(e,it.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(p.RI&&(e.init.user_actions.enabled&&(it.Zp.forEach((e=>(0,A.sp)(e,(e=>(0,x.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),it.qN.forEach((e=>{const t=(0,v.s)((e=>{(0,x.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,A.sp)(e,t)}))),e.init.performance.resources.enabled&&p.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,x.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var at=i(993),st=i(3785),ct=i(9414);class ut extends b{static featureName=at.TZ;constructor(e,t=!0){super(e,at.TZ,t);const r=this.ee;(0,ct.J)(r,p.gm.console,"log",{level:"info"}),(0,ct.J)(r,p.gm.console,"error",{level:"error"}),(0,ct.J)(r,p.gm.console,"warn",{level:"warn"}),(0,ct.J)(r,p.gm.console,"info",{level:"info"}),(0,ct.J)(r,p.gm.console,"debug",{level:"debug"}),(0,ct.J)(r,p.gm.console,"trace",{level:"trace"}),this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,st.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),p.gm?(this.features={},(0,R.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,R.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[he,w,S,Se,Oe,O,M,ot,ut,Pe,nt],loaderType:"spa"})})()})();</script>
+<title>Shop all hair care | Dyson</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/mage/calendar.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/jquery/uppy/dist/uppy-custom.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/PayU_PaymentGateway/css/payu.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/Dyson_Cms/css/jquery.hotspot.min.css" />
+<link  rel="stylesheet" type="text/css"  media="print" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/css/print.min.css" />
+<link  rel="icon" type="image/x-icon" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/Magento_Enterprise/favicon.ico" />
+<link  rel="shortcut icon" type="image/x-icon" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/Magento_Enterprise/favicon.ico" />
+<script  type="text/javascript"  src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/requirejs/require.min.js"></script>
+<script  type="text/javascript"  src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/requirejs-min-resolver.min.js"></script>
+<script  type="text/javascript"  src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/mage/requirejs/mixins.min.js"></script>
+<script  type="text/javascript"  src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/requirejs-config.min.js"></script>
+<script  type="text/javascript"  async="async" src="https://js.afterpay.com/afterpay-1.x.js"></script>
+<link  rel="canonical" href="https://www.dyson.com.sg/products/hair-care/shop-all-hair-care" />
+<link  rel="apple-touch-icon" type="image/png" href="/media/icons/apple-touch-icon.png" />
+<link  rel="apple-touch-icon" type="image/png" sizes="120x120" href="/media/icons/apple-touch-icon-120x120.png" />
+<link  rel="apple-touch-icon" type="image/png" sizes="152x152" href="/media/icons/apple-touch-icon-152x152.png" />
+<link  rel="apple-touch-icon-precomposed" type="image/png" href="/media/icons/apple-touch-icon-precomposed.png" />
+<link  rel="apple-touch-icon-precomposed" type="image/png" sizes="120x120" href="/media/icons/apple-touch-icon-120x120-precomposed.png" />
+<link  rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/media/icons/apple-touch-icon-152x152-precomposed.png" />
+<meta name="p:domain_verify" content="4sPCgSvnWt3sxtLOEOiCVwX14P7QDYOw"/>
+
+<script src="https://s.salecycle.com/dysonsg/bundle.js" type="text/javascript"></script>
+
+<!--GZtm2aFfBoTXHgGNpQo5iYCuLMvxGeme-->
+ <script  type="text/javascript"  data-routing="commerce=rum" defer="defer" src="https://rum.hlx.page/.rum/@adobe/helix-rum-js@^2/dist/rum-standalone.js"></script> <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_PageCache/js/form-key-provider": {
+                    "isPaginationCacheEnabled":
+                        0                }
+            }
+        }</script> <link rel="stylesheet" type="text/css" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/css/styles.min.css"/> <link rel="stylesheet" type="text/css" href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/css/layouts/spc/SG-spc.min.css"/> <script defer src="https://assets.adobedtm.com/015292f18572/eaf224559952/launch-9a6855924755.min.js"></script> <link rel="preconnect" href="https://apps.bazaarvoice.com/"><link rel="preconnect" href="https://api.bazaarvoice.com/"><script src="https://apps.bazaarvoice.com/deployments/dysonglobal/main_site_magento/production/en_SG/bv.js" async></script>  <script fetchpriority="high" src="https://orca-api.zoovu.com/advisor-fe-web/api/v1/launchers/zrwpr4/personal-care-sg-001" async></script><link rel="preconnect" href="https://tiger-cdn.zoovu.com/">  <!-- Decibel - Dyson - Singapore -->
+<script type="text/javascript">
+// <![CDATA[
+(function(d,e,c,i,b,el,it) {
+d._da_=d._da_||[];_da_.oldErr=d.onerror;_da_.err=[];
+d.onerror=function(){_da_.err.push(arguments);_da_.oldErr&&_da_.oldErr.apply(d,Array.prototype.slice.call(arguments));};
+d.DecibelInsight=b;d[b]=d[b]||function(){(d[b].q=d[b].q||[]).push(arguments);};
+el=e.createElement(c),it=e.getElementsByTagName(c)[0];el.async=1;el.src=i;it.parentNode.insertBefore(el,it);
+})(window,document,'script','https://cdn.decibelinsight.net/i/13812/272498/di.js','decibelInsight');
+// ]]>
+</script><script type="text/x-magento-init">
+        {
+             "*" : {
+                "decibel-error-tracking" : {}
+             }
+        }</script><script type="application/ld+json">
+    {
+       "@context":"http://schema.org",
+       "@type":"WebSite",
+       "url":"https://www.dyson.com.sg/",
+       "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://www.dyson.com.sg/catalogsearch/result/?q={search_term_string}",
+          "query-input":"required name=search_term_string"
+       }
+    }</script> <script type='text/javascript' src='//static.queue-it.net/script/queueclient.min.js'></script><script data-queueit-c='dysonmagento2' type='text/javascript' src='//static.queue-it.net/script/queueconfigloader.min.js'></script><a href="#maincontent" class="sr-only-focusable sr-only skip-navigation" data-role="none" aria-label="Skip navigation"><span>Skip navigation</span></a>      <meta property="og:title" content="Shop&#x20;all&#x20;hair&#x20;care" />    <meta property="og:type" content="og&#x3A;article" />    <meta property="og:url" content="https://www.dyson.com.sg/products/hair-care/shop-all-hair-care" />          <script>
+    if (dataLayer === undefined) var dataLayer = [];
+    dataLayer.push({"platformInfo":{"market":"SG","environment":"production"}});
+    dataLayer.push({"pageInfo":{"pageType":"catalog\/category\/view","pagePath":"en-SG\/products\/hair-care\/shop-all-hair-care?___store=en-SG","pageTitle":"shop all hair care | dyson"}});</script>  <!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TH38VF');</script><!-- End Google Tag Manager --> 
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-0f95d063-6d83-47bc-bfbd-92286c1f5310","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"true","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("True"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="QYSPF-DSHDD-DYC6P-72JRN-MARJD",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"QYSPF-DSHDD-DYC6P-72JRN-MARJD",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="cookiepresent",n="ql4h4iqxiaa6s2irqroa-f-03b892990-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"421030","ak.ai":parseInt("1097462",10),"ak.ol":"0","ak.cr":60,"ak.ipv":4,"ak.proto":"h2","ak.rid":"41707fb7","ak.r":49695,"ak.a2":e,"ak.m":"","ak.n":"essl","ak.bpcip":"130.248.126.0","ak.cport":44022,"ak.gh":"96.17.194.229","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1762755676","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==4OkA80ZUpPikJRDxhx7GdMaDsZ4QCD+muSKz6HHKar4rUyIjmquoU6rwrV//dtcIRZhmQQ5Ecjb0rwUyMtj/+FKzN1NiHCrGJpX31IKqxKaJw2jprKOm7rdBhJIwRjM8D/p+3O0mEKOkchP2Aj/vURsddWNit5Ee5J95Zcs9qSmpFp01qREv396mP42a36TD7jgsclN6eD0jxKdFWPzI8A1NAjtydKS150CqYrdLp/gbv3f6pwNDu1f32Yg+JsICFxZ/jgoceT3WpwOHccHuzvDff47D7Gy5HYZ3KZOMWSCmd7LuIpYZBHR/TB5BFdaVdfn5U6a3x5cayzfiSUaHZbyVR4JjdF0nsuTEv7rv3n7Z3jB7DQSrSLLV3tUYT7LEUi4h3Bv21s9EKnyFFqAqKsqUJlRZCXtM2ALmGaUGA7o=","ak.pv":"18","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head><body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/loader-2.gif"}}' class="dyson-sg page-with-filter page-products categorypath-products-hair-care-shop-all-hair-care category-shop-all-hair-care catalog-category-view page-layout-2columns-left" id="html-body"><div id="atb-modal" style="display:none" data-bind="scope:'addtobasket'"><!-- ko template: getTemplate() --><!-- /ko --></div><script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "addtobasket": {
+                    "component": "Dyson_Leap/js/addtobasket"
+                }
+            }
+        }
+    }
+}</script>             <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/content-type\/slide\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/content-type\/banner\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false}},
+                "breakpoints": {"desktop":{"label":"Desktop","stage":true,"default":true,"class":"desktop-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-desktop.svg","conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"label":"Mobile","stage":true,"class":"mobile-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-mobile.svg","media":"only screen and (max-width: 768px)","conditions":{"max-width":"768px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}}}}}            }
+        }
+    }</script>  <div class="cookie-status-message" id="cookie-status">The store will not work correctly when cookies are disabled.</div> <script type="text&#x2F;javascript">document.querySelector("#cookie-status").style.display = "none";</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "cookieStatus": {}
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".www.dyson.com.sg",
+                "secure": true,
+                "lifetime": "3600"
+            }
+        }
+    }</script>  <noscript><div class="message global noscript"><div class="content"><p><strong>JavaScript seems to be disabled in your browser.</strong> <span> For the best experience on our site, be sure to turn on Javascript in your browser.</span></p></div></div></noscript>   <script> window.cookiesConfig = window.cookiesConfig || {}; window.cookiesConfig.secure = true; </script> <script>    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymceAdapter'
+            }
+        }
+    });</script> <script>    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3.53\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: '',
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.dyson.com.sg\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.dyson.com.sg\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });</script><script>
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });</script>  <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TH38VF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript><!-- End Google Tag Manager (noscript) -->  <script type="text/x-magento-init">
+    {
+        "*" : {
+            "Dyson_Leap/js/dyson-sticky-promotion-banner": {}
+         }
+    }</script><script type="text/x-magento-init">
+    {
+         "*" : {
+            "registration_form_cookie": {}
+         }
+    }</script> <script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "*": {
+                    "component": "Dyson_Cms/js/view/aop-cookie-counter",
+                    "aop_expiry": 30                }
+             }
+        },
+        "prospect_form_cookie":{}
+    }
+}</script><div id="dyson_promo_modal_popup" class="dyson_promo_modal_popup"></div><div id="dyson_notifyme_modal_popup" class="notifyme-modal-block notifyme-modal-content dyson_notifyme_modal_popup"></div><script type="text/x-magento-init">
+    {
+        "*": {
+            "notifyme-popup": { "notifyMePopupUrl": "https://www.dyson.com.sg//dyson/notifyme/popup" }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "[data-modal]": {
+            "Dyson_Leap/js/modal": {}
+        },
+        "[data-toggle-content]": {
+            "Dyson_Leap/js/dyson-toggles": {}
+        },
+        "*" : {
+            "store-selector": {},
+            "browser-sniff": {},
+            "svg4everybody.init" : {},
+            "jquery.matchHeight.init" : {},
+            "Dyson_Leap/js/dyson-forms": {},
+            "Dyson_Leap/js/dyson-focus": {},
+            "dyson-honeypot": {},
+            "ajaxaddtocart": {}
+         },
+        "body:not(.checkout-cart-index):not(.checkout-index-index)" : {
+            "picturefill" : {},
+            "faqs-dropdown": {},
+            "dyson-notifyme": {},
+            "dyson-menu-sticky": {}
+         },
+        ".checkout-index-index": {
+            "Dyson_Leap/js/checkout-tracking": {}
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*" : {
+            "dyson-slider": {},
+            "dyson-slider-gallery": {},
+            "dyson-product-slideshow": {},
+            "dyson-autoplay-video": {},
+            "dyson-carousel": {}
+         }
+    }</script> <script>
+    
+    window.focVariable = 'Your order total is $0.00, so no payment is required. Please confirm your order and we will deliver to you for free.';</script><div class="page"><header class="page-header"><div id="utility-menu__wrapper" class="utility-menu__wrapper clr-black-fill"> <script type="text/javascript">
+    window.isRedirectToCartCheck = true;</script> <div class="layout"><div class="header__logo" data-gtm-component="utility-menu"><div class="header__logo__inner"><a href="https://www.dyson.com.sg/" aria-label="dyson"><svg class="icon icon--logo" role="img" aria-labelledby="dysonlogo" data-gtm-name="text link~dyson logo"><title id="dysonlogo">Dyson</title><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#logo"></use></svg></a></div></div><nav class="utility-menu-nav" data-gtm-component="utility-menu"><ul>   <li><a href="https://www.dyson.com.sg/for-business/overview" target="" aria-label="For business" data-gtm-name="text link~for business">For business</a></li>    <li><a href="https://www.dyson.com.sg/demo-store/find-a-store" target="" aria-label="Store finder" data-gtm-name="text link~find a store">Find a store</a></li>    <li><a href="https://www.dyson.com.sg/dyson-outlet" target="" aria-label="Dyson Outlet" data-gtm-name="text link~dyson outlet">Dyson Outlet</a></li>    <li><a href="https://www.dyson.com.sg/product-registration" target="" aria-label="Register machine" data-gtm-name="text link~register machine">Register machine</a></li>    <li><a href="https://www.dyson.com.sg/support/contact-us" target="" aria-label="Contact us" data-gtm-name="text link~contact us">Contact us</a></li> </ul></nav></div><script>
+        require(['jquery', 'jquery/ui'], function ($) {
+            $("#js-sticky").addClass("utilitymenu--enabled");
+            if (!$("#js-sticky").hasClass("utilitymenu--enabled")) {
+                $(".header__masthead").addClass("utilitymenu--enabled");
+            }
+        });</script></div><div id="js-sticky" class="header"><div class="header__masthead clr-black-fill"><div class="layout"> <button id="heademenuicid" class="header-hamburger-dyson header__toggle-nav hamburger_menu_enabled hover_menu_enabled" data-isglobalnav="1" data-toggle-content data-toggle-content-opens="hamburger_menu" aria-label="menu"><span class="header__hamburger"></span></button>  <div class="header__logo utility-menu-active" data-gtm-component="utility-menu"><div class="header__logo__inner"><a aria-label="dyson" href="https://www.dyson.com.sg/"><svg class="icon icon--logo" role="img" aria-labelledby="dysonlogo" data-gtm-name="text link~dyson logo"><title id="dysonlogo">Dyson</title><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#logo"></use></svg></a></div></div>   <nav class="header__nav hidden global__quick-links desktop-hover-menu" aria-label="Global" id="nav"><ul class="header__nav__list" data-gtm-component="menu"> <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 1 href="https://www.dyson.com.sg/promotions/shop-all" data-gtm-name="primary~11.11 deals">11.11 Deals</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="11.11 deals sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore deals" class="header__nav-submenu-title">Explore deals</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore deals">    <li><a href="https://www.dyson.com.sg/promotions/shop-all">Shop all</a></li>  <li><a href="https://www.dyson.com.sg/promotions/hair-care">Hair Care</a></li>  <li><a href="https://www.dyson.com.sg/promotions/vacuum-cleaners">Vacuum Cleaners</a></li>  <li><a href="https://www.dyson.com.sg/promotions/air-purifiers">Air Purifiers and fans</a></li>  <li><a href="https://www.dyson.com.sg/promotions/deal-days">Deal days</a></li>  <li><a href="https://www.dyson.com.sg/promotions/bundles">Bundles</a></li>  <li><a href="https://www.dyson.com.sg/promotions/headphones">Headphones</a></li>  <li><a href="https://www.dyson.com.sg/promotions/lighting">Lighting</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title"></h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 2 href="https://www.dyson.com.sg/products/floorcare" data-gtm-name="primary~vacuum & wet cleaners">Vacuum & wet cleaners</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="vacuum & wet cleaners sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore vacuums & wet cleaners" class="header__nav-submenu-title">Explore vacuums & wet cleaners</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore vacuums & wet cleaners">    <li><a href="https://www.dyson.com.sg/products/vacuum-cleaners/cordless">Cordless vacuum cleaners</a></li>  <li><a href="https://www.dyson.com.sg/products/vacuum-cleaners/wet-dry-cleans">Wet & dry vacuum cleaners</a></li>  <li><a href="https://www.dyson.com.sg/products/wet-floor-cleaners/wet/washg1">Wet floor cleaners</a></li>  <li><a href="https://www.dyson.com.sg/dyson-360-vis-nav">Robot vacuum cleaner</a></li>  <li><a href="https://www.dyson.com.sg/products/vacuum-cleaners/shop-all-vacuum-cleaners">Shop all vacuum cleaners</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title">More from Dyson</h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">    <li> <a href="/help-me-choose/vacuum-cleaners" target="">Help me choose</a></li>  <li> <a href="/products/vacuum-cleaners/vacuum-stands-tools-and-accessories" target="">Accessories</a></li>  <li> <a href="/support/replacement-parts/vacuum-cleaners/cordless" target="">Parts</a></li>  <li> <a href="/products/vacuum-cleaners/replacement-batteries" target="">Batteries</a></li>  <li> <a href="https://singapore.dyson-demo.com/appointment" target="">Book a demo</a></li>  <li> <a href="/pets" target="">Home with pets</a></li>  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 3 href="https://www.dyson.com.sg/products/hair-care" data-gtm-name="primary~hair care">Hair care</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="hair care sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore hair care" class="header__nav-submenu-title">Explore hair care</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore hair care">    <li><a href="https://www.dyson.com.sg/products/hair-care/wet-to-dry-straighteners/airstrait">Wet to dry straighteners</a></li>  <li><a href="https://www.dyson.com.sg/products/hair-care/hair-stylers">Hair multi-stylers</a></li>  <li><a href="https://www.dyson.com.sg/products/hair-care/hair-dryers">Hair dryers</a></li>  <li><a href="https://www.dyson.com.sg/products/hair-care/hair-care-products">Hair care products</a></li>  <li><a href="https://www.dyson.com.sg/products/hair-care/shop-all-hair-care">Shop all hair care</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title">More from Dyson</h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">    <li> <a href="/products/hair-care/help-me-choose" target="">Help me choose</a></li>  <li> <a href="/gifts" target="">Gifts</a></li>  <li> <a href="/products/hair-care/haircare-accessories" target="">Cases, accessories & attachments</a></li>  <li> <a href="/products/hair-care/hair-styling-guides" target="">Styling guides</a></li>  <li> <a href="/products/hair-care/learn-about-hair-science" target="">Hair science</a></li>  <li> <a href="https://singapore.dyson-demo.com/appointment" target="">Book a styling appointment</a></li>  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 4 href="https://www.dyson.com.sg/products/air-purifiers" data-gtm-name="primary~air purifier fans">Air purifier fans</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="air purifier fans sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore air purifiers fans" class="header__nav-submenu-title">Explore air purifiers fans</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore air purifiers fans">    <li><a href="https://www.dyson.com.sg/products/air-purifiers-and-fans/air-purifiers">Air purifiers</a></li>  <li><a href="https://www.dyson.com.sg/products/air-purifiers-and-fans/fans">Fans</a></li>  <li><a href="https://www.dyson.com.sg/products/air-purifiers-and-fans/shop-all-air-purifiers">Shop all air purifier fans</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title">More from Dyson</h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">    <li> <a href="/help-me-choose/air-purifiers" target="">Help me choose</a></li>  <li> <a href="/products/air-purifiers/purifier-filters" target="">Purifier filters</a></li>  <li> <a href="/products/air-purifiers/expert-in-formaldehyde" target="">Experts in formaldehyde</a></li>  <li> <a href="/pets" target="">Home with pets</a></li>  <li> <a href="/products/air-purifiers-and-fans/shop-all-air-purifiers" target="">Eligible for climate vouchers</a></li>  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 5 href="https://www.dyson.com.sg/products/headphones" data-gtm-name="primary~headphones">Headphones</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="headphones sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore headphones" class="header__nav-submenu-title">Explore headphones</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore headphones">    <li><a href="https://www.dyson.com.sg/ontrac-headphones-cnc-black-nickel">OnTrac headphones</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title">More from Dyson</h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">    <li> <a href="/products/headphones/ontrac/accessories" target="">Ear cushions & caps</a></li>  <li> <a href="https://singapore.dyson-demo.com/appointment" target="">Book a demo</a></li>  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 6 href="https://www.dyson.com.sg/products/lighting" data-gtm-name="primary~lighting">Lighting</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="lighting sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span>  <div class="header__nav-submenu"><div class="layout"><div class="header__nav-submenu-wrap"><div class="header__nav-submenu-list-group"><h3 id="Explore lighting" class="header__nav-submenu-title">Explore lighting</h3><ul class="header__nav-submenu-list" aria-labelledby="Explore lighting">    <li><a href="https://www.dyson.com.sg/products/lighting/dyson-solarcycle-morph/overview">Dyson Solarcycle Morph™</a></li>  <li><a href="https://www.dyson.com.sg/products/lighting/shop-all-lighting">Shop all lighting</a></li>  </ul></div><div class="header__nav-submenu-list-group"><h3 id="statictitle2" class="header__nav-submenu-title"></h3><ul class="header__nav-submenu-list" aria-labelledby="statictitle2">  </ul></div></div></div></div></li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 7 href="https://www.dyson.com.sg/dyson-support" data-gtm-name="primary~support">Support</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="support sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span> </li>  <li class="header__nav-item"><a class="quick-link-item" target="" data-id= 8 href="https://www.dyson.com.sg/best-sellers" data-gtm-name="primary~best sellers">Best sellers</a> <span class="header__nav-item-chevron" tabindex="0" aria-expanded="false" aria-label="best sellers sub-menu" role="button"><img src="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/chevron-down-white.svg" alt=""></span> </li> </ul></nav><script type="text/x-magento-init">
+    {
+        "*" : {
+            "Dyson_Leap/js/quick-links": {},
+            "Magento_Theme/js/primary-nav": {} ,
+            "Magento_Theme/js/primary-nav-analytics": {
+                "selector":"nav.header__nav.global__quick-links li.header__nav-item",
+                "time": "1000"
+            }
+         }
+    }</script>   <div class='hamburger_menu' id='hamburger_menu' aria-label="Menu" role='dialog' data-toggle-content-animation-length='200' data-toggle-content-focus-first data-toggle-content-close-on-resize data-toggle-content-use-class-for-hidden><div class='hamburger_logo'><div class='hamburger_logo_img' data-gtm-component="utility-menu"><a class='logo_link' aria-label='dyson' href='https://www.dyson.com.sg/'><svg class='icon icon--logo' role="img" aria-labelledby="dysonlogo" data-gtm-name="text link~dyson logo"><title id="dysonlogo">Dyson</title><use xlink:href='https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#logo'></use></svg></a></div><div class='close_hamburger_menu'><button id="headmenucloseid" class='close_hamburger' aria-label='close'><svg class="close_hamburger_icon" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><g id="Layer_1"><polygon fill-rule="evenodd" fill="#FFFFFF" points="9.4,8 16,14.6 14.6,16 8,9.4 1.4,16 0,14.6 6.6,8 0,1.4 1.4,0 8,6.6 14.6,0 16,1.4 "/></g><g id="Layer_2"></g></svg></button></div></div><nav class='hamburger_menu_nav' aria-label="main"><ul class='hamburger_menu_list' id="hamburgermenuid" data-gtm-component="menu"></ul></nav></div><script type="text/javascript">
+    base_url_hmenu = "https://www.dyson.com.sg/";
+    chevronLinkSprite = "<svg class='icon icon--chevron' version='1.1' baseProfile='tiny' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' overflow='visible' xml:space='preserve'><polygon fill-rule='evenodd' fill='#FFFFFF' points='15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 '/></svg>";</script><script type="text/x-magento-init">
+    {
+        "*" : {
+            "Dyson_Leap/js/hamburger-menu": {}
+         }
+    }</script>    <div class="header__search header_search-enhancement global-link-search-enabled"><div class="header__search__inner"><input placeholder="Search products and parts" aria-label="Search products and parts" aria-hidden="true" value="Search products and parts" class="header__search__input" disabled><input placeholder="Search products and parts" aria-label="Search products and parts" value="Search products and parts" class="header__search__input--mobile" aria-hidden="true" disabled><svg class="icon icon--search" role="img" aria-labelledby="search-results-icon"><title id="search-results-icon">Search</title><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#search"></use></svg><button aria-label="Search products and parts" class="header__search__input-open" data-toggle-content data-toggle-content-opens="search-popover"></button></div></div><div class="search-panel" role="dialog" aria-modal="true" id="search-popover" aria-label="Search the website" data-toggle-content-animation-length="200" data-toggle-content-focus-first><div class="row row--full-height"><div class="layout search-panel__inner"><form class="search-panel__form js-search-form" action="https://www.dyson.com.sg/catalogsearch/result/" method="get" data-input-state data-di-form-track data-di-form-id="search-form"><div class="search-panel__underline"><input autocomplete="off" required="" id="" maxlength="30" type="search" placeholder="dyson.com.sg" class="search-panel__input js-search-form__input" aria-label="Search" name="q" required data-di-form-id="search-query" ><button type="button" class="search-panel__clear js-search-form__clear" aria-label="Clear"><svg class="icon icon--clear"><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#clear"></use></svg></button> <button type="submit" class="search-panel__submit js-search-form__submit"><svg class="icon icon--search" role="img" aria-labelledby="search-results-icon"><title id="search-results-icon">Search</title><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#search-large"></use></svg></button></div></form> <div class="layout search-panel__popular-search" data-gtm-component="most searched for"><h2 class="search-panel__popular-search__title">Most searched for</h2><ul class="search-panel__popular-search__terms"><li><a data-gtm-name="search term~Airwrap Co-anda2x" href="/airwrap-co-anda2x-ceramic-pink-rose-gold">Airwrap Co-anda2x</a></li><li><a data-gtm-name="search term~Hushjet" href="/hushjet-purifier-compact-black-teal">Hushjet</a></li><li><a data-gtm-name="search term~Pencilvac" href="/pencilvac-fluffycones-black">Pencilvac</a></li><li><a data-gtm-name="search term~Omega" href="/products/hair-care/hair-care-products">Omega</a></li><li><a data-gtm-name="search term~Airstrait" href="/dyson-airstrait-straightener-prussian-blue-rich-copper">Airstrait</a></li><li><a data-gtm-name="search term~Supersonic Nural" href="/supersonic-nural-hair-dryer-strawberry-bronze-blush-pink">Supersonic Nural</a></li></ul></div> <button class="search-panel__close" aria-label="Close" data-toggle-content data-toggle-content-opens="search-popover"><svg class="icon icon--close"><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#close"></use></svg></button></div></div></div> <div class="header__basket" data-gtm-component = "utility-menu"><a href="https://www.dyson.com.sg/checkout/cart/" data-gtm-name="text link~cart"><svg class="icon icon--basket" role="img" aria-labelledby="cartlogo"><title id="cartlogo">Cart</title><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#basket"></use></svg></a></div><script type="text/x-magento-init">
+    {
+        "*" : {
+            "dyson-minicart" : {}
+        }
+    }</script></div></div>     <script type="text/javascript">
+    var addToCart;
+    require([
+        'jquery',
+        'jquery/ui'
+    ], function ($) {
+        document.addEventListener("readystatechange", (event) => {
+            if (event.target.readyState === "complete") {
+                $(".toCart").prop('disabled',false);
+            }
+        });
+        addToCart = function (product_id)
+        {
+            if(!$('.tocart_'+product_id).prop('disabled')){
+              if($("#product_addtocart_form_" + product_id).length != 0) {
+                $('#product_addtocart_form_'+product_id).submit();
+              } else {
+                $('.tocart_'+ product_id).click();
+              }
+            }
+        }
+    });</script></div></header><div class="top-container">  </div><div id="site-wide-alert-banner" class="site-wide-alert-banner">  <script type="text/x-magento-init">
+    {
+        "*": {
+            "Dyson_StickyPromotion/js/sitewidealert" : {
+                "uniqueId": "ALERT66ec0affac7887.80539041"
+            }
+        }
+    }</script></div>  <div class="sticky-promo-banner" id="static_dyson_promo_container"></div><input type="hidden" id="static_dyson_promo_url" value="https://www.dyson.com.sg/dyson_cms/contentprovider/promo/"/> <input type="hidden" id="static_dyson_promo_page" value="4350"/><script type="text/x-magento-init">
+            {
+                 "*" : {
+                    "Dyson_Cms/js/static-promo-banner" : {}
+                 }
+            }</script> <main id="maincontent" class="page-main"> <a id="contentarea" tabindex="-1"></a><div class="layout messages"> <div data-placeholder="messages"></div> <div class="msg-data" data-bind="scope: 'messages'"><!-- ko if: cookieMessagesObservable() && cookieMessagesObservable().length > 0 --><div role="alert" class="messages" data-bind="foreach: { data: cookieMessagesObservable(), as: 'message' }"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: message.text"></div></div></div><!-- /ko --><div role="alert" class="messages" data-bind="foreach: { data: messages().messages, as: 'message' }, afterRender: purgeMessages"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: message.text"></div></div></div></div><script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }</script></div><div class="category-view">  </div><div class="columns"><div class="column main"> <input name="form_key" type="hidden" value="CxV3VnuMpdGtizIl" /> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","captcha","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","captcha"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"checkout\/cart\/removefailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/editwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"review\/product\/post":["review"],"checkout_com\/payment\/placeorder":["cart"],"dyson\/ajax\/addtocart":["cart"],"sso\/saml2\/login":["*"],"sso\/saml2\/acs":["*"]},
+                "clientSideSections": ["checkout-data","cart-data"],
+                "baseUrls": ["https:\/\/www.dyson.com.sg\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","wishlist","instant-purchase","loggedAsCustomer","multiplewishlist","review","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement"]            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.dyson.com.sg\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart"],
+                "cookieLifeTime": "3600",
+                "cookieDomain": "",
+                "updateSessionUrl": "https\u003A\u002F\u002Fwww.dyson.com.sg\u002Fcustomer\u002Faccount\u002FupdateSession\u002F",
+                "isLoggedIn": ""
+            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "9"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.dyson.com.sg\/page_cache\/block\/render\/id\/4419\/","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_type_layered_without_children","catalog_category_view_displaymode_products","catalog_category_view_id_4419"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/products\/hair-care\/shop-all-hair-care"},"versionCookieName":"private_content_version"}        }
+    }</script>  <script type="text/x-magento-init">
+    {
+        "body": {
+            "requireCookie": {"noCookieUrl":"https:\/\/www.dyson.com.sg\/cookie\/index\/noCookies\/","triggers":[".action.towishlist"],"isRedirectCmsPage":true}        }
+    }</script>   <script type="text/x-magento-init">
+        {
+             "*" : {
+                "decibel-masking" : {
+                        "market_fields": "{\n    \"shipping\": {\n        \"postcode\": \"shipping-postcode\"\n    },\n    \"billing\": {\n        \"postcode\": \"billing-postcode\"\n    },\n    \"shipping_select_fields\":{},\n    \"billing_select_fields\":{\n        \"[name='billingAddressworldpay_cc.country_id'] select\":{\n            \"name\":\"country_id\",\n            \"field\":\"country\"\n        }\n    },\n    \"customer_fields\":{}\n}\n",
+                        "common_fields": "{\n    \"shipping\": {\n            \"firstname\": \"shipping-first-name\",\n            \"lastname\": \"shipping-last-name\",\n            \"telephone\": \"shipping-phone-number\",\n            \"street[0]\": \"shipping-street-address-1\",\n            \"street[1]\": \"shipping-street-address-2\",\n            \"city\": \"shipping-city\",\n            \"region\": \"shipping-state\",\n            \"country_id\": \"shipping-country\",\n            \"company\" : \"shipping-company\"\n    },\n    \"billing\": {\n            \"firstname\": \"billing-first-name\",\n            \"lastname\": \"billing-last-name\",\n            \"telephone\": \"billing-phone-number\",\n            \"street[0]\": \"billing-street-address-1\",\n            \"street[1]\": \"billing-street-address-2\",\n            \"street[2]\": \"billing-street-address-3\",\n            \"city\": \"billing-city\",\n            \"region\": \"billing-state\",\n            \"country_id\": \"billing-country\",\n            \"payment[method]\": \"billing-payment-method\",\n            \"company\": \"billing-company\"\n    },\n    \"shipping_select_fields\":{\n        \"[name='shippingAddress.country_id'] select\":{\n            \"name\":\"country_id\",\n            \"field\":\"country\"\n        },\n        \"[name='shippingAddress.region_id'] select\":{\n            \"name\":\"region_id\",\n            \"field\":\"state\"\n        }\n    },\n    \"billing_select_fields\":{\n        \"[name='billingAddressadyen_hpp.country_id'] select\":{\n            \"name\":\"country_id\",\n            \"field\":\"country\"\n        },\n        \"[name='billingAddressadyen_hpp.region_id'] select\":{\n            \"name\":\"region_id\",\n            \"field\":\"state\"\n        },\n        \"[name='billingAddressadyen_cc.country_id'] select\":{\n            \"name\":\"country_id\",\n            \"field\":\"country\"\n        },\n        \"[name='billingAddressadyen_cc.region_id'] select\":{\n            \"name\":\"region_id\",\n            \"field\":\"state\"\n        },\n        \"[name='payment[method]']\":{\n            \"name\":\"payment[method]\",\n            \"field\":\"payment-method\"\n        }\n    },\n    \"customer_fields\":{}\n}\n"                }
+             }
+        }</script>  <script type="text/x-magento-init">
+    {
+         "*" : {
+            "dyson-parts" : {}
+         }
+    }</script>   <script type="text/x-magento-init">
+    {
+        "*" : {
+            "Dyson_Unsubscribe/js/dyson-unsubscribe": {}
+         }
+    }</script> </div></div> <script type="text/javascript"></script><div class="dyson-cms"> <div class="dyson_cms_row_config" data-gtm-component="text-box" data-row-target="target-11.11_deals_sign_post" id="scrollid1111dealssignpost">   <div class="title " style="background-color: #0066cc; color: #fff; border-color: ;"><div class="row row--minute "><div class="layout"><div class="g-wrap"><div class="g-col  ">  <p class="title__content hgroup__content text-center" style="color: #fff;">11.11 Deals <a href="/promotions/shop-all" style="color:#fff">now live.</a> Shop best-selling bundles <a href="/promotions/bundles" style="color:#fff">here</a></p></div> <!-- else if only 1 selected then only show Button 1 --><!-- Button 1 --><div class="g-col gt-col-1-2 gtw-col-1-3 gt-push-1-4 gtw-push-1-3"></div></div></div></div></div> </div> <div class="dyson_cms_row_config" data-gtm-component="rcc" data-row-target="target-hair_care__category_page_2024_dnj__hero" id="scrollidhaircarecategorypage2024dnjhero">    <section height-applied = "0" class="rich-content-component  "  >  <div class="flexbox-for-above-below rcc_video_539954"><div data-mobile-bg="" data-tablet-bg="" data-desktop-bg="" class="rcc__body  rcc__body--absolute--g    rcc__body--mobile--top    rcc__body--tablet--top    rcc__body--desktop--top  " style="min-height:"><div class="row row--full-height  row--minuscule--rcc--mobile   row--minuscule--rcc--tablet   row--minuscule--rcc--desktop "><div class="rcc__layout">  <div class="rcc__body__inner"><div class="rcc__content rcc__text-align--left--g rcc__text-align--left--gt rcc__text-align--left--gtw rcc__text-width--12--g rcc__text-width--11--gt rcc__text-width--11--gtw rcc__text-pos--0--g rcc__text-pos--0--gt rcc__text-pos--0--gtw rcc__text-offset--0--g rcc__text-offset--0--gt rcc__text-offset--0--gtw  rcc__clr-theme--light--g rcc__clr-theme--light--gt rcc__clr-theme--light--gtw">     <div class="hgroup">    <!-- value stacks--> <!-- CTAs -->      </div></div></div></div></div></div>    <picture class="rcc-media-picture"> <source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=3840 2x" media="(min-width: 1024px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=2050 2x" media="(min-width: 768px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=320, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=640 2x" media="(min-width: 320px)"/><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920" alt="A blonde, long-haired model, flicks her hair over her shoulder." itemprop="image" /></picture> <div class="manage_height"></div><div class="adm-video__wrapper4964"><div class="adm-video__wrapper__inner"><video width="100%" height="auto" aria-hidden="true" loop id="video4964" preload="none" src="https://video-eu.assetsadobe.com/dyson/_renditions_/7b0/7b078911-16b5-4ae9-bffb-fc47b6808c40/avs/HC-cat-0x720-3000k.mp4" type="video/mp4" muted="" preload="" playsinline="" autostart="0" data-autoplay="0" data-enable-timeout="true" poster="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/direct-journey/products/hair-care/category/hc-landing-mod-1-708-Blonde-hair-swish-Fallback-image.jpg" class="full-width-image__inline-video js-inline-video-tag" loop="false"> Your browser does not support the video tag.</video> <div id="video-play-btn4964" class="play-pause-btn-container active paused play-pause-btn dark_theme_video"><a class="play_icon_btn" id="play_icon_btn4964" role="button" href="javascript:void(0);" aria-label="Play animation" data-analytics-action-name="button~play animation."><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Spec" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.704171317"><g id="Desktop-Layout-|-Dark" transform="translate(-1240.000000, -814.000000)"><g id="Play-Button" transform="translate(1240.000000, 814.000000)"><path id="Oval" d="M32,16 C32,24.8362667 24.8362667,32 16,32 C7.16373333,32 0,24.8362667 0,16 C0,7.16373333 7.16373333,0 16,0 C24.8362667,0 32,7.16373333 32,16"></path><path id="Group" d="M12.5713067,8.6 L12.5713067,23.4 L22.5713067,15.9994667 L12.5713067,8.6 Z M13.7713067,10.9808 L20.55424,15.9994667 L13.7713067,21.0192 L13.7713067,10.9808 Z"></path></g></g></g></svg></a> <a class="pause_icon_btn" id="pause_icon_btn4964" href="javascript:void(0);" role="button" aria-label="Pause animation" data-analytics-action-name="button~pause animation."> <svg class="svg-light-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1"><title>Group 3</title><defs><path d="M1.5,0 L1.5,15 L1.77635684e-15,15 L1.77635684e-15,0 L1.5,0 Z M8.25,0 L8.25,15 L6.75,15 L6.75,0 L8.25,0 Z" id="path-1"/></defs><g id="Spec" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group-3"><g id="Buttons-/-Mobile-/-Play-/-Standard-/-Small" fill="#FFFFFF" opacity="0.704171317"><g id="Play-Button---Light-(60x60px)"><path d="M32,16 C32,24.8362667 24.8362667,32 16,32 C7.16373333,32 0,24.8362667 0,16 C0,7.16373333 7.16373333,0 16,0 C24.8362667,0 32,7.16373333 32,16" id="Fill-1"/></g></g><g id="Icons/32/pause" transform="translate(11.923750, 8.545000)"><mask id="mask-2" fill="white"><use xlink:href="#path-1"/></mask><use id="Icon" fill="#333333" xlink:href="#path-1"/><g id="Colour" mask="url(#mask-2)" fill="#333333"><g transform="translate(-8.923750, -5.545000)"><rect x="0" y="0" width="26" height="26"/></g></g></g></g></g></svg></a></div></div></div> <style type="text/css"> @media only screen and (max-width: 767px) { .adm-video__wrapper4964 .adm-video__wrapper__inner{ width: 1280px; }  .adm-video__wrapper4964 .adm-video__wrapper__inner .play-pause-btn-container{ left: calc(-40px + 100dvw); }   } .adm-video__wrapper4964 { position: absolute; top: 0; left: 0; width: 100%; } .adm-video__wrapper__inner { position: relative; top: 0; left: 0; width: 100%; height: 100%; } /*.rich-content-component video {*/ /* position: static;*/ /*}*/ .play-pause-btn-container { z-index: 10; height: 32px; width: 32px; right: 0px; bottom: 0px; margin: 0 8px 8px 0; border-radius: 50%; position: absolute; cursor: pointer; background: transparent; } .play-pause-btn-container svg { display: block; } .pause_icon_btn #Oval, .play_icon_btn #Oval, .dark_theme_video .pause_icon_btn #Group, .dark_theme_video .play_icon_btn #Group { fill:#333333; } .dark_theme_video .pause_icon_btn #Oval, .dark_theme_video .play_icon_btn #Oval, .pause_icon_btn #Group, .play_icon_btn #Group { fill:#ffffff; } .paused .pause_icon_btn, .play_icon_btn { display: block; } .paused .play_icon_btn, .pause_icon_btn { display: none; } /* responsive view starts */ @media only screen and (min-width: 1025px) { #video4964 { height: 100%; min-height: unset; } .adm-video__wrapper4964{ height: 100%; } .adm-video-flex-container.rcc_video_539954 { min-height: 100%; } } @media only screen and (max-width: 1024px) { .play-pause-btn-container { margin: 0 12px 12px 0; } #video4964 { height: 100%; min-height: unset; } .adm-video__wrapper4964 { height: 100%; } .adm-video-flex-container.rcc_video_539954 { min-height: 100%; } } @media only screen and (max-width: 767px) { .play-pause-btn-container { margin: 0 8px 8px 0; } #video4964 { height: 100%; min-height: unset; } .adm-video__wrapper4964 { height: 100%; } .adm-video-flex-container.rcc_video_539954 { min-height: 100%; } } </style><input type="hidden" id="video_play_status4964" value="1" /><input type="hidden" id="video_play_status_initial4964" value="0" /><script>
+    require(['jquery'], function($){
+        $(document).ready(function(){
+            var vid = document.getElementById("video4964");
+                        vid.play();
+            $('#video-play-btn4964').addClass('active');
+            $('#video-play-btn4964').addClass('paused');
+              vid.onended = function() {
+                $('#video-play-btn4964').trigger('click');
+            };
+
+        });
+
+        $('#video-play-btn4964').on('click',function(){
+            var vid = document.getElementById("video4964");
+            if($(this).hasClass('active')){
+                $('#video4964').show();
+                vid.pause();
+                $(this).removeClass('active');
+                $(this).removeClass('paused');
+                $('#play_icon_btn4964').focus();
+            }else{
+                $('#video4964').show();
+                vid.play();
+                $(this).addClass('active');
+                $(this).addClass('paused');
+                var isAutoPlay = $('#video_play_status4964').val();
+                if(isAutoPlay != 1){
+                    $('#video4964').wrap('<div class="video-container4964"></div>');
+                    $('#video_play_status4964').val(1);
+                }
+                $('#pause_icon_btn4964').focus();
+            }
+        });
+
+        $('#video_play_status4964').val(1);
+         });</script>    </section> <style> @media screen and (max-width: 767px) { .js-rcc__body-bg-override-539954 {  background-color: transparent;  } } @media screen and (min-width: 768px) { .js-rcc__body-bg-override-539954 {  background-color: transparent;  } } @media screen and (min-width: 1024px) { .js-rcc__body-bg-override-539954 {  background-color: transparent;  } }</style> </div> <div class="dyson_cms_row_config" data-gtm-component="rcc" data-row-target="target-shop_all__hair_care__hero_text_1" id="scrollidshopallhaircareherotext1">    <section height-applied = "0" class="rich-content-component  "  >  <div class="flexbox-for-above-below rcc_video_596252"><div data-mobile-bg="" data-tablet-bg="" data-desktop-bg="" class="rcc__body  rcc__body--absolute--g    rcc__body--mobile--top    rcc__body--tablet--top    rcc__body--desktop--top  " style="min-height:"><div class="row row--full-height  row--minuscule--rcc--mobile   row--minuscule--rcc--tablet   row--minuscule--rcc--desktop "><div class="rcc__layout">  <div class="rcc__body__inner"><div class="rcc__content rcc__text-align--left--g rcc__text-align--left--gt rcc__text-align--left--gtw rcc__text-width--12--g rcc__text-width--8--gt rcc__text-width--6--gtw rcc__text-pos--0--g rcc__text-pos--0--gt rcc__text-pos--0--gtw rcc__text-offset--0--g rcc__text-offset--0--gt rcc__text-offset--0--gtw  rcc__clr-theme--light--g rcc__clr-theme--light--gt rcc__clr-theme--light--gtw">     <div class="hgroup">   <h1   class="rcc__title-size--heading_1" >Shop all hair care  </h1>     <p    class="hgroup__content rcc__title-size--large_paragraph">Shop our full range of hair dryers, stylers, straighteners, formulations and accessories.  </p>    <!-- value stacks--> <!-- CTAs -->    <div class="hgroup__action vspace-minute-top "><a href="https://www.dyson.com.sg/help-me-choose/hair-care"  class="button rcc__cta--button-link product__variant__add-to-cart--animated-smaller  button--tertiary " aria-label="Help me choose" data-gtm-name="button~help me choose" ><span>Help me choose</span></a></div>   </div></div></div></div></div></div>  <div class="rcc__media"><div class="image image--stretch"> </div></div>     </section> <style> @media screen and (max-width: 767px) { .js-rcc__body-bg-override-596252 {  background-color: transparent;  } } @media screen and (min-width: 768px) { .js-rcc__body-bg-override-596252 {  background-color: transparent;  } } @media screen and (min-width: 1024px) { .js-rcc__body-bg-override-596252 {  background-color: transparent;  } }</style> </div> <div class="dyson_cms_row_config" data-gtm-component="wysiwyg" data-row-target="target-plp_products_grid" id="scrollidplpproductsgrid"> <div class="plp-layered-grid"></div> </div> <div class="dyson_cms_row_config" data-gtm-component="text-box" data-row-target="target-signpost__help_me_gift" id="scrollidsignposthelpmegift">   <div class="title " style="background-color: #c4398d; color: #ffffff; border-color: ;"><div class="row row--minute "><div class="layout"><div class="g-wrap"><div class="g-col  ">  <p class="title__content hgroup__content text-center" style="color: #ffffff;"><a href="/help-me-choose/the-perfect-gift" style="color:#fff">Find the ideal beauty gift at Dyson – no matter who you’re buying for. Try our <u>gifting tool</u>.</a></p></div> <!-- else if only 1 selected then only show Button 1 --><!-- Button 1 --><div class="g-col gt-col-1-2 gtw-col-1-3 gt-push-1-4 gtw-push-1-3"></div></div></div></div></div> </div> <div class="dyson_cms_row_config" data-gtm-component="partial-width" data-row-target="target-hair_care__category_page_2024__personalisation_in_store" id="scrollidhaircarecategorypage2024personalisationinstore">   <div class="promos promo-theme-light  " style="background-color: light;"><div class="row row--small"><div class="layout">        <h3 class="promos__title h3 ">Make it extra special</h3><p class="promos__content "></p>   <div class="promos__list"><ul class="g-wrap g-wrap--flex safari-flex-only" style="display:-webkit-flex;">       <li class="g-col gp-col-1-2 gt-col-1-3">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media "> <div class="image">  <picture class=""><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=3840" media="(min-width: 1024px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=2050 2x" media="(min-width: 768px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=320, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=640 2x" media="(min-width: 320px)" /><img loading="lazy" src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-1-of-11-Case-Personalisation.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920" alt="Bespoke case personalisation" itemprop="image"/></picture>  </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2">Bespoke case personalisation</h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph">Give your Dyson personalisation case the personal touch, with your initials professionally debossed by our experts. Exclusively available at Dyson Demo Stores.</p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <li class="g-col gp-col-1-2 gt-col-1-3">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media "> <div class="image">  <picture class=""><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=3840" media="(min-width: 1024px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=2050 2x" media="(min-width: 768px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=320, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=640 2x" media="(min-width: 320px)" /><img loading="lazy" src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/campaigns/why-buy-direct/2-why-direct-partial-width/LEAP-Mod-2-Partial-Width-Option-3-of-11-Gift-Wrapping.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920" alt="Gift wrapping" itemprop="image"/></picture>  </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2">Complimentary gift wrapping</h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph">Choose to have your Dyson Hair Care machines wrapped by hand in exclusive motor-patterned paper and finished with a wax seal. *Wax seal available at Dyson Demo Stores only. </p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <li class="g-col gp-col-1-2 gt-col-1-3">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media "> <div class="image">  <picture class=""><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=3840" media="(min-width: 1024px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=2050 2x" media="(min-width: 768px)" /><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=320, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=640 2x" media="(min-width: 320px)" /><img loading="lazy" src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/dyson-demo/store/styling.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920" alt="Dyson Expert using Dyson Corrale hair straightener on a client" itemprop="image"/></picture>  </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2">One-to-one hair styling sessions</h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph">Book an appointment with a Dyson Stylist at the Dyson Demo Store. They’ll show you how to create beautiful looks while protecting your natural shine.</p></div></div><div class="hgroup__action vspace-minute-top">  <a href="https://singapore.dyson-demo.com/appointment" class="icon-link common_btn cta-button-1 black-allow" data-gtm-name = "text link~book an appointment" aria-label="Book an appointment" ><span class="roundal roundal--small roundal--solid roundal--animated"><span class="roundal__icon"><div class="image"><svg class="icon icon--logo"><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#arrow-right"></use></svg></div></span></span>  <span class="hgroup__action--text">Book an appointment</span> </a>    </div></div></div></div></li>   <script type="text/x-magento-init">
+                    {
+                        "*": {
+                            "promoMatchHeight": {}
+                        }
+                    }</script></ul></div></div></div></div> </div> <div class="dyson_cms_row_config" data-gtm-component="rcc" data-row-target="target-homepage__hair_care_accessories" id="scrollidhomepagehaircareaccessories">    <section height-applied = "0" class="rich-content-component  "  >  <div class="flexbox-for-above-below rcc_video_48729"><div data-mobile-bg="#D0D4D7" data-tablet-bg="" data-desktop-bg="" class="rcc__body  rcc__body--inline--g    rcc__body--mobile--above    rcc__body--tablet--top    rcc__body--desktop--top   js-rcc__body-bg-override js-rcc__body-bg-override-48729 " style="min-height:"><div class="row row--full-height  row--minuscule--rcc--above--mobile   row--minuscule--rcc--tablet   row--minuscule--rcc--desktop "><div class="rcc__layout">  <div class="rcc__body__inner"><div class="rcc__content rcc__text-align--left--g rcc__text-align--left--gt rcc__text-align--left--gtw rcc__text-width--12--g rcc__text-width--5--gt rcc__text-width--5--gtw rcc__text-pos--above--g rcc__text-pos--0--gt rcc__text-pos--0--gtw rcc__text-offset--0--g rcc__text-offset--0--gt rcc__text-offset--0--gtw  rcc__clr-theme--light--g rcc__clr-theme--light--gt rcc__clr-theme--light--gtw">     <div class="hgroup">   <h2   class="rcc__title-size--heading_3" >Discover Dyson hair care attachments and accessories  </h2>     <!-- value stacks--> <!-- CTAs -->    <div class="rcc__cta--arrow-link"><a href="https://www.dyson.com.sg/products/tools-and-accessories/hair-care-accessories" class="icon-link rcc__icon-link" aria-label="Learn more" data-gtm-name="button~learn more" ><div style="display:flex;"><span  class="roundal roundal--small roundal--solid roundal--animated rcc__roundal"><span class="roundal__icon"><div class="image"><svg class="icon icon--logo"><use xlink:href="https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/images/icons/icons.sprite.svg#arrow-right"></use></svg></div></span></span> <span >Learn more</span></div></a></div>   </div></div></div></div></div></div>  <div class="rcc__media"><div class="image image--stretch"> <picture> <source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=3840 2x" media="(min-width: 1024px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=1025, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=2050 2x" media="(min-width: 768px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=320, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=640 2x" media="(min-width: 320px)"/><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/hair-care/shop-all/plp-shop-all-hc-accessories.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920" loading="lazy" alt="Hair care accessories" itemprop="image" /></picture> </div></div>     </section> <style> @media screen and (max-width: 767px) { .js-rcc__body-bg-override-48729 {  background-color: #D0D4D7;  } } @media screen and (min-width: 768px) { .js-rcc__body-bg-override-48729 {  background-color: transparent;  } } @media screen and (min-width: 1024px) { .js-rcc__body-bg-override-48729 {  background-color: transparent;  } }</style> </div> <div class="dyson_cms_row_config" data-gtm-component="partial-width" data-row-target="target-owner_footer__category__hair_care_1" id="scrollidownerfootercategoryhaircare1">   <div class="promos promo-theme-light footer-owner " style="background-color: light;"><div class="row row--small"><div class="layout">       <h3 class="promos__title h3 "><div style="color:#ffffff">Owner support</div></h3><p class="promos__content "><style>
+.footer-owner{background-color:#522A86!important;}
+.footer-owner .promos__title{font-weight:500; font-size:24px; }
+.footer-owner .promos__item {padding-top: 0; padding-bottom:0; font-size:18px; color:#fff; font-weight:500;}
+.footer-owner .promos__item h6 {font-weight:500; font-size:18px;}
+.footer-owner .promos__item a {display:block; margin-bottom:-5px;}
+@media all and (max-width:1023px){
+.footer-owner .promos__item {font-size:16px;}
+}
+@media all and (max-width:768px){
+.footer-owner .promos__title{font-size:20px;}
+.footer-owner .promos__item h6  {font-size:16px;}
+.footer-owner .promos__item a img {width:60px;}
+}
+@media all and (max-width:650px){
+.footer-owner .promos__list ul li {width:50% !important;}
+.footer-owner .promos__title {margin-bottom:-20px;}
+}
+</style></p>    <div class="promos__list"><ul class="g-wrap g-wrap--flex safari-flex-only" style="display:-webkit-flex;">       <li class="g-col gp-col-1-2 gt-col-1-4">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media"> <div class="image">   </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2"></h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph"><div align="center"><a href="/product-registration"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/owner-footer/mydyson/guarantee-activate.png?scl=1&fmt=png-alpha" width="100"></a><br/><div style="color:#ffffff!important;font-size:20px;font-weight:bold">Register your machine</div></div></p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <li class="g-col gp-col-1-2 gt-col-1-4">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media"> <div class="image">   </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2"></h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph"><div align="center"><a href="/products/hair-care/haircare-accessories"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/owner-footer/mydyson/haircare-icon.png?scl=1&fmt=png-alpha" width="100"></a><br/><div style="color:#ffffff!important;font-size:20px;font-weight:bold;text-align:center">Explore accessories</div></div></p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <li class="g-col gp-col-1-2 gt-col-1-4">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media"> <div class="image">   </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2"></h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph"><div align="center"><a href="/support/contact-us"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/owner-footer/mydyson/right-part-icon.png?scl=1&fmt=png-alpha" width="100"></a><br/><div style="color:#ffffff!important;font-size:20px;font-weight:bold">Find the right part</div></div></p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <li class="g-col gp-col-1-2 gt-col-1-4">  <div class="promos__item promos_title_content"> <div class="promos-card-holder ">   <div class="promos__item__media"> <div class="image">   </div></div> <div class="promo_card-description "><div class="promo_card_description-inner"><div class="promo-motif "></div>   <div class="promo__heading-block"><h2 class="promos__item__title h2"></h2></div><div class="promo__description-block"><p class="promos__item__copy rcc__title-size--paragraph"><div align="center"><a href="https://support.dyson.com.sg/SupportHome.aspx/Hair-Care"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/owner-footer/mydyson/expert-support-icon.png?scl=1&fmt=png-alpha" width="100"></a><br/><div style="color:#ffffff!important;font-size:20px;font-weight:bold">Expert support</div></div></p></div></div><div class="hgroup__action vspace-minute-top">   </div></div></div></div></li>   <script type="text/x-magento-init">
+                    {
+                        "*": {
+                            "promoMatchHeight": {}
+                        }
+                    }</script></ul></div></div></div></div> </div> <div class="dyson_cms_row_config" data-gtm-component="icons" data-row-target="target-rtb_-_title_only" id="scrollidrtb-titleonly">   <div class="rtb-icon-set icon-info-set tiles dyson-direct light-theme-icons home-page-icons theme-light" data-gtm-component="RTB-section"><div class="row row--small rtb-icons-row"><div class="layout">  <div class="icon-info-set__list"><div class="layout--nogutter">    <h2 class="rtb-icons-header "></h2> <ul class="rtb-modal-list g-wrap g-wrap--flex ">    <li class="tile-no-1 g-col-1-2 gt-col-1-4"><div class="icon-info-set__item"><button class="icon-info direct-buy-btn icon-info--inline row--minute icon-info-action-343858" data-gtm-name="textlink~free next-day delivery" data-modal="rtb_-_title_only" data-modal-anchor="rtb_-_title_only1" icon-info-action data-iconnumber="1" >  <div class="icon-info__icon "><div class="image"> <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/reasons-to-buy/free-shipping-dark.png" alt="Free next-day delivery icon" aria-hidden="true"></div></div><div class="icon-info__body"><h3 class="icon-info__title h6 h-inherit">Free next-day delivery</h3> </div> </button></div></li>      <li class="tile-no-2 g-col-1-2 gt-col-1-4"><div class="icon-info-set__item"><button class="icon-info direct-buy-btn icon-info--inline row--minute icon-info-action-343858" data-gtm-name="textlink~instalments with grab paylater" data-modal="rtb_-_title_only" data-modal-anchor="rtb_-_title_only2" icon-info-action data-iconnumber="2" >  <div class="icon-info__icon "><div class="image"> <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/reasons-to-buy/installments-dark.png" alt="instalment icon" aria-hidden="true"></div></div><div class="icon-info__body"><h3 class="icon-info__title h6 h-inherit">Instalments with Grab PayLater</h3> </div> </button></div></li>      <li class="tile-no-3 g-col-1-2 gt-col-1-4"><div class="icon-info-set__item"><button class="icon-info direct-buy-btn icon-info--inline row--minute icon-info-action-343858" data-gtm-name="textlink~free 14 day return" data-modal="rtb_-_title_only" data-modal-anchor="rtb_-_title_only3" icon-info-action data-iconnumber="3" >  <div class="icon-info__icon "><div class="image"> <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/reasons-to-buy/14-day-return-dark.png" alt="14 day money back icon" aria-hidden="true"></div></div><div class="icon-info__body"><h3 class="icon-info__title h6 h-inherit">Free 14 day return</h3> </div> </button></div></li>      <li class="tile-no-4 g-col-1-2 gt-col-1-4"><div class="icon-info-set__item"><button class="icon-info direct-buy-btn icon-info--inline row--minute icon-info-action-343858" data-gtm-name="textlink~2 year warranty" data-modal="rtb_-_title_only" data-modal-anchor="rtb_-_title_only4" icon-info-action data-iconnumber="4" >  <div class="icon-info__icon "><div class="image"> <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/reasons-to-buy/2-year-warranty-dark.png" alt="2 year warranty icon" aria-hidden="true"></div></div><div class="icon-info__body"><h3 class="icon-info__title h6 h-inherit">2 year warranty</h3> </div> </button></div></li>  </ul></div></div></div>   </div></div><div id="icon_overlay_343858" class="rtb-overlay" data-gtm-component="RTB-section"><div class="overlay__content--fullscreen"><div class="rtb-overlay-container" role="dialog" id="icon_overlay_container_343858" aria-modal="true" aria-label="" style="display: none"><div class="layout" id="icon_content_modal_343858"></div></div></div></div><script type="text/x-magento-init">
+            {
+                "*": {
+                    "Dyson_Cms/js/dyson-rtb-modal":{"config":"value"}
+                }
+            }</script> <script>
+        require(['jquery'],function($){
+            $(document).ready(function() {
+                $(".icon-info-action-343858").click(function(){
+                    var url = "https://www.dyson.com.sg/dyson_cms/ContentProvider/IconController";
+                    let selectedIcon = $(this).data('iconnumber');
+                    $(".direct-buy-btn").removeClass('rtb-selected');
+                    $(this).addClass('tile-selected');
+                    $(this).addClass('rtb-selected');
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        data:{
+                            'entity_id' : '343858',
+                            'selected_icon' : selectedIcon
+                        },
+                        showLoader: true,
+                        cache: true,
+                        success: function(response){
+                            let html_string = '';
+                            html_string += '<div id="'+response.output.slug+selectedIcon+'" class="icon-info-set-section">';
+                            html_string += '<div class="rtb-overlay-header"><div class="rtb-overlay-header-wrapper">';
+                            html_string += '<h2>';
+                            if(response.output.icons_icon_modal_img){
+                                html_string += '<img src="'+response.output.icons_icon_modal_img+'" alt="'+response.output.icons_icon_modal_imga+'" itemprop="image">';
+                            } else if(response.output.icons_icon_modal_img_adobe){
+                                html_string += '<picture class="">';
+                                html_string += '<source srcset="'+response.output.icons_icon_modal_img_adobe+'?cropPathE=desktop&fit=stretch,1&fmt=pjpeg&wid=480, '+response.output.icons_icon_modal_img_adobe+'?cropPathE=desktop&fit=stretch,1&fmt=pjpeg&wid=960 2x" media="(min-width: 1024px)"/>';
+                                html_string += '<source srcset="'+response.output.icons_icon_modal_img_adobe+'?cropPathE=tablet&fit=stretch,1&fmt=pjpeg&wid=256, '+response.output.icons_icon_modal_img_adobe+'?cropPathE=tablet&fit=stretch,1&fmt=pjpeg&wid=512 2x" media="(min-width: 768px)"/>';
+                                html_string += '<source srcset="'+response.output.icons_icon_modal_img_adobe+'?cropPathE=mobile&fit=stretch,1&fmt=pjpeg&wid=320, '+response.output.icons_icon_modal_img_adobe+'?cropPathE=mobile&fit=stretch,1&fmt=pjpeg&wid=640 2x" media="(min-width: 320px)"/>';
+                                html_string += '<img src="'+response.output.icons_icon_modal_img_adobe+'?cropPathE=desktop&fit=stretch,1&fmt=pjpeg&wid=480" alt="'+response.output.icons_icon_modal_img_adobe+'"/>';
+                                html_string += '</picture>';
+                            }
+                            html_string += '<span>'+response.output.icons_icon_icon_title+'</span>';
+                            html_string += '</h2>';
+                            html_string += '<button data-role="closeBtn" class="rtb-overlay-close-button action-close" type="button" data-gtm-name ="textlink~Close-'+response.output.icons_icon_icon_title+'"><span>Close</span></button>';
+                            html_string += '</div>';
+                            html_string += '</div>';
+                            html_string += '<div class="rtb-overlay-content">';
+                            html_string += '<p>'+response.output.icons_icon_modal_copy+'</p>';
+                            html_string += '</div>';
+                            html_string += '</div>';
+                            $("#icon_overlay_343858").addClass('overlay-is-open');
+                            $('html').addClass('overlay-is-open');
+                            $('#icon_overlay_container_343858').css('display','block');
+                            $("#icon_content_modal_343858").html(html_string);
+
+                            setTimeout(() => {
+                                $('.action-close').focus();
+                                $('#icon_content_modal_343858').scrollTop(0);
+                            }, 100);
+                        }
+                    });
+                    return false;
+                });
+            });
+        });</script><script type='text/javascript'>
+        require(['jquery', 'matchMedia'], function ($, mediaCheck) {
+            $( 'body' ).addClass( "rtb_container" );
+            mediaCheck({
+            media: '(min-width: 1025px)', 
+            entry: function () {
+                
+                $('.rtb_icon_assurance').appendTo('.basket__summary');
+            },
+            exit: function () {
+                
+                $('.rtb_icon_assurance').appendTo('.cart-container');
+            }
+            });
+        });</script>  </div> <div class="dyson_cms_row_config" data-gtm-component="home caveat" data-row-target="target-shop_all__hair_care__caveat" id="scrollidshopallhaircarecaveat">  <div class="smallprint"><div class="row row--minuscule"><div class="layout"> <sub><sup>1</sup>vs. untreated hair.​<sub> </div></div></div> </div> <div class="dyson_cms_row_config" data-gtm-component="prospect data" data-row-target="target-daily_deals_prospect" id="scrolliddailydealsprospect"> <div class="aop_prospect prospect_data_type" > <!-- Form --> <div data-gtm-component="prospect_data_daily_deals_prospect" class="dyson-form prospect-data-form" ><div class="layout"><div class="form-elm"><form class="prospect-form-always" id="prospect-form-daily_deals_prospect" data-mage-init='{"validation": {}}' action="https://www.dyson.com.sg/dyson_cms/prospect/post/" method="post"><!-- form key block --><input name="form_key" type="hidden" value="CxV3VnuMpdGtizIl" /> <h2 id="daily_deals_prospect_title" >Subscribe to Dyson Deal Days and unlock exclusive savings.</h2><p>Daily deals up to 70% off from 3 - 11 Nov.<br>Voucher codes exclusive to mailing list.</p><span>* Required</span> <fieldset class="fieldset"><!-- hidden fields --><input type="hidden" id="campaign_id_always" name="campaign_id" value="Daily Deals Prospect"><input type="hidden" id="form_name_always" name="form_name" value="Daily Deals Prospect"><input type="hidden" id="prefered_language_always" name="prefered_language" value="en"><input type="hidden" id="market_always" name="market" value="SG"><input type="hidden" id="time_stamp_always" name="time_stamp" value="2025-11-10 13:20:06"><input type="hidden" id="web_analytics_id_always" name="web_analytics_id" value="some_id"><input type="hidden" id="form_type_always" name="form_type" value="aop_prospect "><input type="hidden" id="cms_page_view_name_always" name="cms_page_view_name" value="daily_deals_prospect ">  <div class="field email_address required"><label class="label" for="email_address"><span>Email Address</span></label> <div class="control"><input type="text" name="email_address" value="" title="Email Address" class="email_address input-text validate-email" data-validate='{"required":true}' data-msg-required="Please enter an email address" id ="email_address" data-di-mask></div><span class="privacy-policy-always-on">For further information on how Dyson uses your personal data, please read the <a href="https://privacy.dyson.com/en/privacy-policy"><u>Dyson Privacy Policy</u></a>.</span></div><!-- submit --> <div class="actions-toolbar"><div class="primary"><button data-gtm-name="button~submit" id="prospect-form-submit-daily_deals_prospect" type="submit" title="Sign up now" class="action submit primary"><span>Sign up now</span></button></div></div></fieldset></form></div> <div class="prospect-form-image"><picture class=""><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=435, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=869 2x" media="(min-width: 1024px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=343, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=tablet&fit=stretch,1&wid=686 2x" media="(min-width: 768px)"/><source srcset=" https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=681, https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&wid=681 2x" media="(min-width: 320px)"/><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&wid=869" loading="lazy" alt="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/dyson-deals/landing-page/Web-DealDays-Vault-deals-event-thumbnail.jpg" itemprop="image"/></picture></div></div></div> <script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "*": {
+                    "component": "Dyson_Cms/js/view/alwaysProspect",
+                    "aop_Validity": 30,
+                    "alwaysCounnter": 0,
+                    "aop_cookie": "aop_validity",
+                    "alwaysDelay": 1,
+                    "btn_image_url" : "https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/Dyson_Cms/images/tick.png",
+                    "aop_is_enabled" : 1,
+                    "btn_loader_url" : "https://www.dyson.com.sg/static/version1762362486/frontend/Dyson/commerce/en_US/Dyson_Cms/images/loader.svg"
+
+                }
+             }
+        }
+    }
+}</script> <script type="text/javascript">
+require([
+  'jquery',
+  'mage/mage',
+  'mage/validation'
+], function ($) {
+        $(document).ready(function(){
+          var $prospect_form = $('.prospect-form');
+          var phone_dial_code_validation = $('.prospect-form').validation({
+                errorPlacement: function (error, element) {
+                  element.attr("name") == "phone_number" && $(".registration-dial-code").length ? error.insertAfter('.registration-dial-code') : error.insertAfter(element);
+                }
+            });
+            $prospect_form.submit(function() {
+                phone_dial_code_validation.validate();
+                phone_dial_code_validation.validation("isValid");
+            });
+            $('.prospect-form').on('submit',function(){
+                if(typeof ga !== "undefined"){
+                  var clientId = ga.getAll()[0].get('clientId');
+                  if(clientId) {
+                    $('#web_analytics_id').val(clientId);
+                  }
+                }
+                setTimeout(postcodeValidate,0);
+            });
+            jQuery('.prospect-form input').on('blur', function() {
+                jQuery(this).valid();
+                if (!jQuery(this).hasClass('valid')) {
+                    var errorid = jQuery(this).attr("id");
+                    jQuery(this).siblings('#'+errorid+'-error').attr('role', 'alert');
+                    postcodeValidate();
+                }
+                if (jQuery(this).hasClass('valid')) {
+                    jQuery(this).attr("aria-invalid","false");
+                }
+            });
+            /* custom validation check for empty postocde field */
+            function postcodeValidate(){
+                const postcodeVal = document.querySelector("#postcode").value;
+                if(postcodeVal != undefined && postcodeVal != null && postcodeVal.length > 0){
+                    document.querySelector("#postcode-error").innerHTML = 'Please enter a %s-digit number';
+                }
+            }
+        });
+    });</script><script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "*": {
+                    "component": "Dyson_Leap/js/view/postCodeValidation",
+                    "postCodeRule": [],
+                    "postCodeRegx": []
+                }
+             }
+        }
+    }
+}</script></div></div> <div class="dyson_cms_row_config" data-gtm-component="wysiwyg" data-row-target="target-prospect_css" id="scrollidprospectcss"> <style>
+ @media screen and (max-width:767px) {
+#modal-content-8 .layout {overflow-y:auto;max-height:500px}
+#modal-content-8 .prospect-form-image {padding:0;display:block}
+.modal-popup.custom_data_prospect .modal-header .action-close{padding:10px !important}
+}
+.dyson-form.prospect-data-form button.action.submit.primary {background: #79b928;color: #000;}
+
+
+</style> </div> <div class="dyson_cms_row_config" data-gtm-component="footer contact dynamic" data-row-target="target-footer_contact_1" id="scrollidfootercontact1">      <div class="contact footer-dynamic-contact-us"><div class="row row--medium-smaller"><div class="layout"><div class="g-col gt-col-1-3 gd-col-2-5"><h2 class="contact__title h1 h-inherit "><div>Talking to us is easy.</div></h2></div><div class="g-wrap g-wrap--flex"><div class="g-col gt-col-5-5 gd-col-5-5"><div class="contact__methods dynamic__footer__contact"><div class="g-wrap g-wrap--flex">  <div class="g-col gt-col-1-4 gtw-col-1-4 footer__component"><div class="contact__methods__type"><a class="contact__methods__link" href="tel:18003976674" aria-label="You can call us<br>1800 397 6674"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/master/ffffff/32/call%402x.png?fmt=png-alpha&scl=1&fmt=png-alpha" alt="You can call us<br>1800 397 6674" loading="lazy" /></a> <span class="contact__methods__text">You can call us<br>1800 397 6674</span></div></div> <div class="g-col gt-col-1-4 gtw-col-1-4 footer__component"><div class="contact__methods__type"><a class="contact__methods__link" href="https://api.whatsapp.com/send?phone=6597229727" aria-label="Start a WhatsApp conversation"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/master/ffffff/32/whatsapp%20%402x.png?fmt=png-alpha&scl=1&fmt=png-alpha" alt="Start a WhatsApp conversation" loading="lazy" /></a> <span class="contact__methods__text">Start a WhatsApp conversation</span></div></div> <div class="g-col gt-col-1-4 gtw-col-1-4 footer__component"><div class="contact__methods__type"><a class="contact__methods__link" href="" aria-label="Email us at<br>sg.service@dyson.com"><img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/icons/master/ffffff/32/e-mail%402x.png?fmt=png-alpha&scl=1&fmt=png-alpha" alt="Email us at<br>sg.service@dyson.com" loading="lazy" /></a> <span class="contact__methods__text">Email us at<br>sg.service@dyson.com</span></div></div> </div></div></div></div></div></div></div> </div>   <script>
+    window.promoProductVariant = [];
+    window.validationreqmsg= "This is a required field.";
+    window.validationemailmsg= "Please enter a valid email address (Ex: johndoe@domain.com).";</script> <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Dyson_Leap/js/dyson-promo-variant":{"config":"value"},
+                    "Dyson_Leap/js/dyson-review-popup":{"config":"value"},
+                    "promo-popup": {
+                        "ajaxPopupUrl": "https://www.dyson.com.sg//dyson/promotion/tucpopup"
+                    }
+                }
+            }</script></div></main><footer class="page-footer"><div class="footer"><div class="links"> <div class="widget block block-static-block"><style>
+_::-webkit-full-page-media, _:future, :root .muliti-color-visualiser-container.layout .multi-color-visualiser .multi-color-visualiser-info .productViewSec .image-wrapper .custom-image-holder-area .image-holder-left-area .videoWrapper .video-js.bc-player-default_default .vjs-progress-control.vjs-control {
+    display: none !important;
+}
+</style></div></div><script type="text/x-magento-init">
+    {
+         "*" : {
+            "dyson-init-bc": {},
+            "dyson-brightcove" : {},
+            "dyson-videojs" : {}
+         }
+    }</script> <div class="footer-wrapper-sec"><div class="footer-wrapper layout"> <div class="footer-block"> <div class="footer-link">  <div class="foot-parent"><div class="foot-title"><h2 class="title"><span class="">Products</span><button class="hidden" aria-expanded="false">Products</button></h2><svg ⁠id="footer-chevron" class="icon icon--chevron" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><polygon fill-rule="evenodd" fill="#FFFFFF" points="15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 "></polygon></svg></div><ul class="foot-link">   <li><a href="https://www.dyson.com.sg/products/floorcare" aria-label="Vacuum cleaners" target="">Vacuum cleaners</a></li>     <li><a href="https://www.dyson.com.sg/products/hair-care" aria-label="Hair care" target="">Hair care</a></li>     <li><a href="https://www.dyson.com.sg/products/air-purifiers" aria-label="Air purifers" target="">Air purifiers fans</a></li>     <li><a href="https://www.dyson.com.sg/products/headphones" aria-label="Headphones" target="">Headphones</a></li>     <li><a href="https://www.dyson.com.sg/products/lighting" aria-label="Lighting" target="">Lighting</a></li>     <li><a href="https://www.dyson.com.sg/promotions/shop-all" aria-label="Deals" target="">Deals</a></li>     <li><a href="https://www.dyson.com.sg/dyson-outlet" aria-label="Dyson Outlet" target="">Dyson Outlet</a></li>     <li><a href="https://www.dyson.com.sg/dyson-live" aria-label="Dyson Live" target="">Dyson Live</a></li>                                      </ul></div>       </div>  <div class="footer-link">    <div class="foot-parent"><div class="foot-title"><h2 class="title"><span class="">For business</span><button class="hidden" aria-expanded="false">For business</button></h2><svg ⁠id="footer-chevron" class="icon icon--chevron" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><polygon fill-rule="evenodd" fill="#FFFFFF" points="15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 "></polygon></svg></div><ul class="foot-link">                   <li><a href="https://www.dyson.com.sg/for-business/overview" aria-label="Explore professional" target="">Explore professional</a></li>     <li><a href="https://www.dyson.com.sg/for-business/hand-dryers" aria-label="Professional Hand dryers" target="">Professional Hand dryers</a></li>     <li><a href="https://www.dyson.com.sg/for-business/air-treatment" aria-label="Professional Air purifers" target="">Professional Air purifers</a></li>     <li><a href="https://www.dyson.com.sg/for-business/vacuum-cleaners" aria-label="Professional Vacuum cleaners" target="">Professional Vacuum cleaners</a></li>     <li><a href="https://www.dyson.com.sg/products/hair-care/hair-care-professional" aria-label="Professional Hair care" target="">Professional Hair care</a></li>     <li><a href="https://www.dyson.com.sg/for-business/lighting" aria-label="Professional Lighting" target="">Professional Lighting</a></li>     <li><a href="https://www.dyson.com.sg/for-business/overview/specifications-and-documents" aria-label="Specs & docs" target="">Specs & docs</a></li>                        </ul></div>     </div>  <div class="footer-link">      <div class="foot-parent"><div class="foot-title"><h2 class="title"><span class="">Support</span><button class="hidden" aria-expanded="false">Support</button></h2><svg ⁠id="footer-chevron" class="icon icon--chevron" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><polygon fill-rule="evenodd" fill="#FFFFFF" points="15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 "></polygon></svg></div><ul class="foot-link">                                 <li><a href="https://www.dyson.com.sg/support/contact-us" aria-label="Contact us" target="">Contact us</a></li>     <li><a href="https://www.dyson.com.sg/dyson-support" aria-label="Machine support" target="">Machine support</a></li>     <li><a href="https://www.dyson.com.sg/product-registration" aria-label="Warranty registration" target="">Warranty registration</a></li>     <li><a href="https://www.dyson.com.sg/footer-primary-links/warranty-terms" aria-label="Warranty terms" target="">Warranty terms</a></li>     <li><a href="https://www.dyson.com.sg/footer-primary-links/delivery-details" aria-label="Delivery details" target="">Delivery details</a></li>     <li><a href="https://www.dyson.com.sg/support/counterfeit-machines" aria-label="Counterfeit machines" target="">Counterfeit machines</a></li>            </ul></div>   </div>  <div class="footer-link">        <div class="foot-parent"><div class="foot-title"><h2 class="title"><span class="">About Dyson</span><button class="hidden" aria-expanded="false">About Dyson</button></h2><svg ⁠id="footer-chevron" class="icon icon--chevron" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><polygon fill-rule="evenodd" fill="#FFFFFF" points="15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 "></polygon></svg></div><ul class="foot-link">                                             <li><a href="https://www.dyson.com.sg/demo-store/find-a-store" aria-label="Dyson Stores" target="">Dyson Stores</a></li>     <li><a href="https://www.dyson.com.sg/newsroom" aria-label="Newsroom" target="">Newsroom</a></li>     <li><a href="https://careers.dyson.com/" aria-label="Careers" target="">Careers</a></li>     <li><a href="https://www.dyson.com.sg/sustainability" aria-label="Sustainability" target="">Sustainability</a></li>     <li><a href="https://www.dyson.com.sg/james-dyson-award" aria-label="James Dyson Award" target="">James Dyson Award</a></li>  </ul></div> </div>  <div class="country-sec mob"><div class="country-lang"><p class="footer__lang"><a class="footer__lang__country" href="https://www.dyson.com.sg/select-your-location">                                                                                            <span class="icon country-flag country-flag--sg"></span><span class="country-name">Singapore</span>    <span class="footer__lang__country__alt"><span>Change language or region</span></span> </a></p></div></div></div> <div class="footer-legal-links"> <ul class="legal-links " aria-label="footer legal menu">     <li><a href="https://privacy.dyson.com/en/privacy-policy" aria-label="Privacy policy" target="">Privacy policy</a></li>      <li><a href="https://privacy.dyson.com/en/globalcookiepolicy.aspx" aria-label="Cookies policy" target="">Cookies policy</a></li>      <li><a href="https://www.dyson.com.sg//footer-secondary-links/terms-and-conditions" aria-label="Terms and conditions" target="">Terms and conditions</a></li>      <li><a href="https://www.dyson.com.sg//footer-secondary-links/terms-of-website-use" aria-label="Terms of website use" target="">Terms of website use</a></li>   </ul><div class="footer_copyright mob"><small>© Dyson 2025</small></div><div class="country-sec desktop"><div class="country-lang"><p class="footer__lang"><a class="footer__lang__country" href="https://www.dyson.com.sg/select-your-location">                                                                                            <span class="icon country-flag country-flag--sg"></span><span class="country-name">Singapore</span>    <span class="footer__lang__country__alt"><span>Change language or region</span></span>  <svg class="icon icon--chevron" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve"><polygon fill-rule="evenodd" fill="#FFFFFF" points="15.1,5.2 9.4,10.8 8,12.2 6.6,10.8 0.9,5.2 2.3,3.8 8,9.4 13.7,3.8 "></polygon></svg></a></p></div></div></div><div class="footer-company"><div class="company-info"> </div><div class="footer_copyright desktop"><small>© Dyson 2025</small></div></div></div></div><script type="text/x-magento-init">
+    {
+        "*" : {
+            "Dyson_Leap/js/footer-accordian": {}
+         }
+    }</script> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"></div> <div class="widget block block-static-block"><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 0px; padding: 0px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><style>
+.light-theme-icons {border-color: #222;background-color: #fff;}
+.light-theme-icons .icon-info--inline .icon-info__title{font-size: 1rem;color: #333 !important;Font-weight: 700;}
+.light-theme-icons .icon-info__text{font-size: 1rem; font-family: Dyson Futura Regular,sans-serif; color: #666;}
+.icon-info-set .row { padding-top: 16px; padding-bottom: 16px; }
+.icon-info—inline { padding-left: 0; padding-right: 0; }
+</style></div></div></div></div> <div class="widget block block-static-block"><style>
+/*Countdown timer */
+.countdown__content{padding:10px 0 10px 0 !important; } .countdown__counter--number{padding:6px 16px 20px 16px;margin:0 6px; font-size:1.25rem;} .countdown__counter{margin-top:10px} .countdown__counter--tile{position:relative;}.countdown__counter--label{font-size:.75rem; position:absolute; bottom:8px;width:100%}.countdown__title.rcc__title-size--heading_3{font-size:150%}.countdown__row {     width: 100;     background-color: #0066cc;     color: #fff; }
+</style></div> <div class="widget block block-static-block"><style>
+  .text {
+    font-size: 14px;
+    color: #333;
+}
+
+  .grabpay__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    width: 100%;
+}
+
+  img#logo {
+    width: 8%;
+    padding-bottom: 6px;
+}
+  
+  .cms-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+}
+  
+  .cms-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+  
+  .cms-popup {
+    margin: 5% auto;
+    padding: 0.5rem 2rem 1.5rem;
+    background: #fff;
+    width: 30%;
+    position: relative;
+    transition: all 2s ease-in-out;
+    height: auto;
+}
+  
+  .cms-popup .close {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+  
+  .cms-popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+  
+  .js-promotional-details-container {
+    color: #333;
+}
+
+  .js-promotional-details-content u {
+    font-weight: 500;
+    text-decoration: none;
+}
+  
+  .product__claims a:link {
+    border-bottom: 0 !important;
+}
+  
+  .grabpay__text-container {
+    line-height: 0.6;
+}
+
+  .ins {
+    font-size:0.75rem; 
+    color:#666
+}
+
+  .logo {
+    width: 36px; 
+    padding-bottom: 6px;
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .cms-popup {
+    width: 80%;
+    margin: 40% auto;
+  }
+}
+  
+@media only screen and (max-width: 767px) and (min-width: 380px) {
+  .cms-popup {
+    margin: 0;
+    width: 100%;
+    height: 40%;
+    padding: 0.5rem 2rem 1.5rem;
+    position: absolute;
+    bottom: 1px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+img#logo {
+width: 12%;
+  }
+}
+  
+@media only screen and (max-width: 380px) {
+  .cms-popup {
+    margin: 0;
+    width: 100%;
+    height: 60%;
+    padding: 0.5rem 2rem 1.5rem;
+    position: absolute;
+    bottom: 1px;
+  }
+}
+  
+@media only screen and (max-width: 1281px) {
+  .grabpay__text-container {
+    line-height: 0.6;
+    font-size: 14px;
+  }
+}
+</style>
+
+<div id="grab" class="cms-overlay">
+  <div class="cms-popup"><a class="close" href="#!">×</a>
+    <h2>Instalments with PayLater by Grab</h2>
+    <hr>
+    <div class="js-promotional-details-container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 promotional-details__content typography-body--small js-promotional-details-content">
+          <p>Enjoy 4-month 0% interest instalments or 8 and 12-month 0.75% interest instalments with PayLater by Grab. Choose to pay later with Grab and apply with simple steps.</p>
+
+<ol>
+  <li>Select Grab at checkout</li>
+  <li>Activate PayLater in Grab app</li>
+  <li>Choose to pay next month or pay in 4/8/12 instalments</li>
+  <li>Complete your checkout</li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div> <div class="widget block block-static-block"><style>
+#gwp1 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/969776-20.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+#gwp2 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/971062-03.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+#gwp3 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/971098-04.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp4 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/973901-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp5 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/hair-care/gwp/GWP-stwbrz-case.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp6 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/hair-care/gwp/GWP-lifestyle-Sakura-Wrap.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp7 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/971098-15.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp8 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/adobetarget/apac-optimisation/969045-14.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp9 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/971327-04.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp10 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/pc-accessories/2022/lifestyle/971425-03.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp11 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/hair-care/gwp/971098-15-v2.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp12 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/658/lifestyle/658_Lifestyle_PLP_800X388.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp13 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/553/lifestyle/553_Lifestyle-Tool_Stand_DKBLBCO_800X388.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp14 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/553/lifestyle/553_Lifestyle-Tool_Display-Case_DKBLBCO_800X388.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp15 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/972488-05.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp16 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/personal-care/553/lifestyle/553_Lifestyle-Tool_Travel-Wrap_DKBLBCO_800X388.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp17 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/972214-04.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp18 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/floorcare/sticks/972205-01-v3.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp19 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/973787-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp20 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/972157-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp21 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle-locale/de_DE/965432-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp22 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/696/lifestyle/972141-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp23 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/971435-02.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp24 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle-locale/it_IT/973150-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp25 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/974655-01.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp26 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/965003-07.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp27 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/dynamic-media/vacuums/sticks/248f/square-tool/Quick-release-stubborn-dirt-brush.png?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp28 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/972798-02.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp29 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/hair-care/gwp/521871-01-v3.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp30 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/markets/singapore/products/hair-care/gwp/572594-01-v3.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp31 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/global/compare/environmental-control/AM07-White.png?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp32 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/apac-dd/HC-GWP-pouch.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+#gwp33 {
+  content: url("https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/products/floor-cleaners/cleaning-solutions/02-probiotic/overview/quick-links/Web-780A-Overview-Module5-Card1.jpg?$responsive$&cropPathE=square,1024&wid=96");
+  width: 20%;
+  margin: 0 2px 0 0;
+  border: solid 1px #dadada;
+}
+
+.product__price-matched {
+    /* No default styles - completely empty by default */
+}
+
+.product__price-matched p {
+    display: block;
+    white-space: normal;
+    margin: 6px 0px !important;
+}
+
+/* Apply styles when there's meaningful content */
+.page-layout-pdp-hero-2columns .pdp__2columns__main .product__info__section .product__info .hero__content__details .product__basket .product__price .product__price-matched:has(p, img, button, br, span, strong, em, a) {
+    background: #EDF4FB;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 12px !important;
+}
+
+.product__price-matched:has(p, img, button, br, span, strong, em, a) {
+    background: #EDF4FB;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 12px !important;
+}
+
+.card_product__price-matched img {
+    display: none;
+}
+
+.promoText-section img {
+    display: none;
+}
+
+.promotion-message-title #gwp1 {
+    display: none;
+}
+
+.promotion-message-title #gwp2 {
+    display: none;
+}
+
+.promotion-message-title #gwp3 {
+    display: none;
+}
+
+.promotion-message-title #gwp4 {
+    display: none;
+}
+
+.promotion-message-title #gwp5 {
+    display: none;
+}
+
+.promotion-message-title #gwp6 {
+    display: none;
+}
+
+.promotion-message-title #gwp7 {
+    display: none;
+}
+
+.promotion-message-title #gwp8 {
+    display: none;
+}
+
+.promotion-message-title #gwp9 {
+    display: none;
+}
+
+.promotion-message-title #gwp10 {
+    display: none;
+}
+
+.promotion-message-title #gwp11 {
+    display: none;
+}
+
+.promotion-message-title #gwp12 {
+    display: none;
+}
+
+.promotion-message-title #gwp13 {
+    display: none;
+}
+
+.promotion-message-title #gwp14 {
+    display: none;
+}
+
+.promotion-message-title #gwp15 {
+    display: none;
+}
+
+.promotion-message-title #gwp16 {
+    display: none;
+}
+
+.promotion-message-title #gwp17 {
+    display: none;
+}
+
+.promotion-message-title #gwp18 {
+    display: none;
+}
+
+.promotion-message-title #gwp19 {
+    display: none;
+}
+
+.promotion-message-title #gwp20 {
+    display: none;
+}
+
+.promotion-message-title #gwp21 {
+    display: none;
+}
+
+.promotion-message-title #gwp22 {
+    display: none;
+}
+
+.promotion-message-title #gwp23 {
+    display: none;
+}
+
+.promotion-message-title #gwp24 {
+    display: none;
+}
+
+.promotion-message-title #gwp25 {
+    display: none;
+}
+
+.promotion-message-title #gwp26 {
+    display: none;
+}
+
+.promotion-message-title #gwp27 {
+    display: none;
+}
+
+.promotion-message-title #gwp28 {
+    display: none;
+}
+
+.promotion-message-title #gwp29 {
+    display: none;
+}
+
+.promotion-message-title #gwp30 {
+    display: none;
+}
+
+.promotion-message-title #gwp31 {
+    display: none;
+}
+
+.promotion-message-title #gwp32 {
+    display: none;
+}
+
+.promotion-message-title #gwp33 {
+    display: none;
+}
+
+</style></div></div>  <input type="hidden" name="compare-required-data" id="compare-required-data" uenc="aHR0cHM6Ly93d3cuZHlzb24uY29tLnNnL3Byb2R1Y3RzL2hhaXItY2FyZS9zaG9wLWFsbC1oYWlyLWNhcmU~" attr-id="4419"/> <script type='text/javascript'>
+    require(["jquery"], function($){
+        var localStorageData = localStorage.getItem('mage-cache-storage');
+        if (typeof localStorageData !== 'undefined' && localStorageData !== '{}' && localStorageData !== null) {
+                var localStorageArray = JSON.parse(localStorageData); 
+                if (localStorageArray['compare-products'] !== ''
+                    && (localStorageArray.length !=0) ) {
+                    
+                    var currentCatId = $('#compare-required-data').attr('attr-id');
+                    var getStorageCatId = localStorage.getItem('current-category-id');
+                    if ((currentCatId == "") || ((getStorageCatId != null) && (currentCatId  != getStorageCatId))) {
+                        $.ajax({
+                            url: window.BASE_URL + 'catalog/product_compare/clear/',
+                            type: 'POST',
+                            complete: function (data) {
+                                localStorage.setItem('compareTemplateId', '');
+                                localStorage.setItem('current-category-id', '');
+                                $('.sticky-compare-products').html('');
+                                $(".sticky-compare-products").removeClass('show-banner');
+                                localStorage.removeItem("mage-cache-storage");
+                                localStorageArray['compare-products'] = '';
+                                localStorage.setItem("mage-cache-storage",JSON.stringify(localStorageArray));
+                            }
+                        });
+                    }
+                    
+                }
+            }
+    });</script></footer></div>  <div class="dyson-layered-nav-slider-js" data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"price","limitDefault":12,"url":"https:\/\/www.dyson.com.sg\/products\/hair-care\/shop-all-hair-care"}}'><script>
+        require.config({
+            map: {
+                '*': {
+                    "productListToolbarForm": "Dyson_LayeredNavigation/js/product/list/toolbar"
+                }
+            }
+        });</script></div><div id="filterModal"><div id="loadAjaxContentSidebar"></div></div><div id="compare_popup_content" role="table"></div><script type="text/x-magento-init">
+    {
+         "*" : {
+            "Dyson_LayeredNavigation/js/plp-script" : {"config":"value"},
+            "Dyson_LayeredNavigation/js/filter-script" : {"config":"value"}
+         }
+    }</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-88c8b469fe89689a6ed","applicationID":"1109350309","transactionName":"YAZUZBBVCkpWUEFaV1lMd1MWXQtXGFBUR1lbDFEfAVUQXFBcR0oXQQpTRw==","queueTime":0,"applicationTime":860,"atts":"TEFDElhPGRUVUhcJQ0oe","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript" nonce="a7255bdf3aa09cf1eeb5d76c8cec08ee" src="/RPzHhcluK/UDUQJg36/-qmEgLcy/8Y/uiQ7ccNwwfcQkf/WlluOA/VQMON2g/TDBA"></script><link rel="stylesheet" type="text/css" nonce="a7255bdf3aa09cf1eeb5d76c8cec08ee" href="/RPzHhcluK/UDUQJg36/-qmEgLcy/8Y/fm/SAxgOA/Vx1JRmJ/WJUVX"><script nonce="a7255bdf3aa09cf1eeb5d76c8cec08ee" src="/RPzHhcluK/UDUQJg36/-qmEgLcy/8Y/ui/SAxgOA/PFxAdDE/TGiYp" async defer></script><div id="sec-overlay" style="display:none;"><div id="sec-container"></div></div></body></html>
