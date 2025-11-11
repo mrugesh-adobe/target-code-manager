@@ -1,0 +1,688 @@
+<!-- =========================
+     LOCALE HEADER/LABELS
+     ========================= -->
+<script type="text/javascript">
+  window._dtag = '';
+  window._lang = '';
+
+  var header = 'Featured',
+      see_more = 'Shop now';
+
+  if (location.host.indexOf('.kr') > -1) { header = '최근 본 제품'; see_more = '더 알아보기'; }
+  if (location.pathname.indexOf('/vi-VN/') > -1) { header = 'Gợi ý dành cho bạn'; see_more = 'Mua ngay'; }
+  if (location.pathname.indexOf('/th-TH/') > -1) { header = 'สินค้าแนะนำสำหรับคุณ'; see_more = 'เลือกซื้อ'; }
+  if (location.pathname.indexOf('/ar-SA/') > -1) { header = 'الأكثر مبيعاً'; see_more = 'تسوق الآن'; }
+  if (location.pathname.indexOf('/ar-AE/') > -1) { header = 'الأكثر مبيعاً'; see_more = 'تسوق الآن'; }
+  if (location.host.indexOf('.tr') > -1) { header = 'Öne Çıkanlar'; see_more = 'Satın al'; }
+  if (location.host.indexOf('.pl') > -1) { header = 'Wyróżnione'; see_more = 'Kup teraz'; }
+  if (location.host.indexOf('.cz') > -1) { header = 'Doporučené produkty'; see_more = 'Nakupujte nyní'; }
+  if (location.host.indexOf('.ro') > -1) { header = 'Produse recomandate'; see_more = 'Cumpără acum'; }
+  if (location.host.indexOf('.hu') > -1) { header = 'Ajánlott termékek'; see_more = 'Vásárlás most'; }
+  if (location.host.indexOf('.sk') > -1) { header = 'Odporúčané produkty'; see_more = 'Nakupujte teraz'; }
+  if (location.host.indexOf('.in') > -1) { header = 'Independence Day deals'; see_more = 'Shop now'; }
+</script>
+
+<!-- =========================
+     VELOCITY / TARGET TEMPLATE
+     ========================= -->
+<script type="text/template" id="at_template_recs">
+  <div class="container-par parbase recs-container at_template_recs" data-analytics-component="product-recommendations">
+  #if($entities.size() > 0)
+    <div class="container-fluid container-fluid--upto-lg pt-lg-0 pt-xl-0 pb-lg-0 pb-xl-0 pt-md-0 pb-md-0 pt-xs-0 pt-sm-0 pb-xs-0 pb-sm-0">
+      <div class="at-recs-mobile row">
+        <div class="at-table">
+          <div class="at-table-row">
+            <h2 class="trade-up-header__content js-trade-up-header-content col-xs-12">
+              Your recently viewed items design Update</h2>
+
+            <!-- NOTE: no slick classes -->
+            <ul class="recs_wrapper">
+              #set($lang="${mbox.language}")
+              #set($count = 1)
+              #foreach($e in $entities)
+
+                #if($lang=="th")
+                  #set($pageURL = $e.pageUrl_th)
+                  #set($lname = $e.name_th)
+                  #set($badge=$e.badgeText_th)
+                  #set($wasPrice=$e.wasPrice_th)
+                  #set($savePrice=$e.savePrice_th)
+                  #set($promoText= $e.prodPromoMessage_th)
+                  #set($fullPrice=$e.actualPrice_th)
+                  #set($salePrice=$e.currPrice_th)
+
+                #elseif($lang=="ar")
+                  #set($pageURL = $e.pageUrl_ar)
+                  #set($lname = $e.name_ar)
+                  #set($badge=$e.badgeText_ar)
+                  #set($wasPrice=$e.wasPrice_ar)
+                  #set($savePrice=$e.savePrice_ar)
+                  #set($promoText= $e.prodPromoMessage_ar)
+                  #set($fullPrice=$e.actualPrice_ar)
+                  #set($salePrice=$e.currPrice_ar)
+
+                #elseif($lang=="vi")
+                  #set($pageURL = $e.pageUrl_vi)
+                  #set($lname = $e.name_vi)
+                  #set($badge=$e.badgeText_vi)
+                  #set($wasPrice=$e.wasPrice_vi)
+                  #set($savePrice=$e.savePrice_vi)
+                  #set($promoText= $e.prodPromoMessage_vi)
+                  #set($fullPrice=$e.actualPrice_vi)
+                  #set($salePrice=$e.currPrice_vi)
+
+                #else
+                  #set($pageURL = $e.pageURL)
+                  #set($lname = $e.name)
+                  #set($badge=$e.badgeText)
+                  #set($wasPrice=$e.wasPrice)
+                  #set($savePrice=$e.savePrice)
+                  #set($promoText= $e.prodPromoMessage)
+                  #set($fullPrice=$e.actualPrice)
+                  #set($salePrice=$e.currPrice)
+                #end
+
+                #set($id = $e.id)
+                #set($badgeThemeColor=$e.badgeThemeColor)
+                #set($review= $e.reviewCount)
+                #set($rating= $e.reviewStar)
+
+                #if($count < 5 && $id != '' && $fullPrice != '')
+                  #set($count = $count + 1)
+                  <li class="at-table-column col-xs-12 col-md-3 col-lg-3" data-analytics-action-title="$lname">
+                    
+                    <span role="group" aria-label="Product">
+                      <a class="at_recs_card" data-analytics-action-name="see more" href="$pageURL" sku="$e.id" region="$e.domain">
+                        <span class="mobile_only_line"></span>
+                        #if($badge!='none')
+                          <span class="badge trade-up-item__badge custom-badge-placement-mobile custom-badge" style="$badgeThemeColor">$badge</span>
+                        #end
+                        <div class="image_container">
+                          #set($img_url=$e.thumbnailUrl)
+                          <img src="$img_url" class="at-thumbnail" alt="$lname"/>
+                        </div>
+                        <div class="text_section">
+                          <h3 class="trade-up-item__text trade-up-item__name">$lname</h3>
+                          <div class="trade-up-item__text reviews_section">
+                            <span class="review_stars" ratings="$rating"></span>
+                            <div class="sr-only ratings__stars--reader">$rating stars out of 5 from $review Reviews</div>
+                            <span class="review_text">$review</span>
+                          </div>
+
+                          <div class="at_recs_price trade-up-item__regional">
+                            #if($salePrice == "" || $savePrice == "" || $salePrice == $fullPrice)
+                              <div class="trade-up-item__price testClass"><span class="price">$fullPrice</span></div>
+                            #else
+                              <div class="atBluePrice">
+                                <div class="trade-up-item__price--blue trade-up-item__price"><span class="price salesPrice">$salePrice</span></div>
+                                <div class="trade-up-item__reduced-price"><span class="price">$wasPrice</span></div>
+                                <div class="trade-up-item__savings js-item-savings"><span class="price">$savePrice</span></div>
+                              </div>
+                            #end
+                          </div>
+<div class="promoText-section displayNone">$promoText</div>
+                          <div class="button button--large button--fluid button--tertiary button--cart enabled card__addtocart product__variant__add-to-cart--animated-smaller soft-bundle-button">
+                            Shop now</div>
+                        </div>
+                      </a>
+                    </span>
+                  </li>
+                #end
+              #end
+            </ul>
+            <!-- controls injected on mobile via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  #end
+  </div>
+</script>
+
+<!-- =========================
+     SCRIPT (NO JQUERY / NO SLICK)
+     ========================= -->
+<script>
+(function (w, d) {
+  /* ---------- Helpers ---------- */
+  w.mobileCheck = function () {
+    var a = (navigator.userAgent || navigator.vendor || w.opera || '');
+    return /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)
+        || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4));
+  };
+
+  var addPriceHeight = function () {
+    var reduced = d.querySelector('.at_recs_price.trade-up-item__regional[reduced]');
+    if (!reduced) return;
+    if (!d.getElementById('reduced_price_style')) {
+      d.body.insertAdjacentHTML('afterbegin', '<style id="reduced_price_style"></style>');
+    }
+    d.getElementById('reduced_price_style').innerHTML =
+      ".at_recs_price.trade-up-item__regional:not([reduced]){height:" +
+      reduced.offsetHeight + "px !important;display:flex;align-items:center;}";
+  };
+
+  var matchHeight = function () {
+    var names = d.querySelectorAll('.at_recs_card .trade-up-item__text.trade-up-item__name'),
+        reviews = d.querySelectorAll('.at_recs_card .text_section .trade-up-item__text.reviews_section'),
+        priceSection = d.querySelectorAll('.at_recs_price.trade-up-item__regional'),
+        imageContainer = d.querySelectorAll('.at_recs_card .image_container'),
+        promoContainer = d.querySelectorAll('.at_recs_card .promoText-section');
+
+    var max = 0;
+
+    if (w.innerWidth < 100) {
+      for (var i = names.length - 1; i >= 0; i--) names[i].style.minHeight = 0;
+      for (var j = reviews.length - 1; j >= 0; j--) reviews[j].style.minHeight = 0;
+    } else {
+      max = 0;
+      for (var i1 = names.length - 1; i1 >= 0; i1--) max = Math.max(max, names[i1].offsetHeight);
+      for (var i2 = names.length - 1; i2 >= 0; i2--) names[i2].style.minHeight = max + 'px';
+
+      max = 0;
+      for (var r1 = reviews.length - 1; r1 >= 0; r1--) max = Math.max(max, reviews[r1].offsetHeight);
+      for (var r2 = reviews.length - 1; r2 >= 0; r2--) reviews[r2].style.minHeight = max + 'px';
+
+      max = 0;
+      for (var p1 = priceSection.length - 1; p1 >= 0; p1--) max = Math.max(max, priceSection[p1].offsetHeight);
+      for (var p2 = priceSection.length - 1; p2 >= 0; p2--) priceSection[p2].style.minHeight = max + 'px';
+
+      max = 0;
+      for (var im1 = imageContainer.length - 1; im1 >= 0; im1--) max = Math.max(max, imageContainer[im1].offsetHeight);
+      for (var im2 = imageContainer.length - 1; im2 >= 0; im2--) {
+        if (imageContainer[im2].offsetHeight < max) {
+          var diff = max - imageContainer[im2].offsetHeight;
+          imageContainer[im2].style.paddingBottom = diff + 'px';
+        }
+      }
+
+      max = 0;
+      for (var pr1 = promoContainer.length - 1; pr1 >= 0; pr1--) max = Math.max(max, promoContainer[pr1].offsetHeight);
+      for (var pr2 = promoContainer.length - 1; pr2 >= 0; pr2--) promoContainer[pr2].style.minHeight = max + 'px';
+    }
+  };
+
+  // Make ALL cards the same height inside one viewport (mobile)
+  function equalizeCardHeights(viewportEl){
+    if (!viewportEl) return;
+    var cards = viewportEl.querySelectorAll('.recs-slide .at_recs_card');
+    if (!cards.length) return;
+
+    cards.forEach(function(c){
+      c.style.height = 'auto';
+      c.parentElement.style.height = 'auto';
+      c.parentElement.style.alignItems = 'stretch';
+    });
+
+    var maxH = 0;
+    cards.forEach(function(c){ maxH = Math.max(maxH, c.offsetHeight); });
+
+    cards.forEach(function(c){
+      c.style.height = maxH + 'px';
+      c.parentElement.style.height = maxH + 'px';
+      c.parentElement.style.display = 'flex';
+    });
+  }
+
+  w.addEventListener('load', function () {
+   // setTimeout(function(){ matchHeight(); addPriceHeight(); }, 500);
+    //setTimeout(function(){ matchHeight(); addPriceHeight(); }, 1200);
+    setTimeout(function(){ matchHeight(); addPriceHeight(); }, 2000);
+  });
+  w.addEventListener('resize', function () {
+    setTimeout(function(){ matchHeight(); addPriceHeight(); }, 400);
+  });
+
+  var logInfo = function (str) { try { console.info(str) } catch(e) {} };
+
+  /* ---------- Flickerlessly (unchanged) ---------- */
+  var Flickerlessly = w.Flickerlessly || {}; !function (t) { "use strict";
+    var e = function (t, e, n, o) {
+      var a = "atNodeInserted" + t, i = [], s = ["", "-moz-", "-webkit-", "-ms-", "-o-"];
+      s.forEach(function (t) { i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}") }), i.push(e + "{"),
+      s.forEach(function (t) { i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";") }), i.push("}");
+      var r = d.getElementsByTagName("head")[0]; if (r) { var c = d.createElement("style");
+      c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(d.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild) }
+      var l = function (t) {
+        if (t.animationName === a && "object" == typeof t.target) {
+          var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success");
+          w.console && logInfo("('" + e + "') ready! Execute: " + i, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : w.console && console.error("Cannot Callback", i, n)
+        } };
+      ["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function (t) { d.addEventListener(t, l, !1) })
+    }, n = Math.floor(1e3 * Math.random() + 1);
+    t.onReady = function () {
+      for (var t = 0; t < arguments.length; t++) { var o = arguments[t], a = o.selector, i = o.success || null, s = o.persist || !1; e(n++, a, i, s) }
+    }
+  }(Flickerlessly);
+
+  /* ---------- RTL detection ---------- */
+  function isRTL() {
+    try {
+      var lang = (w._satellite && _satellite.getVar && _satellite.getVar('Cfg: Site Language')) || '';
+      return (d.documentElement.getAttribute('dir') || '').toLowerCase() === 'rtl' || (lang && lang.indexOf('ar') === 0);
+    } catch(e) {
+      return (d.documentElement.getAttribute('dir') || '').toLowerCase() === 'rtl';
+    }
+  }
+
+  /* ---------- Custom Mobile Slider (no Slick) ---------- */
+  function initMobileRecsSlider(ul) {
+    if (!ul || ul.getAttribute('data-recs-initialized') === '1') return;
+
+    if (!mobileCheck()) {
+      ul.style.visibility = 'visible';
+     // setTimeout(function(){ matchHeight(); addPriceHeight(); }, 300);
+      ul.setAttribute('data-recs-initialized','1');
+      return;
+    }
+
+    var items = Array.prototype.slice.call(ul.querySelectorAll('li'));
+
+    var viewport = d.createElement('div'); viewport.className = 'recs-viewport';
+    var track    = d.createElement('div'); track.className    = 'recs-track';
+
+    // RTL
+    var rtl = isRTL();
+    if (rtl) viewport.setAttribute('dir', 'rtl');
+
+    // Replace UL with viewport->track->slides
+    ul.parentNode.replaceChild(viewport, ul);
+    viewport.appendChild(track);
+    items.forEach(function(li){
+      li.classList.add('recs-slide');
+      track.appendChild(li);
+    });
+
+    // Controls
+    var controls = d.createElement('div');
+    controls.className = 'recs-controls';
+    var prevBtn = d.createElement('button'); prevBtn.className = 'recs-btn recs-prev'; prevBtn.setAttribute('aria-label','Previous');
+    var nextBtn = d.createElement('button'); nextBtn.className = 'recs-btn recs-next'; nextBtn.setAttribute('aria-label','Next');
+    controls.appendChild(prevBtn); controls.appendChild(nextBtn);
+    viewport.appendChild(controls);
+
+    // Widths
+    function cardWidthPx(){ var wv = viewport.clientWidth || 320; return Math.round(wv * 0.65); }
+    var gap = 16;
+    function applySlideWidths(){
+      var cw = cardWidthPx();
+      items.forEach(function(li){
+        li.style.flex = "0 0 " + cw + "px";
+        li.style.maxWidth = cw + "px";
+      });
+     // track.style.columnGap = gap + "px";
+    }
+
+    // Index/movement
+    var index = 0;
+    var maxIndex = Math.max(0, items.length - 1);
+    function update(){
+      var cw = cardWidthPx();
+      var offset = index * (cw);
+      var translateX = rtl ? (offset) : (-offset);
+      track.style.transform = "translateX(" + translateX + "px)";
+      prevBtn.disabled = (index === 0);
+      nextBtn.disabled = (index >= maxIndex);
+    }
+    prevBtn.addEventListener('click', function(){ if (index > 0) { index--; update(); } });
+    nextBtn.addEventListener('click', function(){ if (index < maxIndex) { index++; update(); } });
+
+    // Swipe
+    var startX = 0, currentX = 0, touching = false;
+    function onTouchStart(e){ touching = true; startX = (e.touches?e.touches[0].clientX:e.clientX); track.classList.add('dragging'); }
+    function onTouchMove(e){ if (!touching) return; currentX = (e.touches?e.touches[0].clientX:e.clientX); }
+    function onTouchEnd(){
+      if (!touching) return; touching = false; track.classList.remove('dragging');
+      var delta = currentX - startX, threshold = 40;
+      if (!rtl){
+        if (delta < -threshold && index < maxIndex) index++;
+        else if (delta > threshold && index > 0) index--;
+      } else {
+        if (delta >  threshold && index < maxIndex) index++;   // swipe right => next
+        else if (delta < -threshold && index > 0) index--;    // swipe left  => prev
+      }
+      update();
+    }
+    track.addEventListener('touchstart', onTouchStart, {passive:true});
+    track.addEventListener('touchmove',  onTouchMove,  {passive:true});
+    track.addEventListener('touchend',   onTouchEnd);
+    track.addEventListener('mousedown',  onTouchStart);
+    d.addEventListener('mouseup',        onTouchEnd);
+
+    // Desktop-like/text tweaks per item
+    items.forEach(function(el){
+      var text = el.querySelector(".text_section");
+      if (text && !text.classList.contains("movedContent")) text.classList.add("movedContent");
+      var promo = el.querySelector(".promoText-section"); if (promo) promo.classList.remove("displayNone");
+      var badge = el.querySelector(".custom-badge-placement-mobile"); if (badge && !badge.innerText.trim()) badge.style.background = "none";
+      var btn = el.querySelector(".button--large"); if (btn) btn.innerHTML = w.see_more;
+      //setTimeout(function(){ matchHeight(); addPriceHeight(); }, 300);
+    });
+
+    // Arabic spacing tweaks
+    try {
+      if (w._satellite && _satellite.getVar('Cfg: Site Language') == "ar") {
+        items.forEach(function(el){
+          var p = el.querySelector(".at_recs_price.trade-up-item__regional");
+          var b = el.querySelector(".custom-badge-placement-mobile");
+          if (p) p.style.paddingRight = "15px";
+          if (b){ b.style.right = "10px"; b.style.left = "50%"; }
+        });
+      }
+    } catch(e){}
+
+    // Initial layout & equal heights
+    applySlideWidths();
+    update();
+  /*  setTimeout(function(){
+      matchHeight(); addPriceHeight();
+      equalizeCardHeights(viewport);
+    }, 50); */
+
+    // Re-equalize when images load
+    track.querySelectorAll('img').forEach(function(img){
+      if (!img.complete) {
+       /* img.addEventListener('load', function(){
+          matchHeight(); addPriceHeight();
+          equalizeCardHeights(viewport);
+        }, { once:true }); */
+      }
+    });
+
+    // Re-layout on resize/rotation
+   /* w.addEventListener('resize', function(){
+      applySlideWidths(); update();
+      matchHeight(); addPriceHeight();
+      equalizeCardHeights(viewport);
+    }); */
+
+    viewport.setAttribute('data-recs-initialized','1');
+  }
+
+  /* ---------- Stars / Injection / Init ---------- */
+  Flickerlessly.onReady(
+    {
+      selector: '.dyson-cms.at-element-marker',
+      success: function (el) {
+        setTimeout(function(){
+          if(!d.querySelector(".at_template_recs")){
+            var recsContent = d.getElementById('at_template_recs').innerHTML;
+            var inserted = false;
+            if(!inserted && el) {
+              el.querySelector('.at-element-marker').insertAdjacentHTML('afterend', recsContent);
+              inserted = true;
+              var headerElement = d.querySelector(".trade-up-header__content");
+              if(headerElement) headerElement.innerHTML = w.header;
+            }
+          }
+        },100);
+      },
+      persist: true
+    },
+    {
+      selector: '.plp-filter-product-wrapper',
+      success: function (el) {
+        setTimeout(function(){
+          if(!d.querySelector(".at_template_recs")){
+            var recsContent = d.getElementById('at_template_recs').innerHTML;
+            var inserted = false;
+            if(!inserted && el) {
+              d.querySelector('.plp-filter-product-wrapper')
+               .parentNode.previousElementSibling
+               .insertAdjacentHTML('beforebegin', recsContent);
+              inserted = true;
+              var headerElement = d.querySelector(".trade-up-header__content");
+              if(headerElement) headerElement.innerHTML = w.header;
+            }
+          }
+        },100);
+      },
+      persist: true
+    },
+    {
+      selector: ".review_stars",
+      success: function (el) {
+        var rateStar = parseFloat(el.getAttribute('ratings')) || 0, addStar;
+        if (rateStar >= 5) addStar = 'five';
+        else if (rateStar >= 4.5) addStar = 'four-five';
+        else if (rateStar >= 4) addStar = 'four';
+        else if (rateStar >= 3.5) addStar = 'three-five';
+        else if (rateStar > 0) addStar = 'three';
+        else addStar = 'zero';
+        el.className += (' ' + addStar);
+      },
+      persist: true
+    },
+    {
+      selector: '.recs_wrapper',
+      success: function (el) { initMobileRecsSlider(el); },
+      persist: true
+    },
+    {
+      selector : ".recs_wrapper li",
+      success: function (el) {
+        if (el.querySelector(".text_section") && !el.querySelector(".text_section").classList.contains("movedContent")){
+          el.querySelector(".text_section").classList.add("movedContent");
+          if(el.querySelector(".promoText-section")){
+            el.querySelector(".promoText-section").classList.remove("displayNone");
+            var btn = el.querySelector(".text_section .button--tertiary");
+            var promo = el.querySelector(".promoText-section");
+            if (btn && promo) btn.insertAdjacentElement("beforebegin", promo);
+          }
+          if (mobileCheck()) {
+            if(!el.firstElementChild.classList.contains("badge")){
+              el.insertAdjacentHTML("afterbegin",
+                '<span class="badge trade-up-item__badge custom-badge-placement-mobile custom-badge backgroundNone"></span>');
+            }
+          }
+        }
+
+        try {
+          if(_satellite.getVar('Cfg: Site Language') == "ar"){
+            var price = el.querySelector(".at_recs_price.trade-up-item__regional");
+            var badge = el.querySelector(".custom-badge-placement-mobile");
+            if (price) price.style.paddingRight = "15px";
+            if (badge){ badge.style.right = "10px"; badge.style.left = "50%"; }
+          }
+        } catch(e){}
+
+        var mobileBadge = el.querySelector(".custom-badge-placement-mobile");
+        if(mobileBadge && mobileBadge.innerText.trim() === "") mobileBadge.style.background = "none";
+
+        var cta = el.querySelector(".button--large");
+        if (cta) cta.innerHTML = w.see_more;
+
+        //setTimeout(function () { matchHeight(); addPriceHeight(); }, 300);
+      },
+      persist: true
+    }
+  );
+})(window, document);
+</script>
+
+<!-- =========================
+     STYLES (NO SLICK)
+     ========================= -->
+<style type="text/css" id="recs_style">
+/* ---- Common visuals (kept from desktop) ---- */
+.at_recs_price .trade-up-item__reduced-price{ text-decoration:line-through; font-size:.875rem; display:inline-flex; }
+.at_recs_price .trade-up-item__reduced-price .curr_before,
+.at_recs_price .trade-up-item__savings .curr_before{ padding-left:4px; }
+.at_recs_price .trade-up-item__savings{ color:#06c; font-size:.875rem; display:inline-flex; padding-left:15px; }
+a.at_recs_card:hover{ border:1px solid #333; }
+.custom-badge.none{ visibility:hidden; }
+
+.at-table{ display:flex; width:100%; border-spacing:5px; }
+.at-table-row{ width:100%; clear:both; }
+.at-table-column{ float:left; display:flex; flex-direction:column; flex:0 0 auto; padding-left:16px; width:25%; }
+
+.recs-container{ background:#fcfcfc; padding:3rem; }
+.recs_wrapper{ margin:0; padding:0; list-style:none; }
+.image_container{ position:relative; }
+.text_section>h3{ margin-bottom:0; padding-bottom:0 !important; padding-top:0; }
+.full_width{ width:100% !important; }
+.at_recs_price.trade-up-item__regional>button{ padding:0; }
+
+.at_recs_card{ border:1px solid #dadada; background:#fff; text-decoration:none!important; display:inline-block; width:100%; position:relative; }
+.at_recs_card .trade-up-item__badge{ z-index:1; }
+.mobile_badge, .mobile_only_line{ display:none; }
+.at_recs_card .reviews_section{ padding:8px 10px 0 15px; }
+
+.review_stars{
+  width:96px; min-height:18px; display:inline-block; vertical-align:middle;
+  background-repeat:no-repeat; background-size:cover;
+  background-image:url(https://www.dyson.co.uk/content/dam/dyson/adobetarget/recommendations/review-stars-small-new.png);
+  margin-right:8px;
+}
+.review_stars.five{ background-position-y:0; }
+.review_stars.four-five{ background-position-y:10%; }
+.review_stars.four{ background-position-y:20%; }
+.review_stars.three-five{ background-position-y:30%; }
+.review_stars.three{ background-position-y:40%; }
+.review_stars.two{ background-position-y:60%; }
+.review_stars.two-five{ background-position-y:50%; }
+.review_stars.one-five{ background-position-y:70%; }
+.review_stars.one{ background-position-y:80%; }
+.review_stars.zero{ background-position-y:100%; }
+.review_stars.invisible, .review_stars.invisible + .review_text{ visibility:hidden; opacity:0; }
+.review_text{ vertical-align:middle; display:inline-block; }
+
+.at_recs_price{ flex-direction:column; justify-content:center; padding:8px 0; }
+.custom-badge{
+  color:#fff; background:#000; top:-13px; left:16px; margin-left:8px; z-index:3 !important;
+  position:absolute; padding:5px 10px; font-size:.875rem; font-weight:500;
+}
+
+/* Badge theme overrides */
+.custom-badge.White_with_Blue_border_Promotions,
+.custom-badge.be_promotions, .custom-badge.nl_promotions, .custom-badge.de_promotions { color:#0066cc !important; background:#fff !important; box-shadow:inset 0 0 0 1px #0066cc; }
+.custom-badge.be_direct_exclusive, .custom-badge.Blue_Direct_exclusive { color:#fff !important; background:#06C !important; }
+.custom-badge.be_latest_technology { color:#fff !important; background:#000 !important; }
+
+/* Tablet / Desktop sizing */
+@media screen and (min-width:481px) and (max-width:1024px){
+  .at_recs_card>.image_container{ display:flex; justify-content:center; align-items:flex-start; }
+  .at_recs_card>.image_container>.at-thumbnail{ width:auto; height:220px; margin-top:1px; }
+  .at_recs_card>.text_section>h3,
+  .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+  .trade-up-item__price{ font-size:16px; font-weight:500; color:#333; }
+  .at-table-column{ padding:16px 11px; }
+  .custom-badge{ left:11px; }
+  .recs_wrapper{ padding-left:0rem; padding-right:0rem; }
+}
+@media screen and (min-width:1025px){
+  .at_recs_card>.image_container{ display:flex; justify-content:center; }
+  .at_recs_card>.image_container>.at-thumbnail{ margin-top:1px; max-height:240px; width:auto; }
+  .at_recs_card .text_section>h3,
+  .at_recs_card .text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+  .trade-up-item__price{ font-size:18px; font-weight:500; color:#333; }
+  .recs_wrapper{ margin:0 auto !important; }
+}
+
+/* Pricing text */
+div.trade-up-item__price--blue{ color:#06c; font-size:24px; font-weight:500; }
+.trade-up-item__price{ border-top:1px solid #dadada; padding-left:15px; padding-top:10px; font-size:24px; }
+.trade-up-item__text.trade-up-item__name{ line-height:1.3; padding-right:10px; }
+.review_text{ font-size:.875rem; }
+.trade-up-item__price--blue, .trade-up-item__reduced-price, .trade-up-item__text{ padding-left:15px; }
+.at_recs_price .price{ margin:0; }
+.hidden-xs-up{ display:none !important; }
+
+#maincontent > div.columns > div > div > div.container-par.parbase.recs-container.at_template_recs > div > div > div > div > h2{ padding-left:1rem; }
+@media screen and (max-width:1024px){ .recs-container .container-fluid{ width:90%; } }
+@media screen and (min-width:1280px){ .recs-container .container-fluid{ box-sizing:border-box; padding-left:15px; padding-right:20px; } }
+@media screen and (min-width:1440px){
+  .recs-container .container-fluid{ box-sizing:border-box; padding-left:0; padding-right:0; max-width:1270px; width:90%; margin:0 auto; }
+}
+.product__price-matched-promo{ padding-left:8px; }
+.displayNone{ display:none; }
+
+/* =========================
+   MOBILE-ONLY Custom Slider
+   ========================= */
+@media screen and (max-width: 767px){
+	.trade-up-item__price{ border-top:none !important}
+  .recs-container{ border-bottom:1px solid #dadada; padding-left:0 !important; padding-right:0 !important; }
+  .trade-up-header__content{ padding-left:0 !important; padding-right:15px;}
+
+  /* viewport & track */
+  .recs-viewport{ position:relative; overflow:hidden; width:100%; background:#fff; padding:25px 0; }
+  .recs-track{ display:flex; align-items:stretch; will-change:transform; transition: transform 300ms ease; }
+  .recs-track.dragging{ transition:none; }
+
+  /* RTL: first card at right edge */
+  .recs-viewport[dir="rtl"] { direction: rtl; }
+  .recs-viewport[dir="rtl"] .recs-track{ flex-direction:row-reverse; justify-content:flex-end; }
+
+  /* slides */
+  .recs-slide{ box-sizing:border-box; display:flex; align-items:stretch; }
+  .recs-slide.at-table-column{ width:auto; padding-top:0; padding-bottom:0; margin-bottom:20px; }
+
+  /* card visuals = desktop-like */
+  .recs-slide .at_recs_card{
+    display:flex; flex-direction:column;
+    border:1px solid #dadada; background:#fff;
+    padding:0; width:100%;
+  }
+
+  /* image area centered like desktop */
+  .recs-slide .at_recs_card .image_container{ display:flex; justify-content:center; align-items:flex-start; padding-top:12px; }
+  .recs-slide .at_recs_card .image_container .at-thumbnail{ max-height:240px; width:auto; }
+
+  /* text spacing */
+  .recs-slide .at_recs_card .text_section{ display:flex; flex-direction:column; gap:6px; }
+  .recs-slide .trade-up-item__text.trade-up-item__name{
+    font-size:16px; font-weight:500; color:#333; line-height:1.3; padding-right:10px;
+  }
+  .recs-slide .reviews_section{ padding:0; }
+
+  /* price row like desktop */
+  .recs-slide .at_recs_price.trade-up-item__regional{ width:100%; border-top:1px solid #dadada; margin-top:6px; padding-top:10px;padding-right:0 !important; }
+  .recs-slide .trade-up-item__price{ padding-left:15px; font-size:24px; }
+  .recs-slide .trade-up-item__price--blue{ padding-left:15px; }
+
+  /* CTA full width 
+  .recs-slide .button--large.button--tertiary{ margin:12px 15px 16px 15px; width:calc(100% - 30px); }*/
+
+  /* badge at top-left inside card */
+  .recs-slide .custom-badge{ position:absolute; top:-16px; left:16px; height:auto; font-size:.875rem; padding:5px 10px; margin:0; }
+
+  /* RTL text alignment */
+  [dir="rtl"] .recs-slide .text_section,
+  .recs-viewport[dir="rtl"] .recs-slide .text_section { text-align:right; }
+  [dir="rtl"] .trade-up-item__price,
+  .recs-viewport[dir="rtl"] .trade-up-item__price { padding-left:0; padding-right:15px; }
+  [dir="rtl"] .trade-up-item__price--blue,
+  .recs-viewport[dir="rtl"] .trade-up-item__price--blue { padding-left:0; padding-right:15px; }
+
+  /* Controls */
+  .recs-controls{
+    position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
+    display:flex; justify-content:space-between; pointer-events:none; padding:0 8px;
+  }
+  .recs-btn{
+    pointer-events:auto; width:35px; height:35px; border:none; border-radius:50%;
+    background:#a7a4a4 !important; color:#fff; position:relative; cursor:pointer;
+  }
+  .recs-btn:disabled{ opacity:0; pointer-events:none; }
+  .recs-prev::before, .recs-next::before{
+    content:''; position:absolute; top:50%; left:45%; width:10px; height:10px;
+    border: solid #fff; border-width:0 3px 3px 0; transform:translate(-50%,-50%) rotate(135deg);
+  }
+  .recs-next::before {
+	  left:55% !important;
+  }
+  .recs-next::before{ transform:translate(-50%,-50%) rotate(-45deg); }
+  /* Flip chevrons for RTL */
+  .recs-viewport[dir="rtl"] .recs-prev::before{ transform:translate(-50%,-50%) rotate(-45deg); }
+  .recs-viewport[dir="rtl"] .recs-next::before{ transform:translate(-50%,-50%) rotate(135deg); }
+
+	.promoText-section {
+		padding-right: 15px;
+	}
+	
+	.at-recs-mobile.row {
+		padding-right: 15px;
+	}
+}
+</style>
