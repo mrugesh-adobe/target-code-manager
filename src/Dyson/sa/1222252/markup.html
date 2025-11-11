@@ -224,13 +224,64 @@
     });
   }
 
+  // Improved height management to prevent visible adjustments
+  var heightsCalculated = false;
+  var pendingHeightCalculation = false;
+
+  function calculateHeightsWhenReady() {
+    if (pendingHeightCalculation) return;
+    pendingHeightCalculation = true;
+
+    // Wait for images to load before calculating heights
+    var images = d.querySelectorAll('.at_recs_card img');
+    var loadedImages = 0;
+    var totalImages = images.length;
+
+    function checkAllImagesLoaded() {
+      loadedImages++;
+      if (loadedImages >= totalImages || totalImages === 0) {
+        // All images loaded, now calculate heights
+        setTimeout(function() {
+          matchHeight(); 
+          addPriceHeight();
+          heightsCalculated = true;
+          pendingHeightCalculation = false;
+          
+          // Show the carousel now that heights are calculated
+          var recsContainer = d.querySelector('.at_template_recs .recs_wrapper, .at_template_recs .recs-viewport');
+          if (recsContainer) {
+            recsContainer.style.setProperty('visibility', 'visible', 'important');
+            recsContainer.style.setProperty('opacity', '1', 'important');
+          }
+        }, 100);
+      }
+    }
+
+    if (totalImages === 0) {
+      checkAllImagesLoaded();
+    } else {
+      images.forEach(function(img) {
+        if (img.complete) {
+          checkAllImagesLoaded();
+        } else {
+          img.addEventListener('load', checkAllImagesLoaded, { once: true });
+          img.addEventListener('error', checkAllImagesLoaded, { once: true });
+        }
+      });
+    }
+  }
+
   w.addEventListener('load', function () {
-   // setTimeout(function(){ matchHeight(); addPriceHeight(); }, 500);
-    //setTimeout(function(){ matchHeight(); addPriceHeight(); }, 1200);
-    setTimeout(function(){ matchHeight(); addPriceHeight(); }, 2000);
+    // Quick initial calculation for immediate display
+    setTimeout(function(){ 
+      calculateHeightsWhenReady();
+    }, 100);
   });
+
   w.addEventListener('resize', function () {
-    setTimeout(function(){ matchHeight(); addPriceHeight(); }, 400);
+    if (heightsCalculated) {
+      setTimeout(function(){ matchHeight(); addPriceHeight(); }, 200);
+    }
   });
 
   var logInfo = function (str) { try { console.info(str) } catch(e) {} };
@@ -269,10 +320,17 @@
   function initMobileRecsSlider(ul) {
     if (!ul || ul.getAttribute('data-recs-initialized') === '1') return;
 
+    // Initially hide the carousel to prevent layout shift
+    ul.style.visibility = 'hidden';
+    ul.style.opacity = '0';
+    ul.style.transition = 'opacity 0.3s ease';
+
     if (!mobileCheck()) {
       ul.style.visibility = 'visible';
-     // setTimeout(function(){ matchHeight(); addPriceHeight(); }, 300);
+      ul.style.opacity = '1';
       ul.setAttribute('data-recs-initialized','1');
+      // Trigger height calculation for desktop
+      setTimeout(function(){ calculateHeightsWhenReady(); }, 50);
       return;
     }
 
@@ -374,27 +432,14 @@
     // Initial layout & equal heights
     applySlideWidths();
     update();
-  /*  setTimeout(function(){
-      matchHeight(); addPriceHeight();
-      equalizeCardHeights(viewport);
-    }, 50); */
 
-    // Re-equalize when images load
-    track.querySelectorAll('img').forEach(function(img){
-      if (!img.complete) {
-       /* img.addEventListener('load', function(){
-          matchHeight(); addPriceHeight();
-          equalizeCardHeights(viewport);
-        }, { once:true }); */
-      }
-    });
-
-    // Re-layout on resize/rotation
-   /* w.addEventListener('resize', function(){
-      applySlideWidths(); update();
-      matchHeight(); addPriceHeight();
-      equalizeCardHeights(viewport);
-    }); */
+    // Hide viewport initially and trigger height calculation
+    viewport.style.visibility = 'hidden';
+    viewport.style.opacity = '0';
+    viewport.style.transition = 'opacity 0.3s ease';
+    
+    // Trigger height calculation which will show the viewport when ready
+    setTimeout(function(){ calculateHeightsWhenReady(); }, 50);
 
     viewport.setAttribute('data-recs-initialized','1');
   }
@@ -511,6 +556,23 @@
 .at_recs_price .trade-up-item__savings{ color:#06c; font-size:.875rem; display:inline-flex; padding-left:15px; }
 a.at_recs_card:hover{ border:1px solid #333; }
 .custom-badge.none{ visibility:hidden; }
+
+/* ---- Prevent layout shift with initial heights ---- */
+.at_template_recs .recs_wrapper, 
+.at_template_recs .recs-viewport { 
+  visibility: hidden; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+.at_template_recs .trade-up-item__text.trade-up-item__name { 
+  min-height: 60px; /* Initial estimate to prevent jump */
+}
+.at_template_recs .trade-up-item__text.reviews_section { 
+  min-height: 20px; /* Initial estimate for review section */
+}
+.at_template_recs .at_recs_price.trade-up-item__regional { 
+  min-height: 90px; /* Initial estimate for price section */
+}
 
 .at-table{ display:flex; width:100%; border-spacing:5px; }
 .at-table-row{ width:100%; clear:both; }
