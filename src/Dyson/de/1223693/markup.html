@@ -1024,22 +1024,84 @@
                 selector: '.image-carousel.parbase:not(.at_target)',
                 success: function (el) {                    
                    setTimeout(() => {
-                      if(document.querySelector(".container-par.parbase.recs-container")){
-                            $('.container-par.parbase.recs-container div').remove();
+                      // Create container if it doesn't exist
+                      var recsContainer = document.querySelector(".container-par.parbase.recs-container");
+                      if(!recsContainer){
+                          recsContainer = document.createElement('div');
+                          recsContainer.className = 'container-par parbase recs-container';
+                          el.parentNode.insertBefore(recsContainer, el.nextSibling);
+                      }
+                      
+                      // Clear existing content and add new content
+                      if(recsContainer){
+                            $(recsContainer).find('div').remove();
                             el.className += ' at_target';
                             var recsContent = document.getElementById('at_template_recs_T817').innerHTML;
-                            //el.insertAdjacentHTML("afterend", recsContent);
-                            document.querySelector(".container-par.parbase.recs-container").innerHTML = recsContent;
-                            document.querySelector(".recs-container-T817 .trade-up-header__content")
-                            .innerHTML = header + categoryValues[document
-                            .querySelector(".recs-container-T817 .at_recs_card")
-                            .getAttribute("category").toLowerCase()] + header1;  
+                            recsContainer.innerHTML = recsContent;
+                            
+                            // Set header content if cards exist
+                            var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
+                            if(firstCard && firstCard.getAttribute("category")){
+                                document.querySelector(".recs-container-T817 .trade-up-header__content")
+                                .innerHTML = header + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
+                            }
+                            
+                            // Make sure the container is visible
+                            recsContainer.style.display = 'block';
+                            recsContainer.style.visibility = 'visible';
                       }                       
-                    }, 0);
+                    }, 100);
                     
                 },
                 persist: true
-            }, /* change 6 ends */
+            },
+            {
+                selector: 'body:not(.at_recs_loaded)',
+                success: function (el) {
+                    setTimeout(() => {
+                        // Only run if we haven't already loaded recommendations
+                        if(document.querySelector('.at_recs_card')) return;
+                        
+                        // Find a suitable insertion point
+                        var insertionPoint = document.querySelector('.image-carousel.parbase') || 
+                                           document.querySelector('.container-par.parbase') ||
+                                           document.querySelector('main') ||
+                                           document.querySelector('.content') ||
+                                           document.body;
+                        
+                        if(insertionPoint){
+                            // Create container
+                            var recsContainer = document.createElement('div');
+                            recsContainer.className = 'container-par parbase recs-container';
+                            recsContainer.innerHTML = document.getElementById('at_template_recs_T817').innerHTML;
+                            
+                            // Insert after the insertion point
+                            if(insertionPoint.parentNode){
+                                insertionPoint.parentNode.insertBefore(recsContainer, insertionPoint.nextSibling);
+                            } else {
+                                insertionPoint.appendChild(recsContainer);
+                            }
+                            
+                            // Set header content if cards exist
+                            var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
+                            if(firstCard && firstCard.getAttribute("category")){
+                                var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
+                                if(headerEl){
+                                    headerEl.innerHTML = header + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
+                                }
+                            }
+                            
+                            // Mark as loaded
+                            document.body.classList.add('at_recs_loaded');
+                            
+                            // Make sure the container is visible
+                            recsContainer.style.display = 'block';
+                            recsContainer.style.visibility = 'visible';
+                        }
+                    }, 200);
+                },
+                persist: true
+            },
             {
                 selector: ".at_recs_card .at_recs_price > .atBluePrice",
                 success: function (el) {
