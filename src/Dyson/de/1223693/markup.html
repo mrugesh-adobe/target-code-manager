@@ -1039,12 +1039,18 @@
                             var recsContent = document.getElementById('at_template_recs_T817').innerHTML;
                             recsContainer.innerHTML = recsContent;
                             
-                            // Set header content if cards exist
-                            var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
-                            if(firstCard && firstCard.getAttribute("category")){
-                                document.querySelector(".recs-container-T817 .trade-up-header__content")
-                                .innerHTML = header + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
-                            }
+                            // Set header content if cards exist - wait for cards to be fully rendered
+                            setTimeout(function() {
+                                var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
+                                var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
+                                if(firstCard && firstCard.getAttribute("category") && headerEl){
+                                    var category = firstCard.getAttribute("category").toLowerCase();
+                                    var categoryText = categoryValues[category] || category;
+                                    headerEl.innerHTML = header;
+                                } else if(headerEl) {
+                                    headerEl.innerHTML = header;
+                                }
+                            }, 300);
                             
                             // Make sure the container is visible
                             recsContainer.style.display = 'block';
