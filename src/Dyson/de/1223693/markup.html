@@ -993,20 +993,29 @@
     });
 	
 	
-    window._dtag = '', window._lang = '',
-        header = 'Featured ',
-        header1 = ' products',
+    window._dtag = ''; window._lang = '';
+        header = 'Featured ';
+        header1 = '-Produkte';
         categoryValues = {
-            "vacuum cleaners" : "vacuum cleaners",
-            "personal care" : "hair care",
-            "air treatment" : "air treatment",
-            "wearables" : "headphones",
-            "lightning" : "lightning",
-            "floor cleaners" : "vacuum cleaners"
+            "vacuum cleaners" : "Staubsauger",
+            "personal care" : "Haarpflege",
+            "air treatment" : "Luftbehandlung",
+            "wearables" : "Kopfhörer",
+            "lightning" : "Beleuchtung",
+            "floor cleaners" : "Staubsauger"
           }
     if (location.host.indexOf('.de') > -1) {
         _dtag = 'de';
-        header = 'Unsere Bestseller für dich';
+        header = 'Unsere Bestseller für dich: ';
+        header1 = '-Produkte';
+        categoryValues = {
+            "vacuum cleaners" : "Staubsauger",
+            "personal care" : "Haarpflege",
+            "air treatment" : "Luftbehandlung",
+            "wearables" : "Kopfhörer",
+            "lightning" : "Beleuchtung",
+            "floor cleaners" : "Staubsauger"
+        }
         see_more = 'Mehr erfahren';
         reviewLang = 'Bewertungen';
         oosLocal = ' ';
@@ -1046,7 +1055,7 @@
                                 if(firstCard && firstCard.getAttribute("category") && headerEl){
                                     var category = firstCard.getAttribute("category").toLowerCase();
                                     var categoryText = categoryValues[category] || category;
-                                    headerEl.innerHTML = header;
+                                    headerEl.innerHTML = header + categoryText;
                                 } else if(headerEl) {
                                     headerEl.innerHTML = header;
                                 }
