@@ -993,33 +993,37 @@
     });
 	
 	
-    window._dtag = ''; window._lang = '';
-        header = 'Featured ';
-        header1 = '-Produkte';
+    window._dtag = '', window._lang = '',
+        header = 'Featured ',
+        header1 = ' products',
+        see_more = 'Shop now',
+        reviewLang = 'Reviews',
+        oosLocal = '',
         categoryValues = {
-            "vacuum cleaners" : "Staubsauger",
-            "personal care" : "Haarpflege",
-            "air treatment" : "Luftbehandlung",
-            "wearables" : "Kopfhörer",
-            "lightning" : "Beleuchtung",
-            "floor cleaners" : "Staubsauger"
-          }
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+          };
+    
     if (location.host.indexOf('.de') > -1) {
         _dtag = 'de';
         header = 'Unsere Bestseller für dich: ';
-        header1 = '-Produkte';
+        header1 = '';
+        see_more = 'Mehr erfahren';
+        reviewLang = 'Bewertungen';
+        oosLocal = ' ';
         categoryValues = {
             "vacuum cleaners" : "Staubsauger",
-            "personal care" : "Haarpflege",
+            "personal care" : "Haarpflege", 
             "air treatment" : "Luftbehandlung",
             "wearables" : "Kopfhörer",
             "lightning" : "Beleuchtung",
             "floor cleaners" : "Staubsauger"
-        }
-        see_more = 'Mehr erfahren';
-        reviewLang = 'Bewertungen';
-        oosLocal = ' ';
-    } 
+        };
+    }
 
     (function (w, d) {
         var logInfo = function (str) {
@@ -1055,7 +1059,7 @@
                                 if(firstCard && firstCard.getAttribute("category") && headerEl){
                                     var category = firstCard.getAttribute("category").toLowerCase();
                                     var categoryText = categoryValues[category] || category;
-                                    headerEl.innerHTML = header + categoryText;
+                                    headerEl.innerHTML = header + categoryText + header1;
                                 } else if(headerEl) {
                                     headerEl.innerHTML = header;
                                 }
