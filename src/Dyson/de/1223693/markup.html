@@ -1025,6 +1025,52 @@
         };
     }
 
+    // Function to check if user has visited category pages (journey experience)
+    var hasVisitedCategoryJourney = function() {
+        // Check if user came from a category page (referrer check)
+        var referrer = document.referrer;
+        var categoryPaths = ['/staubsauger/', '/haarpflege/', '/raumklima/', '/kopfhoerer/', '/leuchten/'];
+        var hasReferrerFromCategory = categoryPaths.some(function(path) {
+            return referrer.indexOf(path) > -1;
+        });
+        
+        // Check for category visit cookie/localStorage
+        var hasCategoryVisitCookie = false;
+        try {
+            hasCategoryVisitCookie = localStorage.getItem('dyson_category_visited') === 'true' || 
+                                   document.cookie.indexOf('dyson_category_visited=true') > -1;
+        } catch(e) {
+            // Fallback if localStorage is not available
+        }
+        
+        // Check if current page is a category page
+        var currentPath = window.location.pathname;
+        var isOnCategoryPage = categoryPaths.some(function(path) {
+            return currentPath.indexOf(path) > -1;
+        });
+        
+        return hasReferrerFromCategory || hasCategoryVisitCookie || isOnCategoryPage;
+    };
+
+    // Function to set category visit flag
+    var setCategoryVisitFlag = function() {
+        try {
+            localStorage.setItem('dyson_category_visited', 'true');
+        } catch(e) {
+            // Fallback to cookie if localStorage is not available
+            document.cookie = 'dyson_category_visited=true; path=/; max-age=86400'; // 24 hours
+        }
+    };
+
+    // Set the flag if user is currently on a category page
+    if (window.location.pathname.indexOf('/staubsauger/') > -1 || 
+        window.location.pathname.indexOf('/haarpflege/') > -1 || 
+        window.location.pathname.indexOf('/raumklima/') > -1 || 
+        window.location.pathname.indexOf('/kopfhoerer/') > -1 || 
+        window.location.pathname.indexOf('/leuchten/') > -1) {
+        setCategoryVisitFlag();
+    }
+
     (function (w, d) {
         var logInfo = function (str) {
         }
@@ -1056,12 +1102,13 @@
                             setTimeout(function() {
                                 var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
-                                if(firstCard && firstCard.getAttribute("category") && headerEl){
+                                if(firstCard && firstCard.getAttribute("category") && headerEl && hasVisitedCategoryJourney()){
                                     var category = firstCard.getAttribute("category").toLowerCase();
                                     var categoryText = categoryValues[category] || category;
                                     headerEl.innerHTML = header + categoryText + header1;
                                 } else if(headerEl) {
-                                    headerEl.innerHTML = header;
+                                    // Show generic header for first-time visitors
+                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich: ', 'Empfohlene ') + 'Produkte';
                                 }
                             }, 300);
                             
@@ -1103,10 +1150,16 @@
                             
                             // Set header content if cards exist
                             var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
-                            if(firstCard && firstCard.getAttribute("category")){
+                            if(firstCard && firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
                                 if(headerEl){
                                     headerEl.innerHTML = header + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
+                                }
+                            } else {
+                                var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
+                                if(headerEl){
+                                    // Show generic header for first-time visitors
+                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich: ', 'Empfohlene ') + 'Produkte';
                                 }
                             }
                             
