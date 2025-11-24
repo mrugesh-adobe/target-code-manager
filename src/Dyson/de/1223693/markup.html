@@ -994,7 +994,7 @@
 	
 	
     window._dtag = '', window._lang = '',
-        header = 'Featured ',
+        header = 'Featured',
         header1 = ' products',
         see_more = 'Shop now',
         reviewLang = 'Reviews',
@@ -1010,7 +1010,7 @@
     
     if (location.host.indexOf('.de') > -1) {
         _dtag = 'de';
-        header = 'Unsere Bestseller für dich: ';
+        header = 'Unsere Bestseller für dich';
         header1 = '';
         see_more = 'Mehr erfahren';
         reviewLang = 'Bewertungen';
@@ -1029,7 +1029,7 @@
     var hasVisitedCategoryJourney = function() {
         // Check if user came from a category page (referrer check)
         var referrer = document.referrer;
-        var categoryPaths = ['/staubsauger/', '/haarpflege/', '/raumklima/', '/kopfhoerer/', '/leuchten/'];
+        var categoryPaths = ['/staubsauger/', '/haarpflege/', '/raumklima/', '/kopfhoerer/', '/leuchten/', '/luftbehandlung/', '/beleuchtung/'];
         var hasReferrerFromCategory = categoryPaths.some(function(path) {
             return referrer.indexOf(path) > -1;
         });
@@ -1105,10 +1105,10 @@
                                 if(firstCard && firstCard.getAttribute("category") && headerEl && hasVisitedCategoryJourney()){
                                     var category = firstCard.getAttribute("category").toLowerCase();
                                     var categoryText = categoryValues[category] || category;
-                                    headerEl.innerHTML = header + categoryText + header1;
+                                    headerEl.innerHTML = header + ' ' + categoryText + header1;
                                 } else if(headerEl) {
                                     // Show generic header for first-time visitors
-                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich: ', 'Empfohlene ') + 'Produkte';
+                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich', 'Empfohlene ') + ' Produkte';
                                 }
                             }, 300);
                             
@@ -1153,13 +1153,13 @@
                             if(firstCard && firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
                                 if(headerEl){
-                                    headerEl.innerHTML = header + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
+                                    headerEl.innerHTML = header + ' ' + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
                                 }
                             } else {
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
                                 if(headerEl){
                                     // Show generic header for first-time visitors
-                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich: ', 'Empfohlene ') + 'Produkte';
+                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich', 'Empfohlene ') + ' Produkte';
                                 }
                             }
                             
