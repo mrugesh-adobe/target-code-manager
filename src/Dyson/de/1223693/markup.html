@@ -1102,13 +1102,19 @@
                             setTimeout(function() {
                                 var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
-                                if(firstCard && firstCard.getAttribute("category") && headerEl && hasVisitedCategoryJourney()){
-                                    var category = firstCard.getAttribute("category").toLowerCase();
-                                    var categoryText = categoryValues[category] || category;
-                                    headerEl.innerHTML = header + ' ' + categoryText + header1;
-                                } else if(headerEl) {
-                                    // Show generic header for first-time visitors
-                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich', 'Empfohlene ') + ' Produkte';
+                                if(firstCard && headerEl){
+                                    if(firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
+                                        // Show personalized category title for users who have visited category pages
+                                        var category = firstCard.getAttribute("category").toLowerCase();
+                                        var categoryText = categoryValues[category] || category;
+                                        headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                        // Mark header as set by T817 to prevent other activities from overriding
+                                        headerEl.setAttribute('data-t817-set', 'true');
+                                    } else {
+                                        // Show default title for first-time visitors
+                                        headerEl.innerHTML = header + header1;
+                                        headerEl.setAttribute('data-t817-default', 'true');
+                                    }
                                 }
                             }, 300);
                             
@@ -1150,16 +1156,19 @@
                             
                             // Set header content if cards exist
                             var firstCard = document.querySelector(".recs-container-T817 .at_recs_card");
-                            if(firstCard && firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
-                                var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
-                                if(headerEl){
-                                    headerEl.innerHTML = header + ' ' + categoryValues[firstCard.getAttribute("category").toLowerCase()] + header1;
-                                }
-                            } else {
-                                var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
-                                if(headerEl){
-                                    // Show generic header for first-time visitors
-                                    headerEl.innerHTML = header.replace('Unsere Bestseller für dich', 'Empfohlene ') + ' Produkte';
+                            var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
+                            if(firstCard && headerEl){
+                                if(firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
+                                    // Show personalized category title for users who have visited category pages
+                                    var category = firstCard.getAttribute("category").toLowerCase();
+                                    var categoryText = categoryValues[category] || category;
+                                    headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                    // Mark header as set by T817 to prevent other activities from overriding
+                                    headerEl.setAttribute('data-t817-set', 'true');
+                                } else {
+                                    // Show default title for first-time visitors
+                                    headerEl.innerHTML = header + header1;
+                                    headerEl.setAttribute('data-t817-default', 'true');
                                 }
                             }
                             
@@ -1329,6 +1338,44 @@
             xhttp.open("GET", base_url + sku, true);
             xhttp.send();
         }
+
+    
+    // Add protection against header being overridden by other activities
+    var protectT817Header = function() {
+        var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
+        if (headerEl && headerEl.getAttribute('data-t817-set') === 'true') {
+            var originalContent = headerEl.innerHTML;
+            
+            // Create a MutationObserver to watch for changes
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                        // If content changed and it's not our content, restore it
+                        if (headerEl.innerHTML !== originalContent && headerEl.getAttribute('data-t817-set') === 'true') {
+                            headerEl.innerHTML = originalContent;
+                        }
+                    }
+                });
+            });
+            
+            // Start observing
+            observer.observe(headerEl, {
+                childList: true,
+                subtree: true,
+                characterData: true
+            });
+            
+            // Also set up a periodic check as backup
+            setInterval(function() {
+                if (headerEl && headerEl.getAttribute('data-t817-set') === 'true' && headerEl.innerHTML !== originalContent) {
+                    headerEl.innerHTML = originalContent;
+                }
+            }, 1000);
+        }
+    };
+    
+    // Start protection after a delay to ensure header is set first
+    setTimeout(protectT817Header, 1000);
 
     })(window, document);
 </script></div></div>
