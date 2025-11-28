@@ -2,521 +2,375 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous"/>
 <style type="text/css" id='recs_style_T472'>
+.recs-container-T817 .at_recs_price .trade-up-item__reduced-price{
+	text-decoration: line-through;
+	font-size: .875rem;
+	display: inline-flex;
+}
+.recs-container-T817 .at_recs_price .trade-up-item__reduced-price .curr_before, .at_recs_price .trade-up-item__savings .curr_before{
+	padding-left: 4px;
+}
+.recs-container-T817 .at_recs_price .trade-up-item__savings {
+	color: #06c;
+	font-size: .875rem;
+	display: inline-flex;
+	padding-left: 4px;
+}
+.recs-container-T817 a.at_recs_card:hover {
+	border: 1px solid #333;
+}
+.recs-container-T817 .custom-badge.none {
+	visibility: hidden;
+}
 
-	  
-	  .recs-container-T817 .at_recs_price .trade-up-item__reduced-price{
-			text-decoration: line-through;
-			font-size: .875rem;
-			display: inline-flex;
-	  }
-	  
-	  .recs-container-T817 .at_recs_price .trade-up-item__reduced-price .curr_before,  .at_recs_price .trade-up-item__savings .curr_before{
-		  padding-left: 4px;
-	  }
-    .recs-container-T817 .at_recs_price .trade-up-item__savings {
-		color: #06c;
-		font-size: .875rem;
-		display: inline-flex;
-		padding-left: 4px;
-    }
-	
-	.recs-container-T817 a.at_recs_card:hover {
-		border: 1px solid #333;
+.recs-container-T817 .custom-badge.US_only_at,
+.recs-container-T817 .custom-badge.global_offer_promo {
+	background-color: #0066cc;
+}
+.recs-container-T817 .custom-badge.us_exclusive {
+	background-color: #333;
+}
+.recs-container-T817 .custom-badge.us_urgency {
+	background-color: #d9384e;
+}
+.recs-container-T817 .custom-badge.us_technology {
+	background-color: #000;
+}
+.recs-container-T817 .at-table {
+	display: flex;
+	width: 100%;
+	border-spacing: 5px;
+}
+.recs-container-T817 .at-table-row {
+	width: 100%;
+	clear: both;
+}
+.recs-container-T817 .at-table-column {
+	float: left;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	padding: 16px;
+}
+.recs-container-T817 {
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	background: #fcfcfc;
+}
+.recs-container-T817 .recs_wrapper {
+	margin: 0;
+	padding: 0;
+}
+.recs-container-T817 .image_container {
+	position: relative;
+}
+.recs-container-T817 .text_section>h3 {
+	margin-bottom: 0;
+	padding-bottom: 0 !important;
+	padding-top: 0;
+}
+.recs-container-T817 .full_width {
+	width: 100% !important;
+}
+.recs-container-T817 .at_recs_price.trade-up-item__regional>button {
+	padding: 0;
+}
+.recs-container-T817 .at_recs_card {
+	border: 1px solid #dadada;
+	background-color: #ffffff;
+	text-decoration: none !important;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+}
+.recs-container-T817 .at_recs_card .trade-up-item__badge {
+	z-index: 1;
+}
+.recs-container-T817 .mobile_badge,
+.recs-container-T817 .mobile_only_line {
+	display: none;
+}
+.recs-container-T817 .at_recs_card .reviews_section {
+	padding: 8px 10px 0px 15px;
+}
+
+.recs-container-T817 .review_stars {
+	width: 96px;
+	min-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position-x: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://www.dyson.co.uk/content/dam/dyson/adobetarget/recommendations/review-stars-small-new.png);
+	margin-right: 8px;
+}
+.recs-container-T817 .review_stars.five {
+	background-position-y: 0;
+}
+.recs-container-T817 .review_stars.four-five {
+	background-position-y: 10%;
+}
+.recs-container-T817 .review_stars.four {
+	background-position-y: 20%;
+}
+.recs-container-T817 .review_stars.three-five {
+	background-position-y: 30%;
+}
+.recs-container-T817 .review_stars.three {
+	background-position-y: 40%;
+}
+.recs-container-T817 .review_stars.two {
+	background-position-y: 60%;
+}
+.recs-container-T817 .review_stars.two-five {
+	background-position-y: 50%;
+}
+.recs-container-T817 .review_stars.one-five {
+	background-position-y: 70%;
+}
+.recs-container-T817 .review_stars.one {
+	background-position-y: 80%;
+}
+.recs-container-T817 .review_stars.zero {
+	background-position-y: 100%;
+}
+.recs-container-T817 .review_stars.invisible,
+.recs-container-T817 .review_stars.invisible+.review_text {
+	visibility: hidden;
+	opacity: 0;
+}
+.recs-container-T817 .review_text {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+	.recs-container-T817 .at_recs_card {
+		display: flex;
 	}
-	
-	.recs-container-T817 .custom-badge.none {
-		visibility: hidden;
+	.recs-container-T817 {
+		border-bottom: 1px solid #dadada;
 	}
+}
+.recs-container-T817 .at_recs_price {
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.recs-container-T817 .custom-badge {
+	color: white;
+	background: black;
+	top: -13px;
+	left: 16px;
+	margin-left: 8px;
+	z-index: 3 !important;
+	position: absolute;
+	padding: 2px 8px;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+.custom-badge.be_promotions,
+.custom-badge.nl_promotions,
+.custom-badge.de_promotions
+.fr_PromotionBadgeTheme{
+	color: #0066cc !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0px 0px 0px 1px #0066cc;
+}
+.recs-container-T817 .custom-badge.be_direct_exclusive {
+	color: #fff !important;
+	background-color: #0066CC !important;
+}
+.recs-container-T817 .custom-badge.be_latest_technology {
+	color: #fff !important;
+	background-color: #000 !important;
+}
 
-    .recs-container-T817 .custom-badge.US_only_at,
-    .recs-container-T817 .custom-badge.global_offer_promo {
-        background-color: #0066cc;
-    }
-
-    .recs-container-T817 .custom-badge.us_exclusive {
-        background-color: #333;
-    }
-
-    .recs-container-T817 .custom-badge.us_urgency {
-        background-color: #d9384e;
-    }
-
-    .recs-container-T817 .custom-badge.us_technology {
-        background-color: #000;
-    }
-
-
-    .recs-container-T817 .at-table {
-        display: flex;
-        width: 100%;
-        border-spacing: 5px;
-    }
-
-    .recs-container-T817 .at-table-row {
-        width: 100%;
-        clear: both;
-    }
-
-    .recs-container-T817 .at-table-column {
-        float: left;
-        display: flex;
-        flex-direction: column;
-        flex: 0 0 auto;
-        padding: 16px;
-    }
-
-    .recs-container-T817 {
-        padding-top: 3rem;
-        padding-bottom: 1rem;
-		background: #fcfcfc;
-    }
-
-    .recs-container-T817 .recs_wrapper {
-        margin: 0;
-        padding: 0;
-    }
-
-    .recs-container-T817 .image_container {
-        position: relative;
-    }
-
-    .recs-container-T817 .text_section>h3 {
-        margin-bottom: 0;
-        padding-bottom: 0 !important;
-        padding-top: 0;
-    }
-
-    .recs-container-T817 .full_width {
-        width: 100% !important;
-    }
-
-    .recs-container-T817 .at_recs_price.trade-up-item__regional>button {
-        padding: 0;
-    }
-
-    .recs-container-T817 .at_recs_card {
-        border: 1px solid #dadada;
-        background-color: #ffffff;
-        text-decoration: none !important;
-        display: inline-block;
-        width: 100%;
-		position: relative;
-    }
-
-    .recs-container-T817 .at_recs_card .trade-up-item__badge {
-        z-index: 1;
-    }
-
-    .recs-container-T817 .mobile_badge,
-    .recs-container-T817 .mobile_only_line {
-        display: none;
-    }
-
-    .recs-container-T817 .at_recs_card .reviews_section {
-		padding: 8px 10px 0px 15px;
-    }
-
-    .recs-container-T817 .review_stars {
-        width: 96px;
-        min-height: 18px;
-        display: inline-block;
-        vertical-align: middle;
-        background-position-x: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url(https://www.dyson.co.uk/content/dam/dyson/adobetarget/recommendations/review-stars-small-new.png);
-        margin-right: 8px;
-    }
-
-    .recs-container-T817 .review_stars.five {
-        background-position-y: 0;
-    }
-
-    .recs-container-T817 .review_stars.four-five {
-        background-position-y: 10%;
-    }
-
-    .recs-container-T817 .review_stars.four {
-        background-position-y: 20%;
-    }
-
-    .recs-container-T817 .review_stars.three-five {
-        background-position-y: 30%;
-    }
-
-    .recs-container-T817 .review_stars.three {
-        background-position-y: 40%;
-    }
-	
-	.recs-container-T817 .review_stars.two {
-        background-position-y: 60%;
-    }
-	
-	.recs-container-T817 .review_stars.two-five {
-        background-position-y: 50%;
-    }
-	
-	.recs-container-T817 .review_stars.one-five {
-        background-position-y: 70%;
-    }
-	
-	.recs-container-T817 .review_stars.one {
-        background-position-y: 80%;
-    }
-	
-	.recs-container-T817 .review_stars.zero {
-        background-position-y: 100%;
-    }
-
-    .recs-container-T817 .review_stars.invisible,
-    .recs-container-T817 .review_stars.invisible+.review_text {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .recs-container-T817 .review_text {
-        vertical-align: middle;
-        display: inline-block;
-    }
-
-    @media screen and (max-width: 767px) {
-        .recs-container-T817 .at_recs_card {
-            display: flex;
-            /* flex-direction: column; */
-        }
-
-        .recs-container-T817 {
-            border-bottom: 1px solid #dadada;
-        }
-    }
-
-    .recs-container-T817 .at_recs_price {
-        /*min-height: 82px;*/
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
-
-    .recs-container-T817 .custom-badge {
-        color: white;
-        background: black;
-        top: -13px;
-        left: 16px;
-        margin-left: 8px;
-        z-index: 3 !important;
+@media(max-width: 480px) {
+	.recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
+		max-height: 220px;
+		width: auto;
+	}
+	.recs-container-T817 .at_recs_card>.text_section>h3,
+	.recs-container-T817 .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+	.recs-container-T817 .trade-up-item__price {
+		font-size: 16px;
+		font-weight: 500;
+		color: #333;
+	}
+	.recs-container-T817 .at-table-column {
+		padding-top: 0;
+		padding-bottom: 0;
+		max-width: 60%;
+		margin-bottom: 20px;
+	}
+	.recs-container-T817 .at_recs_card {
+		border: none;
+	}
+	.recs-container-T817 .at_recs_card .text_section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+	}
+	.recs-container-T817 .mobile_only_line {
+		display: inline-block;
+		width: 114%;
 		position: absolute;
-		padding: 2px 8px;
-		font-size: 0.875rem;
-		font-weight: 500;
-    }
-
-    .custom-badge.be_promotions,
-    .custom-badge.nl_promotions,
-    .custom-badge.de_promotions
-    .fr_PromotionBadgeTheme{
-        color: #0066cc !important;
-        background-color: #ffffff !important;
-        box-shadow: inset 0px 0px 0px 1px #0066cc;
-    }
-
-    .recs-container-T817 .custom-badge.be_direct_exclusive {
-        color: #fff !important;
-        background-color: #0066CC !important;
-    }
-
-    .recs-container-T817 .custom-badge.be_latest_technology {
-        color: #fff !important;
-        background-color: #000 !important;
-    }
-   
-
-    @media screen and (max-width: 767px) {
-        .recs-container-T817 .at_recs_card {
-            display: flex;
-            /* flex-direction: column; */
-        }
-
-        .recs-container-T817 {
-            border-bottom: 1px solid #dadada;
-        }
-    }
-
-    @media(max-width: 480px) {
-        .recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
-            /*width: 12rem;*/
-	    max-height: 220px;
-            width: auto;
-        }
-
-        .recs-container-T817 .at_recs_card>.text_section>h3,
-        .recs-container-T817 .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
-        .recs-container-T817 .trade-up-item__price {
-            font-size: 16px;
-			font-weight: 500;
-			color: #333;
-        }
-
-        .recs-container-T817 .at-table-column {
-            padding-top: 0;
-            padding-bottom: 0;
-			max-width: 60%;
-			margin-bottom: 20px;
-        }
-
-        .recs-container-T817 .at_recs_card {
-            border: none;
-        }
-
-        .recs-container-T817 .at_recs_card .text_section {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-items: flex-start;
-        }
-
-        .recs-container-T817 .mobile_only_line {
-            display: inline-block;
-            width: 114%;
-            position: absolute;
-            /* height: 1px; */
-           /* border-top: 1px solid #dadada; */
-            top: 0;
-            margin-left: -12%;
-        }
-
-        .recs-container-T817 .custom-badge {
-            display: inline-block;
-            margin-top: 0;
-            margin-left: 1rem;
-            position: absolute;
-            top: -10px;
-            left: 0;
-            margin-bottom: 8px;
-            order: -1;
-			padding: 3px;
-        }
-		
-		.recs-container-T817 .carousel button:focus {
-			outline: none !important;
-		}
-
-        .recs-container-T817 .at_recs_card>.badge {
-            display: none;
-        }
-
-        .recs-container-T817 .mobile_badge {
-            display: inline-block;
-            margin-top: 1rem;
-            margin-left: 1rem;
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin-bottom: 8px;
-        }
-
-        .recs-container-T817 .at_recs_card .reviews_section {
-           padding: 8px 10px 0px 15px;
-        }
-
-        .recs-container-T817 .review_stars {
-            width: 92px;
-            min-height: 16px;
-        }
-    }
-	
-	.recs-container-T817 div.trade-up-item__price--blue {
-		color: #06c;
-		font-size: 24px;
-		font-weight: 500;
+		top: 0;
+		margin-left: -12%;
 	}
-
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
-        .recs-container-T817 .at_recs_card>.image_container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
-            /*width: 113px;*/
-            /*height: auto;*/
-            width:auto;
-            height:220px;
-            margin-top: 1px;
-        }
-
-
-        .recs-container-T817 .at_recs_card>.text_section>h3,
-        .recs-container-T817 .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
-        .recs-container-T817 .trade-up-item__price {
-            font-size: 16px;
-			font-weight: 500;
-			color: #333;
-        }
-
-        .recs-container-T817 .at-table-column {
-            padding: 16px 11px;
-        }
-
-        .recs-container-T817 .custom-badge {
-            left: 11px;
-        }
-    }
-
-    @media screen and (min-width: 1025px) {
-        .recs-container-T817 .at_recs_card>.image_container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
-            /*width: 195px;*/
-            /*height: auto;*/
-            margin-top: 1px;
-            max-height: 240px;
-            width: auto;
-        }
-
-        .recs-container-T817 .at_recs_card .text_section>h3,
-        .recs-container-T817 .at_recs_card .text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
-        .recs-container-T817 .trade-up-item__price {
-            font-size: 18px;
-			font-weight: 500;
-			color: #333;
-        }
-		
-		.recs-container-T817 .carousel {
-			margin:0 auto !important;
-		}
-
-    }
-
-    .recs-container-T817 .see-more-section {
-        padding: 0px !important;
-    }
-
-    .recs-container-T817 .promoText-section {
-        color: #06c;
-    }
-
-    .gb_exclusive,
-    .us_exclusive,
-    .ca_exclusive {
-        background-color: #333;
-        color: #fff;
-    }
-
-    .gb_urgency,
-    .us_urgency,
-    .ca_urgency {
-        background-color: #d9384e;
-        color: #fff;
-    }
-
-    .gb_educational,
-    .us_educational,
-    .ca_educational {
-        background-color: #fff;
-        color: #333;
-    }
-
-    .gb_offer_promo,
-    .us_offer_promo,
-    .ca_offer_promo {
-        background-color: #0066cc;
-        color: #fff;
-    }
-
-    .gb_popular,
-    .us_popular,
-    .ca_popular {
-        background-color: #ffcc00;
-        color: #000;
-    }
-
-    .gb_technology,
-    .us_technology,
-    .ca_technology {
-        background-color: #000;
-        color: #fff;
-    }
-
-    .fr_exclusive,
-    .nl_exclusive,
-    .ie_exclusive,
-    .it_exclusive,
-    .es_exclusive,
-    .at_exclusive,
-    .de_exclusive {
-        background-color: #333;
-        color: #fff;
-    }
-
-    .fr_urgency,
-    .nl_urgency,
-    .ie_urgency,
-    .it_urgency,
-    .es_urgency,
-    .at_urgency,
-    .de_urgency {
-        background-color: #d9384e;
-        color: #fff;
-    }
-
-    .fr_educational,
-    .nl_educational,
-    .ie_educational,
-    .it_educational,
-    .es_educational,
-    .at_educational,
-    .de_educational {
-        background-color: #fff;
-        color: #333;
-    }
-
-    .fr_offer_promo,
-    .nl_offer_promo,
-    .ie_offer_promo,
-    .it_offer_promo,
-    .es_offer_promo,
-    .at_offer_promo,
-    .de_offer_promo {
-        background-color: #0066cc;
-        color: #fff;
-    }
-
-    .fr_popular,
-    .nl_popular,
-    .ie_popular,
-    .it_popular,
-    .es_popular,
-    .at_popular,
-    .de_popular {
-        background-color: #ffcc00;
-        color: #000;
-    }
-
-    .fr_technology,
-    .nl_technology,
-    .ie_technology,
-    .it_technology,
-    .es_technology,
-    .at_technology,
-    .de_technology {
-        background-color: #000;
-        color: #fff;
-    }
-
-	
-	.recs-container-T817 .recs_wrapper.carousel{
-		width:100%;
-		margin:0px;
-		visibility: visible;
-		display: inline-flex;
+	.recs-container-T817 .custom-badge {
+		display: inline-block;
+		margin-top: 0;
+		margin-left: 1rem;
+		position: absolute;
+		top: -10px;
+		left: 0;
+		margin-bottom: 8px;
+		order: -1;
+		padding: 3px;
 	}
+	.recs-container-T817 .carousel button:focus {
+		outline: none !important;
+	}
+	.recs-container-T817 .at_recs_card>.badge {
+		display: none;
+	}
+	.recs-container-T817 .mobile_badge {
+		display: inline-block;
+		margin-top: 1rem;
+		margin-left: 1rem;
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin-bottom: 8px;
+	}
+	.recs-container-T817 .at_recs_card .reviews_section {
+		padding: 8px 10px 0px 15px;
+	}
+	.recs-container-T817 .review_stars {
+		width: 92px;
+		min-height: 16px;
+	}
+}
+.recs-container-T817 div.trade-up-item__price--blue {
+	color: #06c;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+	.recs-container-T817 .at_recs_card>.image_container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
+		width:auto;
+		height:220px;
+		margin-top: 1px;
+	}
+	.recs-container-T817 .at_recs_card>.text_section>h3,
+	.recs-container-T817 .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+	.recs-container-T817 .trade-up-item__price {
+		font-size: 16px;
+		font-weight: 500;
+		color: #333;
+	}
+	.recs-container-T817 .at-table-column {
+		padding: 16px 11px;
+	}
+	.recs-container-T817 .custom-badge {
+		left: 11px;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.recs-container-T817 .at_recs_card>.image_container {
+		display: flex;
+		justify-content: center;
+	}
+	.recs-container-T817 .at_recs_card>.image_container>.at-thumbnail {
+		margin-top: 1px;
+		max-height: 240px;
+		width: auto;
+	}
+	.recs-container-T817 .at_recs_card .text_section>h3,
+	.recs-container-T817 .at_recs_card .text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+	.recs-container-T817 .trade-up-item__price {
+		font-size: 18px;
+		font-weight: 500;
+		color: #333;
+	}
+	.recs-container-T817 .carousel {
+		margin:0 auto !important;
+	}
+}
+.recs-container-T817 .see-more-section {
+	padding: 0px !important;
+}
+.recs-container-T817 .promoText-section {
+	color: #06c;
+}
+
+.gb_exclusive,.us_exclusive,.ca_exclusive {
+	background-color: #333;
+	color: #fff;
+}
+.gb_urgency,.us_urgency,.ca_urgency {
+	background-color: #d9384e;
+	color: #fff;
+}
+.gb_educational,.us_educational,.ca_educational {
+	background-color: #fff;
+	color: #333;
+}
+.gb_offer_promo,.us_offer_promo,.ca_offer_promo {
+	background-color: #0066cc;
+	color: #fff;
+}
+.gb_popular,.us_popular,.ca_popular {
+	background-color: #ffcc00;
+	color: #000;
+}
+.gb_technology,.us_technology,.ca_technology {
+	background-color: #000;
+	color: #fff;
+}
+.fr_exclusive,.nl_exclusive,.ie_exclusive,.it_exclusive,.es_exclusive,.at_exclusive,.de_exclusive {
+	background-color: #333;
+	color: #fff;
+}
+.fr_urgency,.nl_urgency,.ie_urgency,.it_urgency,.es_urgency,.at_urgency,.de_urgency {
+	background-color: #d9384e;
+	color: #fff;
+}
+.fr_educational,.nl_educational,.ie_educational,.it_educational,.es_educational,.at_educational,.de_educational {
+	background-color: #fff;
+	color: #333;
+}
+.fr_offer_promo,.nl_offer_promo,.ie_offer_promo,.it_offer_promo,.es_offer_promo,.at_offer_promo,.de_offer_promo {
+	background-color: #0066cc;
+	color: #fff;
+}
+.fr_popular,.nl_popular,.ie_popular,.it_popular,.es_popular,.at_popular,.de_popular {
+	background-color: #ffcc00;
+	color: #000;
+}
+.fr_technology,.nl_technology,.ie_technology,.it_technology,.es_technology,.at_technology,.de_technology {
+	background-color: #000;
+	color: #fff;
+}
+.recs-container-T817 .recs_wrapper.carousel{
+    width:100%;
+    margin:0px;
+    visibility: visible;
+    display: inline-flex;
+}
 .recs-container-T817 .recs_wrapper .slick-slide{
   margin:10px;
 }
@@ -534,7 +388,6 @@
 		display: flex;
 		box-sizing: border-box;
 		} 
-		
 		.recs-container-T817 .recs_wrapper.carousel a.at_recs_card {
 			display: block !important;
 			 border: 1px solid #dadada;
@@ -545,38 +398,31 @@
 			padding: 0;
 			position: relative;
 		}
-		
 		.recs-container-T817 .at_recs_card>.image_container {
 			display: flex;
 			justify-content: center;
 			
 		}
-		
 		  .recs-container-T817 .recs_wrapper .slick-slide .at-table-column {
 			  padding: 0;
 		  }
-		  
 		  .recs-container-T817 .at_recs_price.trade-up-item__regional {
 			  width: 100% !important;
 		  }
 		  .recs-container-T817 div.trade-up-item__price--blue {
 				padding-bottom: 10px;
 			}
-			
 			.recs-container-T817 a.at_recs_card:hover, a.at_recs_card:focus, a.at_recs_card:active {
 				border: 1px solid #333;
 				color: #333;
 				outline: none;
 			}
-			
 			.recs-container-T817 .recs-container .row {
 				width: 100% !important;
 				margin-left: 25px !important;
 			}
 	 }
-	 
 	.recs-container-T817 .recs_wrapper .slick-list{padding:0 40% 0 0 !important; }
-	 
 	.recs-container-T817 .recs_wrapper .slick-prev, .recs-container .slick-next {
 		font-size: 0;
 		line-height: 0;
@@ -596,17 +442,13 @@
 		border-radius: 17px;
 		background: #a7a4a4;
 	 }
-
 	.recs-container-T817 .recs_wrapper .slick-next {
 		left: 83%;
 	 }
-	 
 	.recs-container-T817 .recs_wrapper .slick-prev {
 		 z-index: 99;
 		 right: 86%;
 	 }
-	
-	
 	.recs-container-T817 .recs_wrapper .slick-next:before {
 		content: '→';
 		transform: rotate(-45deg);
@@ -621,7 +463,6 @@
 		right: -3px;
 		font-size: 0;
 	}
-	
 	.recs-container-T817 .recs_wrapper .slick-prev:before, .recs-container .slick-next:before {
 		 color: white;
 		 -webkit-font-smoothing: antialiased; 
@@ -632,12 +473,10 @@
 		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 		position: relative;
 	}
-	
 	.recs-container-T817 .recs_wrapper .slick-disabled {
 		opacity: 0;
 		pointer-events: none;
 	}
-	
 	.recs-container-T817 .recs_wrapper .slick-track {
 		display: flex !important;
 	}
@@ -645,19 +484,16 @@
 	{
 		height: inherit !important;
 	}
-	
 	.recs-container-T817 .trade-up-item__price {
 		border-top: 1px solid #dadada;
 		padding-left: 15px;
 		padding-top: 10px;
 		font-size: 24px;
 	}
-	
 	.recs-container-T817 .trade-up-item__text.trade-up-item__name {
 		line-height: 1.3;
 		padding-right: 10px;
 	}
-	
 	 @media screen and (min-width: 768px) and (max-width: 1024px) {
 		.recs-container-T817 .recs_wrapper.carousel {
 			margin: 0 auto !important;
@@ -669,40 +505,31 @@
 			 width: 33.33%
 		 }
 	 }
-	 
-	 
 	.recs-container-T817 .review_text {
 		 font-size: 0.875rem;
 	 }
 	.recs-container-T817 .trade-up-item__price--blue, .trade-up-item__reduced-price, .trade-up-item__text {
 		 padding-left: 15px;
 	 }
-	 
 	.recs-container-T817 .recs_wrapper #chevron-bold-sr {
 		 display: none !important;
 	 }
-
-	 
 	.recs-container-T817 .recs_wrapper .slick-track:after, .slick-track:before {
 		 display: none;
 	 }
-	 
 	.recs-container-T817 .at_recs_card .js-product-hero-promo-message {
 	margin-top: 0;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-bottom: .5rem;
 }
-
 .recs-container-T817 .at_recs_card .js-product-hero-promo-message ul.list {
 	padding-left: 0;
 }
-
 .recs-container-T817 .at_recs_card .js-product-hero-promo-message .js-promotional-details-message {
 	list-style-type: none;
     color: #06c;
 }
-
 .recs-container-T817 .at_recs_card .js-product-hero-promo-message li strong {
 	overflow: hidden;
    text-overflow: ellipsis;
@@ -712,12 +539,9 @@
    -webkit-box-orient: vertical;
        font-weight:400!important;
 }
-	 
-	
 </style>
 
 <script type="text/template" id="at_template_recs_T817">
-
   <div class="container-par parbase recs-container recs-container-T817" data-analytics-component="product-recommendations" >
      #if($entities.size() > 0)
          <div class="container-fluid container-fluid--upto-lg pt-lg-0 pt-xl-0 pb-lg-0 pb-xl-0 pt-md-0 pb-md-0 pt-xs-0 pt-sm-0 pb-xs-0 pb-sm-0">
@@ -1022,6 +846,155 @@
             "wearables" : "Kopfhörer",
             "lightning" : "Beleuchtung",
             "floor cleaners" : "Staubsauger"
+        };
+    }
+
+    if (location.host.indexOf('.kr') > -1) {
+        _dtag = 'kr';
+        header = '최근 본 제품';
+        header1 = '';
+        see_more = '더 알아보기';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.pathname.indexOf('/vi-VN/') > -1) {
+        header = 'Gợi ý dành cho bạn';
+        header1 = '';
+        see_more = 'Mua ngay';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.pathname.indexOf('/th-TH/') > -1) {
+        header = 'สินค้าแนะนำสำหรับคุณ';
+        header1 = '';
+        see_more = 'เลือกซื้อ';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.pathname.indexOf('/ar-SA/') > -1) {
+        header = 'الأكثر مبيعاً';
+        header1 = '';
+        see_more = 'تسوق الآن';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.pathname.indexOf('/ar-AE/') > -1) {
+        header = 'الأكثر مبيعاً';
+        header1 = '';
+        see_more = 'تسوق الآن';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.host.indexOf('.tr') > -1) {
+        _dtag = 'tr';
+        header = 'Öne Çıkanlar';
+        header1 = '';
+        see_more = 'Satın al';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.host.indexOf('.pl') > -1) {
+        _dtag = 'pl';
+        header = 'Wyróżnione';
+        header1 = '';
+        see_more = 'Kup teraz';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.host.indexOf('.cz') > -1) {
+        _dtag = 'cz';
+        header = 'Doporučené';
+        header1 = '';
+        see_more = 'Nakupujte nyní';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
+        };
+    }
+
+    if (location.host.indexOf('.ro') > -1) {
+        _dtag = 'ro';
+        header = 'Recomandat';
+        header1 = '';
+        see_more = 'Cumpără acum';
+        reviewLang = 'Reviews';
+        oosLocal = ' ';
+        categoryValues = {
+            "vacuum cleaners" : "vacuum cleaners",
+            "personal care" : "hair care",
+            "air treatment" : "air treatment",
+            "wearables" : "headphones",
+            "lightning" : "lightning",
+            "floor cleaners" : "vacuum cleaners"
         };
     }
 
