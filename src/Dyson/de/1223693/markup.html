@@ -1168,9 +1168,19 @@
                                         // Mark header as set by T817 to prevent other activities from overriding
                                         headerEl.setAttribute('data-t817-set', 'true');
                                     } else {
-                                        // Show default title for first-time visitors
-                                        headerEl.innerHTML = header + header1;
-                                        headerEl.setAttribute('data-t817-default', 'true');
+                                        // Check if there's an existing title from previous activity
+                                        var existingHeaderEl = document.querySelector('.recs-container h2.trade-up-header__content.js-trade-up-header-content');
+                                        var fallbackTitle = 'Deine Black Friday Highlights';
+                                        
+                                        if (existingHeaderEl && existingHeaderEl.innerHTML.trim() !== '') {
+                                            // Use title from previous activity
+                                            headerEl.innerHTML = existingHeaderEl.innerHTML;
+                                            headerEl.setAttribute('data-t707', 'true');
+                                        } else {
+                                            // Use fallback title if no previous activity set it
+                                            headerEl.innerHTML = fallbackTitle;
+                                            headerEl.setAttribute('data-t817-default', 'true');
+                                        }
                                     }
                                 }
                             }, 300);
@@ -1223,9 +1233,19 @@
                                     // Mark header as set by T817 to prevent other activities from overriding
                                     headerEl.setAttribute('data-t817-set', 'true');
                                 } else {
-                                    // Show default title for first-time visitors
-                                    headerEl.innerHTML = header + header1;
-                                    headerEl.setAttribute('data-t817-default', 'true');
+                                    // Check if there's an existing title from previous activity
+                                    var existingHeaderEl = document.querySelector('.recs-container h2.trade-up-header__content.js-trade-up-header-content');
+                                    var fallbackTitle = 'Deine Black Friday Highlights';
+                                    
+                                    if (existingHeaderEl && existingHeaderEl.innerHTML.trim() !== '') {
+                                        // Use title from previous activity
+                                        headerEl.innerHTML = existingHeaderEl.innerHTML;
+                                        headerEl.setAttribute('data-t707', 'true');
+                                    } else {
+                                        // Use fallback title if no previous activity set it
+                                        headerEl.innerHTML = fallbackTitle;
+                                        headerEl.setAttribute('data-t817-default', 'true');
+                                    }
                                 }
                             }
                             
