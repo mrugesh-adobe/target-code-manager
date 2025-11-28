@@ -822,6 +822,8 @@
         see_more = 'Shop now',
         reviewLang = 'Reviews',
         oosLocal = '',
+        recommendedPrefix = 'Recommended';
+        recommendedSuffix = 'for you';
         categoryValues = {
             "vacuum cleaners" : "vacuum cleaners",
             "personal care" : "hair care",
@@ -838,6 +840,8 @@
         see_more = 'Mehr erfahren';
         reviewLang = 'Bewertungen';
         oosLocal = ' ';
+        recommendedPrefix = 'Empfohlene';
+        recommendedSuffix = 'für dich';
         categoryValues = {
             "vacuum cleaners" : "Staubsauger",
             "personal care" : "Haarpflege", 
@@ -1161,10 +1165,15 @@
                                 var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
                                 if(firstCard && headerEl){
                                     if(firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
-                                        // Show personalized category title for users who have visited category pages
+                                        // Show personalized "Recommended [category] for you" title for users who have visited category pages
                                         var category = firstCard.getAttribute("category").toLowerCase();
                                         var categoryText = categoryValues[category] || category;
-                                        headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                        if (typeof recommendedPrefix !== 'undefined' && typeof recommendedSuffix !== 'undefined') {
+                                            headerEl.innerHTML = recommendedPrefix + ' ' + categoryText + ' ' + recommendedSuffix;
+                                        } else {
+                                            // Fallback to original format for non-German locales
+                                            headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                        }
                                         // Mark header as set by T817 to prevent other activities from overriding
                                         headerEl.setAttribute('data-t817-set', 'true');
                                     } else {
@@ -1226,10 +1235,15 @@
                             var headerEl = document.querySelector(".recs-container-T817 .trade-up-header__content");
                             if(firstCard && headerEl){
                                 if(firstCard.getAttribute("category") && hasVisitedCategoryJourney()){
-                                    // Show personalized category title for users who have visited category pages
+                                    // Show personalized "Recommended [category] for you" title for users who have visited category pages
                                     var category = firstCard.getAttribute("category").toLowerCase();
                                     var categoryText = categoryValues[category] || category;
-                                    headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                    if (typeof recommendedPrefix !== 'undefined' && typeof recommendedSuffix !== 'undefined') {
+                                        headerEl.innerHTML = recommendedPrefix + ' ' + categoryText + ' ' + recommendedSuffix;
+                                    } else {
+                                        // Fallback to original format for non-German locales
+                                        headerEl.innerHTML = header + ' ' + categoryText + header1;
+                                    }
                                     // Mark header as set by T817 to prevent other activities from overriding
                                     headerEl.setAttribute('data-t817-set', 'true');
                                 } else {
