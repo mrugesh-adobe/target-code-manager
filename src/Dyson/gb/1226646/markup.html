@@ -1,0 +1,151 @@
+<script>
+    // Flickerlessly utility for waiting for elements to be ready
+    var Flickerlessly = window.Flickerlessly || {};
+    !function(t) {
+        "use strict";
+        var e = function(t, e, n, o) {
+            var a = "atNodeInserted" + t,
+                i = [],
+                s = ["", "-moz-", "-webkit-", "-ms-", "-o-"];
+            s.forEach(function(t, e) {
+                i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}")
+            }), i.push(e + "{"), s.forEach(function(t, e) {
+                i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";")
+            }), i.push("}");
+            var r = document.getElementsByTagName("head")[0];
+            if (r) {
+                var c = document.createElement("style");
+                c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(document.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild)
+            }
+            var l = function(t) {
+                if (t.animationName === a && "object" == typeof t.target) {
+                    var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success");
+                    console.log("Flickerlessly element ready: " + e, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : console.error("Cannot execute callback", i, n)
+                }
+            };
+            ["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function(t, e) {
+                document.addEventListener(t, l, !1)
+            })
+        }, n = Math.floor(1e3 * Math.random() + 1);
+        t.onReady = function() {
+            for (var t = 0; t < arguments.length; t++) {
+                var o = arguments[t],
+                    a = o.selector,
+                    i = o.success || null,
+                    s = o.persist || !1;
+                e(n++, a, i, s)
+            }
+        }
+    }(Flickerlessly);
+
+    console.log("Recently Viewed Analytics Script Loaded");
+
+    // Function to handle add-to-basket clicks
+    function handleAddToBasketClick(event) {
+        console.log("CLICK DETECTED on:", event.target);
+        console.log("Target classes:", event.target.className);
+        console.log("Target tagName:", event.target.tagName);
+        debugger;
+        try {
+            // 1. Detect ONLY Recently Viewed Add-to-Basket clicks
+            var cta = event.target.closest(".js-add-to-basket-button");
+            console.log("Checking for add-to-basket button:", cta);
+            
+            if (!cta) {
+                console.log("Not an add-to-basket button - continuing");
+                return;
+            }
+            
+            console.log("Add-to-basket button clicked:", cta);
+
+            // 2. Find the parent product card <li>
+            var productCard = cta.closest("li.at-table-column-at-641");
+            if (!productCard) {
+                console.warn("Recently Viewed: Product card not found with selector 'li.at-table-column-at-641'");
+                return;
+            }
+            
+            console.log("Product card found:", productCard);
+
+            // 3. Get the anchor tag which holds the SKU
+            var productLink = productCard.querySelector("a.at_recs_card-at-641");
+            if (!productLink) {
+                console.warn("Recently Viewed: Product link not found with selector 'a.at_recs_card-at-641'");
+                return;
+            }
+            
+            console.log("Product link found:", productLink);
+
+            // 4. Extract SKU
+            var productSKU = productLink.getAttribute("sku");
+            console.log("Extracted SKU:", productSKU);
+
+            if (!productSKU) {
+                console.warn("Recently Viewed: SKU not found on product link");
+                return;
+            }
+
+            // 5. Fire Adobe Analytics Tracking
+            if (typeof s !== "undefined") {
+                console.log("Adobe Analytics object found, firing tracking...");
+                
+                s.linkTrackVars = "eVar56,events";
+                s.linkTrackEvents = "event5";
+                s.eVar56 = productSKU;
+                s.events = "event5";
+
+                s.tl(true, "o", "Recently Viewed | Add To Basket");
+
+                console.log("eVar56 fired with SKU:", productSKU);
+                console.log("Analytics Data:", {
+                    eVar56: s.eVar56,
+                    events: s.events,
+                    linkTrackVars: s.linkTrackVars,
+                    linkTrackEvents: s.linkTrackEvents
+                });
+            } else {
+                console.warn("Adobe Analytics object 's' not found");
+            }
+
+        } catch (error) {
+            console.error("Error in Recently Viewed Analytics:", error);
+        }
+    }
+
+    // Use Flickerlessly to wait for Recently Viewed elements to be ready
+    Flickerlessly.onReady({
+        selector: '.recs_wrapper-at-641 .js-add-to-basket-button',
+        success: function(el) {
+            console.log("Add-to-basket button detected via Flickerlessly:", el);
+            
+            // Add click listener to this specific button
+            el.addEventListener('click', handleAddToBasketClick);
+            
+            // Debug info about this button's context
+            var productCard = el.closest("li.at-table-column-at-641");
+            if (productCard) {
+                var productLink = productCard.querySelector("a.at_recs_card-at-641");
+                var sku = productLink ? productLink.getAttribute("sku") : "not found";
+                console.log("Button context - SKU:", sku);
+            }
+        },
+        persist: true
+    });
+
+    // Fallback: Also add global click listener
+    document.addEventListener("click", handleAddToBasketClick);
+    
+    // Debug helper - log when Recently Viewed elements are detected
+    setTimeout(function() {
+        var recentlyViewedCards = document.querySelectorAll("li.at-table-column-at-641");
+        var addToBasketButtons = document.querySelectorAll(".js-add-to-basket-button");
+        
+        console.log("Debug Info:");
+        console.log("- Recently Viewed Cards found:", recentlyViewedCards.length);
+        console.log("- Add to Basket buttons found:", addToBasketButtons.length);
+        
+        if (recentlyViewedCards.length > 0) {
+            console.log("- First card SKU:", recentlyViewedCards[0].querySelector("a.at_recs_card-at-641")?.getAttribute("sku"));
+        }
+    }, 2000);
+</script>
