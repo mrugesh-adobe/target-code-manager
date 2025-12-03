@@ -1691,23 +1691,15 @@ function addToCart(e) {
   var btn = e.target;
   var sku = jQuery(btn).parents(".at_recs_card-at-641").attr("sku");
   
-  console.log("Add to Cart clicked - SKU:", sku);
+//   console.log("Add to Cart clicked - SKU:", sku);
   
   if (typeof s !== "undefined") 
   {
 	   s.linkTrackVars = "eVar56,events";
 	   s.linkTrackEvents = "event5";
-	   s.eVar56 = sku; // Use actual product SKU instead of hardcoded string
+	   s.eVar56 = "footer|product-recommendations-at-641|addtocart,recentlyviewrecs|ctabutton"; // Use actual product SKU instead of hardcoded string
 	   s.events = "event5";
-	   s.tl(true, "o", "Recently Viewed | Add To Basket");
-	   
-	   console.log("eVar56 fired with SKU:", sku);
-	   console.log("Analytics Data:", {
-		   eVar56: s.eVar56,
-		   events: s.events,
-		   linkTrackVars: s.linkTrackVars,
-		   linkTrackEvents: s.linkTrackEvents
-	   });
+	   s.tl(true, "o", "footer|product-recommendations-at-641|addtocart,recentlyviewrecs|ctabutton");
    } else {
 	   console.warn("Adobe Analytics object 's' not found");
    }
