@@ -1,0 +1,1542 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.min.js"
+    integrity="sha512-/LKHQ9K9yatyOfEKXiysc9SPCpF6xkvfHQxtPkhdKS83GvfyIWDwKaOr3/LqVxbEX89Bqz+SbMHEPWm0AeRWnA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.css"
+    integrity="sha512-eCyejMSBO5OZwV8DiCj9XETkTRH4FQBrvxod2fd12/xDKIzsc26NzmUZWucuvOXxOCooPb5NDqP5iOD8SzeOyQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css" id='recs_style'>
+    .no-badge {
+        display: none;
+    }
+
+    .trade-up-item__text reviews_section {
+        display: none !important;
+    }
+
+    .button--large.button--fluid {
+        min-height: 36px;
+        padding: 6px 12px !important;
+    }
+
+
+    .at_recs_price .trade-up-item__reduced-price {
+        text-decoration: line-through;
+        font-size: .875rem;
+        display: inline-flex;
+    }
+
+
+    .at_recs_price .trade-up-item__reduced-price .curr_before,
+    .at_recs_price .trade-up-item__savings .curr_before {
+        padding-left: 4px;
+    }
+
+    .at_recs_price .trade-up-item__savings {
+        color: #06c;
+        font-size: .875rem;
+        display: inline-flex;
+        padding-left: 15px;
+    }
+
+    a.at_recs_card:hover {
+        border: 1px solid #333;
+    }
+
+
+    .custom-badge.none {
+        visibility: hidden;
+    }
+
+
+    .at-table {
+        display: flex;
+        width: 100%;
+        border-spacing: 5px;
+    }
+
+    .at-table-row-at-641 {
+        width: 100%;
+        clear: both;
+    }
+
+    .at-table-column-at-641 {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .recs-container-at-641 {
+        background: #fcfcfc;
+    }
+
+    .recs_wrapper-at-641 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .image_container {
+        position: relative;
+    }
+
+    .text_section>h3 {
+        margin-bottom: 0;
+        padding-bottom: 0 !important;
+        padding-top: 0;
+    }
+
+    .full_width {
+        width: 100% !important;
+    }
+
+
+    .at_recs_price.trade-up-item__regional>button {
+        padding: 0;
+    }
+
+    .at_recs_card {
+        border: 1px solid #dadada;
+        background-color: #ffffff;
+        text-decoration: none !important;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+
+    .at_recs_card .trade-up-item__badge {
+        z-index: 1;
+    }
+
+    .mobile_badge,
+    .mobile_only_line {
+        display: none;
+    }
+
+    .at_recs_card .reviews_section {
+        padding: 8px 10px 0px 15px;
+    }
+
+    .review_stars {
+        width: 96px;
+        min-height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        background-position-x: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(https://www.dyson.co.uk/content/dam/dyson/adobetarget/recommendations/review-stars-small-new.png);
+        margin-right: 8px;
+    }
+
+    .review_stars.five {
+        background-position-y: 0;
+    }
+
+    .review_stars.four-five {
+        background-position-y: 10%;
+    }
+
+    .review_stars.four {
+        background-position-y: 20%;
+    }
+
+    .review_stars.three-five {
+        background-position-y: 30%;
+    }
+
+    .review_stars.three {
+        background-position-y: 40%;
+    }
+
+    .review_stars.two {
+        background-position-y: 60%;
+    }
+
+    .review_stars.two-five {
+        background-position-y: 50%;
+    }
+
+    .review_stars.one-five {
+        background-position-y: 70%;
+    }
+
+    .review_stars.one {
+        background-position-y: 80%;
+    }
+
+    .review_stars.zero {
+        background-position-y: 100%;
+    }
+
+    .review_stars.invisible,
+    .review_stars.invisible+.review_text {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .review_text {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+
+    @media screen and (max-width: 767px) {
+        .at_recs_card {
+            display: flex;
+            /* flex-direction: column; */
+        }
+
+        .at_recs_price .trade-up-item__savings {
+            padding-left: 15px !important;
+        }
+
+        .recs-container-at-641 {
+            border-bottom: 1px solid #dadada;
+        }
+
+        #maincontent>div.columns>div>div>div.container-par-at-641.parbase.recs-container-at-641.at_template_recs-at-641>div>div>div>div>h2 {
+            padding-left: 0rem !important;
+        }
+
+        .recs_wrapper-at-641.carousel-at-641 {
+            padding-left: 0 !important;
+        }
+
+        [data-slick-index='0'],
+        [data-slick-index='1'],
+        [data-slick-index='2'],
+        [data-slick-index='3'] {
+            padding-left: 0;
+        }
+    }
+
+    .at_recs_price {
+        /*min-height: 82px;*/
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .custom-badge {
+        color: white;
+        background: black;
+        top: -13px;
+        left: 16px;
+        margin-left: 8px;
+        z-index: 3 !important;
+        position: absolute;
+        padding: 5px 10px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+        width: fit-content;
+    }
+
+
+    .custom-badge.be_promotions,
+    .custom-badge.nl_promotions,
+    .custom-badge.de_promotions,
+    .custom-badge.White_with_Blue_border_Promotions {
+        color: #0066cc !important;
+        background-color: #ffffff !important;
+        box-shadow: inset 0px 0px 0px 1px #0066cc;
+    }
+
+    .custom-badge.be_direct_exclusive,
+    .custom-badge.Blue_Direct_exclusive {
+        color: #fff !important;
+        background-color: #0066CC !important;
+    }
+
+    .custom-badge.be_latest_technology {
+        color: #fff !important;
+        background-color: #000 !important;
+    }
+
+    .at_recs_card>.text_section>h3 {
+        margin-bottom: 10px;
+        padding-top: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+        .at_recs_card {
+            display: flex;
+            /* flex-direction: column; */
+        }
+
+        .recs-container-at-641 {
+            border-bottom: 1px solid #dadada;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    @media(max-width: 480px) {
+        .custom-badge-placement-nomobile {
+            display: none !important;
+        }
+
+        .custom-badge-placement-mobile {
+            display: block !important;
+            background: none;
+        }
+
+        .at_recs_card>.image_container.at-641>.at-thumbnail {
+            /*width: 12rem;*/
+            max-height: 180px;
+
+            width: auto;
+        }
+
+        .at-table-column-at-641 {
+            width: 80%;
+        }
+
+        .at_recs_card>.text_section>h3,
+        .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+        .trade-up-item__price {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .at-table-column-at-641 {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 20px;
+        }
+
+        .at_recs_card {
+            border: none;
+        }
+
+        .at_recs_card .text_section {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        .mobile_only_line {
+            display: inline-block;
+            width: 114%;
+            position: absolute;
+            /* height: 1px; */
+            /* border-top: 1px solid #dadada; */
+            top: 0;
+            margin-left: -12%;
+        }
+
+        .custom-badge {
+            display: inline-block;
+            margin-top: 0;
+            margin-left: 1rem;
+            /* top: -12px; */
+            left: 0;
+            /* margin-bottom: 8px; */
+            order: -1;
+            padding: 3px;
+            padding: 5px 10px;
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-align: center;
+            position: relative;
+            display: block;
+            color: #fff;
+            width: fit-content;
+            text-align: center;
+            border-radius: 1px;
+            border-radius: 1px;
+            height: 26px;
+        }
+
+        .carousel-at-641 button:focus {
+            outline: none !important;
+        }
+
+        .at_recs_card>.badge {
+            display: none;
+        }
+
+        .mobile_badge {
+            display: inline-block;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-bottom: 8px;
+        }
+
+        .at_recs_card .reviews_section {
+            padding: 8px 10px 0px 15px;
+        }
+
+        .review_stars {
+            width: 92px;
+            min-height: 16px;
+        }
+    }
+
+    div.trade-up-item__price--blue {
+        color: #06c;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .at_recs_card>.image_container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .at_recs_card>.image_container.at-641>.at-thumbnail {
+            /*width: 113px;*/
+            /*height: auto;*/
+            width: auto;
+            height: 180px;
+            margin-top: 1px;
+        }
+
+
+        .at_recs_card>.text_section>h3,
+        .at_recs_card>.text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+        .trade-up-item__price {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .at-table-column-at-641 {
+            padding: 16px 11px;
+        }
+
+        .custom-badge {
+            left: 11px;
+        }
+
+        #maincontent>div.columns>div>div>div.container-par-at-641.parbase.recs-container-at-641.at_template_recs-at-641>div>div>div>div>h2 {
+            padding-left: 0rem;
+        }
+
+        .recs_wrapper-at-641.carousel-at-641 {
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+
+    }
+
+    @media screen and (min-width: 1025px) {
+        .at_recs_card>.image_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .at_recs_card>.image_container.at-641>.at-thumbnail {
+            /*width: 195px;*/
+            /*height: auto;*/
+            margin-top: 1px;
+            max-height: 180px;
+            width: auto;
+        }
+
+
+
+        .at_recs_card .text_section>h3,
+        .at_recs_card .text_section>.at_recs_price>div.trade-up-item__price--blue>.price,
+        .trade-up-item__price {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .carousel-at-641 {
+            margin: 0 auto !important;
+        }
+
+    }
+
+    .see-more-section {
+        padding: 0px !important;
+    }
+
+    .promoText-section {
+        display: none !important;
+        color: #06c;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        margin-bottom: 15px;
+        -webkit-box-orient: vertical;
+    }
+
+    .promoText-section a {
+        display: none;
+    }
+
+    .gb_exclusive,
+    .us_exclusive,
+    .ca_exclusive {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .gb_urgency,
+    .us_urgency,
+    .ca_urgency {
+        background-color: #d9384e;
+        color: #fff;
+    }
+
+    .gb_educational,
+    .us_educational,
+    .ca_educational {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .gb_offer_promo,
+    .us_offer_promo,
+    .ca_offer_promo {
+        background-color: #0066cc;
+        color: #fff;
+    }
+
+    .gb_popular,
+    .us_popular,
+    .ca_popular {
+        background-color: #ffcc00;
+        color: #000;
+    }
+
+    .gb_technology,
+    .us_technology,
+    .ca_technology {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .fr_exclusive,
+    .nl_exclusive,
+    .ie_exclusive,
+    .it_exclusive,
+    .es_exclusive,
+    .at_exclusive,
+    .de_exclusive {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .fr_urgency,
+    .nl_urgency,
+    .ie_urgency,
+    .it_urgency,
+    .es_urgency,
+    .at_urgency,
+    .de_urgency {
+        background-color: #d9384e;
+        color: #fff;
+    }
+
+    .fr_educational,
+    .nl_educational,
+    .ie_educational,
+    .it_educational,
+    .es_educational,
+    .at_educational,
+    .de_educational {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .fr_offer_promo,
+    .nl_offer_promo,
+    .ie_offer_promo,
+    .it_offer_promo,
+    .es_offer_promo,
+    .at_offer_promo,
+    .de_offer_promo {
+        background-color: #0066cc;
+        color: #fff;
+    }
+
+    .fr_popular,
+    .nl_popular,
+    .ie_popular,
+    .it_popular,
+    .es_popular,
+    .at_popular,
+    .de_popular {
+        background-color: #ffcc00;
+        color: #000;
+    }
+
+    .fr_technology,
+    .nl_technology,
+    .ie_technology,
+    .it_technology,
+    .es_technology,
+    .at_technology,
+    .de_technology {
+        background-color: #000;
+        color: #fff;
+    }
+
+
+    .recs_wrapper-at-641.carousel-at-641 {
+        width: 100%;
+        margin: 0px;
+        visibility: visible;
+        display: inline-flex;
+    }
+
+    .recs_wrapper-at-641 .slick-slide img {
+        width: 100%;
+        border: 2px solid #fff;
+    }
+
+    .recs_wrapper-at-641 .wrapper .slick-dots li button:before {
+        font-size: 20px;
+        color: white;
+    }
+
+    .recs_wrapper-at-641 .slick-slide.slick-current {
+        width: 17rem !important;
+    }
+
+    @media screen and (max-width: 500px) {
+        .recs_wrapper-at-641.carousel-at-641.slick-initialized.slick-slider {
+            position: relative;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .recs_wrapper-at-641.carousel-at-641 a.at_recs_card {
+            display: block !important;
+            border: 1px solid #dadada;
+            background-color: #ffffff;
+            text-decoration: none !important;
+            display: inline-block;
+            width: 100%;
+            padding: 0;
+            position: relative;
+        }
+
+        .at_recs_card>.image_container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .recs_wrapper-at-641 .slick-slide .at-table-column-at-641 {
+            padding: 10px;
+        }
+
+        .at_recs_price.trade-up-item__regional {
+            width: 100% !important;
+        }
+
+        div.trade-up-item__price--blue {
+            padding-bottom: 10px;
+        }
+
+        a.at_recs_card:hover,
+        a.at_recs_card:focus,
+        a.at_recs_card:active {
+            border: 1px solid #333;
+            color: #333;
+            outline: none;
+        }
+
+        .recs-container-at-641 .row {
+            width: 100% !important;
+            margin-left: 25px !important;
+        }
+    }
+
+    .recs_wrapper-at-641 .slick-list {
+        padding: 0 40% 0 0 !important;
+    }
+
+    .recs_wrapper-at-641 .slick-prev,
+    .recs-container-at-641 .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 47%;
+        display: block;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        margin-top: -10px \9;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        border-radius: 17px;
+        background: #a7a4a4;
+    }
+
+    .recs_wrapper-at-641 .slick-next {
+        left: 83%;
+    }
+
+    .recs_wrapper-at-641 .slick-prev {
+        z-index: 99;
+        right: 86%;
+    }
+
+
+    .recs_wrapper-at-641 .slick-next:before {
+        content: '→';
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        left: -2px;
+        font-size: 0;
+    }
+
+    .recs_wrapper-at-641 .slick-prev:before {
+        content: '←';
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        right: -3px;
+        font-size: 0;
+    }
+
+    .recs_wrapper-at-641 .slick-prev:before,
+    .recs-container-at-641 .slick-next:before {
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        border: solid white;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 5px;
+        box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .recs_wrapper-at-641 .slick-disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .recs_wrapper-at-641 .slick-track {
+        display: flex !important;
+    }
+
+    .recs_wrapper-at-641 .slick-slide {
+        height: inherit !important;
+    }
+
+    .trade-up-item__price {
+        border-top: 1px solid #dadada;
+        padding-left: 15px;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+
+    .trade-up-item__text.trade-up-item__name {
+        line-height: 1.3;
+        padding-right: 10px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .recs_wrapper-at-641.carousel-at-641 {
+            margin: 0 auto !important;
+        }
+
+        .recs_wrapper-at-641.carousel-at-641 li:nth-child(4) {
+            display: none;
+        }
+
+        .at-table-column-at-641.col-xs-12.col-md-3 {
+            width: 33.33%
+        }
+    }
+
+
+    .review_text {
+        font-size: 0.875rem;
+    }
+
+    .trade-up-item__price--blue,
+    .trade-up-item__reduced-price,
+    .trade-up-item__text {
+        padding-left: 15px;
+    }
+
+    .recs_wrapper-at-641 #chevron-bold-sr {
+        display: none !important;
+    }
+
+    .recs_wrapper-at-641 .slick-track:after,
+    .slick-track:before {
+        display: none;
+    }
+
+    .at_recs_price .price {
+        margin: 0;
+    }
+
+    .hidden-xs-up {
+        display: none !important;
+    }
+
+    .trade-up-item__price--blue.trade-up-item__price,
+    .trade-up-item__price {
+        display: flex;
+    }
+
+    .recs-container-at-641 {
+        background: #fcfcfc;
+        padding: 3rem;
+    }
+
+    #maincontent>div.columns>div>div>div.container-par-at-641.parbase.recs-container-at-641.at_template_recs-at-641>div>div>div>div>h2 {
+        padding-left: 1rem;
+    }
+
+
+    @media screen and (max-width: 1024px) {
+        .recs-container-at-641 .container-fluid-at-641 {
+            width: 90%;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        .recs-container-at-641 .container-fluid-at-641 {
+            box-sizing: border-box;
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+    }
+
+
+    @media screen and (min-width: 1440px) {
+
+        .recs-container-at-641 .container-fluid-at-641 {
+            box-sizing: border-box;
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 1270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .product__price-matched-promo {
+        padding-left: 8px;
+
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    /* // swiper js stylesheet */
+    .swiper-container .swiper-button-prev {
+        left: 12px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        .swiper-container .swiper-button-prev {
+            left: 7%
+        }
+
+        .swiper-container .swiper-button-next {
+            right: 7%;
+        }
+
+        .swiper-container {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .swiper-container {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .swiper-container .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-container .swiper-button-next {
+            right: 0;
+        }
+    }
+
+    @media screen and (min-width: 2560px) {
+        .swiper-container .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-container .swiper-button-next {
+            right: 0;
+        }
+    }
+
+    .at-table-row-at-641.swiper-container {
+        overflow: hidden;
+        margin: 0 1.47315%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .at-table-row-at-641.swiper-container {
+            margin: 0 !important;
+        }
+    }
+
+    .recs_wrapper-at-641-at-641 .swiper-slide {
+        padding: 0;
+    }
+
+    .swiper-wrapper .at_recs_card-at-641 {
+        width: 99%;
+    }
+
+    .swiper-wrapper .at_recs_card-at-641 {
+        width: 99%;
+    }
+
+    .at_recs_price-at-641.trade-up-item__regional-at-641 {
+        width: 100% !important;
+        border-top: 1px solid #dadada;
+        min-height: 0 !important;
+    }
+
+    .carousel-at-641.swiper-wrapper,
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        visibility: hidden;
+    }
+
+    .at_recs_price-at-641 .js-item-savings {
+        display: none;
+    }
+
+    .recs-container-at-641 .swiper-button-prev,
+    .recs-container-at-641 .swiper-button-next {
+        background: #a7a4a4;
+        border-radius: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .recs-container-at-641 .swiper-button-prev:focus,
+    .recs-container-at-641 .swiper-button-next:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .recs-container-at-641 .swiper-button-prev:after,
+    .recs-container-at-641 .swiper-button-next:after {
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .at-table.at-641 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image_container.at-641>.at-thumbnail {
+        max-height: 180 px !important;
+    }
+
+    .at_recs_card-at-641>.text_section>.at_recs_price-at-641>div.trade-up-item__price--blue.at-641>.price,
+    .trade-up-item__price.at-641 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+
+    .button--large.button--fluid {
+        min-height: 36px;
+        padding: 12px 12px !important;
+        padding-bottom: 16px !important;
+
+    }
+</style>
+<script type="text/javascript">
+       function triggerEvar56(e, pageURL) {
+        try {
+            var btn = e && e.target ? e.target : this;
+            
+            // Find the closest parent element with data-analytics-action-title attribute
+            var productElement = btn.closest('[data-analytics-action-title]');
+            var productTitle = productElement ? productElement.getAttribute('data-analytics-action-title').toLowerCase() : 'unknown product';
+
+            // Adobe Analytics tracking
+            if (typeof s !== "undefined" && s) {
+                try {
+                    s.linkTrackVars = "eVar56";
+                    s.eVar56 = "unknown|sitewide-recently-viewed-recs|~" + productTitle + "|addtocart";
+                    s.tl(true, "o", "unknown|sitewide-recently-viewed-recs|~" + productTitle + "|addtocart");
+                } catch (analyticsError) {
+                    console.warn('Analytics tracking failed:', analyticsError);
+                }
+            }
+            
+            // Navigate to the product page after analytics tracking
+            if (pageURL) {
+                setTimeout(function() {
+                    try {
+                        window.location.href = pageURL;
+                    } catch (navError) {
+                        console.warn('Navigation failed:', navError);
+                    }
+                }, 100); // Small delay to ensure analytics tracking completes
+            }
+        } catch (error) {
+            console.warn('addToCart function error:', error);
+            // Fallback navigation if everything fails
+            if (pageURL) {
+                window.location.href = pageURL;
+            }
+        }
+    }
+    window._dtag = '', window._lang = '',
+        header2 = 'Recently viewed',
+        see_more_641 = 'Shop now'
+    if (location.host.indexOf('.kr') > -1) {
+        header2 = '최근 본 제품';
+        see_more_641 = '더 알아보기';
+    }
+
+    if (location.pathname.indexOf('/vi-VN/') > -1) {
+        header2 = 'Gợi ý dành cho bạn';
+        see_more_641 = 'Mua ngay';
+    }
+    if (location.pathname.indexOf('/th-TH/') > -1) {
+        header2 = 'สินค้าแนะนำสำหรับคุณ';
+        see_more_641 = 'เลือกซื้อ';
+    }
+    if (location.pathname.indexOf('/ar-SA/') > -1) {
+        header2 = 'تمت مشاهدته مؤخرًا';
+        see_more_641 = 'تسوق الآن';
+    }
+    if (location.pathname.indexOf('/ar-AE/') > -1) {
+        header2 = 'تمت مشاهدته مؤخرًا';
+        see_more_641 = 'تسوق الآن';
+    }
+
+    if (location.host.indexOf('.tr') > -1) {
+        header2 = 'Son görüntülenenler',
+            see_more_641 = 'Satın al'
+    }
+    if (location.host.indexOf('.pl') > -1) {
+        header2 = 'Ostatnio oglądane',
+            see_more_641 = 'Dodaj do koszyka'
+    }
+    if (location.host.indexOf('.cz') > -1) {
+        header2 = 'Doporučené',
+            see_more_641 = 'Nakupujte nyní'
+    }
+    if (location.host.indexOf('.ro') > -1) {
+        header2 = 'Recomandat',
+            see_more_641 = 'Cumpără acum'
+    }
+    if (location.host.indexOf('.hu') > -1) {
+        header2 = 'Kiemelt',
+            see_more_641 = 'Vásárlás most'
+    }
+    if (location.host.indexOf('.sk') > -1) {
+        header2 = 'Odporúčané',
+            see_more_641 = 'Nakupujte teraz'
+    }
+
+</script>
+
+<script type="text/template" id="at_template_recs-at-641">
+    <div class="container-par-at-641 parbase at_template_recs-at-641 recs-container-at-641" data-gtm-component="sitewide-recently-viewed-recs">
+    #if($entities.size() > 0)
+        <div class="container-fluid-at-641 container-fluid--upto-lg pt-lg-0 pt-xl-0 pb-lg-0 pb-xl-0 pt-md-0 pb-md-0 pt-xs-0 pt-sm-0 pb-xs-0 pb-sm-0">
+            <div class="at-recs-mobile row">
+                <div class="at-table at-641">
+                    <div class="at-table-row-at-641 swiper-container">
+                        <h2 class="trade-up-header__content at-641 js-trade-up-header-content col-xs-12">
+                          Your recently viewed items design Update</h2>
+                        
+                        <ul class="recs_wrapper-at-641 carousel-at-641 swiper-wrapper">
+  
+                        #set($lang="${mbox.language}")
+                       
+                       
+                        #set($count = 1)
+                        
+                        #set($base_url="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/SKU.png")
+                        #foreach($e in $entities)
+  
+                            #if($lang=="th")
+                            #set($pageURL = $e.pageUrl_th)
+                            #set($lname = $e.name_th)
+                            #set($badge=$e.badgeText_th)
+                            #set($wasPrice=$e.wasPrice_th)
+                            #set($savePrice=$e.savePrice_th)
+                            #set($promoText= $e.prodPromoMessage_th)
+                            #set($fullPrice=$e.actualPrice_th) 
+                            #set($salePrice=$e.currPrice_th) 
+  
+                              #elseif($lang=="ar")
+                              #set($pageURL = $e.pageUrl_ar)
+                              #set($lname = $e.name_ar)
+                              #set($badge=$e.badgeText_ar)
+                              #set($wasPrice=$e.wasPrice_ar)
+                              #set($savePrice=$e.savePrice_ar)
+                              #set($promoText= $e.prodPromoMessage_ar)
+                              #set($fullPrice=$e.actualPrice_ar) 
+                              #set($salePrice=$e.currPrice_ar) 
+  
+   #elseif($lang=="vi")
+                          #set($pageURL = $e.pageUrl_vi)
+                          #set($lname = $e.name_vi)
+                          #set($badge=$e.badgeText_vi)
+                          #set($wasPrice=$e.wasPrice_vi)
+                          #set($savePrice=$e.savePrice_vi)
+                          #set($promoText= $e.prodPromoMessage_vi)
+                          #set($fullPrice=$e.actualPrice_vi) 
+                          #set($salePrice=$e.currPrice_vi) 
+                            
+                            #else
+                                #set($pageURL = $e.pageURL)
+                                #set($lname = $e.name)
+                                #set($badge=$e.badgeText)
+                                #set($wasPrice=$e.wasPrice)
+                                #set($savePrice=$e.savePrice)
+                                #set($promoText= $e.prodPromoMessage)
+                                #set($fullPrice=$e.actualPrice) 
+                                #set($salePrice=$e.currPrice) 
+  
+                            #end
+  
+                            #set($id = $e.id)
+                            #set($badgeThemeColor=$e.badgeThemeColor)
+                            #set($review= $e.reviewCount)
+                            #set($rating= $e.reviewStar)
+                            
+                            #if($count < 11 && $id != '' && $fullPrice != '')
+                                #set($count = $count + 1)
+                                <li class="at-table-column-at-641 swiper-slide col-xs-12 col-md-3 col-lg-3" data-analytics-action-title="$lname">
+                                    <div class="promoText-section displayNone">$promoText</div>
+                                  <span role="group" aria-label="Product">
+                                    <a class="at_recs_card" data-analytics-action-name="see more" href="$pageURL" sku="$e.id" 
+                                    region="$e.domain">
+                                        <span class="mobile_only_line"></span>
+                                        #if($badge!='none')
+                                        <span class="badge trade-up-item__badge custom-badge-placement-mobile custom-badge" style="$badgeThemeColor">$badge</span>
+                                        #else
+                                        <span class="badge trade-up-item__badge custom-badge-placement-mobile custom-badge no-badge" style="$badgeThemeColor"></span>
+                                        #end
+                                        <div class="image_container at-641">
+                                            #set($img_url=$e.thumbnailUrl)
+                                            <img src="$img_url" class="at-thumbnail" alt="$lname"/>
+                                        </div>
+                                        <div class="text_section">
+                                            <h3 class="trade-up-item__text trade-up-item__name">$lname</h3>
+                                            <div class="trade-up-item__text reviews_section">
+                                              <span class="review_stars" ratings="$rating"></span>
+                                              <div class="sr-only ratings__stars--reader">$rating  
+                                                  stars out of 5 from $review Reviews</div>
+                                              <span class="review_text">$review</span>
+                                            </div>
+                                            
+                                            <div class="at_recs_price trade-up-item__regional">
+                                              #if($salePrice == "" || $savePrice == "" || $salePrice == $fullPrice)
+                                                  <div class="trade-up-item__price at-641 testClass">
+                                                     <span class="price">$fullPrice</span>
+                                                  </div>
+                                              #else
+                                              <div class="atBluePrice">
+                                                  <div class="trade-up-item__price--blue trade-up-item__price at-641"> 
+                                                     <span class="price salesPrice">$salePrice</span>
+                                                  </div>
+  
+                                                  <div class="trade-up-item__reduced-price">
+                                                    
+                                                   
+                                                     <span class="price">$wasPrice</span> 
+                                                  </div>
+  
+  
+                                                  <div class="trade-up-item__savings js-item-savings">
+                                            
+                                                     <span class="price">$savePrice</span>
+                                                  </div>
+                                             </div>
+                                              #end
+                                          </div>
+                                        </div>
+                                        
+                                      </a>
+                                      <div data-analytics-action-name="see more1" class="button button--large button--fluid button--tertiary button--cart enabled card__addtocart product__variant__add-to-cart--animated-smaller soft-bundle-button" onclick="triggerEvar56(event, '$pageURL')">
+                                        Shop now</div>
+                                  </span>
+                              </li>
+                            #end
+                        #end
+                      </ul>
+					  <div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    #end
+    </div>
+  </script>
+<script>
+    (function (w, d) {
+        window.mobileCheck = function () {
+            let check = false;
+            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        var addPriceHeight = function () {
+            if (!document.querySelector('.at_recs_price.trade-up-item__regional[reduced]')) {
+                return;
+            }
+            if (!document.getElementById('reduced_price_style')) {
+                document.body.insertAdjacentHTML('afterbegin', '<style id="reduced_price_style"></style>');
+            }
+            document.getElementById('reduced_price_style').innerHTML = "\n.at_recs_price.trade-up-item__regional:not([reduced]){\nheight: " + document.querySelector('.at_recs_price.trade-up-item__regional[reduced]').offsetHeight + "px !important;\ndisplay: flex;\nalign-items: center;\n}\n";
+        },
+            matchHeight = function () {
+                //alert("here inside :::")
+                /*name height*/
+                var names = document.querySelectorAll('.at_recs_card .trade-up-item__text.trade-up-item__name'), reviews = document.querySelectorAll('.at_recs_card .text_section .trade-up-item__text.reviews_section'), priceSection = document.querySelectorAll('.at_recs_price.trade-up-item__regional'), max = 0;
+                var imageContainer = document.querySelectorAll('.at_recs_card .image_container');
+                var promoContainer = document.querySelectorAll('.at_recs_card .promoText-section');
+
+                if (jQuery(window).width() < 100) {
+                    for (var i = names.length - 1; i >= 0; i--) {
+                        names[i].style.minHeight = max;
+                    }
+                    for (var i = reviews.length - 1; i >= 0; i--) {
+                        reviews[i].style.minHeight = max;
+                    }
+                } else {
+                    for (var i = names.length - 1; i >= 0; i--) {
+                        max = names[i].offsetHeight > max ? names[i].offsetHeight : max;
+                    }
+                    for (var i = names.length - 1; i >= 0; i--) {
+                        names[i].style.minHeight = max + 'px';
+                    }
+                    max = 0;
+                    for (var i = reviews.length - 1; i >= 0; i--) {
+                        max = reviews[i].offsetHeight > max ? reviews[i].offsetHeight : max;
+                    }
+                    for (var i = reviews.length - 1; i >= 0; i--) {
+                        reviews[i].style.minHeight = max + 'px';
+                    }
+
+
+                    max = 0;
+                    for (var i = priceSection.length - 1; i >= 0; i--) {
+                        max = priceSection[i].offsetHeight > max ? priceSection[i].offsetHeight : max;
+                    }
+                    for (var i = priceSection.length - 1; i >= 0; i--) {
+                        priceSection[i].style.minHeight = max + 'px';
+                    }
+
+                    max = 0;
+                    for (var i = imageContainer.length - 1; i >= 0; i--) {
+                        max = imageContainer[i].offsetHeight > max ? imageContainer[i].offsetHeight : max;
+                    }
+
+                    for (var i = imageContainer.length - 1; i >= 0; i--) {
+                        if (imageContainer[i].offsetHeight < max) {
+                            var diff = max - imageContainer[i].offsetHeight;
+                            imageContainer[i].style.paddingBottom = diff + 'px';
+
+                        }
+                    }
+
+                    max = 0;
+                    for (var i = promoContainer.length - 1; i >= 0; i--) {
+                        max = promoContainer[i].offsetHeight > max ? promoContainer[i].offsetHeight : max;
+                    }
+
+                    for (var i = promoContainer.length - 1; i >= 0; i--) {
+                        promoContainer[i].style.minHeight = max + 'px';
+                    }
+
+
+                }
+            }
+        loadcarousel = function () {
+            if (typeof (jQuery) != 'undefined') {
+                var jq = jQuery.noConflict();
+                //if(window.innerWidth < 500){
+                setTimeout(function () {
+                    const swiper = new Swiper('.at-table-row-at-641.swiper-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 16,
+                        autoHeight: true,
+                        loop: false,
+                        preloadImages: true,
+                        centeredSlides: false,
+                        initialSlide: 0,
+                        speed: 600,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1.45,
+                            },
+                            520: {
+                                slidesPerView: 2.5,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                            },
+                            1440: {
+                                slidesPerView: 5,
+                            },
+                            2560: {
+                                slidesPerView: 6,
+                            },
+                        },
+                        on: {
+                            init() {
+                                document.querySelector(".recs-container-at-641").style.opacity = 1;
+                                document.querySelector(".swiper-container").style.opacity = 1;
+                                if ((document.querySelector('.product-hero .js-product-hero-animate .full-width-image__image img') && document.querySelector('.product-hero .js-product-hero-animate .full-width-image__image img').getAttribute('src').includes(document.querySelector('.at_recs_card-at-641').getAttribute('sku'))) && document.querySelectorAll('.recs_wrapper-at-641 .at-table-column-at-641').length == 1) {
+                                    document.querySelector('.container-par-at-641.recs-container-at-641').style.display = 'none';
+                                } else {
+                                    document.querySelector('.container-par-at-641.recs-container-at-641').style.display = 'flex';
+                                    if (typeof s !== "undefined") {
+                                        s.linkTrackVars = "eVar67";
+                                        s.eVar67 = "recentlyviewrecs|impression";
+                                        s.tl(true, "o", "recentlyviewrecs|impression");
+                                    }
+                                }
+
+                                //document.querySelector(".swiper-loader").style.display = "none";
+                            },
+                        },
+                    });
+
+                    document.querySelectorAll('.at-table-column-at-641').forEach(function (i) {
+                        i.style.maxWidth = '100%';
+                    });
+                    matchHeight();
+                    addPriceHeight();
+                    document.querySelector('.recs_wrapper-at-641.carousel-at-641').style.visibility = 'visible';
+                    document.querySelector('.carousel-at-641.swiper-wrapper').style.visibility = 'visible';
+                }, 3000);
+                setTimeout(function () {
+                    //matchHeights();
+                    //addPriceHeight();
+                }, 500);
+                //} 
+            }
+
+            if (window.innerWidth > 500) {
+                document.querySelector('.recs_wrapper-at-641.carousel-at-641').style.visibility = 'visible';
+                setTimeout(function () {
+                    //matchHeights();
+                    //addPriceHeight();
+                }, 500);
+            }
+        }
+
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                // matchHeight();
+                //addPriceHeight();
+            }, 2500);
+            setTimeout(function () {
+                // matchHeight();
+                // addPriceHeight();
+            }, 2500);
+            setTimeout(function () {
+                // matchHeight();
+                // addPriceHeight();
+            }, 2500);
+        })
+        window.addEventListener('resize', function () {
+            setTimeout(function () {
+                //matchHeight();
+                // addPriceHeight();
+            }, 2500);
+        });
+
+
+        var logInfo = function (str) {
+            console.info(str)
+        }
+        var Flickerlessly = w.Flickerlessly || {}; !function (t) { "use strict"; var e = function (t, e, n, o) { var a = "atNodeInserted" + t, i = [], s = ["", "-moz-", "-webkit-", "-ms-", "-o-"]; s.forEach(function (t, e) { i.push("@" + t + "keyframes " + a + " {from {opacity:0.99} to {opacity:1}}") }), i.push(e + "{"), s.forEach(function (t, e) { i.push(t + "animation-duration:0.001s;" + t + "animation-name:" + a + ";") }), i.push("}"); var r = d.getElementsByTagName("head")[0]; if (r) { var c = d.createElement("style"); c.setAttribute("type", "text/css"), c.styleSheet ? c.styleSheet.cssText = i.join("\n") : c.appendChild(d.createTextNode(i.join("\n"))), r.insertBefore(c, r.firstChild) } var l = function (t) { if (t.animationName === a && "object" == typeof t.target) { var i = o === !0 || o === !1 && null === t.target.getAttribute("data-flk-success"); w.console && logInfo("('" + e + "') ready! Execute: " + i, t.target), "function" == typeof n && i ? (n(t.target), t.target.setAttribute("data-flk-success", a)) : w.console && console.error("Cannot Callback", i, n) } };["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function (t, e) { d.addEventListener(t, l, !1) }) }, n = Math.floor(1e3 * Math.random() + 1); t.onReady = function () { for (var t = 0; t < arguments.length; t++) { var o = arguments[t], a = o.selector, i = o.success || null, s = o.persist || !1; e(n++, a, i, s) } } }(Flickerlessly);
+
+        Flickerlessly.onReady(
+            {
+                selector: '.page-footer',
+                success: function (el) {
+                    /* if(!document.querySelector(".at_template_recs-at-641")){
+                     var recsContent = document.getElementById('at_template_recs-at-641').innerHTML;
+                     el.querySelector('[data-gtm-component="menu"]')
+                     .insertAdjacentHTML("beforebegin", recsContent);
+                     document.querySelector(".trade-up-header__content").innerHTML = window.header2;
+                   } */
+                    el.className += ' at_target';
+                    if (document.querySelector('.recs-container-at-641')) {
+                        var r = document.querySelector('.recs-container-at-641');
+                        r.parentNode.removeChild(r);
+                    }
+                    var recsContent = document.getElementById('at_template_recs-at-641').innerHTML;
+                    document.querySelector(".page-footer").insertAdjacentHTML('beforebegin', recsContent);
+                    document.querySelector(".trade-up-header__content.at-641").innerHTML = window.header2;
+                    setTimeout(function () {
+                        window.scrollTo({ top: 0 });
+                    }, 1000);
+                },
+                persist: true
+            },
+
+
+            {
+                selector: ".review_stars",
+                success: function (el) {
+                    var rateStar = el.getAttribute('ratings'), addStar;
+                    if (rateStar >= 5) {
+                        addStar = 'five'
+                    } else if (rateStar >= 4.5) {
+                        addStar = 'four-five'
+                    } else if (rateStar >= 4) {
+                        addStar = 'four';
+                    } else if (rateStar >= 3.5) {
+                        addStar = 'three-five';
+                    } else if (rateStar < 3.5 && rateStar > 0) {
+                        addStar = 'three';
+                    } else {
+                        addStar = 'zero';
+                    }
+                    el.className += (' ' + addStar);
+
+                },
+                persist: true
+            },
+            /*{
+            selector: '.recs_wrapper-at-641.carousel-at-641',
+            success: function (el) {
+                debugger;
+                  console.log("here inside :::;")
+                    if(mobileCheck()){
+                      require(['jquery','slick'], 
+                      function($){
+                          $(document).ready(function() {
+                              $('.recs_wrapper-at-641.carousel-at-641').slick({
+                                  slidesToShow: 6,
+                                  dots:false,
+                                  centerMode: false,
+                                  infinite: false,
+                                  slidesToScroll: 1
+                              })
+                          });
+                      });
+                    }else{
+                      document.querySelector('.recs_wrapper-at-641.carousel-at-641').style.visibility = 'visible';
+                      setTimeout(function () {
+                          matchHeight();
+                          addPriceHeight();                       
+                      }, 500);
+                    }
+    
+                    
+            },
+            persist: true
+        },*/
+            {
+                selector: ".recs_wrapper-at-641 li",
+                success: function (el) {
+                    if (!el.querySelector(".text_section")
+                        .classList.contains("movedContent")) {
+                        el.querySelector(".text_section")
+                            .classList += " movedContent";
+                        if (el.querySelector(".promoText-section")) {
+                            el.querySelector(".promoText-section").classList.remove("displayNone");
+                            el.querySelector(".text_section .button--tertiary")
+                                .insertAdjacentElement("beforebegin", el
+                                    .querySelector(".promoText-section"));
+                        }
+
+                        if (mobileCheck()) {
+                            if (!el.firstElementChild.classList.contains("badge")) {
+                                el.insertAdjacentHTML("afterbegin",
+                                    '<span class="badge trade-up-item__badge custom-badge-placement-mobile custom-badge backgroundNone"></span>')
+                            }
+                        }
+                    }
+
+                    if (_satellite.getVar('Cfg: Site Language') == "ar") {
+                        el.querySelector(".at_recs_price.trade-up-item__regional").style.paddingRight = "15px";
+                        el.querySelector(".custom-badge-placement-mobile").style.right = "10px";
+                        el.querySelector(".custom-badge-placement-mobile").style.left = "50%";
+                    }
+
+                    if (el.querySelector(".custom-badge-placement-mobile").innerText == "") {
+                        el.querySelector(".custom-badge-placement-mobile").style.background = "none"
+                    }
+
+                    el.querySelector(".button--large").innerHTML = window.see_more_641;
+                    setTimeout(function () {
+                        matchHeight();
+                        addPriceHeight();
+                    }, 500);
+
+                },
+                persist: true
+            }, {
+            selector: '.swiper-container',
+            success: function (el) {
+
+                loadcarousel();
+                //}
+            },
+            persist: true
+        },
+            {
+                selector: '.custom-badge-placement-mobile',
+                success: function (el) {
+
+                    if (el.innerText == "") {
+                        el.style.background = "none"
+                    }
+                },
+                persist: true
+            }
+        );
+
+
+    })(window, document);
+
+
+</script>
