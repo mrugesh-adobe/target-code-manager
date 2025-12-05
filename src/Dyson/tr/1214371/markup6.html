@@ -981,6 +981,44 @@
     }
 </style>
 <script type="text/javascript">
+    function triggerEvar56(e, pageURL) {
+        try {
+            var btn = e && e.target ? e.target : this;
+            
+            // Find the closest parent element with data-analytics-action-title attribute
+            var productElement = btn.closest('[data-analytics-action-title]');
+            var productTitle = productElement ? productElement.getAttribute('data-analytics-action-title').toLowerCase() : 'unknown product';
+
+            // Adobe Analytics tracking
+            if (typeof s !== "undefined" && s) {
+                try {
+                    s.linkTrackVars = "eVar56";
+                    s.eVar56 = "unknown|sitewide-recently-viewed-recs|~" + productTitle + "|a";
+                    s.tl(true, "o", "unknown|sitewide-recently-viewed-recs|~" + productTitle + "|a");
+                } catch (analyticsError) {
+                    console.warn('Analytics tracking failed:', analyticsError);
+                }
+            }
+            
+            // Navigate to the product page after analytics tracking
+            if (pageURL) {
+                setTimeout(function() {
+                    try {
+                        window.location.href = pageURL;
+                    } catch (navError) {
+                        console.warn('Navigation failed:', navError);
+                    }
+                }, 100); // Small delay to ensure analytics tracking completes
+            }
+        } catch (error) {
+            console.warn('addToCart function error:', error);
+            // Fallback navigation if everything fails
+            if (pageURL) {
+                window.location.href = pageURL;
+            }
+        }
+    }
+
     window._dtag = '', window._lang = '',
         header2 = 'Recently viewed',
         see_more_641 = 'Shop now'
@@ -1154,7 +1192,7 @@
                                         </div>
                                         
                                       </a>
-                                      <div data-analytics-action-name="see more1" class="button button--large button--fluid button--tertiary button--cart enabled card__addtocart product__variant__add-to-cart--animated-smaller soft-bundle-button" onclick="window.location.href='$pageURL'">
+                                      <div data-analytics-action-name="see more1" class="button button--large button--fluid button--tertiary button--cart enabled card__addtocart product__variant__add-to-cart--animated-smaller soft-bundle-button" onclick="addToCart(event, '$pageURL')">
                                         Shop now</div>
                                   </span>
                               </li>
